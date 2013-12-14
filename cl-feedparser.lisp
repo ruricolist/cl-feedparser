@@ -31,14 +31,32 @@
     (yason:parse string :object-key-fn #'name->keyword)))
 
 (defmethod feedparse.py ((string string))
-  (let ((output
-          (trivial-shell:shell-command
-           *feedparse-script*
-           :input string)))
-    (parse-json output)))
+  (with-input-from-string (in string)
+    (feedparse.py in)))
 
 (defmethod feedparse.py ((pathname pathname))
-  (feedparse.py (read-file-into-string pathname)))
+  (with-open-file (in pathname
+                      :direction :input
+                      :element-type 'character)
+    (feedparse.py in)))
+
+(defmethod feedparse.py ((in stream))
+  ;; Parsing directly from the stream is slightly slower but conses a
+  ;; third as much.
+  (let* ((proc
+           (sb-ext:run-program
+            *feedparse-script*
+            '()
+            :wait nil
+            :pty nil
+            :input :stream
+            :output :stream))
+         (input (sb-ext:process-input proc))
+         (output (sb-ext:process-output proc)))
+    (copy-stream in input)
+    (close input)
+    (prog1 (parse-json output)
+      (close output))))
 
 
 
@@ -89,8 +107,20 @@
               ("ins"         . (("cite" . (:http :https :relative))))
               ("q"           . (("cite" . (:http :https :relative))))))
 
-(defun sanitize (x)
-  (if x (sanitize:clean x +feed+)))
+(declaim (function *content-sanitizer* *title-sanitizer))
+
+(defvar *content-sanitizer*
+  (lambda (x)
+    (when x
+      (sanitize:clean x +feed+))))
+
+(defparameter *title-sanitizer* *content-sanitizer*)
+
+(defun sanitize-content (x)
+  (funcall *content-sanitizer* x))
+
+(defun sanitize-title (x)
+  (funcall *title-sanitizer* x))
 
 
 
@@ -118,7 +148,7 @@
          :pubdate '("/rss/channel/lastBuildDate" "/rss/channel/dc:date"
                     "/rss/channel/pubDate")
          :entry-title "title"
-         :entry-id "guid"
+         :entry-id '("guid" "feedburner:origLink" "link")
          :content '("content:encoded" "body" "fullitem" "xhtml:body")
          :summary '("description" "dc:description")
          :entry-link '("feedburner:origLink" "link")
@@ -238,7 +268,7 @@
         (when (string*= "xhtml" type)
           (when-let ((div (libxml2.xpath:find-single-node
                            (get-node :content) "xhtml:div")))
-            (sanitize (serialize div))))))))
+            (sanitize-content (serialize div))))))))
 
 (defun q1 (paths ns action raw expr)
   (when-let (key (@ paths expr))
@@ -263,7 +293,7 @@
         (let ((qs (curry #'q1 paths ns #'libxml2.xpath:find-string)))
           (let-alias ((qs (curry qs rawfeed)))
             (setf (@ feed :version) version
-                  (@ feed :title) (string-trim +whitespace+ (sanitize (qs :title)))
+                  (@ feed :title) (string-trim +whitespace+ (sanitize-title (qs :title)))
                   (@ feed :link) (qs :link)
                   (@ feed :language) (qs :language)
                   (@ feed :icon) (qs :icon)
@@ -277,16 +307,16 @@
                                 (let-alias ((qs (curry qs rawentry)))
                                   (collect
                                       (aprog1 (dict)
-                                        (setf (@ it :title)         (sanitize (qs :entry-title))
+                                        (setf (@ it :title)         (sanitize-title (qs :entry-title))
                                               (@ it :id)            (qs :entry-id)
                                               (@ it :author-detail) (author-details parser rawentry)
                                               (@ it :author)        (@ it :author-detail :name)
                                               (@ it :link)          (qs :entry-link))
-                                        (let ((summary (sanitize (qs :summary))))
+                                        (let ((summary (sanitize-content (qs :summary))))
                                           (setf (@ it :summary) summary)
                                           ;; XXX Atom allows multiple content elements.
                                           (when-let ((content (or (content parser rawentry)
-                                                                  (sanitize (qs :content)))))
+                                                                  (sanitize-content (qs :content)))))
                                             (unless (emptyp content)
                                               (setf (@ it :content)
                                                     (list (aprog1 (dict)
@@ -341,44 +371,61 @@
             on tree with-ns-map ns)
       (expand! node "src"))))
 
-(defun parse-feed (feed &key max-entries)
+(defun parse-feed (feed &key max-entries punt (sanitize-content t) (sanitize-titles t))
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (check-type max-entries limit)
   (let ((feed
-          (restart-case
-              (xtree:with-parse-document (rawfeed feed)
-                (unless rawfeed (error "No feed?"))
-                (let* ((root-feed (xtree:root rawfeed))
-                       (name (xtree:local-name root-feed))
-                       (namespace (xtree:namespace-uri root-feed)))
-                  (cond
-                    ((and (string= name "feed")
-                          (string= namespace "http://www.w3.org/2005/Atom"))
-                     (let ((feed
-                             (let ((parser (make 'atom-parser :rawfeed rawfeed :max-entries max-entries)))
-                               (parse-feed! parser)
-                               (feed parser))))
-                       feed))
-                    ((and (not namespace)
-                          (string= name "rss")
-                          (string= "2.0"
-                                   (xtree:attribute-value root-feed
-                                                          "version")))
-                     (let ((parser (make 'rss-parser :rawfeed rawfeed :max-entries max-entries)))
-                       (parse-feed! parser)
-                       (feed parser)))
-                    (t (error "Unknown feed type")))))
-            (punt ()
-              :report "Punt to feedparser.py."
-              (aprog1 (or (ignore-errors (feedparse.py feed)) (dict))
-                (setf (@ it :parser)
-                      (fmt "feedparser ~a" *feedparser-version*)))))))
+          (if punt
+              (lret ((feed (or (ignore-errors (feedparse.py feed))
+                               (dict))))
+                (setf (@ feed :parser)
+                      (fmt "feedparser ~a" *feedparser-version*)))
+              (restart-case
+                  (let ((*content-sanitizer*
+                          (if (not sanitize-content)
+                              #'identity
+                              *content-sanitizer*))
+                        (*title-sanitizer*
+                          (if (not sanitize-titles)
+                              #'identity
+                              *title-sanitizer*)))
+                    (parse-feed-aux feed :max-entries max-entries)
+                    #+ () (xtree:with-parse-document (rawfeed feed)
+                            (unless rawfeed (error "No feed?"))
+                            (let* ((root-feed (xtree:root rawfeed))
+                                   (name (xtree:local-name root-feed))
+                                   (namespace (xtree:namespace-uri root-feed)))
+                              (cond
+                                ((and (string= name "feed")
+                                      (string= namespace "http://www.w3.org/2005/Atom"))
+                                 (let ((feed
+                                         (let ((parser (make 'atom-parser :rawfeed rawfeed :max-entries max-entries)))
+                                           (parse-feed! parser)
+                                           (feed parser))))
+                                   feed))
+                                ((and (not namespace)
+                                      (string= name "rss")
+                                      (string= "2.0"
+                                               (xtree:attribute-value root-feed
+                                                                      "version")))
+                                 (let ((parser (make 'rss-parser :rawfeed rawfeed :max-entries max-entries)))
+                                   (parse-feed! parser)
+                                   (feed parser)))
+                                (t (error "Unknown feed type"))))))
+                (punt ()
+                  :report "Punt to feedparser.py."
+                  (parse-feed feed :max-entries max-entries :punt t))))))
     (setf (@ feed :language) (guess-language feed))
     feed))
 
-(defun parse-feed-safe (feed &key max-entries)
+(defun parse-feed-safe (feed &key max-entries punt
+                                  (sanitize-content t)
+                                  (sanitize-titles t))
   (handler-bind ((error
                    (lambda (c) (declare (ignore c))
                      (invoke-restart 'punt))))
-    (parse-feed feed :max-entries max-entries)))
+    (parse-feed feed :max-entries max-entries
+                     :punt punt
+                     :sanitize-content sanitize-content
+                     :sanitize-titles sanitize-titles)))

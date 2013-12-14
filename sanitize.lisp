@@ -48,4 +48,5 @@
               ("q"           . (("cite" . (:http :https :relative))))))
 
 (defun sanitize (x)
-  (if x (sanitize:clean x +feed+)))
+  (and x (stringp x) (find #\< x)
+       (sanitize:clean x +feed+)))

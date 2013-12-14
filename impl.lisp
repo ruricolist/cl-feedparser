@@ -15,11 +15,20 @@
 (defclass parser ()
   ((max-entries :initarg :max-entries :accessor parser-max-entries)))
 
-(defparameter *sanitizer* 'sanitize)
+(declaim (function *content-sanitizer* *title-sanitizer))
 
-(defun sanitize (x)
-  (when x
-    (funcall *sanitizer* x)))
+(defvar *content-sanitizer*
+  (lambda (x)
+    (when x
+      (sanitize:clean x +feed+))))
+
+(defparameter *title-sanitizer* *content-sanitizer*)
+
+(defun sanitize-content (x)
+  (funcall *content-sanitizer* x))
+
+(defun sanitize-title (x)
+  (funcall *title-sanitizer* x))
 
 (defparameter *namespaces*
   (alist-hash-table
@@ -173,7 +182,7 @@
 
 (defun handle-title ()
   (when-let (text (text))
-    (let ((title (string-trim +whitespace+ (sanitize text))))
+    (let ((title (string-trim +whitespace+ (sanitize-title text))))
       (setf (gethash :title (or *entry* *feed*)) title))))
 
 (defhandler :atom :tagline
@@ -186,14 +195,14 @@
   (handle-subtitle))
 
 (defhandler :atom :info
-  (when-let (text (sanitize (text)))
+  (when-let (text (sanitize-content (text)))
     (setf (gethash :info *feed*) text)))
 
 (defhandler :feedburner :browser-friendly
   (handle-tag :atom :info))
 
 (defhandler :atom :rights
-  (when-let (text (sanitize (text)))
+  (when-let (text (sanitize-content (text)))
     (setf (gethash :rights *feed*) text)))
 
 (defhandler :atom :copyright
@@ -209,7 +218,7 @@
   (handle-tag :atom :rights))
 
 (defun handle-subtitle ()
-  (when-let (text (sanitize (text)))
+  (when-let (text (sanitize-title (text)))
     (setf (gethash :subtitle *feed*) text)))
 
 (defmethod handle-tag ((ns null) (lname (eql :link)))
@@ -308,7 +317,7 @@
 
 (defun get-summary ()
   (let ((attrs (klacks:list-attributes *source*)))
-    (when-let (string (sanitize (text)))
+    (when-let (string (sanitize-content (text)))
       (if (not *entry*)
           (setf (gethash :subtitle *feed*) string)
           (let ((detail (dict)))
@@ -410,7 +419,7 @@
   (let ((content (dict)))
     (push content (gethash :content *entry*))
     (let* ((attrs (klacks:list-attributes *source*))
-           (string (sanitize (text))))
+           (string (sanitize-content (text))))
       (setf (gethash :value content) string
 
             (gethash :type content)
@@ -461,7 +470,8 @@
 
 (defun resolve-uri (uri)
   (let ((base (klacks:current-xml-base *source*)))
-    (puri:merge-uris uri base)))
+    (ignoring puri:uri-parse-error
+      (puri:merge-uris uri base))))
 
 (defun text ()
   (when (eql (klacks:peek *source*) :characters)
