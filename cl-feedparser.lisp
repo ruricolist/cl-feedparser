@@ -133,9 +133,12 @@
 (defvar *links*)
 (defvar *author*)
 (defvar *path*)
+(defvar *disabled*)
 
 (defclass parser ()
-  ((max-entries :initarg :max-entries :accessor parser-max-entries)))
+  ((max-entries :initarg :max-entries :accessor parser-max-entries)
+   (guid-mask   :initarg :guid-mask   :accessor parser-guid-mask))
+  (:default-initargs :guid-mask nil :max-entries nil))
 
 (defparameter *namespaces*
   (alist-hash-table
@@ -206,12 +209,15 @@
      ("http://podlove.org/simple-chapters" .                    :psc))
    :test 'equal))
 
-(defun parse-feed-aux (input &key max-entries)
+(defun parse-feed-aux (input &key max-entries guid-mask)
   (let ((*feed* (dict))
         (*author* (dict))
         (*entry* nil)
         (*path* nil)
-        (*parser* (make 'parser :max-entries max-entries)))
+        (*disabled* nil)
+        (*parser* (make 'parser
+                        :max-entries max-entries
+                        :guid-mask guid-mask)))
 
     (setf (gethash :parser *feed*) (fmt "cl-feedparser ~a" *version*))
 
@@ -247,7 +253,8 @@
                        (klacks:consume *source*)
                      (declare (ignore ev))
                      (push lname *path*)
-                     (handle-tag (find-ns uri) lname)))
+                     (unless *disabled*
+                       (handle-tag (find-ns uri) lname))))
                   (:end-element
                    (decf depth)
                    (pop *path*)
@@ -424,7 +431,6 @@
 (defmethod handle-tag ((ns null) (lname (eql :description)))
   (get-summary))
 
-
 (defun get-summary ()
   (when-let (content (get-content))
     (let ((entry *entry*))
@@ -478,14 +484,21 @@
   (when-let (string (get-text))
     (setf (gethash :ttl *feed*) string)))
 
+(defun check-guid-mask (id)
+  (when (and *entry* id (find id (parser-guid-mask *parser*) :test #'equal))
+    (setf *disabled* t)))
+
 (defmethod handle-tag ((ns null) (lname (eql :guid)))
   ;; todo rdf:about
-  (when-let (string (get-text))
+  (when-let (id (get-text))
     (when *entry*
-      (setf (gethash :id *entry*) string))))
+      (check-guid-mask id)
+      (setf (gethash :id *entry*) id))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :id)))
-  (setf (gethash :id (or *entry* *feed*)) (get-text)))
+  (let ((id (get-text)))
+    (check-guid-mask id)
+    (setf (gethash :id (or *entry* *feed*)) id)))
 
 (defmethod handle-tag ((ns (eql :dc)) (lname (eql :description)))
   (get-summary))
@@ -589,6 +602,7 @@
 
 (defmethod handle-tag ((ns (eql :rdf)) (lname (eql :item)))
   ;; todo rdf:about
+  ;; TODO use guid-mask
   (let ((entry (handle-entry)))
     (when-let (id (klacks:get-attribute *source* "about"))
       (setf (gethash :id entry) id))))
@@ -603,11 +617,13 @@
         (throw 'done nil)
         (lret ((*author* (dict))
                (*entry* (dict)))
-          (push *entry* (gethash :entries *feed*))
 
           (setf (gethash :author-detail *entry*) *author*)
 
-          (parser-loop *source* :recursive t)
+          (let ((*disabled* *disabled*))
+            (parser-loop *source* :recursive t)
+            (unless *disabled*
+              (push *entry* (gethash :entries *feed*))))
 
           (setf (gethash :author *entry*)
                 (gethash :name *author*))))))
@@ -654,7 +670,8 @@
 
 
 
-(defun parse-feed (feed &key max-entries punt (sanitize-content t) (sanitize-titles t))
+(defun parse-feed (feed &key max-entries punt (sanitize-content t) (sanitize-titles t)
+                             guid-mask)
   "Try to parse FEED."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
@@ -674,21 +691,29 @@
                           (if (not sanitize-titles)
                               #'identity
                               *title-sanitizer*)))
-                    (parse-feed-aux feed :max-entries max-entries))
+                    (parse-feed-aux feed
+                                    :max-entries max-entries
+                                    :guid-mask guid-mask))
                 (punt ()
                   :report "Punt to feedparser.py."
-                  (parse-feed feed :max-entries max-entries :punt t))))))
+                  (lret ((feed (parse-feed feed :max-entries max-entries :punt t)))
+                    (setf (@ feed :entries)
+                          (remove-if (lambda (entry)
+                                       (find (@ entry :id) guid-mask :test #'equal))
+                                     (@ feed :entries)))))))))
     (setf (@ feed :language) (guess-language feed))
     feed))
 
 (defun parse-feed-safe (feed &key max-entries punt
                                   (sanitize-content t)
-                                  (sanitize-titles t))
+                                  (sanitize-titles t)
+                                  guid-mask)
   "Try to parse FEED, possibly punting to feedparser.py."
   (handler-bind ((error
                    (lambda (c) (declare (ignore c))
                      (invoke-restart 'punt))))
     (parse-feed feed :max-entries max-entries
                      :punt punt
+                     :guid-mask guid-mask
                      :sanitize-content sanitize-content
                      :sanitize-titles sanitize-titles)))
