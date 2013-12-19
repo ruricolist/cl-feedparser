@@ -50,13 +50,11 @@
             :wait nil
             :pty nil
             :input :stream
-            :output :stream))
-         (input (sb-ext:process-input proc))
-         (output (sb-ext:process-output proc)))
-    (copy-stream in input)
-    (close input)
-    (prog1 (parse-json output)
-      (close output))))
+            :output :stream)))
+    (with-open-stream (input (sb-ext:process-input proc))
+      (copy-stream in input))
+    (with-open-stream (output (sb-ext:process-output proc))
+      (parse-json output))))
 
 
 
@@ -137,6 +135,7 @@
 
 (defclass parser ()
   ((max-entries :initarg :max-entries :accessor parser-max-entries)
+   (entries-count :initform 0 :accessor parser-entries-count)
    (guid-mask   :initarg :guid-mask   :accessor parser-guid-mask))
   (:default-initargs :guid-mask nil :max-entries nil))
 
@@ -611,7 +610,7 @@
   (handle-entry))
 
 (defun handle-entry ()
-  (let ((count (length (gethash :entries *feed*)))
+  (let ((count (finc (parser-entries-count *parser*)))
         (max-entries (parser-max-entries *parser*)))
     (if (and max-entries (= max-entries count))
         (throw 'done nil)
@@ -672,7 +671,17 @@
 
 (defun parse-feed (feed &key max-entries punt (sanitize-content t) (sanitize-titles t)
                              guid-mask)
-  "Try to parse FEED."
+  "Try to parse FEED.
+MAX-ENTRIES is the maximum number of entries to retrieve; GUID-MASK is
+a list of GUIDs of entries that are already known to the caller and
+thus not of interest.
+
+Note that MAX-ENTRIES and GUID-MASK are, in effect, applied
+successively, as though MAX-ENTRIES were taken and then filtered by
+guid. (Actually entries with recognized GUIDs are never parsed.)
+Consider a feed with thousands of entries (they do exist): if the mask
+were applied first, you would get another set of older entries each
+time you called PARSE-FEED."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (check-type max-entries limit)
