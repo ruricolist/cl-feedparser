@@ -43,18 +43,27 @@
 (defmethod feedparse.py ((in stream))
   ;; Parsing directly from the stream is slightly slower but conses a
   ;; third as much.
-  (let* ((proc
-           (sb-ext:run-program
-            *feedparse-script*
-            '()
-            :wait nil
-            :pty nil
-            :input :stream
-            :output :stream)))
-    (with-open-stream (input (sb-ext:process-input proc))
-      (copy-stream in input))
-    (with-open-stream (output (sb-ext:process-output proc))
-      (parse-json output))))
+  (let-alias ((run-program
+               #+sbcl #'sb-ext:run-program
+               #+ccl  #'ccl:run-program)
+              (process-input
+               #+sbcl #'sb-ext:process-input
+               #+ccl  #'ccl:external-process-input-stream)
+              (process-output
+               #+sbcl #'sb-ext:process-output
+               #+ccl  #'ccl:external-process-output-stream))
+    (let* ((proc
+             (run-program
+              *feedparse-script*
+              '()
+              :wait nil
+              :pty nil
+              :input :stream
+              :output :stream)))
+      (with-open-stream (input  (process-input proc))
+        (copy-stream in input))
+      (with-open-stream (output (process-output proc))
+        (parse-json output)))))
 
 
 
@@ -232,9 +241,6 @@
     (setf (gethash :entries *feed*)
           (nreverse (gethash :entries *feed*)))
 
-    (setf (gethash :language *feed*)
-          (guess-language *feed*))
-
     (values *feed* *parser*)))
 
 (defun find-ns (uri)
@@ -264,7 +270,7 @@
                   (t (klacks:consume *source*))))))))
 
 (defgeneric handle-tag (ns lname)
-  (:method (ns lname)
+  (:method (ns lname) (declare (ignore ns lname))
     nil)
   (:method (ns (lname string))
     (handle-tag ns (find-keyword lname))))
@@ -329,9 +335,6 @@
 (defhandler nil :copyright
   (handle-tag :atom :rights))
 
-(defhandler :dc :rights
-  (handle-tag :atom :rights))
-
 (defun handle-subtitle ()
   (when-let (text (sanitize-title (get-text)))
     (setf (gethash :subtitle *feed*) text)))
@@ -349,6 +352,10 @@
          (title (klacks:get-attribute source "title"))
          (link (make-hash-table)))
 
+    ;; E.g. Quora.
+    (when (or (equal href "None") (equal href "/None"))
+      (return-from handle-tag))
+
     (when href
       (setf href (resolve-uri href)))
 
@@ -362,9 +369,6 @@
           (gethash :title link) title)
 
     (push link (gethash :links (or *entry* *feed*)))))
-
-(defmethod handle-tag ((ns (eql :atom)) (lname (eql :name)))
-  (setf (gethash :name *author*) (get-text)))
 
 (defhandler :atom :name
   (let ((name (get-text)))
@@ -577,7 +581,8 @@
              (let ((out (make-instance 'absolute-uri-handler
                                        :handlers (list (cxml:make-octet-vector-sink))
                                        :base (klacks:current-xml-base *source*))))
-               (klacks:serialize-element *source* out :document-events t)))))
+               (klacks:serialize-element *source* out :document-events t))
+             :external-format :utf-8)))
       (setf (@ content :value) (sanitize-content value)
             (@ content :type)  "text/html"
             (@ content :base)  (klacks:current-xml-base *source*))
@@ -635,10 +640,9 @@
 (defun xml-character? (c)
   (declare (optimize speed))
   (let ((code (char-code c)))
-    (or (eql code 9)
-        (eql code 10)
-        (eql code 13)
-        (<= 32 code #xd7ff)
+    (declare (dynamic-extent code))
+    (or (<= 32 code #xd7ff)
+        (case code ((9 10 13) t))
         #+rune-is-utf-16 (<= #xD800 code #xDFFF)
         (<= #xe000 code #xfffd)
         #-rune-is-utf-16 (<= #x10000 code #x10ffff))))
@@ -649,27 +653,11 @@
       (loop while (eql (klacks:peek *source*) :characters)
             do (write-string (nth-value 1 (klacks:consume *source*)) s)))))
 
-(defun guess-language (feed &key (min-length 100))
-  (let ((lang (gethash :language feed)))
-    ;; If it says it's not in English, it's probably right.
-    (if (not (string^= "en" lang))
-        lang
-        (let ((langs (delq nil
-                           (loop for entry in (gethash :entries feed)
-                                 nconc (loop for content in (@ entry :content)
-                                             for value = (join (ppcre:split "(?s)<.*?>"
-                                                                            (@ content :value))
-                                                               #\Space)
-                                             when (> (length value) min-length)
-                                               collect (textcat:classify value))))))
-          ;; Do we have agreement?
-          (if (and langs (every #'eql langs (rest langs)))
-              (string-downcase (first langs))
-              lang)))))
-
 
 
-(defun parse-feed (feed &key max-entries punt (sanitize-content t) (sanitize-titles t)
+(defun parse-feed (feed &key max-entries punt
+                             (sanitize-content t)
+                             (sanitize-titles t)
                              guid-mask)
   "Try to parse FEED.
 MAX-ENTRIES is the maximum number of entries to retrieve; GUID-MASK is
@@ -710,7 +698,6 @@ time you called PARSE-FEED."
                           (remove-if (lambda (entry)
                                        (find (@ entry :id) guid-mask :test #'equal))
                                      (@ feed :entries)))))))))
-    (setf (@ feed :language) (guess-language feed))
     feed))
 
 (defun parse-feed-safe (feed &key max-entries punt
