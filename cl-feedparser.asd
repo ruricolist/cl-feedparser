@@ -2,22 +2,18 @@
 
 (asdf:defsystem #:cl-feedparser
   :serial t
-  :description "Describe cl-feedparser here"
+  :description "Common Lisp universal feed parser"
   :author "Paul M. Rodriguez <pmr@ruricolist.com>"
-  :license "Specify license here"
+  :license "LLGPL"
   :depends-on (#:alexandria
                #:serapeum
-               #:trivial-shell
                #:anaphora
-               #:yason
-               #:cl-libxml2
                #:net-telent-date
                #:local-time
-               #:iterate
+               #:cl-libxml2
                #:sanitize
                #:cl-fad
-               #:cl-textcat
-               #:optima
-               #:optima.ppcre)
+               #:babel
+               #:markup-grinder)
   :components ((:file "package")
                (:file "cl-feedparser")))

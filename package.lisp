@@ -1,9 +1,6 @@
 ;;;; package.lisp
 
 (defpackage #:cl-feedparser
-  (:use #:cl #:serapeum #:alexandria #:anaphora #:iterate)
+  (:use #:cl #:serapeum #:alexandria #:anaphora)
   (:nicknames #:feedparser)
-  (:shadowing-import-from
-   #:serapeum
-   #:collecting #:in #:summing #:reducing #:maximizing #:minimizing #:repeat)
-  (:export #:parse-feed #:punt #:parse-feed-safe))
+  (:export #:parse-feed #:repair #:return-feed #:parse-feed-safe))

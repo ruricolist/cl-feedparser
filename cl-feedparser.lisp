@@ -4,66 +4,11 @@
 
 ;;; "cl-feedparser" goes here. Hacks and glory await!
 
-;; NB: Returned hash tables must always be EQUAL tables for use with
-;; Funes.
-
-(eval-and-compile
-  (defvar *base*
-    #.(fad:pathname-directory-pathname (or *compile-file-truename* *load-truename*))))
-
 (defparameter *version*
   "0.1")
 
-(defparameter *feedparser-version*
-  "5.1.3")
-
-(defparameter *feedparse-script*
-  (merge-pathnames #p"parse.py" *base*))
-
-(deftype limit ()
-  '(or null array-index))
-
-(defun name->keyword (name)
-  (make-keyword (upcase (join (words (string-downcase name)) #\-))))
-
-(defun parse-json (string)
-  (ignoring end-of-file
-    (yason:parse string :object-key-fn #'name->keyword)))
-
-(defmethod feedparse.py ((string string))
-  (with-input-from-string (in string)
-    (feedparse.py in)))
-
-(defmethod feedparse.py ((pathname pathname))
-  (with-open-file (in pathname
-                      :direction :input
-                      :element-type 'character)
-    (feedparse.py in)))
-
-(defmethod feedparse.py ((in stream))
-  ;; Parsing directly from the stream is slightly slower but conses a
-  ;; third as much.
-  (let-alias ((run-program
-               #+sbcl #'sb-ext:run-program
-               #+ccl  #'ccl:run-program)
-              (process-input
-               #+sbcl #'sb-ext:process-input
-               #+ccl  #'ccl:external-process-input-stream)
-              (process-output
-               #+sbcl #'sb-ext:process-output
-               #+ccl  #'ccl:external-process-output-stream))
-    (let* ((proc
-             (run-program
-              *feedparse-script*
-              '()
-              :wait nil
-              :pty nil
-              :input :stream
-              :output :stream)))
-      (with-open-stream (input  (process-input proc))
-        (copy-stream in input))
-      (with-open-stream (output (process-output proc))
-        (parse-json output)))))
+(defun version-string ()
+  (fmt "cl-feedparser ~a" *version*))
 
 
 
@@ -121,7 +66,8 @@
     (when x
       (sanitize:clean x +feed+))))
 
-(defparameter *title-sanitizer* *content-sanitizer*)
+(defparameter *title-sanitizer*
+  *content-sanitizer*)
 
 (defun sanitize-content (x)
   (funcall *content-sanitizer* x))
@@ -215,7 +161,12 @@
      ("http://www.w3.org/1999/xlink" .                          :xlink)
      ("http://www.w3.org/XML/1998/namespace" .                  :xml)
      ("http://podlove.org/simple-chapters" .                    :psc))
-   :test 'equal))
+   :test 'equal)
+  "Table from namespace to prefix.")
+
+(defparameter *namespace-prefixes*
+  (flip-hash-table *namespaces* :key #'string-downcase)
+  "Table from prefix to namespace.")
 
 (defun parse-feed-aux (input &key max-entries guid-mask)
   (let ((*feed* (dict))
@@ -227,24 +178,24 @@
                         :max-entries max-entries
                         :guid-mask guid-mask)))
 
-    (setf (gethash :parser *feed*) (fmt "cl-feedparser ~a" *version*))
+    (setf (gethash :parser *feed*) (version-string))
 
     (setf (gethash :author-detail *feed*) *author*)
 
-    ;; TODO Same for streams.
-    (when (stringp input)
-      (setf input (remove-if-not #'xml-character? input)))
-
-    (catch 'done
-      (parser-loop (cxml:make-source input)))
-
-    (setf (gethash :entries *feed*)
-          (nreverse (gethash :entries *feed*)))
-
-    (values *feed* *parser*)))
-
-(defun find-ns (uri)
-  (gethash uri *namespaces*))
+    (flet ((return-feed (&optional bozo)
+             (let ((feed *feed*))
+               (nreversef (gethash :entries feed))
+               (when bozo
+                 (setf (gethash :bozo feed) t))
+               (return-from parse-feed-aux
+                 (values feed *parser*)))))
+      (restart-case
+          (catch 'done
+            (parser-loop (cxml:make-source input)))
+        (return-feed ()
+          :report "Return what we have so far."
+          (return-feed t)))
+      (return-feed))))
 
 (defun parser-loop (*source* &key recursive)
   (let ((depth 0))
@@ -269,25 +220,34 @@
                      (return)))
                   (t (klacks:consume *source*))))))))
 
+(defun find-ns (uri)
+  (gethash uri *namespaces*))
+
 (defgeneric handle-tag (ns lname)
   (:method (ns lname) (declare (ignore ns lname))
     nil)
   (:method (ns (lname string))
-    (handle-tag ns (find-keyword lname))))
-
-(defun find-keyword (string)
-  (let ((id (with-output-to-string (s)
-              (loop for c across string
-                    if (upper-case-p c)
-                      do (write-char #\- s)
-                         (write-char c s)
-                    else do (write-char (char-upcase c) s)))))
-    (find-symbol id :keyword)))
+    (handle-tag ns (find-keyword (lispify lname)))))
 
 (defmacro defhandler (ns lname &body body)
   (with-gensyms (gns glname)
     `(defmethod handle-tag ((,gns (eql ,ns)) (,glname (eql ,lname)))
        ,@body)))
+
+(defun lispify (id)
+  "Convert ID from camel-case to hyphenated form."
+  ;; A little faster than a string stream.
+  (declare (optimize speed) (string id))
+  (let ((s (make-array 5
+                       :element-type 'character
+                       :adjustable t
+                       :fill-pointer 0)))
+    (loop for c across id
+          if (upper-case-p c)
+            do (vector-push-extend #\- s 2)
+               (vector-push c s)
+          else do (vector-push-extend c s)
+          finally (return (nstring-upcase s)))))
 
 (defmethod handle-tag ((ns null) (lname (eql :title)))
   (handle-title))
@@ -303,7 +263,7 @@
 
 (defun handle-title ()
   (when-let (text (get-text))
-    (let ((title (string-trim +whitespace+ (sanitize-title text))))
+    (let ((title (trim-whitespace (sanitize-title text))))
       (setf (gethash :title (or *entry* *feed*)) title))))
 
 (defhandler :atom :tagline
@@ -474,14 +434,14 @@
           (get-timestring))))
 
 (defun get-timestring ()
-  (when-let ((string (get-text)))
+  (when-let (string (get-text))
     (values string (parse-timestring string))))
 
 (defun parse-timestring (timestring)
   (or (net.telent.date:parse-time timestring)
-      (ignore-errors
-       (local-time:timestamp-to-universal
-        (local-time:parse-timestring timestring)))))
+      (ignoring local-time::invalid-timestring ;XXX
+        (local-time:timestamp-to-universal
+         (local-time:parse-timestring timestring)))))
 
 (defmethod handle-tag ((ns null) (lname (eql :ttl)))
   (when-let (string (get-text))
@@ -510,8 +470,10 @@
   (get-summary))
 
 (defmethod handle-tag ((ns (eql :feedburner)) (lname (eql :orig-link)))
-  (setf (gethash :link *entry*)
-        (get-text)))
+  ;; Eg. 3QD.
+  (when *entry*
+    (setf (gethash :link *entry*)
+          (get-text))))
 
 (defmethod handle-tag ((ns (eql :content)) (lname (eql :encoded)))
   (get-entry-content))
@@ -532,8 +494,6 @@
   (setf (values (gethash :updated *entry*)
                 (gethash :updated-parsed *entry*))
         (get-timestring)))
-
-;; TODO Handle XHTML.
 
 (defun get-entry-content ()
   (push (get-content) (@ *entry* :content)))
@@ -577,12 +537,12 @@
   (let ((ns (slot-value *source* 'cxml::namespace-stack)))
     (klacks:find-element *source* "div")
     (let ((value
-            (flex:octets-to-string
+            (babel:octets-to-string
              (let ((out (make-instance 'absolute-uri-handler
                                        :handlers (list (cxml:make-octet-vector-sink))
                                        :base (klacks:current-xml-base *source*))))
                (klacks:serialize-element *source* out :document-events t))
-             :external-format :utf-8)))
+             :encoding :utf-8)))
       (setf (@ content :value) (sanitize-content value)
             (@ content :type)  "text/html"
             (@ content :base)  (klacks:current-xml-base *source*))
@@ -637,16 +597,6 @@
     (ignoring puri:uri-parse-error
       (puri:merge-uris uri base))))
 
-(defun xml-character? (c)
-  (declare (optimize speed))
-  (let ((code (char-code c)))
-    (declare (dynamic-extent code))
-    (or (<= 32 code #xd7ff)
-        (case code ((9 10 13) t))
-        #+rune-is-utf-16 (<= #xD800 code #xDFFF)
-        (<= #xe000 code #xfffd)
-        #-rune-is-utf-16 (<= #x10000 code #x10ffff))))
-
 (defun get-text ()
   (when (eql (klacks:peek *source*) :characters)
     (with-output-to-string (s)
@@ -655,10 +605,12 @@
 
 
 
-(defun parse-feed (feed &key max-entries punt
+(defun parse-feed (feed &rest args
+                        &key max-entries
                              (sanitize-content t)
                              (sanitize-titles t)
-                             guid-mask)
+                             guid-mask
+                             repaired)
   "Try to parse FEED.
 MAX-ENTRIES is the maximum number of entries to retrieve; GUID-MASK is
 a list of GUIDs of entries that are already known to the caller and
@@ -666,50 +618,50 @@ thus not of interest.
 
 Note that MAX-ENTRIES and GUID-MASK are, in effect, applied
 successively, as though MAX-ENTRIES were taken and then filtered by
-guid. (Actually entries with recognized GUIDs are never parsed.)
+GUID. (Actually, entries with recognized GUIDs are never even parsed.)
+
 Consider a feed with thousands of entries (they do exist): if the mask
 were applied first, you would get another set of older entries each
 time you called PARSE-FEED."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
-  (check-type max-entries limit)
   (let ((feed
-          (if punt
-              (lret ((feed (or (ignore-errors (feedparse.py feed))
-                               (dict))))
-                (setf (@ feed :parser)
-                      (fmt "feedparser ~a" *feedparser-version*)))
-              (restart-case
-                  (let ((*content-sanitizer*
-                          (if (not sanitize-content)
-                              #'identity
-                              *content-sanitizer*))
-                        (*title-sanitizer*
-                          (if (not sanitize-titles)
-                              #'identity
-                              *title-sanitizer*)))
-                    (parse-feed-aux feed
-                                    :max-entries max-entries
-                                    :guid-mask guid-mask))
-                (punt ()
-                  :report "Punt to feedparser.py."
-                  (lret ((feed (parse-feed feed :max-entries max-entries :punt t)))
-                    (setf (@ feed :entries)
-                          (remove-if (lambda (entry)
-                                       (find (@ entry :id) guid-mask :test #'equal))
-                                     (@ feed :entries)))))))))
+          (restart-case
+              (let ((*content-sanitizer*
+                      (if (not sanitize-content)
+                          #'identity
+                          *content-sanitizer*))
+                    (*title-sanitizer*
+                      (if (not sanitize-titles)
+                          #'identity
+                          *title-sanitizer*)))
+                (parse-feed-aux feed
+                                :max-entries max-entries
+                                :guid-mask guid-mask))
+            (repair ()
+              :report "Try to repair the XML document and try again."
+              :test (lambda (c) (declare (ignore c))
+                      (not repaired))
+              (let* ((repaired (markup-grinder:grind feed
+                                                     (cxml:make-string-sink)
+                                                     :extra-namespaces *namespace-prefixes*)))
+                (aprog1 (apply #'parse-feed repaired :repaired t args)
+                  (setf (gethash :bozo it) t)))))))
     feed))
 
-(defun parse-feed-safe (feed &key max-entries punt
+(defun parse-feed-safe (feed &key max-entries
                                   (sanitize-content t)
                                   (sanitize-titles t)
                                   guid-mask)
-  "Try to parse FEED, possibly punting to feedparser.py."
+  "Try to parse FEED.
+If FEED is invalid XML, try to repair it.
+If FEED cannot be repaired, return a best-faith attempt."
   (handler-bind ((error
                    (lambda (c) (declare (ignore c))
-                     (invoke-restart 'punt))))
+                     (when-let (restart (or (find-restart 'repair)
+                                            (find-restart 'return-feed)))
+                       (invoke-restart restart)))))
     (parse-feed feed :max-entries max-entries
-                     :punt punt
                      :guid-mask guid-mask
                      :sanitize-content sanitize-content
                      :sanitize-titles sanitize-titles)))
