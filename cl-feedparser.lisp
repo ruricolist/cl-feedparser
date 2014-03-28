@@ -12,7 +12,7 @@
 
 
 
-(sanitize:define-sanitize-mode +feed+
+(sax-sanitize:define-sanitize-mode feed
   :elements ("a" "abbr" "acronym" "address" "area" "aside" "audio"
                  "b" "big" "bdo" "blockquote" "br"
                  "caption" "center" "cite" "code" "col" "colgroup"
@@ -44,7 +44,7 @@
                ("img"        . ("align" "alt" "height" "src" "width"))
                ("ins"        . ("cite" "datetime"))
                ("ol"         . ("start" "reversed" "type"))
-               ("p"          . ("align" "style")) ;XXX
+               ("p"          . ("align")) ;XXX style?
                ("q"          . ("cite"))
                ("table"      . ("summary" "width"))
                ("td"         . ("abbr" "axis" "colspan" "rowspan" "width"))
@@ -59,21 +59,28 @@
               ("ins"         . (("cite" . (:http :https :relative))))
               ("q"           . (("cite" . (:http :https :relative))))))
 
-(declaim (function *content-sanitizer* *title-sanitizer*))
+(defun clean (x &optional (sanitizer feed))
+  (html5-sax:serialize-dom
+   (html5-parser:parse-html5 x)
+   (sax-sanitize:wrap-sanitize (html5-sax:make-html5-sink)
+                               sanitizer)))
 
-(defvar *content-sanitizer*
+(def default-sanitizer
   (lambda (x)
     (when x
-      (sanitize:clean x +feed+))))
+      (clean x))))
 
-(defparameter *title-sanitizer*
-  *content-sanitizer*)
+(declaim (function *content-sanitizer* *title-sanitizer*))
+
+(defparameter *content-sanitizer* default-sanitizer)
+
+(defparameter *title-sanitizer* default-sanitizer)
 
 (defun sanitize-content (x)
   (funcall *content-sanitizer* x))
 
 (defun sanitize-title (x)
-  (funcall *title-sanitizer* x))
+  (clean x sax-sanitize:restricted))
 
 
 
@@ -85,16 +92,16 @@
 (defvar *content*)
 (defvar *links*)
 (defvar *author*)
-(defvar *path*)
 (defvar *disabled*)
 
 (defclass parser ()
   ((max-entries :initarg :max-entries :accessor parser-max-entries)
    (entries-count :initform 0 :accessor parser-entries-count)
-   (guid-mask   :initarg :guid-mask   :accessor parser-guid-mask))
-  (:default-initargs :guid-mask nil :max-entries nil))
+   (guid-mask :initarg :guid-mask :accessor parser-guid-mask))
+  (:default-initargs :guid-mask nil
+                     :max-entries nil))
 
-(defparameter *namespaces*
+(def namespaces
   (alist-hash-table
    '(("http://backend.userland.com/rss" . nil)
      ("http://blogs.law.harvard.edu/tech/rss" . nil)
@@ -164,64 +171,59 @@
    :test 'equal)
   "Table from namespace to prefix.")
 
-(defparameter *namespace-prefixes*
-  (flip-hash-table *namespaces* :key #'string-downcase)
+(def namespace-prefixes
+  (flip-hash-table namespaces :key #'string-downcase)
   "Table from prefix to namespace.")
 
+(defun find-ns (uri)
+  (gethash uri namespaces))
+
 (defun parse-feed-aux (input &key max-entries guid-mask)
-  (let ((*feed* (dict))
-        (*author* (dict))
-        (*entry* nil)
-        (*path* nil)
-        (*disabled* nil)
-        (*parser* (make 'parser
-                        :max-entries max-entries
-                        :guid-mask guid-mask)))
+  (let* ((*entry* nil)
+         (*disabled* nil)
+         (author (dict))
+         (*author* author)
+         (parser (make 'parser
+                       :max-entries max-entries
+                       :guid-mask guid-mask))
+         (*parser* parser)
+         (feed (dict :parser (version-string)
+                     :author-detail *author*))
+         (*feed* feed))
 
-    (setf (gethash :parser *feed*) (version-string))
-
-    (setf (gethash :author-detail *feed*) *author*)
-
-    (flet ((return-feed (&optional bozo)
-             (let ((feed *feed*))
-               (nreversef (gethash :entries feed))
-               (when bozo
-                 (setf (gethash :bozo feed) t))
-               (return-from parse-feed-aux
-                 (values feed *parser*)))))
+    (flet ((return-feed (&key bozo)
+             (nreversef (gethash :entries feed))
+             (when bozo
+               (setf (gethash :bozo feed) t))
+             (return-from parse-feed-aux
+               (values feed parser))))
       (restart-case
           (catch 'done
             (parser-loop (cxml:make-source input)))
         (return-feed ()
-          :report "Return what we have so far."
-          (return-feed t)))
+          :report "Return whatever we have so far."
+          (return-feed :bozo t)))
       (return-feed))))
 
 (defun parser-loop (*source* &key recursive)
   (let ((depth 0))
     (loop (let ((event (klacks:peek *source*)))
-            (if (not event)
-                (return)
-                (case event
-                  (:start-element
-                   (incf depth)
-                   (multiple-value-bind (ev uri lname)
-                       (klacks:consume *source*)
-                     (declare (ignore ev))
-                     (push lname *path*)
-                     (unless *disabled*
-                       (handle-tag (find-ns uri) lname))))
-                  (:end-element
-                   (decf depth)
-                   (pop *path*)
+            (unless event
+              (return))
+            (case event
+              (:start-element
+               (incf depth)
+               (multiple-value-bind (ev uri lname)
                    (klacks:consume *source*)
-
-                   (when (and recursive (minusp depth))
-                     (return)))
-                  (t (klacks:consume *source*))))))))
-
-(defun find-ns (uri)
-  (gethash uri *namespaces*))
+                 (declare (ignore ev))
+                 (unless *disabled*
+                   (handle-tag (find-ns uri) lname))))
+              (:end-element
+               (decf depth)
+               (klacks:consume *source*)
+               (when (and recursive (minusp depth))
+                 (return)))
+              (t (klacks:consume *source*)))))))
 
 (defgeneric handle-tag (ns lname)
   (:method (ns lname) (declare (ignore ns lname))
@@ -249,16 +251,16 @@
           else do (vector-push-extend c s)
           finally (return (nstring-upcase s)))))
 
-(defmethod handle-tag ((ns null) (lname (eql :title)))
+(defhandler nil :title
   (handle-title))
 
-(defmethod handle-tag ((ns (eql :atom)) (lname (eql :title)))
+(defhandler :atom :title
   (handle-title))
 
-(defmethod handle-tag ((ns (eql :dc)) (lname (eql :title)))
+(defhandler :dc :title
   (handle-title))
 
-(defmethod handle-tag ((ns (eql :rdf)) (lname (eql :title)))
+(defhandler :rdf :title
   (handle-title))
 
 (defun handle-title ()
@@ -398,9 +400,10 @@
   (when-let (content (get-content))
     (let ((entry *entry*))
       (if (not entry)
-          (setf (gethash :subtitle *feed*) (@ content :value))
-          (setf (@ entry :summary) (@ content :value)
-                (@ entry :summary-detail) content)))))
+          (setf (gethash :subtitle *feed*)
+                (gethash :value content))
+          (setf (gethash :summary entry) (gethash :value content)
+                (gethash :summary-detail entry) content)))))
 
 (defmethod handle-tag ((ns null) (lname (eql :pub-date)))
   (read-pubdate))
@@ -496,12 +499,12 @@
         (get-timestring)))
 
 (defun get-entry-content ()
-  (push (get-content) (@ *entry* :content)))
+  (push (get-content) (gethash :content *entry*)))
 
 (defun get-content ()
   (let ((type (klacks:get-attribute *source* "type"))
         (content (dict)))
-    (setf (@ content :base) (klacks:current-xml-base *source*))
+    (setf (gethash :base content) (klacks:current-xml-base *source*))
     (if (equal type "xhtml")
         (get-xhtml-content content)
         (get-text-content content))
@@ -510,8 +513,8 @@
 (defun get-text-content (content)
   (let* ((attrs (klacks:list-attributes *source*))
          (string (sanitize-content (get-text))))
-    (setf (@ content :value) string
-          (@ content :type)  (guess-type string attrs))
+    (setf (gethash :value content) string
+          (gethash :type content)  (guess-type string attrs))
     content))
 
 (defclass absolute-uri-handler (cxml:broadcast-handler)
@@ -536,16 +539,20 @@
   ;; rest of the document in as XHTML.
   (let ((ns (slot-value *source* 'cxml::namespace-stack)))
     (klacks:find-element *source* "div")
-    (let ((value
-            (babel:octets-to-string
-             (let ((out (make-instance 'absolute-uri-handler
-                                       :handlers (list (cxml:make-octet-vector-sink))
-                                       :base (klacks:current-xml-base *source*))))
-               (klacks:serialize-element *source* out :document-events t))
-             :encoding :utf-8)))
-      (setf (@ content :value) (sanitize-content value)
-            (@ content :type)  "text/html"
-            (@ content :base)  (klacks:current-xml-base *source*))
+    (let* ((can-sanitize/sax (eql *content-sanitizer* default-sanitizer))
+           (value
+             (let ((handler (make-instance 'absolute-uri-handler
+                                           :handlers (list (html5-sax:make-html5-sink))
+                                           :base (klacks:current-xml-base *source*))))
+               (when can-sanitize/sax
+                 (setf handler (sax-sanitize:wrap-sanitize handler feed)))
+               (klacks:serialize-element *source* handler :document-events t))))
+      (setf (gethash :value content)
+            (if can-sanitize/sax
+                value
+                (sanitize-content value))
+            (gethash :type content)  "text/html"
+            (gethash :base content)  (klacks:current-xml-base *source*))
       (setf (slot-value *source* 'cxml::namespace-stack) ns)
       content)))
 
@@ -643,8 +650,8 @@ time you called PARSE-FEED."
               :test (lambda (c) (declare (ignore c))
                       (not repaired))
               (let* ((repaired (markup-grinder:grind feed
-                                                     (cxml:make-string-sink)
-                                                     :extra-namespaces *namespace-prefixes*)))
+                                                     (cxml:make-string-sink :indentation nil)
+                                                     :extra-namespaces namespace-prefixes)))
                 (aprog1 (apply #'parse-feed repaired :repaired t args)
                   (setf (gethash :bozo it) t)))))))
     feed))
