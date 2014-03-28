@@ -12,6 +12,11 @@
 
 
 
+(def empty-uri (puri:parse-uri ""))
+
+(defparameter *allow-protocols*
+  '(:http :https :relative))
+
 (sax-sanitize:define-sanitize-mode feed
   :elements ("a" "abbr" "acronym" "address" "area" "aside" "audio"
                  "b" "big" "bdo" "blockquote" "br"
@@ -323,7 +328,7 @@
 
     (when (and href (or (not rel) (equal rel "alternate")))
       (setf (gethash :link (or *entry* *feed*))
-            (resolve-uri href)))
+            href))
 
     (setf (gethash :rel link) rel
           (gethash :type link) type
@@ -354,7 +359,7 @@
   (get-author))
 
 (defun get-author ()
-  (let* ((author (get-text))
+  (let* ((author (sanitize-title (get-text)))
          (email? (find #\@ author))
          creator)
 
@@ -438,6 +443,7 @@
 
 (defun get-timestring ()
   (when-let (string (get-text))
+    (setf string (sanitize-title string))
     (values string (parse-timestring string))))
 
 (defun parse-timestring (timestring)
@@ -476,7 +482,7 @@
   ;; Eg. 3QD.
   (when *entry*
     (setf (gethash :link *entry*)
-          (get-text))))
+          (resolve-uri (get-text)))))
 
 (defmethod handle-tag ((ns (eql :content)) (lname (eql :encoded)))
   (get-entry-content))
@@ -601,8 +607,13 @@
 
 (defun resolve-uri (uri)
   (let ((base (klacks:current-xml-base *source*)))
-    (ignoring puri:uri-parse-error
-      (puri:merge-uris uri base))))
+    (or (ignoring puri:uri-parse-error
+          (let* ((uri (puri:merge-uris uri base))
+                 (protocol (or (puri:uri-scheme uri)
+                               :relative)))
+            (when (member protocol *allow-protocols*)
+              uri)))
+        empty-uri)))
 
 (defun get-text ()
   (when (eql (klacks:peek *source*) :characters)
