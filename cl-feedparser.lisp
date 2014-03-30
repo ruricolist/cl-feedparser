@@ -269,8 +269,8 @@
   (handle-title))
 
 (defun handle-title ()
-  (when-let (text (get-text))
-    (let ((title (trim-whitespace (sanitize-title text))))
+  (when-let (text (get-text-safe))
+    (let ((title (trim-whitespace text)))
       (setf (gethash :title (or *entry* *feed*)) title))))
 
 (defhandler :atom :tagline
@@ -303,7 +303,7 @@
   (handle-tag :atom :rights))
 
 (defun handle-subtitle ()
-  (when-let (text (sanitize-title (get-text)))
+  (when-let (text (get-text-safe))
     (setf (gethash :subtitle *feed*) text)))
 
 (defmethod handle-tag ((ns null) (lname (eql :link)))
@@ -338,12 +338,13 @@
     (push link (gethash :links (or *entry* *feed*)))))
 
 (defhandler :atom :name
-  (let ((name (get-text)))
+  (let ((name (get-text-safe sax-sanitize:default)))
     (setf (gethash :author (or *entry* *feed*)) name
           (gethash :name *author*) name)))
 
 (defhandler :atom :email
-  (setf (gethash :email *author*) (get-text)))
+  (setf (gethash :email *author*)
+        (get-text-safe sax-sanitize:default)))
 
 (defhandler :atom :uri
   (setf (gethash :uri *author*)
@@ -359,7 +360,7 @@
   (get-author))
 
 (defun get-author ()
-  (let* ((author (sanitize-title (get-text)))
+  (let* ((author (get-text-safe sax-sanitize:default))
          (email? (find #\@ author))
          creator)
 
@@ -442,8 +443,7 @@
           (get-timestring))))
 
 (defun get-timestring ()
-  (when-let (string (get-text))
-    (setf string (sanitize-title string))
+  (when-let (string (get-text-safe))
     (values string (parse-timestring string))))
 
 (defun parse-timestring (timestring)
@@ -582,10 +582,19 @@
   ;; TODO use guid-mask
   (let ((entry (handle-entry)))
     (when-let (id (klacks:get-attribute *source* "about"))
+      (check-guid-mask id)
       (setf (gethash :id entry) id))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :entry)))
   (handle-entry))
+
+(defun ensure-entry-id (entry)
+  "Substitute link for ID if there is none."
+  (ensure2 (gethash :id entry)
+    (when-let (id (gethash :link entry))
+      (let ((id (princ-to-string id)))
+        (check-guid-mask id)
+        id))))
 
 (defun handle-entry ()
   (let ((count (finc (parser-entries-count *parser*)))
@@ -599,6 +608,8 @@
 
           (let ((*disabled* *disabled*))
             (parser-loop *source* :recursive t)
+            ;; Ensure an ID.
+            (ensure-entry-id *entry*)
             (unless *disabled*
               (push *entry* (gethash :entries *feed*))))
 
@@ -620,6 +631,10 @@
     (with-output-to-string (s)
       (loop while (eql (klacks:peek *source*) :characters)
             do (write-string (nth-value 1 (klacks:consume *source*)) s)))))
+
+(defun get-text-safe (&optional (sanitizer sax-sanitize:restricted))
+  (when-let (text (get-text))
+    (clean text sanitizer)))
 
 
 
@@ -674,12 +689,16 @@ time you called PARSE-FEED."
   "Try to parse FEED.
 If FEED is invalid XML, try to repair it.
 If FEED cannot be repaired, return a best-faith attempt."
-  (handler-bind ((error
-                   (lambda (c) (declare (ignore c))
-                     (when-let (restart (or (find-restart 'repair)
-                                            (find-restart 'return-feed)))
-                       (invoke-restart restart)))))
-    (parse-feed feed :max-entries max-entries
-                     :guid-mask guid-mask
-                     :sanitize-content sanitize-content
-                     :sanitize-titles sanitize-titles)))
+  (let (e)
+    (flet ((parse-feed-safe ()
+             (handler-bind ((error
+                              (lambda (c)
+                                (when-let (restart (or (find-restart 'repair)
+                                                       (find-restart 'return-feed)))
+                                  (setf e c)
+                                  (invoke-restart restart)))))
+               (parse-feed feed :max-entries max-entries
+                                :guid-mask guid-mask
+                                :sanitize-content sanitize-content
+                                :sanitize-titles sanitize-titles))))
+      (values (parse-feed-safe) e))))
