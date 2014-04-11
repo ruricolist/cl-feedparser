@@ -540,27 +540,41 @@
                   attrs)))
       (call-next-method handler ns lname qname attrs))))
 
-(defun get-xhtml-content (content)
-  ;; HACK: Unless we clear the namespace stack CXML tries to read the
+(defvar *in-xhtml* nil)
+
+(defmethod handle-tag :around ((ns (eql :xhtml)) lname)
+  ;; HACK: Unless we reset the namespace stack CXML tries to read the
   ;; rest of the document in as XHTML.
-  (let ((ns (slot-value *source* 'cxml::namespace-stack)))
-    (klacks:find-element *source* "div")
-    (let* ((can-sanitize/sax (eql *content-sanitizer* default-sanitizer))
-           (value
-             (let ((handler (make-instance 'absolute-uri-handler
-                                           :handlers (list (html5-sax:make-html5-sink))
-                                           :base (klacks:current-xml-base *source*))))
-               (when can-sanitize/sax
-                 (setf handler (sax-sanitize:wrap-sanitize handler feed)))
-               (klacks:serialize-element *source* handler :document-events t))))
-      (setf (gethash :value content)
-            (if can-sanitize/sax
-                value
-                (sanitize-content value))
-            (gethash :type content)  "text/html"
-            (gethash :base content)  (klacks:current-xml-base *source*))
-      (setf (slot-value *source* 'cxml::namespace-stack) ns)
-      content)))
+  (declare (ignore lname))
+  (if *in-xhtml*
+      (call-next-method)
+      (let ((*in-xhtml* t))
+        (with-slots ((stack1 cxml::current-namespace-declarations)
+                     (stack2 cxml::namespace-stack))
+            *source*
+          (let ((saved-stack1 stack1)
+                (saved-stack2 stack2))
+            (multiple-value-prog1 (call-next-method)
+              (setf stack1 saved-stack1
+                    stack2 saved-stack2)))))))
+
+(defun get-xhtml-content (content)
+  (klacks:find-element *source* "div")
+  (let* ((can-sanitize/sax (eql *content-sanitizer* default-sanitizer))
+         (value
+           (let ((handler (make-instance 'absolute-uri-handler
+                                         :handlers (list (html5-sax:make-html5-sink))
+                                         :base (klacks:current-xml-base *source*))))
+             (when can-sanitize/sax
+               (setf handler (sax-sanitize:wrap-sanitize handler feed)))
+             (klacks:serialize-element *source* handler :document-events t))))
+    (setf (gethash :value content)
+          (if can-sanitize/sax
+              value
+              (sanitize-content value))
+          (gethash :type content)  "text/html"
+          (gethash :base content)  (klacks:current-xml-base *source*))
+    content))
 
 (defun guess-type (value attrs)
   (when-let (attr (find "type" attrs :test 'equal :key #'sax:attribute-local-name))
@@ -668,9 +682,10 @@ time you called PARSE-FEED."
                       (if (not sanitize-titles)
                           #'identity
                           *title-sanitizer*)))
-                (parse-feed-aux feed
-                                :max-entries max-entries
-                                :guid-mask guid-mask))
+                (dict* (parse-feed-aux feed
+                                       :max-entries max-entries
+                                       :guid-mask guid-mask)
+                       :bozo nil))
             (repair ()
               :report "Try to repair the XML document and try again."
               :test (lambda (c) (declare (ignore c))
@@ -678,8 +693,8 @@ time you called PARSE-FEED."
               (let* ((repaired (markup-grinder:grind feed
                                                      (cxml:make-string-sink :indentation nil)
                                                      :extra-namespaces namespace-prefixes)))
-                (aprog1 (apply #'parse-feed repaired :repaired t args)
-                  (setf (gethash :bozo it) t)))))))
+                (dict* (apply #'parse-feed repaired :repaired t args)
+                       :bozo t))))))
     feed))
 
 (defun parse-feed-safe (feed &key max-entries
