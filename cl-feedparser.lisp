@@ -17,7 +17,23 @@
 (defparameter *allow-protocols*
   '(:http :https :relative))
 
-(sax-sanitize:define-sanitize-mode feed
+(defstruct (unsanitized-string (:constructor make-unsanitized-string (string)))
+  (string "" :type string))
+
+(defun string+ (&rest strings)
+  (let* ((unsanitized nil)
+         (s (with-output-to-string (s)
+              (dolist (string strings)
+                (etypecase string
+                  (string (write-string string s))
+                  (unsanitized-string
+                   (setf unsanitized t)
+                   (write-string (unsanitized-string-string string) s)))))))
+    (if unsanitized
+        (make-unsanitized-string s)
+        s)))
+
+(sax-sanitize:define-sanitize-mode feed-sanitizer
   :elements ("a" "abbr" "acronym" "address" "area" "aside" "audio"
                  "b" "big" "bdo" "blockquote" "br"
                  "caption" "center" "cite" "code" "col" "colgroup"
@@ -64,7 +80,7 @@
               ("ins"         . (("cite" . (:http :https :relative))))
               ("q"           . (("cite" . (:http :https :relative))))))
 
-(defun clean (x &optional (sanitizer feed))
+(defun clean (x &optional (sanitizer feed-sanitizer))
   (html5-sax:serialize-dom
    (html5-parser:parse-html5 x)
    (sax-sanitize:wrap-sanitize (html5-sax:make-html5-sink)
@@ -75,17 +91,22 @@
     (when x
       (clean x))))
 
-(declaim (function *content-sanitizer* *title-sanitizer*))
+(def default-title-sanitizer
+  (lambda (x)
+    (when x
+      (clean x sax-sanitize:restricted))))
+
+(declaim (type function *content-sanitizer* *title-sanitizer*))
 
 (defparameter *content-sanitizer* default-sanitizer)
 
-(defparameter *title-sanitizer* default-sanitizer)
+(defparameter *title-sanitizer* default-title-sanitizer)
 
 (defun sanitize-content (x)
   (funcall *content-sanitizer* x))
 
 (defun sanitize-title (x)
-  (clean x sax-sanitize:restricted))
+  (funcall *title-sanitizer* x))
 
 
 
@@ -283,14 +304,14 @@
   (handle-subtitle))
 
 (defhandler :atom :info
-  (when-let (text (sanitize-content (get-text)))
+  (when-let (text (sanitize-title (get-text)))
     (setf (gethash :info *feed*) text)))
 
 (defhandler :feedburner :browser-friendly
   (handle-tag :atom :info))
 
 (defhandler :atom :rights
-  (when-let (text (sanitize-content (get-text)))
+  (when-let (text (sanitize-title (get-text)))
     (setf (gethash :rights *feed*) text)))
 
 (defhandler :atom :copyright
@@ -403,13 +424,13 @@
   (get-summary))
 
 (defun get-summary ()
-  (when-let (content (get-content))
-    (let ((entry *entry*))
-      (if (not entry)
-          (setf (gethash :subtitle *feed*)
-                (gethash :value content))
-          (setf (gethash :summary entry) (gethash :value content)
-                (gethash :summary-detail entry) content)))))
+  (if-let (entry *entry*)
+    (when-let (content (get-content))
+      (setf (gethash :summary entry) (gethash :value content)
+            (gethash :summary-detail entry) content))
+
+    (setf (gethash :subtitle *feed*)
+          (sanitize-title (get-text)))))
 
 (defmethod handle-tag ((ns null) (lname (eql :pub-date)))
   (read-pubdate))
@@ -566,7 +587,7 @@
                                          :handlers (list (html5-sax:make-html5-sink))
                                          :base (klacks:current-xml-base *source*))))
              (when can-sanitize/sax
-               (setf handler (sax-sanitize:wrap-sanitize handler feed)))
+               (setf handler (sax-sanitize:wrap-sanitize handler feed-sanitizer)))
              (klacks:serialize-element *source* handler :document-events t))))
     (setf (gethash :value content)
           (if can-sanitize/sax
@@ -669,18 +690,21 @@ GUID. (Actually, entries with recognized GUIDs are never even parsed.)
 
 Consider a feed with thousands of entries (they do exist): if the mask
 were applied first, you would get another set of older entries each
-time you called PARSE-FEED."
+time you called PARSE-FEED.
+
+Sanitizing content can be turned off with SANITIZE-CONTENT (defaults
+to T). Sanitizing titles cannot be turned off."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (let ((feed
           (restart-case
               (let ((*content-sanitizer*
                       (if (not sanitize-content)
-                          #'identity
+                          #'make-unsanitized-string
                           *content-sanitizer*))
                     (*title-sanitizer*
                       (if (not sanitize-titles)
-                          #'identity
+                          #'make-unsanitized-string
                           *title-sanitizer*)))
                 (dict* (parse-feed-aux feed
                                        :max-entries max-entries
@@ -697,10 +721,7 @@ time you called PARSE-FEED."
                        :bozo t))))))
     feed))
 
-(defun parse-feed-safe (feed &key max-entries
-                                  (sanitize-content t)
-                                  (sanitize-titles t)
-                                  guid-mask)
+(defun parse-feed-safe (feed &rest args &key &allow-other-keys)
   "Try to parse FEED.
 If FEED is invalid XML, try to repair it.
 If FEED cannot be repaired, return a best-faith attempt."
@@ -712,8 +733,5 @@ If FEED cannot be repaired, return a best-faith attempt."
                                                        (find-restart 'return-feed)))
                                   (setf e c)
                                   (invoke-restart restart)))))
-               (parse-feed feed :max-entries max-entries
-                                :guid-mask guid-mask
-                                :sanitize-content sanitize-content
-                                :sanitize-titles sanitize-titles))))
+               (apply #'parse-feed feed args))))
       (values (parse-feed-safe) e))))
