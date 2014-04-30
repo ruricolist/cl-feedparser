@@ -483,10 +483,14 @@
 
 (defmethod handle-tag ((ns null) (lname (eql :guid)))
   ;; todo rdf:about
-  (when-let (id (get-text))
-    (when *entry*
-      (check-guid-mask id)
-      (setf (gethash :id *entry*) id))))
+  (when-let (entry *entry*)
+    (let ((permalinkp (klacks:get-attribute *source* "isPermaLink"))
+          (id (get-text)))
+      (when id
+        (check-guid-mask id)
+        (setf (href entry :id) id)
+        (when (and permalinkp (equal permalinkp "true"))
+          (setf (href entry :link) (resolve-uri id)))))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :id)))
   (let ((id (get-text)))
@@ -662,14 +666,17 @@
         empty-uri)))
 
 (defun get-text ()
-  (when (eql (klacks:peek *source*) :characters)
-    (with-output-to-string (s)
-      (loop while (eql (klacks:peek *source*) :characters)
-            do (write-string (nth-value 1 (klacks:consume *source*)) s)))))
+  (if (not (eql (klacks:peek *source*) :characters))
+      ""
+      (with-output-to-string (s)
+        (loop while (eql (klacks:peek *source*) :characters)
+              do (write-string (nth-value 1 (klacks:consume *source*)) s)))))
 
 (defun get-text-safe (&optional (sanitizer sax-sanitize:restricted))
-  (when-let (text (get-text))
-    (clean text sanitizer)))
+  (let ((text (get-text)))
+    (if (emptyp text)
+        text
+        (clean text sanitizer))))
 
 
 
@@ -693,7 +700,7 @@ were applied first, you would get another set of older entries each
 time you called PARSE-FEED.
 
 Sanitizing content can be turned off with SANITIZE-CONTENT (defaults
-to T). Sanitizing titles cannot be turned off."
+to T). SANITIZE-TITLES controls sanitizing titles."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (let ((feed
