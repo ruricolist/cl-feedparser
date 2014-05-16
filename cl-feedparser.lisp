@@ -18,9 +18,12 @@
   '(:http :https :relative))
 
 (defstruct (unsanitized-string (:constructor make-unsanitized-string (string)))
+  "Wrapper for an unsanitized string."
   (string "" :type string))
 
 (defun string+ (&rest strings)
+  "Concatenate STRINGS, ensuring that if any are unsanitized, the
+result is an unsanitized string."
   (let* ((unsanitized nil)
          (s (with-output-to-string (s)
               (dolist (string strings)
@@ -128,104 +131,121 @@
                      :max-entries nil))
 
 (def namespaces
-  (dict
-   "http://backend.userland.com/rss" nil
-   "http://blogs.law.harvard.edu/tech/rss" nil
-   "http://purl.org/rss/1.0/" nil
-   "http://my.netscape.com/rdf/simple/0.9/" nil
-   "http://example.com/newformat#" nil
-   "http://example.com/necho" nil
-   "http://purl.org/echo/" nil
-   "uri/of/echo/namespace#" nil
-   "http://purl.org/pie/" nil
-   "http://purl.org/atom/ns#" :atom    ;atom03
-   "http://www.w3.org/2005/Atom" :atom ;atom10
-   "http://purl.org/rss/1.0/modules/rss091#" nil
-   "http://www.bloglines.com/about/specs/fac-1.0"             :access
-   "http://webns.net/mvcb/"                                   :admin
-   "http://purl.org/rss/1.0/modules/aggregation/"             :ag
-   "http://purl.org/rss/1.0/modules/annotate/"                :annotate
-   "http://www.w3.org/2007/app"                               :app
-   "http://media.tangent.org/rss/1.0/"                        :audio
-   "http://backend.userland.com/blogChannelModule"            :blog-channel
-   "http://web.resource.org/cc/"                              :cc
-   "http://www.microsoft.com/schemas/rss/core/2005"           :cf
-   "http://backend.userland.com/creativeCommonsRssModule"     :creative-commons
-   "http://purl.org/rss/1.0/modules/company"                  :co
-   "http://purl.org/rss/1.0/modules/content/"                 :content
-   "http://conversationsnetwork.org/rssNamespace-1.0/"        :conversations-network
-   "http://my.theinfo.org/changed/1.0/rss/"                   :cp
-   "http://purl.org/dc/elements/1.1/"                         :dc
-   "http://purl.org/dc/terms/"                                :dcterms
-   "http://purl.org/rss/1.0/modules/email/"                   :email
-   "http://purl.org/rss/1.0/modules/event/"                   :ev
-   "http://rssnamespace.org/feedburner/ext/1.0"               :feedburner
-   "http://purl.org/syndication/history/1.0"                  :fh
-   "http://freshmeat.net/rss/fm/"                             :fm
-   "http://xmlns.com/foaf/0.1"                                :foaf
-   "http://xmlns.com/foaf/0.1/"                               :foaf
-   "http://www.w3.org/2003/01/geo/wgs84_pos#"                 :geo
-   "http://www.georss.org/georss"                             :georss
-   "http://geourl.org/rss/module/"                            :geourl
-   "http://base.google.com/ns/1.0"                            :g
-   "http://www.opengis.net/gml"                               :gml
-   "http://postneo.com/icbm/"                                 :icbm
-   "http://purl.org/rss/1.0/modules/image/"                   :image
-   "urn:atom-extension:indexing"                              :indexing
-   "http://www.itunes.com/DTDs/PodCast-1.0.dtd"               :itunes
-   "http://example.com/DTDs/PodCast-1.0.dtd"                  :itunes
-   "http://earth.google.com/kml/2.0"                          :kml20
-   "http://earth.google.com/kml/2.1"                          :kml21
-   "http://www.opengis.net/kml/2.2"                           :kml22
-   "http://purl.org/rss/1.0/modules/link/"                    :l
-   "http://www.w3.org/1998/Math/MathML"                       :mathml
-   "http://search.yahoo.com/mrss"                             :media
-   ;; Version 1.1.2 of the Media RSS spec added the trailing slash on
-   ;; the namespace
-   "http://search.yahoo.com/mrss/"                            :media
-   "http://openid.net/xmlns/1.0"                              :openid
-   "http://a9.com/-/spec/opensearchrss/1.0/"                  :opensearch10
-   "http://a9.com/-/spec/opensearch/1.1/"                     :opensearch
-   "http://www.opml.org/spec2"                                :opml
-   "http://madskills.com/public/xml/rss/module/pingback/"     :pingback
-   "http://prismstandard.org/namespaces/1.2/basic/"           :prism
-   "http://www.w3.org/1999/02/22-rdf-syntax-ns#"              :rdf
-   "http://www.w3.org/2000/01/rdf-schema#"                    :rdfs
-   "http://purl.org/rss/1.0/modules/reference/"               :ref
-   "http://purl.org/rss/1.0/modules/richequiv/"               :reqv
-   "http://purl.org/rss/1.0/modules/search/"                  :search
-   "http://purl.org/rss/1.0/modules/slash/"                   :slash
-   "http://schemas.xmlsoap.org/soap/envelope/"                :soap
-   "http://purl.org/rss/1.0/modules/servicestatus/"           :ss
-   "http://hacks.benhammersley.com/rss/streaming/"            :str
-   "http://purl.org/rss/1.0/modules/subscription/"            :sub
-   "http://www.w3.org/2000/svg"                               :svg
-   "http://feedsync.org/2007/feedsync"                        :sx
-   "http://purl.org/rss/1.0/modules/syndication/"             :sy
-   "http://schemas.pocketsoap.com/rss/myDescModule/"          :szf
-   "http://purl.org/rss/1.0/modules/taxonomy/"                :taxo
-   "http://purl.org/rss/1.0/modules/threading/"               :thr
-   "http://purl.org/syndication/thread/1.0"                   :thr
-   "http://purl.org/rss/1.0/modules/textinput/"               :ti
-   "http://madskills.com/public/xml/rss/module/trackback/"    :trackback
-   "http://wellformedweb.org/commentAPI/"                     :wfw
-   "http://purl.org/rss/1.0/modules/wiki/"                    :wiki
-   "http://www.w3.org/1999/xhtml"                             :xhtml
-   "http://www.w3.org/1999/xlink"                             :xlink
-   "http://www.w3.org/XML/1998/namespace"                     :xml
-   "xri://$xrd*($v*2.0)"                                      :xrd
-   "xri://$xrds"                                              :xrds
-   "http://podlove.org/simple-chapters"                       :psc)
+  (dict "http://backend.userland.com/rss" nil
+        "http://blogs.law.harvard.edu/tech/rss" nil
+        "http://purl.org/rss/1.0/" nil
+        "http://my.netscape.com/rdf/simple/0.9/" nil
+        "http://example.com/newformat#" nil
+        "http://example.com/necho" nil
+        "http://purl.org/echo/" nil
+        "uri/of/echo/namespace#" nil
+        "http://purl.org/pie/" nil
+        "http://purl.org/atom/ns#" :atom ;atom03
+        "http://www.w3.org/2005/Atom" :atom ;atom10
+        "http://purl.org/rss/1.0/modules/rss091#" nil
+        "http://www.bloglines.com/about/specs/fac-1.0"             :access
+        "http://webns.net/mvcb/"                                   :admin
+        "http://purl.org/rss/1.0/modules/aggregation/"             :ag
+        "http://purl.org/rss/1.0/modules/annotate/"                :annotate
+        "http://www.w3.org/2007/app"                               :app
+        "http://media.tangent.org/rss/1.0/"                        :audio
+        "http://backend.userland.com/blogChannelModule"            :blog-channel
+        "http://web.resource.org/cc/"                              :cc
+        "http://www.microsoft.com/schemas/rss/core/2005"           :cf
+        "http://backend.userland.com/creativeCommonsRssModule"     :creative-commons
+        "http://purl.org/rss/1.0/modules/company"                  :co
+        "http://purl.org/rss/1.0/modules/content/"                 :content
+        "http://conversationsnetwork.org/rssNamespace-1.0/"        :conversations-network
+        "http://my.theinfo.org/changed/1.0/rss/"                   :cp
+        "http://purl.org/dc/elements/1.1/"                         :dc
+        "http://purl.org/dc/terms/"                                :dcterms
+        "http://purl.org/rss/1.0/modules/email/"                   :email
+        "http://purl.org/rss/1.0/modules/event/"                   :ev
+        "http://rssnamespace.org/feedburner/ext/1.0"               :feedburner
+        "http://purl.org/syndication/history/1.0"                  :fh
+        "http://freshmeat.net/rss/fm/"                             :fm
+        "http://xmlns.com/foaf/0.1"                                :foaf
+        "http://xmlns.com/foaf/0.1/"                               :foaf
+        "http://www.w3.org/2003/01/geo/wgs84_pos#"                 :geo
+        "http://www.georss.org/georss"                             :georss
+        "http://geourl.org/rss/module/"                            :geourl
+        "http://base.google.com/ns/1.0"                            :g
+        "http://www.opengis.net/gml"                               :gml
+        "http://postneo.com/icbm/"                                 :icbm
+        "http://purl.org/rss/1.0/modules/image/"                   :image
+        "urn:atom-extension:indexing"                              :indexing
+        "http://www.itunes.com/DTDs/PodCast-1.0.dtd"               :itunes
+        "http://example.com/DTDs/PodCast-1.0.dtd"                  :itunes
+        "http://earth.google.com/kml/2.0"                          :kml20
+        "http://earth.google.com/kml/2.1"                          :kml21
+        "http://www.opengis.net/kml/2.2"                           :kml22
+        "http://purl.org/rss/1.0/modules/link/"                    :l
+        "http://www.w3.org/1998/Math/MathML"                       :mathml
+        "http://search.yahoo.com/mrss"                             :media
+        ;; Version 1.1.2 of the Media RSS spec added the trailing slash on
+        ;; the namespace
+        "http://search.yahoo.com/mrss/"                            :media
+        "http://openid.net/xmlns/1.0"                              :openid
+        "http://a9.com/-/spec/opensearchrss/1.0/"                  :opensearch10
+        "http://a9.com/-/spec/opensearch/1.1/"                     :opensearch
+        "http://www.opml.org/spec2"                                :opml
+        "http://madskills.com/public/xml/rss/module/pingback/"     :pingback
+        "http://prismstandard.org/namespaces/1.2/basic/"           :prism
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#"              :rdf
+        "http://www.w3.org/2000/01/rdf-schema#"                    :rdfs
+        "http://purl.org/rss/1.0/modules/reference/"               :ref
+        "http://purl.org/rss/1.0/modules/richequiv/"               :reqv
+        "http://purl.org/rss/1.0/modules/search/"                  :search
+        "http://purl.org/rss/1.0/modules/slash/"                   :slash
+        "http://schemas.xmlsoap.org/soap/envelope/"                :soap
+        "http://purl.org/rss/1.0/modules/servicestatus/"           :ss
+        "http://hacks.benhammersley.com/rss/streaming/"            :str
+        "http://purl.org/rss/1.0/modules/subscription/"            :sub
+        "http://www.w3.org/2000/svg"                               :svg
+        "http://feedsync.org/2007/feedsync"                        :sx
+        "http://purl.org/rss/1.0/modules/syndication/"             :sy
+        "http://schemas.pocketsoap.com/rss/myDescModule/"          :szf
+        "http://purl.org/rss/1.0/modules/taxonomy/"                :taxo
+        "http://purl.org/rss/1.0/modules/threading/"               :thr
+        "http://purl.org/syndication/thread/1.0"                   :thr
+        "http://purl.org/rss/1.0/modules/textinput/"               :ti
+        "http://madskills.com/public/xml/rss/module/trackback/"    :trackback
+        "http://wellformedweb.org/commentAPI/"                     :wfw
+        "http://purl.org/rss/1.0/modules/wiki/"                    :wiki
+        "http://www.w3.org/1999/xhtml"                             :xhtml
+        "http://www.w3.org/1999/xlink"                             :xlink
+        "http://www.w3.org/XML/1998/namespace"                     :xml
+        "xri://$xrd*($v*2.0)"                                      :xrd
+        "xri://$xrds"                                              :xrds
+        "http://podlove.org/simple-chapters"                       :psc)
   "Table from namespace to prefix.
 Collected from the source of feedparser.py and the list at the W3C
 feed validator.")
 
+(defun symbol->camel-case (symbol)
+  "Convert SYMBOL to a camel-cased string."
+  (let ((string (copy-seq (string symbol))))
+    ;; Don't worry about speed; this will be memoized.
+    (with-output-to-string (s)
+      (loop for c1 = #\Space then c2
+            for c2 across string
+            do (unless (eql c2 #\-)
+                 (if (eql c1 #\-)
+                     (write-char (char-upcase c2) s)
+                     (write-char (char-downcase c2) s)))))))
+
+(defun xmlify (id)
+  "Convert ID to camel case."
+  (ensure (get id 'camel-case)
+    (symbol->camel-case id)))
+
 (def namespace-prefixes
-  (lret ((hash (dict)))
+  (let ((map (fset:map)))
     (maphash (lambda (k v)
                (when k
-                 (setf (gethash (xmlify v) hash) k)))
-             namespaces))
+                 (setf map (fset:with map (xmlify v) k))))
+             namespaces)
+    map)
   "Table from prefix to namespace.")
 
 (defun find-ns (uri)
@@ -258,25 +278,26 @@ feed validator.")
           (return-feed :bozo t)))
       (return-feed))))
 
-(defun parser-loop (*source* &key recursive)
-  (let ((depth 0))
-    (loop (let ((event (klacks:peek *source*)))
+(defun parser-loop (source &key recursive)
+  (let ((*source* source)
+        (depth 0))
+    (loop (let ((event (klacks:peek source)))
             (unless event
               (return))
             (case event
               (:start-element
                (incf depth)
                (multiple-value-bind (ev uri lname)
-                   (klacks:consume *source*)
+                   (klacks:consume source)
                  (declare (ignore ev))
                  (unless *disabled*
                    (handle-tag (find-ns uri) lname))))
               (:end-element
                (decf depth)
-               (klacks:consume *source*)
+               (klacks:consume source)
                (when (and recursive (minusp depth))
                  (return)))
-              (t (klacks:consume *source*)))))))
+              (t (klacks:consume source)))))))
 
 (defgeneric handle-tag (ns lname)
   (:method (ns lname) (declare (ignore ns lname))
@@ -303,30 +324,6 @@ feed validator.")
                (vector-push c s)
           else do (vector-push-extend c s)
           finally (return (nstring-upcase s)))))
-
-(defun symbol->camel-case (symbol)
-  (let ((string (copy-seq (string symbol))))
-    ;; Don't worry about speed; this will be memoized.
-    (with-output-to-string (s)
-      (nlet rec ((start 0))
-        (print start)
-        (unless (= start (length string))
-          (let ((hyphen (position #\- string :start start)))
-            (cond ((no hyphen)
-                   (write-string (string-downcase (nsubseq string start)) s))
-                  ;; Trailing hyphen.
-                  ((= hyphen (1- (length string)))
-                   (write-string (string-downcase (nsubseq string start hyphen))
-                                 s))
-                  (t (write-string (string-downcase (nsubseq string start hyphen))
-                                   s)
-                     (write-char (char-upcase (char string (1+ hyphen))) s)
-                     (rec (+ hyphen 2))))))))))
-
-(defun xmlify (id)
-  "Convert ID to camel case."
-  (ensure (get id 'camel-case)
-    (symbol->camel-case id)))
 
 (defhandler nil :title
   (handle-title))
@@ -583,10 +580,10 @@ feed validator.")
 (defun get-entry-content ()
   (push (get-content) (gethash :content *entry*)))
 
-(defun get-content ()
-  (let ((type (klacks:get-attribute *source* "type"))
+(defun get-content (&aux (source *source*))
+  (let ((type (klacks:get-attribute source "type"))
         (content (dict)))
-    (setf (gethash :base content) (klacks:current-xml-base *source*))
+    (setf (gethash :base content) (klacks:current-xml-base source))
     (if (equal type "xhtml")
         (get-xhtml-content content)
         (get-text-content content))
@@ -616,40 +613,22 @@ feed validator.")
                   attrs)))
       (call-next-method handler ns lname qname attrs))))
 
-(defvar *in-xhtml* nil)
-
-(defmethod handle-tag :around ((ns (eql :xhtml)) lname)
-  ;; HACK: Unless we reset the namespace stack CXML tries to read the
-  ;; rest of the document in as XHTML.
-  (declare (ignore lname))
-  (if *in-xhtml*
-      (call-next-method)
-      (let ((*in-xhtml* t))
-        (with-slots ((stack1 cxml::current-namespace-declarations)
-                     (stack2 cxml::namespace-stack))
-            *source*
-          (let ((saved-stack1 stack1)
-                (saved-stack2 stack2))
-            (multiple-value-prog1 (call-next-method)
-              (setf stack1 saved-stack1
-                    stack2 saved-stack2)))))))
-
-(defun get-xhtml-content (content)
-  (klacks:find-element *source* "div")
+(defun get-xhtml-content (content &aux (source *source*))
+  (klacks:find-element source "div")
   (let* ((can-sanitize/sax (eql *content-sanitizer* default-sanitizer))
          (value
            (let ((handler (make-instance 'absolute-uri-handler
                                          :handlers (list (html5-sax:make-html5-sink))
-                                         :base (klacks:current-xml-base *source*))))
+                                         :base (klacks:current-xml-base source))))
              (when can-sanitize/sax
                (setf handler (sax-sanitize:wrap-sanitize handler feed-sanitizer)))
-             (klacks:serialize-element *source* handler :document-events t))))
+             (klacks:serialize-element source handler :document-events t))))
     (setf (gethash :value content)
           (if can-sanitize/sax
               value
               (sanitize-content value))
           (gethash :type content)  "text/html"
-          (gethash :base content)  (klacks:current-xml-base *source*))
+          (gethash :base content)  (klacks:current-xml-base source))
     content))
 
 (defun guess-type (value attrs)
@@ -716,12 +695,12 @@ feed validator.")
               uri)))
         empty-uri)))
 
-(defun get-text ()
-  (if (not (eql (klacks:peek *source*) :characters))
+(defun get-text (&aux (source *source*))
+  (if (not (eql (klacks:peek source) :characters))
       ""
       (with-output-to-string (s)
-        (loop while (eql (klacks:peek *source*) :characters)
-              do (write-string (nth-value 1 (klacks:consume *source*)) s)))))
+        (loop while (eql (klacks:peek source) :characters)
+              do (write-string (nth-value 1 (klacks:consume source)) s)))))
 
 (defun get-text-safe (&optional (sanitizer sax-sanitize:restricted))
   (let ((text (get-text)))
@@ -775,21 +754,46 @@ to T). SANITIZE-TITLES controls sanitizing titles."
               (let* ((repaired (markup-grinder:grind feed
                                                      (cxml:make-string-sink :indentation nil)
                                                      :extra-namespaces namespace-prefixes)))
-                (dict* (apply #'parse-feed repaired :repaired t args)
-                       :bozo t))))))
+                (apply #'parse-feed repaired :repaired t args))))))
     feed))
+
+(defvar *parse-safe* t
+  "For testing purposes, you can bind this to prevent
+  `parse-feed-safe' from falling back to using markup-grinder.")
 
 (defun parse-feed-safe (feed &rest args &key &allow-other-keys)
   "Try to parse FEED.
 If FEED is invalid XML, try to repair it.
 If FEED cannot be repaired, return a best-faith attempt."
   (let (e)
-    (flet ((parse-feed-safe ()
-             (handler-bind ((error
-                              (lambda (c)
-                                (when-let (restart (or (find-restart 'repair)
-                                                       (find-restart 'return-feed)))
-                                  (setf e c)
-                                  (invoke-restart restart)))))
-               (apply #'parse-feed feed args))))
-      (values (parse-feed-safe) e))))
+    (labels ((maybe-invoke-restart (restart &rest args)
+               (when (find-restart restart)
+                 (apply #'invoke-restart restart args)))
+             (parse-feed-safe ()
+               (cond (*parse-safe*
+                      ;; If CXML can't repair the damage, fall back to markup-grinder.
+                      (handler-bind ((error
+                                       (lambda (c) (declare (ignore c))
+                                         (maybe-invoke-restart 'repair)
+                                         (maybe-invoke-restart 'return-feed))))
+                        ;; Try to repair the damage with our forked
+                        ;; CXML.
+                        (handler-bind ((cxml:undefined-entity
+                                         (lambda (c) (declare (ignore c))
+                                           (maybe-invoke-restart 'expand-as-html)
+                                           (continue)))
+                                       (cxml:undeclared-namespace
+                                         (lambda (c)
+                                           (let* ((prefix (cxml:undeclared-namespace-prefix c))
+                                                  (uri (fset:lookup namespace-prefixes prefix)))
+                                             (store-value uri)
+                                             (continue))))
+                                       (cxml:well-formedness-violation #'continue))
+                          ;; Set the bozo bit.
+                          (handler-bind ((error (lambda (c) (setf e c))))
+                            (apply #'parse-feed feed args)))))
+                     (t (apply #'parse-feed feed args)))))
+      (let ((feed (parse-feed-safe)))
+        (if e
+            (values (dict* feed :bozo t) e)
+            (values feed nil))))))
