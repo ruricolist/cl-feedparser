@@ -84,10 +84,12 @@ result is an unsanitized string."
               ("q"           . (("cite" . (:http :https :relative))))))
 
 (defun clean (x &optional (sanitizer feed-sanitizer))
-  (html5-sax:serialize-dom
-   (html5-parser:parse-html5 x)
-   (sax-sanitize:wrap-sanitize (html5-sax:make-html5-sink)
-                               sanitizer)))
+  (if (ppcre:scan "[<>&]" x)
+      (html5-sax:serialize-dom
+       (html5-parser:parse-html5 x)
+       (sax-sanitize:wrap-sanitize (html5-sax:make-html5-sink)
+                                   sanitizer))
+      x))
 
 (def default-sanitizer
   (lambda (x)
@@ -766,9 +768,8 @@ to T). SANITIZE-TITLES controls sanitizing titles."
 If FEED is invalid XML, try to repair it.
 If FEED cannot be repaired, return a best-faith attempt."
   (let (e)
-    (labels ((maybe-invoke-restart (restart &rest args)
-               (when (find-restart restart)
-                 (apply #'invoke-restart restart args)))
+    (labels ((expand-html-entity (name)
+               (sgml::find-named-entity chtml::*html-dtd* name))
              (parse-feed-safe ()
                (cond (*parse-safe*
                       ;; If CXML can't repair the damage, fall back to markup-grinder.
@@ -779,8 +780,9 @@ If FEED cannot be repaired, return a best-faith attempt."
                         ;; Try to repair the damage with our forked
                         ;; CXML.
                         (handler-bind ((cxml:undefined-entity
-                                         (lambda (c) (declare (ignore c))
-                                           (maybe-invoke-restart 'expand-as-html)
+                                         (lambda (c)
+                                           (when-let (match (expand-html-entity (cxml:undefined-entity-name c)))
+                                             (use-value match))
                                            (continue)))
                                        (cxml:undeclared-namespace
                                          (lambda (c)
