@@ -342,7 +342,8 @@ feed validator.")
 (defun handle-title ()
   (when-let (text (get-text-safe))
     (let ((title (trim-whitespace text)))
-      (setf (gethash :title (or *entry* *feed*)) title))))
+      (ensure2 (gethash :title (or *entry* *feed*))
+        title))))
 
 (defhandler :atom :tagline
   (handle-subtitle))
@@ -401,10 +402,11 @@ feed validator.")
       (setf (gethash :link (or *entry* *feed*))
             href))
 
-    (setf (gethash :rel link) rel
-          (gethash :type link) type
-          (gethash :href link) href
-          (gethash :title link) title)
+    (dict* link
+           :rel rel
+           :type type
+           :href href
+           :title title)
 
     (push link (gethash :links (or *entry* *feed*)))))
 
