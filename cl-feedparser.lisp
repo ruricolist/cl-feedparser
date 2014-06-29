@@ -59,6 +59,8 @@ result is an unsanitized string."
 
   :remove-elements ("script" "style")
 
+  :allow-data-attributes t
+
   :attributes ((:all         . ("dir" "lang" "title" "class"))
                ("a"          . ("href"))
                ("blockquote" . ("cite"))
@@ -342,6 +344,7 @@ feed validator.")
 (defun handle-title ()
   (when-let (text (get-text-safe))
     (let ((title (trim-whitespace text)))
+      ;; Cf. Grantland.
       (ensure2 (gethash :title (or *entry* *feed*))
         title))))
 
@@ -536,12 +539,16 @@ feed validator.")
 (defmethod handle-tag ((ns null) (lname (eql :guid)))
   ;; todo rdf:about
   (when-let (entry *entry*)
-    (let ((permalinkp (klacks:get-attribute *source* "isPermaLink"))
+    (let ((permalinkp
+            (equal "true" (klacks:get-attribute *source* "isPermaLink")))
           (id (get-text)))
       (when id
         (check-guid-mask id)
         (setf (href entry :id) id)
-        (when (and permalinkp (equal permalinkp "true"))
+        (when (or permalinkp
+                  ;; Use GUID as a fallback link.
+                  (and (urlish? id)
+                       (null (@ entry :href))))
           (setf (href entry :link) (resolve-uri id)))))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :id)))
@@ -690,6 +697,8 @@ feed validator.")
                 (gethash :name *author*))))))
 
 (defun resolve-uri (uri)
+  (when (stringp uri)
+    (setf uri (trim-whitespace (remove #\Newline uri))))
   (let ((base (klacks:current-xml-base *source*)))
     (or (ignoring puri:uri-parse-error
           (let* ((uri (puri:merge-uris uri base))
@@ -711,6 +720,9 @@ feed validator.")
     (if (emptyp text)
         text
         (clean text sanitizer))))
+
+(defun urlish? (x)
+  (ppcre:scan "(?s)^\\s*https?://" x))
 
 
 
@@ -771,6 +783,7 @@ If FEED is invalid XML, try to repair it.
 If FEED cannot be repaired, return a best-faith attempt."
   (let (e)
     (labels ((expand-html-entity (name)
+               ;; XXX
                (sgml::find-named-entity chtml::*html-dtd* name))
              (parse-feed-safe ()
                (cond (*parse-safe*
