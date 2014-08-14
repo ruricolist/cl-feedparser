@@ -12,10 +12,41 @@
 
 
 
+;;; TODO We should really switch from hash tables to objects.
+
+;;; This is a hack to statically check that the wrong key can't be set
+;;; due to a typo.
+
+(eval-and-compile
+  (defparameter *keys*
+    '(:entries :bozo :title :info :rights :subtitle
+      :proxy :link :rel :type :href :title
+      :author :name :email :uri :email
+      :name :author :language :icon
+      :summary :value :summary-detail :subtitle
+      :published :published-parsed
+      :updated :updated-parsed
+      :ttl :id :content :proxy
+      :base :value :type
+      :author-detail :links)))
+
+(defmacro gethash* (key hash &optional default)
+  "Like `gethash', but check (statically) that KEY is a member of
+`*keys*'."
+  (unless (member key *keys*)
+    (error "Unknown key: ~a" key))
+  `(gethash ,key ,hash ,@(unsplice default)))
+
+
+
 (def empty-uri (puri:parse-uri ""))
 
 (defparameter *allow-protocols*
   '(:http :https :relative))
+
+#+ () (adt:defdata string
+  (sanitized-string string)
+  (unsanitized-string string))
 
 (defstruct (unsanitized-string (:constructor make-unsanitized-string (string)))
   "Wrapper for an unsanitized string."
@@ -268,9 +299,9 @@ feed validator.")
          (*feed* feed))
 
     (flet ((return-feed (&key bozo)
-             (nreversef (gethash :entries feed))
+             (nreversef (gethash* :entries feed))
              (when bozo
-               (setf (gethash :bozo feed) t))
+               (setf (gethash* :bozo feed) t))
              (return-from parse-feed-aux
                (values feed parser))))
       (restart-case
@@ -344,7 +375,7 @@ feed validator.")
   (when-let (text (get-text-safe))
     (let ((title (trim-whitespace text)))
       ;; Cf. Grantland.
-      (ensure2 (gethash :title (or *entry* *feed*))
+      (ensure2 (gethash* :title (or *entry* *feed*))
         title))))
 
 (defhandler :atom :tagline
@@ -358,14 +389,14 @@ feed validator.")
 
 (defhandler :atom :info
   (when-let (text (sanitize-title (get-text)))
-    (setf (gethash :info *feed*) text)))
+    (setf (gethash* :info *feed*) text)))
 
 (defhandler :feedburner :browser-friendly
   (handle-tag :atom :info))
 
 (defhandler :atom :rights
   (when-let (text (sanitize-title (get-text)))
-    (setf (gethash :rights *feed*) text)))
+    (setf (gethash* :rights *feed*) text)))
 
 (defhandler :atom :copyright
   (handle-tag :atom :rights))
@@ -378,16 +409,16 @@ feed validator.")
 
 (defun handle-subtitle ()
   (when-let (text (get-text-safe))
-    (setf (gethash :subtitle *feed*) text)))
+    (setf (gethash* :subtitle *feed*) text)))
 
 (defmethod handle-tag ((ns (eql :feedburner)) lname)
   "The feed is from Feedburner."
   (declare (ignore lname))
-  (ensure2 (gethash :proxy *feed*) ns))
+  (ensure2 (gethash* :proxy *feed*) ns))
 
 (defmethod handle-tag ((ns null) (lname (eql :link)))
   (when-let (string (get-text))
-    (setf (gethash :link (or *entry* *feed*))
+    (setf (gethash* :link (or *entry* *feed*))
           (resolve-uri string))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :link)))
@@ -406,27 +437,27 @@ feed validator.")
       (setf href (resolve-uri href)))
 
     (when (and href (or (not rel) (equal rel "alternate")))
-      (setf (gethash :link (or *entry* *feed*))
+      (setf (gethash* :link (or *entry* *feed*))
             href))
 
-    (setf (gethash :rel link) rel
-          (gethash :type link) type
-          (gethash :href link) href
-          (gethash :title link) title)
+    (setf (gethash* :rel link) rel
+          (gethash* :type link) type
+          (gethash* :href link) href
+          (gethash* :title link) title)
 
-    (push link (gethash :links (or *entry* *feed*)))))
+    (push link (gethash* :links (or *entry* *feed*)))))
 
 (defhandler :atom :name
   (let ((name (get-text-safe sax-sanitize:default)))
-    (setf (gethash :author (or *entry* *feed*)) name
-          (gethash :name *author*) name)))
+    (setf (gethash* :author (or *entry* *feed*)) name
+          (gethash* :name *author*) name)))
 
 (defhandler :atom :email
-  (setf (gethash :email *author*)
+  (setf (gethash* :email *author*)
         (get-text-safe sax-sanitize:default)))
 
 (defhandler :atom :uri
-  (setf (gethash :uri *author*)
+  (setf (gethash* :uri *author*)
         (resolve-uri (get-text))))
 
 (defhandler :dc :creator
@@ -445,24 +476,24 @@ feed validator.")
 
     (if email?
         (let ((space (position #\Space author)))
-          (setf (gethash :email *author*) (subseq author 0 space))
+          (setf (gethash* :email *author*) (subseq author 0 space))
           (when space
             (ensure creator (strip-parens (subseq author space)))))
         (ensure creator author))
 
     (let ((name (strip-parens creator)))
-      (setf (gethash :name *author*) name
-            (gethash :author (or *entry* *feed*)) name))))
+      (setf (gethash* :name *author*) name
+            (gethash* :author (or *entry* *feed*)) name))))
 
 (defun strip-parens (s)
   (when (stringp s)
     (string-trim " ()" s)))
 
 (defmethod handle-tag ((ns null) (lname (eql :language)))
-  (setf (gethash :language *feed*) (get-text)))
+  (setf (gethash* :language *feed*) (get-text)))
 
 (defmethod handle-tag ((ns (eql :dc)) (lname (eql :language)))
-  (setf (gethash :language *feed*) (get-text)))
+  (setf (gethash* :language *feed*) (get-text)))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :feed)))
   (block nil
@@ -470,12 +501,12 @@ feed validator.")
      (lambda (ns lname qname value dtdp)
        (declare (ignore ns lname dtdp))
        (when (equal qname "xml:lang")
-         (setf (gethash :language *feed*) value)
+         (setf (gethash* :language *feed*) value)
          (return)))
      *source*)))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :icon)))
-  (setf (gethash :icon *feed*)
+  (setf (gethash* :icon *feed*)
         (resolve-uri (get-text))))
 
 (defmethod handle-tag ((ns null) (lname (eql :description)))
@@ -484,10 +515,10 @@ feed validator.")
 (defun get-summary ()
   (if-let (entry *entry*)
     (when-let (content (get-content))
-      (setf (gethash :summary entry) (gethash :value content)
-            (gethash :summary-detail entry) content))
+      (setf (gethash* :summary entry) (gethash* :value content)
+            (gethash* :summary-detail entry) content))
 
-    (setf (gethash :subtitle *feed*)
+    (setf (gethash* :subtitle *feed*)
           (sanitize-title (get-text)))))
 
 (defmethod handle-tag ((ns null) (lname (eql :pub-date)))
@@ -511,14 +542,14 @@ feed validator.")
 
 (defun read-pubdate ()
   (let ((target (or *entry* *feed*)))
-    (setf (values (gethash :published target)
-                  (gethash :published-parsed target))
+    (setf (values (gethash* :published target)
+                  (gethash* :published-parsed target))
           (get-timestring))))
 
 (defun read-mtime ()
   (let ((target (or *entry* *feed*)))
-    (setf (values (gethash :updated target)
-                  (gethash :updated-parsed target))
+    (setf (values (gethash* :updated target)
+                  (gethash* :updated-parsed target))
           (get-timestring))))
 
 (defun get-timestring ()
@@ -533,7 +564,7 @@ feed validator.")
 
 (defmethod handle-tag ((ns null) (lname (eql :ttl)))
   (when-let (string (get-text))
-    (setf (gethash :ttl *feed*) string)))
+    (setf (gethash* :ttl *feed*) string)))
 
 (defun check-guid-mask (id)
   (when (and *entry* id (find id (parser-guid-mask *parser*) :test #'equal))
@@ -551,13 +582,13 @@ feed validator.")
         (when (or permalinkp
                   ;; Use GUID as a fallback link.
                   (and (urlish? id)
-                       (null (gethash :href entry))))
-          (setf (gethash :link entry) (resolve-uri id)))))))
+                       (null (gethash* :href entry))))
+          (setf (gethash* :link entry) (resolve-uri id)))))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :id)))
   (let ((id (get-text)))
     (check-guid-mask id)
-    (setf (gethash :id (or *entry* *feed*)) id)))
+    (setf (gethash* :id (or *entry* *feed*)) id)))
 
 (defmethod handle-tag ((ns (eql :dc)) (lname (eql :description)))
   (get-summary))
@@ -568,7 +599,7 @@ feed validator.")
 (defmethod handle-tag ((ns (eql :feedburner)) (lname (eql :orig-link)))
   ;; Eg. 3QD.
   (when *entry*
-    (setf (gethash :link *entry*)
+    (setf (gethash* :link *entry*)
           (resolve-uri (get-text)))))
 
 (defmethod handle-tag ((ns (eql :content)) (lname (eql :encoded)))
@@ -587,12 +618,12 @@ feed validator.")
   (get-entry-content))
 
 (defmethod handle-tag ((ns (eql :dcterms)) (lname (eql :modified)))
-  (setf (values (gethash :updated *entry*)
-                (gethash :updated-parsed *entry*))
+  (setf (values (gethash* :updated *entry*)
+                (gethash* :updated-parsed *entry*))
         (get-timestring)))
 
 (defun get-entry-content ()
-  (push (get-content) (gethash :content *entry*)))
+  (push (get-content) (gethash* :content *entry*)))
 
 (defun current-xml-base-aux (&aux (feed *feed*))
   "Hack to work around the fact that Feedburner wipes out the xml:base
@@ -600,9 +631,9 @@ attribute: if there is no current XML base, use the :link property of the feed."
   (let ((xml-base (klacks:current-xml-base *source*)))
     (if (not (emptyp xml-base))
         xml-base
-        (let ((proxy (gethash :proxy feed)))
+        (let ((proxy (gethash* :proxy feed)))
           (when (eql proxy :feedburner)
-            (gethash :link feed))))))
+            (gethash* :link feed))))))
 
 (defun current-xml-base ()
   (or (current-xml-base-aux) ""))
@@ -610,7 +641,7 @@ attribute: if there is no current XML base, use the :link property of the feed."
 (defun get-content (&aux (source *source*))
   (let ((type (klacks:get-attribute source "type"))
         (content (dict)))
-    (setf (gethash :base content) (current-xml-base))
+    (setf (gethash* :base content) (current-xml-base))
     (if (equal type "xhtml")
         (get-xhtml-content content)
         (get-text-content content))
@@ -619,8 +650,8 @@ attribute: if there is no current XML base, use the :link property of the feed."
 (defun get-text-content (content)
   (let* ((attrs (klacks:list-attributes *source*))
          (string (sanitize-content (get-text))))
-    (setf (gethash :value content) string
-          (gethash :type content)  (guess-type string attrs))
+    (setf (gethash* :value content) string
+          (gethash* :type content)  (guess-type string attrs))
     content))
 
 (defclass absolute-uri-handler (cxml:broadcast-handler)
@@ -650,12 +681,12 @@ attribute: if there is no current XML base, use the :link property of the feed."
              (when can-sanitize/sax
                (setf handler (sax-sanitize:wrap-sanitize handler feed-sanitizer)))
              (klacks:serialize-element source handler :document-events t))))
-    (setf (gethash :value content)
+    (setf (gethash* :value content)
           (if can-sanitize/sax
               value
               (sanitize-content value))
-          (gethash :type content)  "text/html"
-          (gethash :base content)  (current-xml-base))
+          (gethash* :type content)  "text/html"
+          (gethash* :base content)  (current-xml-base))
     content))
 
 (defun guess-type (value attrs)
@@ -679,15 +710,15 @@ attribute: if there is no current XML base, use the :link property of the feed."
   (let ((entry (handle-entry)))
     (when-let (id (klacks:get-attribute *source* "about"))
       (check-guid-mask id)
-      (setf (gethash :id entry) id))))
+      (setf (gethash* :id entry) id))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :entry)))
   (handle-entry))
 
 (defun ensure-entry-id (entry)
   "Substitute link for ID if there is none."
-  (ensure2 (gethash :id entry)
-    (when-let (id (gethash :link entry))
+  (ensure2 (gethash* :id entry)
+    (when-let (id (gethash* :link entry))
       (let ((id (princ-to-string id)))
         (check-guid-mask id)
         id))))
@@ -700,17 +731,17 @@ attribute: if there is no current XML base, use the :link property of the feed."
         (lret ((*author* (dict))
                (*entry* (dict)))
 
-          (setf (gethash :author-detail *entry*) *author*)
+          (setf (gethash* :author-detail *entry*) *author*)
 
           (let ((*disabled* *disabled*))
             (parser-loop *source* :recursive t)
             ;; Ensure an ID.
             (ensure-entry-id *entry*)
             (unless *disabled*
-              (push *entry* (gethash :entries *feed*))))
+              (push *entry* (gethash* :entries *feed*))))
 
-          (setf (gethash :author *entry*)
-                (gethash :name *author*))))))
+          (setf (gethash* :author *entry*)
+                (gethash* :name *author*))))))
 
 (defun resolve-uri (uri)
   (when (stringp uri)
