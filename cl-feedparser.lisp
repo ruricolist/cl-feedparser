@@ -127,6 +127,9 @@ result is an unsanitized string."
 (defvar *author*)
 (defvar *disabled*)
 
+(defun ctx ()
+  (or *entry* *feed*))
+
 (defclass parser ()
   ((max-entries :initarg :max-entries :accessor parser-max-entries)
    (entries-count :initform 0 :accessor parser-entries-count)
@@ -226,28 +229,24 @@ result is an unsanitized string."
 Collected from the source of feedparser.py and the list at the W3C
 feed validator.")
 
-(defun symbol->camel-case (symbol)
-  "Convert SYMBOL to a camel-cased string."
-  (let ((string (copy-seq (string symbol))))
-    ;; Don't worry about speed; this will be memoized.
-    (with-output-to-string (s)
-      (loop for c1 = #\Space then c2
-            for c2 across string
-            do (unless (eql c2 #\-)
-                 (if (eql c1 #\-)
-                     (write-char (char-upcase c2) s)
-                     (write-char (char-downcase c2) s)))))))
+(defun nstring-camel-case (string)
+  (prog1 string
+    (loop for i from 0 below (length string)
+          for c2 = (aref string i)
+          for c1 = #\Space then c2
+          do (unless (eql c2 #\-)
+               (if (eql c1 #\-)
+                   (setf (aref string i) (char-upcase c2))
+                   (setf (aref string i) (char-downcase c2)))))))
 
-(defun xmlify (id)
-  "Convert ID to camel case."
-  (ensure (get id 'camel-case)
-    (symbol->camel-case id)))
+(defun string-camel-case (string)
+  (nstring-camel-case (copy-seq (string string))))
 
 (def namespace-prefixes
   (let ((map (fset:map)))
     (maphash (lambda (k v)
                (when k
-                 (setf map (fset:with map (xmlify v) k))))
+                 (setf map (fset:with map (string-camel-case v) k))))
              namespaces)
     map)
   "Table from prefix to namespace.")
@@ -303,17 +302,6 @@ feed validator.")
                  (return)))
               (t (klacks:consume source)))))))
 
-(defgeneric handle-tag (ns lname)
-  (:method (ns lname) (declare (ignore ns lname))
-    nil)
-  (:method (ns (lname string))
-    (handle-tag ns (find-keyword (lispify lname)))))
-
-(defmacro defhandler (ns lname &body body)
-  (with-gensyms (gns glname)
-    `(defmethod handle-tag ((,gns (eql ,ns)) (,glname (eql ,lname)))
-       ,@body)))
-
 (defun lispify (id)
   "Convert ID from camel-case to hyphenated form."
   ;; A little faster than a string stream.
@@ -328,6 +316,17 @@ feed validator.")
                (vector-push c s)
           else do (vector-push-extend c s)
           finally (return (nstring-upcase s)))))
+
+(defgeneric handle-tag (ns lname)
+  (:method (ns lname) (declare (ignore ns lname))
+    nil)
+  (:method (ns (lname string))
+    (handle-tag ns (find-keyword (lispify lname)))))
+
+(defmacro defhandler (ns lname &body body)
+  (with-gensyms (gns glname)
+    `(defmethod handle-tag ((,gns (eql ,ns)) (,glname (eql ,lname)))
+       ,@body)))
 
 (defhandler nil :title
   (handle-title))
@@ -381,6 +380,11 @@ feed validator.")
   (when-let (text (get-text-safe))
     (setf (gethash :subtitle *feed*) text)))
 
+(defmethod handle-tag ((ns (eql :feedburner)) lname)
+  "The feed is from Feedburner."
+  (declare (ignore lname))
+  (ensure2 (gethash :proxy *feed*) ns))
+
 (defmethod handle-tag ((ns null) (lname (eql :link)))
   (when-let (string (get-text))
     (setf (gethash :link (or *entry* *feed*))
@@ -405,11 +409,10 @@ feed validator.")
       (setf (gethash :link (or *entry* *feed*))
             href))
 
-    (dict* link
-           :rel rel
-           :type type
-           :href href
-           :title title)
+    (setf (gethash :rel link) rel
+          (gethash :type link) type
+          (gethash :href link) href
+          (gethash :title link) title)
 
     (push link (gethash :links (or *entry* *feed*)))))
 
@@ -548,8 +551,8 @@ feed validator.")
         (when (or permalinkp
                   ;; Use GUID as a fallback link.
                   (and (urlish? id)
-                       (null (@ entry :href))))
-          (setf (href entry :link) (resolve-uri id)))))))
+                       (null (gethash :href entry))))
+          (setf (gethash :link entry) (resolve-uri id)))))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :id)))
   (let ((id (get-text)))
@@ -591,10 +594,23 @@ feed validator.")
 (defun get-entry-content ()
   (push (get-content) (gethash :content *entry*)))
 
+(defun current-xml-base-aux (&aux (feed *feed*))
+  "Hack to work around the fact that Feedburner wipes out the xml:base
+attribute: if there is no current XML base, use the :link property of the feed."
+  (let ((xml-base (klacks:current-xml-base *source*)))
+    (if (not (emptyp xml-base))
+        xml-base
+        (let ((proxy (gethash :proxy feed)))
+          (when (eql proxy :feedburner)
+            (gethash :link feed))))))
+
+(defun current-xml-base ()
+  (or (current-xml-base-aux) ""))
+
 (defun get-content (&aux (source *source*))
   (let ((type (klacks:get-attribute source "type"))
         (content (dict)))
-    (setf (gethash :base content) (klacks:current-xml-base source))
+    (setf (gethash :base content) (current-xml-base))
     (if (equal type "xhtml")
         (get-xhtml-content content)
         (get-text-content content))
@@ -630,7 +646,7 @@ feed validator.")
          (value
            (let ((handler (make-instance 'absolute-uri-handler
                                          :handlers (list (html5-sax:make-html5-sink))
-                                         :base (klacks:current-xml-base source))))
+                                         :base (current-xml-base))))
              (when can-sanitize/sax
                (setf handler (sax-sanitize:wrap-sanitize handler feed-sanitizer)))
              (klacks:serialize-element source handler :document-events t))))
@@ -639,7 +655,7 @@ feed validator.")
               value
               (sanitize-content value))
           (gethash :type content)  "text/html"
-          (gethash :base content)  (klacks:current-xml-base source))
+          (gethash :base content)  (current-xml-base))
     content))
 
 (defun guess-type (value attrs)
@@ -699,7 +715,7 @@ feed validator.")
 (defun resolve-uri (uri)
   (when (stringp uri)
     (setf uri (trim-whitespace (remove #\Newline uri))))
-  (let ((base (klacks:current-xml-base *source*)))
+  (let ((base (current-xml-base)))
     (or (ignoring puri:uri-parse-error
           (let* ((uri (puri:merge-uris uri base))
                  (protocol (or (puri:uri-scheme uri)
@@ -776,6 +792,14 @@ to T). SANITIZE-TITLES controls sanitizing titles."
 (defvar *parse-safe* t
   "For testing purposes, you can bind this to prevent
   `parse-feed-safe' from falling back to using markup-grinder.")
+
+(defun repair ()
+  "Invoke the REPAIR restart, if available."
+  (maybe-invoke-restart 'repair))
+
+(defun return-feed ()
+  "Invoke the RETURN-FEED restart, if available."
+  (maybe-invoke-restart 'return-feed))
 
 (defun parse-feed-safe (feed &rest args &key &allow-other-keys)
   "Try to parse FEED.
