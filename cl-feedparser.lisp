@@ -120,8 +120,10 @@ result is an unsanitized string."
   (if (ppcre:scan "[<>&]" x)
       (html5-sax:serialize-dom
        (html5-parser:parse-html5 x)
-       (sax-sanitize:wrap-sanitize (html5-sax:make-html5-sink)
-                                   sanitizer))
+       (make-absolute-uri-handler
+        (sax-sanitize:wrap-sanitize
+         (html5-sax:make-html5-sink)
+         sanitizer)))
       x))
 
 (def default-sanitizer
@@ -261,6 +263,7 @@ Collected from the source of feedparser.py and the list at the W3C
 feed validator.")
 
 (defun nstring-camel-case (string)
+  "Destructively convert STRING to camelCase and return it."
   (prog1 string
     (loop for i from 0 below (length string)
           for c2 = (aref string i)
@@ -271,6 +274,7 @@ feed validator.")
                    (setf (aref string i) (char-downcase c2)))))))
 
 (defun string-camel-case (string)
+  "Return a copy of STRING in camelCase."
   (nstring-camel-case (copy-seq (string string))))
 
 (def namespace-prefixes
@@ -657,19 +661,23 @@ attribute: if there is no current XML base, use the :link property of the feed."
 (defclass absolute-uri-handler (cxml:broadcast-handler)
   ((base :initarg :base :accessor base-of)))
 
+(defun make-absolute-uri-handler (handler &key (base (current-xml-base)))
+  (make 'absolute-uri-handler :base base :handlers (list handler)))
+
+(defun resolve-attr (attr)
+  (with-accessors ((name sax:attribute-local-name)
+                   (value sax:attribute-value))
+      attr
+    (when (or (equal name "href") (equal name "src"))
+      (let ((abs-uri (resolve-uri value)))
+        (if (eq abs-uri empty-uri)
+            (setf value "#")
+            (setf value (princ-to-string abs-uri)))))))
+
 (defmethod sax:start-element ((handler absolute-uri-handler) ns lname qname attrs)
-  (flet ((make-absolute (attr)
-           (let ((value (sax:attribute-value attr)))
-             (when value
-               (setf (sax:attribute-value attr)
-                     (princ-to-string (puri:merge-uris value (base-of handler))))))))
-    (let ((attrs
-            (mapc (lambda (attr)
-                    (let ((name (sax:attribute-local-name attr)))
-                      (when (or (equal name "href") (equal name "src"))
-                        (make-absolute attr))))
-                  attrs)))
-      (call-next-method handler ns lname qname attrs))))
+  (dolist (attr attrs)
+    (resolve-attr attr))
+  (call-next-method handler ns lname qname attrs))
 
 (defun get-xhtml-content (content &aux (source *source*))
   (klacks:find-element source "div")
@@ -773,12 +781,19 @@ attribute: if there is no current XML base, use the :link property of the feed."
 
 
 
-(defun parse-feed (feed &rest args
-                        &key max-entries
+(defun repair ()
+  "Invoke the REPAIR restart, if available."
+  (maybe-invoke-restart 'repair))
+
+(defun return-feed ()
+  "Invoke the RETURN-FEED restart, if available."
+  (maybe-invoke-restart 'return-feed))
+
+(defun parse-feed (feed &key max-entries
                              (sanitize-content t)
                              (sanitize-titles t)
                              guid-mask
-                             repaired)
+                             (safe t))
   "Try to parse FEED.
 MAX-ENTRIES is the maximum number of entries to retrieve; GUID-MASK is
 a list of GUIDs of entries that are already known to the caller and
@@ -796,76 +811,58 @@ Sanitizing content can be turned off with SANITIZE-CONTENT (defaults
 to T). SANITIZE-TITLES controls sanitizing titles."
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
-  (let ((feed
+  (let ((bozo nil)
+        (*content-sanitizer*
+          (if sanitize-content
+              *content-sanitizer*
+              #'make-unsanitized-string))
+        (*title-sanitizer*
+          (if sanitize-titles
+              *title-sanitizer*
+              #'make-unsanitized-string)))
+    (handler-bind
+        ((error
+           (lambda (c) (declare (ignore c))
+             (when safe
+               ;; If CXML can't repair the damage,
+               ;; fall back to markup-grinder.
+               (repair)
+               ;; Last resort: return whatever we've got so far. Bound
+               ;; in `parse-feed-aux`.
+               (return-feed)))))
+      (handler-bind
+          ((cxml:undefined-entity
+             (lambda (c)
+               (when safe
+                 (when-let (match (markup-grinder:expand-entity
+                                   (cxml:undefined-entity-name c)))
+                   (use-value match))
+                 (continue))))
+           (cxml:undeclared-namespace
+             (lambda (c)
+               (when safe
+                 (let* ((prefix (cxml:undeclared-namespace-prefix c))
+                        (uri (fset:lookup namespace-prefixes prefix)))
+                   (store-value uri)
+                   (continue)))))
+           (cxml:well-formedness-violation
+             (lambda (c)
+               (when safe
+                 (continue c)))))
+        (flet ((parse (feed)
+                 ;; Always set the bozo bit before other handlers
+                 ;; can take effect.
+                 (handler-bind ((error (lambda (c) (push c bozo))))
+                   (dict* (parse-feed-aux feed
+                                          :max-entries max-entries
+                                          :guid-mask guid-mask)
+                          :bozo bozo))))
           (restart-case
-              (let ((*content-sanitizer*
-                      (if (not sanitize-content)
-                          #'make-unsanitized-string
-                          *content-sanitizer*))
-                    (*title-sanitizer*
-                      (if (not sanitize-titles)
-                          #'make-unsanitized-string
-                          *title-sanitizer*)))
-                (dict* (parse-feed-aux feed
-                                       :max-entries max-entries
-                                       :guid-mask guid-mask)
-                       :bozo nil))
+              (parse feed)
             (repair ()
               :report "Try to repair the XML document and try again."
-              :test (lambda (c) (declare (ignore c))
-                      (not repaired))
-              (let* ((repaired (markup-grinder:grind feed
-                                                     (cxml:make-string-sink :indentation nil)
-                                                     :extra-namespaces namespace-prefixes)))
-                (apply #'parse-feed repaired :repaired t args))))))
-    feed))
-
-(defvar *parse-safe* t
-  "For testing purposes, you can bind this to prevent
-  `parse-feed-safe' from falling back to using markup-grinder.")
-
-(defun repair ()
-  "Invoke the REPAIR restart, if available."
-  (maybe-invoke-restart 'repair))
-
-(defun return-feed ()
-  "Invoke the RETURN-FEED restart, if available."
-  (maybe-invoke-restart 'return-feed))
-
-(defun parse-feed-safe (feed &rest args &key &allow-other-keys)
-  "Try to parse FEED.
-If FEED is invalid XML, try to repair it.
-If FEED cannot be repaired, return a best-faith attempt."
-  (let (e)
-    (labels ((expand-html-entity (name)
-               ;; XXX
-               (sgml::find-named-entity chtml::*html-dtd* name))
-             (parse-feed-safe ()
-               (cond (*parse-safe*
-                      ;; If CXML can't repair the damage, fall back to markup-grinder.
-                      (handler-bind ((error
-                                       (lambda (c) (declare (ignore c))
-                                         (maybe-invoke-restart 'repair)
-                                         (maybe-invoke-restart 'return-feed))))
-                        ;; Try to repair the damage with our forked
-                        ;; CXML.
-                        (handler-bind ((cxml:undefined-entity
-                                         (lambda (c)
-                                           (when-let (match (expand-html-entity (cxml:undefined-entity-name c)))
-                                             (use-value match))
-                                           (continue)))
-                                       (cxml:undeclared-namespace
-                                         (lambda (c)
-                                           (let* ((prefix (cxml:undeclared-namespace-prefix c))
-                                                  (uri (fset:lookup namespace-prefixes prefix)))
-                                             (store-value uri)
-                                             (continue))))
-                                       (cxml:well-formedness-violation #'continue))
-                          ;; Set the bozo bit.
-                          (handler-bind ((error (lambda (c) (setf e c))))
-                            (apply #'parse-feed feed args)))))
-                     (t (apply #'parse-feed feed args)))))
-      (let ((feed (parse-feed-safe)))
-        (if e
-            (values (dict* feed :bozo t) e)
-            (values feed nil))))))
+              (parse
+               (markup-grinder:grind
+                feed
+                (cxml:make-string-sink :indentation nil)
+                :extra-namespaces namespace-prefixes)))))))))
