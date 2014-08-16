@@ -1,6 +1,12 @@
-There is an extra key, `:proxy`, which is set to `:feedburner` when
+CL-FEEDPARSER is a port of the feed-parsing part of Python’s
+feedparser. It handles both well-formed and mildly invalid feeds.
+
+There is an extra key, `:proxy`, which is set to `"feedburner"` when
 the feed is from Feedburner (or uses elements in the Feedburner
 namespace, like Feedblitz).
+
+It is also the case that the Feedburner link is always overriden with
+the feedburner:origLink.
 
 This is the stub README.txt for the "cl-feedparser" project.
 

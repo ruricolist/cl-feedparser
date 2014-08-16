@@ -22,4 +22,12 @@
   :components ((:file "package")
                (:file "sanitizer")
                (:file "namespaces")
-               (:file "cl-feedparser")))
+               (:file "cl-feedparser")
+               (:module handlers
+                :components ((:file "atom")
+                             (:file "atom03")
+                             (:file "rss")
+                             (:file "rdf")
+                             (:file "dc")
+                             (:file "feedburner")
+                             (:file "itunes")))))
