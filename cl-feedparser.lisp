@@ -42,7 +42,8 @@
 (def empty-uri (puri:parse-uri ""))
 
 (defparameter *allow-protocols*
-  '(:http :https :relative))
+  '(:http :https :relative)
+  "List of the allowed protocols.")
 
 #+ () (adt:defdata string
   (sanitized-string string)
@@ -66,55 +67,6 @@ result is an unsanitized string."
     (if unsanitized
         (make-unsanitized-string s)
         s)))
-
-(sax-sanitize:define-sanitize-mode feed-sanitizer
-  :elements ("a" "abbr" "acronym" "address" "area" "aside" "audio"
-                 "b" "big" "bdo" "blockquote" "br"
-                 "caption" "center" "cite" "code" "col" "colgroup"
-                 "dd" "del" "details" "dfn" "dir" "div" "dl" "dt"
-                 "em"
-                 "figcaption" "figure"
-                 "h1" "h2" "h3" "h4" "h5" "h6" "hgroup"
-                 "i" "img" "ins"
-                 "kbd"
-                 "li"
-                 "m" "map" "mark" "noscript"
-                 "ol"
-                 "p" "pre"
-                 "q"
-                 "rp" "rt" "ruby"
-                 "s" "samp" "section" "small" "span" "strike" "strong" "sub" "sup"
-                 "table" "tbody" "td" "tfoot" "th" "thead" "time" "tr"
-                 "u" "ul" "var"
-                 "wbr")
-
-  :remove-elements ("script" "style")
-
-  :allow-data-attributes t
-
-  :attributes ((:all         . ("dir" "lang" "title" "class"))
-               ("a"          . ("href"))
-               ("blockquote" . ("cite"))
-               ("col"        . ("span" "width"))
-               ("colgroup"   . ("span" "width"))
-               ("del"        . ("cite" "datetime"))
-               ("img"        . ("align" "alt" "height" "src" "width"))
-               ("ins"        . ("cite" "datetime"))
-               ("ol"         . ("start" "reversed" "type"))
-               ("p"          . ("align")) ;XXX style?
-               ("q"          . ("cite"))
-               ("table"      . ("summary" "width"))
-               ("td"         . ("abbr" "axis" "colspan" "rowspan" "width"))
-               ("th"         . ("abbr" "axis" "colspan" "rowspan" "scope" "width"))
-               ("time"       . ("datetime" "pubdate"))
-               ("ul"         . ("type")))
-
-  :protocols (("a"           . (("href" . (:ftp :http :https :mailto :relative))))
-              ("blockquote"  . (("cite" . (:http :https :relative))))
-              ("del"         . (("cite" . (:http :https :relative))))
-              ("img"         . (("src"  . (:http :https :relative))))
-              ("ins"         . (("cite" . (:http :https :relative))))
-              ("q"           . (("cite" . (:http :https :relative))))))
 
 (defun clean (x &optional (sanitizer feed-sanitizer))
   (if (ppcre:scan "[<>&]" x)
@@ -170,126 +122,7 @@ result is an unsanitized string."
   (:default-initargs :guid-mask nil
                      :max-entries nil))
 
-(def namespaces
-  (dict "http://backend.userland.com/rss" nil
-        "http://blogs.law.harvard.edu/tech/rss" nil
-        "http://purl.org/rss/1.0/" nil
-        "http://my.netscape.com/rdf/simple/0.9/" nil
-        "http://example.com/newformat#" nil
-        "http://example.com/necho" nil
-        "http://purl.org/echo/" nil
-        "uri/of/echo/namespace#" nil
-        "http://purl.org/pie/" nil
-        "http://purl.org/atom/ns#" :atom ;atom03
-        "http://www.w3.org/2005/Atom" :atom ;atom10
-        "http://purl.org/rss/1.0/modules/rss091#" nil
-        "http://www.bloglines.com/about/specs/fac-1.0"             :access
-        "http://webns.net/mvcb/"                                   :admin
-        "http://purl.org/rss/1.0/modules/aggregation/"             :ag
-        "http://purl.org/rss/1.0/modules/annotate/"                :annotate
-        "http://www.w3.org/2007/app"                               :app
-        "http://media.tangent.org/rss/1.0/"                        :audio
-        "http://backend.userland.com/blogChannelModule"            :blog-channel
-        "http://web.resource.org/cc/"                              :cc
-        "http://www.microsoft.com/schemas/rss/core/2005"           :cf
-        "http://backend.userland.com/creativeCommonsRssModule"     :creative-commons
-        "http://purl.org/rss/1.0/modules/company"                  :co
-        "http://purl.org/rss/1.0/modules/content/"                 :content
-        "http://conversationsnetwork.org/rssNamespace-1.0/"        :conversations-network
-        "http://my.theinfo.org/changed/1.0/rss/"                   :cp
-        "http://purl.org/dc/elements/1.1/"                         :dc
-        "http://purl.org/dc/terms/"                                :dcterms
-        "http://purl.org/rss/1.0/modules/email/"                   :email
-        "http://purl.org/rss/1.0/modules/event/"                   :ev
-        "http://rssnamespace.org/feedburner/ext/1.0"               :feedburner
-        "http://purl.org/syndication/history/1.0"                  :fh
-        "http://freshmeat.net/rss/fm/"                             :fm
-        "http://xmlns.com/foaf/0.1"                                :foaf
-        "http://xmlns.com/foaf/0.1/"                               :foaf
-        "http://www.w3.org/2003/01/geo/wgs84_pos#"                 :geo
-        "http://www.georss.org/georss"                             :georss
-        "http://geourl.org/rss/module/"                            :geourl
-        "http://base.google.com/ns/1.0"                            :g
-        "http://www.opengis.net/gml"                               :gml
-        "http://postneo.com/icbm/"                                 :icbm
-        "http://purl.org/rss/1.0/modules/image/"                   :image
-        "urn:atom-extension:indexing"                              :indexing
-        "http://www.itunes.com/DTDs/PodCast-1.0.dtd"               :itunes
-        "http://example.com/DTDs/PodCast-1.0.dtd"                  :itunes
-        "http://earth.google.com/kml/2.0"                          :kml20
-        "http://earth.google.com/kml/2.1"                          :kml21
-        "http://www.opengis.net/kml/2.2"                           :kml22
-        "http://purl.org/rss/1.0/modules/link/"                    :l
-        "http://www.w3.org/1998/Math/MathML"                       :mathml
-        "http://search.yahoo.com/mrss"                             :media
-        ;; Version 1.1.2 of the Media RSS spec added the trailing slash on
-        ;; the namespace
-        "http://search.yahoo.com/mrss/"                            :media
-        "http://openid.net/xmlns/1.0"                              :openid
-        "http://a9.com/-/spec/opensearchrss/1.0/"                  :opensearch10
-        "http://a9.com/-/spec/opensearch/1.1/"                     :opensearch
-        "http://www.opml.org/spec2"                                :opml
-        "http://madskills.com/public/xml/rss/module/pingback/"     :pingback
-        "http://prismstandard.org/namespaces/1.2/basic/"           :prism
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#"              :rdf
-        "http://www.w3.org/2000/01/rdf-schema#"                    :rdfs
-        "http://purl.org/rss/1.0/modules/reference/"               :ref
-        "http://purl.org/rss/1.0/modules/richequiv/"               :reqv
-        "http://purl.org/rss/1.0/modules/search/"                  :search
-        "http://purl.org/rss/1.0/modules/slash/"                   :slash
-        "http://schemas.xmlsoap.org/soap/envelope/"                :soap
-        "http://purl.org/rss/1.0/modules/servicestatus/"           :ss
-        "http://hacks.benhammersley.com/rss/streaming/"            :str
-        "http://purl.org/rss/1.0/modules/subscription/"            :sub
-        "http://www.w3.org/2000/svg"                               :svg
-        "http://feedsync.org/2007/feedsync"                        :sx
-        "http://purl.org/rss/1.0/modules/syndication/"             :sy
-        "http://schemas.pocketsoap.com/rss/myDescModule/"          :szf
-        "http://purl.org/rss/1.0/modules/taxonomy/"                :taxo
-        "http://purl.org/rss/1.0/modules/threading/"               :thr
-        "http://purl.org/syndication/thread/1.0"                   :thr
-        "http://purl.org/rss/1.0/modules/textinput/"               :ti
-        "http://madskills.com/public/xml/rss/module/trackback/"    :trackback
-        "http://wellformedweb.org/commentAPI/"                     :wfw
-        "http://purl.org/rss/1.0/modules/wiki/"                    :wiki
-        "http://www.w3.org/1999/xhtml"                             :xhtml
-        "http://www.w3.org/1999/xlink"                             :xlink
-        "http://www.w3.org/XML/1998/namespace"                     :xml
-        "xri://$xrd*($v*2.0)"                                      :xrd
-        "xri://$xrds"                                              :xrds
-        "http://podlove.org/simple-chapters"                       :psc)
-  "Table from namespace to prefix.
-Collected from the source of feedparser.py and the list at the W3C
-feed validator.")
-
-(defun nstring-camel-case (string)
-  "Destructively convert STRING to camelCase and return it."
-  (prog1 string
-    (loop for i from 0 below (length string)
-          for c2 = (aref string i)
-          for c1 = #\Space then c2
-          do (unless (eql c2 #\-)
-               (if (eql c1 #\-)
-                   (setf (aref string i) (char-upcase c2))
-                   (setf (aref string i) (char-downcase c2)))))))
-
-(defun string-camel-case (string)
-  "Return a copy of STRING in camelCase."
-  (nstring-camel-case (copy-seq (string string))))
-
-(def namespace-prefixes
-  (let ((map (fset:map)))
-    (maphash (lambda (k v)
-               (when k
-                 (setf map (fset:with map (string-camel-case v) k))))
-             namespaces)
-    map)
-  "Table from prefix to namespace.")
-
-(defun find-ns (uri)
-  (gethash uri namespaces))
-
-(defun parse-feed-aux (input &key max-entries guid-mask)
+(defun parser-context (input &key max-entries guid-mask)
   (let* ((*entry* nil)
          (*disabled* nil)
          (author (dict))
@@ -306,10 +139,10 @@ feed validator.")
              (nreversef (gethash* :entries feed))
              (when bozo
                (setf (gethash* :bozo feed) t))
-             (return-from parse-feed-aux
+             (return-from parser-context
                (values feed parser))))
       (restart-case
-          (catch 'done
+          (catch 'parser-done
             (parser-loop (cxml:make-source input)))
         (return-feed ()
           :report "Return whatever we have so far."
@@ -359,9 +192,15 @@ feed validator.")
     (handle-tag ns (find-keyword (lispify lname)))))
 
 (defmacro defhandler (ns lname &body body)
+  (unless (member ns namespace-prefixes)
+    (error "Unknown namespace: ~a" ns))
   (with-gensyms (gns glname)
-    `(defmethod handle-tag ((,gns (eql ,ns)) (,glname (eql ,lname)))
-       ,@body)))
+    (let ((ns-spec
+            (if (eql ns nil)
+                `(,gns null)
+                `(,gns (eql ,ns)))))
+      `(defmethod handle-tag (,ns-spec (,glname (eql ,lname)))
+         ,@body))))
 
 (defhandler nil :title
   (handle-title))
@@ -594,34 +433,34 @@ feed validator.")
     (check-guid-mask id)
     (setf (gethash* :id (or *entry* *feed*)) id)))
 
-(defmethod handle-tag ((ns (eql :dc)) (lname (eql :description)))
+(defhandler :dc :description
   (get-summary))
 
-(defmethod handle-tag ((ns (eql :atom)) (lname (eql :summary)))
+(defhandler :atom :summary
   (get-summary))
 
-(defmethod handle-tag ((ns (eql :feedburner)) (lname (eql :orig-link)))
+(defhandler :feedburner :orig-link
   ;; Eg. 3QD.
   (when *entry*
     (setf (gethash* :link *entry*)
           (resolve-uri (get-text)))))
 
-(defmethod handle-tag ((ns (eql :content)) (lname (eql :encoded)))
+(defhandler :content :encoded
   (get-entry-content))
 
-(defmethod handle-tag ((ns (eql :atom)) (lname (eql :content)))
+(defhandler :atom :content
   (get-entry-content))
 
-(defmethod handle-tag ((ns null) (lname (eql :body)))
+(defhandler nil :body
   (get-entry-content))
 
-(defmethod handle-tag ((ns null) (lname (eql :fullitem)))
+(defhandler nil :fullitem
   (get-entry-content))
 
-(defmethod handle-tag ((ns (eql :xhtml)) (lname (eql :body)))
+(defhandler :xhtml :body
   (get-entry-content))
 
-(defmethod handle-tag ((ns (eql :dcterms)) (lname (eql :modified)))
+(defhandler :dcterms :modified
   (setf (values (gethash* :updated *entry*)
                 (gethash* :updated-parsed *entry*))
         (get-timestring)))
@@ -735,7 +574,7 @@ attribute: if there is no current XML base, use the :link property of the feed."
   (let ((count (finc (parser-entries-count *parser*)))
         (max-entries (parser-max-entries *parser*)))
     (if (and max-entries (= max-entries count))
-        (throw 'done nil)
+        (throw 'parser-done nil)
         (lret ((*author* (dict))
                (*entry* (dict)))
 
@@ -755,7 +594,10 @@ attribute: if there is no current XML base, use the :link property of the feed."
   (when (stringp uri)
     (setf uri (trim-whitespace (remove #\Newline uri))))
   (let ((base (current-xml-base)))
-    (or (ignoring puri:uri-parse-error
+    ;; Not that (ignoring puri:uri-parse-error ...) won't do it; e.g.
+    ;; (parse-uri "1!USER@FTP.JONATHANKINLAY.COM" signals
+    ;; `simple-error'.
+    (or (ignore-errors
           (let* ((uri (puri:merge-uris uri base))
                  (protocol (or (puri:uri-scheme uri)
                                :relative)))
@@ -842,7 +684,7 @@ to T). SANITIZE-TITLES controls sanitizing titles."
              (lambda (c)
                (when safe
                  (let* ((prefix (cxml:undeclared-namespace-prefix c))
-                        (uri (fset:lookup namespace-prefixes prefix)))
+                        (uri (fset:lookup namespace-map prefix)))
                    (store-value uri)
                    (continue)))))
            (cxml:well-formedness-violation
@@ -853,10 +695,12 @@ to T). SANITIZE-TITLES controls sanitizing titles."
                  ;; Always set the bozo bit before other handlers
                  ;; can take effect.
                  (handler-bind ((error (lambda (c) (push c bozo))))
-                   (dict* (parse-feed-aux feed
-                                          :max-entries max-entries
-                                          :guid-mask guid-mask)
-                          :bozo bozo))))
+                   (values
+                    (dict* (parser-context feed
+                                           :max-entries max-entries
+                                           :guid-mask guid-mask)
+                           :bozo bozo)
+                    bozo))))
           (restart-case
               (parse feed)
             (repair ()
@@ -865,4 +709,4 @@ to T). SANITIZE-TITLES controls sanitizing titles."
                (markup-grinder:grind
                 feed
                 (cxml:make-string-sink :indentation nil)
-                :extra-namespaces namespace-prefixes)))))))))
+                :extra-namespaces namespace-map)))))))))

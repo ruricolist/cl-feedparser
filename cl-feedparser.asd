@@ -10,10 +10,16 @@
                #:anaphora
                #:net-telent-date
                #:local-time
-               #:cl-libxml2
-               #:sanitize
                #:cl-fad
                #:babel
-               #:markup-grinder)
+               #:markup-grinder
+               #:sax-sanitize
+               #:html5-sax
+               #:fset
+               #:cxml
+               #:closure-html
+               #:cl-ppcre)
   :components ((:file "package")
+               (:file "sanitizer")
+               (:file "namespaces")
                (:file "cl-feedparser")))
