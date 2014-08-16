@@ -549,18 +549,18 @@ attribute: if there is no current XML base, use the :link property of the feed."
             (t "text/plain")))))
 
 (defmethod handle-tag ((ns null) (lname (eql :item)))
-  (handle-entry))
+  (entry-context))
 
 (defmethod handle-tag ((ns (eql :rdf)) (lname (eql :item)))
   ;; todo rdf:about
   ;; TODO use guid-mask
-  (let ((entry (handle-entry)))
+  (let ((entry (entry-context)))
     (when-let (id (klacks:get-attribute *source* "about"))
       (check-guid-mask id)
       (setf (gethash* :id entry) id))))
 
 (defmethod handle-tag ((ns (eql :atom)) (lname (eql :entry)))
-  (handle-entry))
+  (entry-context))
 
 (defun ensure-entry-id (entry)
   "Substitute link for ID if there is none."
@@ -570,25 +570,25 @@ attribute: if there is no current XML base, use the :link property of the feed."
         (check-guid-mask id)
         id))))
 
-(defun handle-entry ()
+(defun entry-context ()
   (let ((count (finc (parser-entries-count *parser*)))
         (max-entries (parser-max-entries *parser*)))
-    (if (and max-entries (= max-entries count))
-        (throw 'parser-done nil)
-        (lret ((*author* (dict))
-               (*entry* (dict)))
+    (when (and max-entries (= max-entries count))
+      (throw 'parser-done nil))
+    (lret ((*author* (dict))
+           (*entry* (dict)))
 
-          (setf (gethash* :author-detail *entry*) *author*)
+      (setf (gethash* :author-detail *entry*) *author*)
 
-          (let ((*disabled* *disabled*))
-            (parser-loop *source* :recursive t)
-            ;; Ensure an ID.
-            (ensure-entry-id *entry*)
-            (unless *disabled*
-              (push *entry* (gethash* :entries *feed*))))
+      (let ((*disabled* *disabled*))
+        (parser-loop *source* :recursive t)
+        ;; Ensure an ID.
+        (ensure-entry-id *entry*)
+        (unless *disabled*
+          (push *entry* (gethash* :entries *feed*))))
 
-          (setf (gethash* :author *entry*)
-                (gethash* :name *author*))))))
+      (setf (gethash* :author *entry*)
+            (gethash* :name *author*)))))
 
 (defun resolve-uri (uri)
   (when (stringp uri)
@@ -695,12 +695,14 @@ to T). SANITIZE-TITLES controls sanitizing titles."
                  ;; Always set the bozo bit before other handlers
                  ;; can take effect.
                  (handler-bind ((error (lambda (c) (push c bozo))))
-                   (values
-                    (dict* (parser-context feed
+                   (let ((parse
+                           (parser-context feed
                                            :max-entries max-entries
-                                           :guid-mask guid-mask)
-                           :bozo bozo)
-                    bozo))))
+                                           :guid-mask guid-mask)))
+                     (when bozo
+                       (setf (gethash :bozo parse) t
+                             (gethash :bozo-exception parse) bozo))
+                     (values parse bozo)))))
           (restart-case
               (parse feed)
             (repair ()
