@@ -10,7 +10,7 @@
         "http://purl.org/echo/" nil
         "uri/of/echo/namespace#" nil
         "http://purl.org/pie/" nil
-        "http://purl.org/atom/ns#" :atom ;atom03
+        "http://purl.org/atom/ns#" :atom03 ;atom03
         "http://www.w3.org/2005/Atom" :atom ;atom10
         "http://purl.org/rss/1.0/modules/rss091#" nil
         "http://www.bloglines.com/about/specs/fac-1.0"             :access
