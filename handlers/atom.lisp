@@ -91,11 +91,14 @@
   (let ((target (or *entry* *feed*)))
     (setf (values (gethash* :updated target)
                   (gethash* :updated-parsed target))
-          (get-timestring))))
+          (get-timestring)))
+
+  (and *entry* (check-guid-mask)))
 
 (defhandler :atom :id
   (let ((id (get-text)))
-    (check-guid-mask id)
+    (when-let (entry *entry*)
+      (check-guid-mask entry))
     (setf (gethash* :id (or *entry* *feed*)) id)))
 
 (defhandler :atom :content

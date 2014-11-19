@@ -117,7 +117,7 @@ feed validator.")
   "Map from prefix to namespace.")
 
 (def namespace-prefixes
-  (cons nil (remove-duplicates (hash-table-values namespaces))))
+  (adjoin nil (remove-duplicates (hash-table-values namespaces))))
 
 (defun find-ns (uri)
   (gethash uri namespaces))

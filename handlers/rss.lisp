@@ -49,7 +49,7 @@
             (equal "true" (klacks:get-attribute *source* "isPermaLink")))
           (id (get-text)))
       (when id
-        (check-guid-mask id)
+        (check-guid-mask entry)
         (setf (href entry :id) id)
         (when (or permalinkp
                   ;; Use GUID as a fallback link.

@@ -4,11 +4,34 @@
 
 ;;; "cl-feedparser" goes here. Hacks and glory await!
 
+;; TODO Use Quri instead of Puri?
+
 (defparameter *version*
   "0.2")
 
 (defun version-string ()
   (fmt "cl-feedparser ~a" *version*))
+
+(deftype universal-time ()
+  'integer)
+
+(deftype time ()
+  '(or universal-time timestamp))
+
+(deftype entry-mtime ()
+  '(or time null))
+
+(deftype id ()
+  '(or null string puri:uri))
+
+(deftype mask-time ()
+  '(or time null string))
+
+(deftype mask ()
+  '(or string (cons string mask-time)))
+
+(deftype max-entries ()
+  '(or null wholenum))
 
 
 
@@ -32,11 +55,13 @@
       :enclosures :contributors
       :created :comments)))
 
+(deftype feedparser-key ()
+  `(member ,@*keys*))
+
 (defmacro gethash* (key hash &optional default)
   "Like `gethash', but check (statically) that KEY is a member of
 `*keys*'."
-  (unless (member key *keys*)
-    (error "Unknown key: ~a" key))
+  (check-type key feedparser-key)
   `(gethash ,key ,hash ,@(unsplice default)))
 
 
@@ -51,13 +76,16 @@
   "Wrapper for an unsanitized string."
   (string "" :type string))
 
+(deftype feed-string ()
+  '(or string unsanitized-string))
+
 (defun string+ (&rest strings)
   "Concatenate STRINGS, ensuring that if any are unsanitized, the
 result is an unsanitized string."
   (let* ((unsanitized nil)
          (s (with-output-to-string (s)
               (dolist (string strings)
-                (etypecase string
+                (etypecase-of feed-string string
                   (string (write-string string s))
                   (unsanitized-string
                    (setf unsanitized t)
@@ -114,9 +142,9 @@ result is an unsanitized string."
   (or *entry* *feed*))
 
 (defclass parser ()
-  ((max-entries :initarg :max-entries :accessor parser-max-entries)
-   (entries-count :initform 0 :accessor parser-entries-count)
-   (guid-mask :initarg :guid-mask :accessor parser-guid-mask))
+  ((max-entries :initarg :max-entries :accessor parser-max-entries :type max-entries)
+   (entries-count :initform 0 :accessor parser-entries-count :type wholenum)
+   (guid-mask :initarg :guid-mask :accessor parser-guid-mask :type list))
   (:default-initargs :guid-mask nil
                      :max-entries nil))
 
@@ -206,19 +234,68 @@ result is an unsanitized string."
 
 (defun get-timestring ()
   (when-let (string (get-text-safe))
-    (values string (parse-timestring string))))
+    (values string (parse-time string))))
 
-(defun parse-timestring (timestring)
-  (or (net.telent.date:parse-time timestring)
+(defun parse-time (string)
+  (or (net.telent.date:parse-time string)
       (ignoring local-time::invalid-timestring ;XXX
-        (local-time:timestamp-to-universal
-         (local-time:parse-timestring timestring)))))
+        (timestamp-to-universal
+         (parse-timestring string)))))
 
-(defmethod check-guid-mask ((id puri:uri))
-  (check-guid-mask (puri:render-uri id nil)))
+(defmethod time= ((t1 integer) (t2 integer))
+  (= t1 t2))
 
-(defmethod check-guid-mask ((id string))
-  (when (and *entry* id (find id (parser-guid-mask *parser*) :test #'equal))
+(defmethod time= ((t1 timestamp) (t2 timestamp))
+  (timestamp= t1 t2))
+
+(defmethod time= ((t1 timestamp) (t2 integer))
+  (time= t2 t1))
+
+(defmethod time= ((t1 integer) (t2 timestamp))
+  (mvlet* ((ss1 mm1 hh1 day1 month1 year1 (decode-universal-time t1))
+           (nsec2 ss2 mm2 hh2 day2 month2 year2 (decode-timestamp t2)))
+    (declare (ignore nsec2))
+    (and (= ss1 ss2)
+         (= mm1 mm2)
+         (= hh1 hh2)
+         (= day1 day2)
+         (= month1 month2)
+         (= year1 year2))))
+
+(defmethod time= ((t1 string) t2) (time= (parse-time t1) t2))
+(defmethod time= (t1 (t2 string)) (time= t1 (parse-time t2)))
+
+(assert
+ (let* ((time (get-universal-time))
+        (timestamp (local-time:universal-to-timestamp time)))
+   (and (time= time timestamp)
+        (not (time= (1+ time) timestamp)))))
+
+(defun id-masked? (id mask)
+  (etypecase-of id id
+    (null nil)
+    (string (equal id mask))
+    (puri:uri (equal (puri:render-uri id nil) mask))))
+
+(defun guid-masked? (entry)
+  (let ((id (gethash* :id entry)))
+    (some (lambda (mask)
+            (etypecase-of mask mask
+              (string (id-masked? id mask))
+              ((cons string mask-time)
+               (destructuring-bind (mask-id . mask-mtime) mask
+                 (and (id-masked? id mask-id)
+                      (let ((mtime (gethash* :updated-parsed entry)))
+                        (etypecase-of entry-mtime mtime
+                          (null t)
+                          (time
+                           (etypecase-of mask-time mask-mtime
+                             (null nil)
+                             ((or time string) (time= mtime mask-mtime)))))))))))
+          (parser-guid-mask *parser*))))
+
+(defun check-guid-mask (&optional (entry *entry*))
+  (when (guid-masked? entry)
     (setf *disabled* t)))
 
 (defun current-xml-base-aux (&aux (feed *feed*))
@@ -303,18 +380,25 @@ feed, use the :link property of the feed as the base."
           ((find-if (op (in _ #\< #\>)) value) "text/html")
           (t "text/plain"))))
 
-(defun inc-entry-count (&aux (parser *parser*))
-  (let ((count (finc (parser-entries-count parser)))
-        (max-entries (parser-max-entries parser)))
-    (when (and max-entries (= max-entries count))
-      (throw 'parser-done nil))))
+(defun entry-count (&aux (parser *parser*))
+  (parser-entries-count parser))
+
+(defun (setf entry-count) (value &aux (parser *parser*))
+  (check-type value wholenum)
+  (setf (parser-entries-count parser) value)
+  (let ((max-entries (parser-max-entries parser)))
+    (etypecase-of max-entries max-entries
+      (null value)
+      (wholenum
+       (when (> value max-entries)
+         (throw 'parser-done nil))))))
 
 (defun ensure-entry-id (entry &key id)
   "Substitute link for ID if there is none."
   (ensure2 (gethash* :id entry)
     (or id
         (when-let (id (gethash* :link entry))
-          (check-guid-mask id)
+          (check-guid-mask entry)
           (princ-to-string id)))))
 
 (defun entry-loop (entry &key id)
@@ -326,7 +410,7 @@ feed, use the :link property of the feed as the base."
       (push entry (gethash* :entries *feed*)))))
 
 (defun entry-context (&key id)
-  (inc-entry-count)
+  (incf (entry-count))
   (lret* ((author (dict))
           (entry (dict))
           (*author* author)
