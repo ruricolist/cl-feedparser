@@ -278,6 +278,8 @@ result is an unsanitized string."
     (puri:uri (equal (puri:render-uri id nil) mask))))
 
 (defun guid-masked? (entry)
+  ;; Note the strategy here: unless an explicit modification time is
+  ;; provided, we assume the post has /not/ been modified.
   (let ((id (gethash* :id entry)))
     (some (lambda (mask)
             (etypecase-of mask mask
