@@ -178,23 +178,21 @@ result is an unsanitized string."
 (defun parser-loop (source &key recursive)
   (let ((*source* source)
         (depth 0))
-    (loop (let ((event (klacks:peek source)))
-            (unless event
-              (return))
-            (case event
-              (:start-element
-               (incf depth)
-               (multiple-value-bind (ev uri lname)
-                   (klacks:consume source)
-                 (declare (ignore ev))
-                 (unless *disabled*
-                   (handle-tag (find-ns uri) lname))))
-              (:end-element
-               (decf depth)
-               (klacks:consume source)
-               (when (and recursive (minusp depth))
-                 (return)))
-              (t (klacks:consume source)))))))
+    (loop for event = (klacks:peek source) while event do
+      (case event
+        (:start-element
+         (incf depth)
+         (multiple-value-bind (ev uri lname)
+             (klacks:consume source)
+           (declare (ignore ev))
+           (unless *disabled*
+             (handle-tag (find-ns uri) lname))))
+        (:end-element
+         (decf depth)
+         (klacks:consume source)
+         (when (and recursive (minusp depth))
+           (return)))
+        (t (klacks:consume source))))))
 
 (defun lispify (id)
   "Convert ID from camel-case to hyphenated form."
