@@ -8,6 +8,6 @@
            #:repair #:return-feed
            #:feed-sanitizer
            #:unsanitized-string #:unsanitized-string-string #:string+
-           #:sanitize-title #:sanitize-content
+           #:sanitize-title #:sanitize-content #:sanitize-text
            #:feed-string
            #:parse-time))
