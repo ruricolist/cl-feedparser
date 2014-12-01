@@ -66,18 +66,21 @@
 
 
 
-(def empty-uri (puri:parse-uri ""))
+(deftype sanitizer ()
+  '(or null sax-sanitize::mode))
 
-(defparameter *allow-protocols*
-  '(:http :https :relative)
-  "List of the allowed protocols.")
-
-(defstruct (unsanitized-string (:constructor make-unsanitized-string (string)))
+(defstruct (unsanitized-string (:constructor unsanitized-string (string)))
   "Wrapper for an unsanitized string."
   (string "" :type string))
 
 (deftype feed-string ()
   '(or string unsanitized-string))
+
+(def empty-uri (puri:parse-uri ""))
+
+(defparameter *allow-protocols*
+  '(:http :https :relative)
+  "List of the allowed protocols.")
 
 (defun string+ (&rest strings)
   "Concatenate STRINGS, ensuring that if any are unsanitized, the
@@ -94,37 +97,35 @@ result is an unsanitized string."
         (make-unsanitized-string s)
         s)))
 
-(defun clean (x &optional (sanitizer feed-sanitizer))
-  (if (ppcre:scan "[<>&]" x)
-      (html5-sax:serialize-dom
-       (html5-parser:parse-html5 x)
-       (make-absolute-uri-handler
-        (sax-sanitize:wrap-sanitize
-         (html5-sax:make-html5-sink)
-         sanitizer)))
-      x))
+(defun make-html-sink (&key base sanitizer)
+  (~> (html5-sax:make-html5-sink)
+      (make-absolute-uri-handler :base base)
+      (sax-sanitize:wrap-sanitize sanitizer)))
 
-(def default-sanitizer
-  (lambda (x)
-    (when x
-      (clean x))))
+(defun sanitize-aux (x sanitizer)
+  (if (not (ppcre:scan "[<>&]" x)) x
+      (etypecase-of sanitizer sanitizer
+        (null (unsanitized-string x))
+        (sax-sanitize::mode
+         (html5-sax:serialize-dom
+          (html5-parser:parse-html5 x)
+          (make-html-sink))))))
 
-(def default-title-sanitizer
-  (lambda (x)
-    (when x
-      (clean x sax-sanitize:restricted))))
+(defparameter *content-sanitizer* feed-sanitizer)
 
-(declaim (type function *content-sanitizer* *title-sanitizer*))
-
-(defparameter *content-sanitizer* default-sanitizer)
-
-(defparameter *title-sanitizer* default-title-sanitizer)
+(defparameter *title-sanitizer* sax-sanitize:restricted)
 
 (defun sanitize-content (x)
-  (funcall *content-sanitizer* x))
+  (sanitize-aux x *content-sanitizer*))
 
 (defun sanitize-title (x)
-  (funcall *title-sanitizer* x))
+  (sanitize-aux x *title-sanitizer*))
+
+(defun sanitize-text (x)
+  (cond ((emptyp x) x)
+        ;; If there are no entities, just strip all tags.
+        ((not (find #\& x)) (ppcre:regex-replace-all "<[^>]*>" x " "))
+        (t (sanitize-aux x sax-sanitize:default))))
 
 
 
@@ -231,7 +232,7 @@ result is an unsanitized string."
     (string-trim " ()" s)))
 
 (defun get-timestring ()
-  (when-let (string (get-text-safe))
+  (when-let (string (get-text/sanitized))
     (values string (parse-time string))))
 
 (defun parse-time (string)
@@ -351,19 +352,18 @@ feed, use the :link property of the feed as the base."
   (eql *content-sanitizer* default-sanitizer))
 
 (defun get-xhtml-content-value (&aux (source *source*))
-  (let ((handler (make-absolute-uri-handler (html5-sax:make-html5-sink)
-                                            :base (current-xml-base))))
-    (when (can-sanitize/sax?)
-      (setf handler (sax-sanitize:wrap-sanitize handler feed-sanitizer)))
-    (klacks:serialize-element source handler :document-events t)))
+  (let* ((handler (make-html-sink :base (current-xml-base)
+                                  :sanitizer *content-sanitizer*))
+         (string
+           (klacks:serialize-element source handler :document-events t)))
+    (etypecase-of sanitizer *content-sanitizer*
+      (null (unsanitized-string string))
+      (sax-sanitize::mode string))))
 
 (defun xhtml-content (content &aux (source *source*))
   (klacks:find-element source "div")
   (let ((value (get-xhtml-content-value)))
-    (setf (gethash* :value content)
-          (if (can-sanitize/sax?)
-              value
-              (sanitize-content value))
+    (setf (gethash* :value content) value ;Already sanitized.
           (gethash* :type content)  "text/html"
           (gethash* :base content)  (current-xml-base)))
   content)
@@ -445,11 +445,8 @@ feed, use the :link property of the feed as the base."
         (loop while (eql (klacks:peek source) :characters)
               do (write-string (nth-value 1 (klacks:consume source)) s)))))
 
-(defun get-text-safe (&optional (sanitizer sax-sanitize:restricted))
-  (let ((text (get-text)))
-    (if (emptyp text)
-        text
-        (clean text sanitizer))))
+(defun get-text/sanitized ()
+  (sanitize-text (get-text)))
 
 (defun urlish? (x)
   "Does X look like a URL?"
@@ -493,18 +490,17 @@ underlying string (using `unsanitized-string-string') and sanitize it
 yourself.
 
 The idea is that if you see a string in the result, you can be sure it
-is sanitized."
+is sanitized.
+
+\(Note that if you do disable sanitizing, you may still get string
+values in cases where the parser is able to determine that sanitizing
+is not needed at all, or where it uses special sanitizing
+strategies.)"
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (let ((bozo nil)
-        (*content-sanitizer*
-          (if sanitize-content
-              *content-sanitizer*
-              #'make-unsanitized-string))
-        (*title-sanitizer*
-          (if sanitize-titles
-              *title-sanitizer*
-              #'make-unsanitized-string)))
+        (*content-sanitizer* (if sanitize-content *content-sanitizer* nil))
+        (*title-sanitizer* (if sanitize-titles *title-sanitizer* nil)))
     (handler-bind
         ((error
            (lambda (c) (declare (ignore c))

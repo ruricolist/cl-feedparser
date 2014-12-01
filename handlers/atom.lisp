@@ -1,14 +1,14 @@
 (in-package #:cl-feedparser)
 
 (defhandler :atom :title
-  (when-let (text (get-text-safe))
+  (when-let (text (sanitize-title (get-text)))
     (let ((title (trim-whitespace text)))
       ;; Cf. Grantland.
       (ensure2 (gethash* :title (or *entry* *feed*))
         title))))
 
 (defhandler :atom :subtitle
-  (when-let (text (get-text-safe))
+  (when-let (text (sanitize-title (get-text)))
     (setf (gethash* :subtitle *feed*) text)))
 
 (defhandler :atom :rights
@@ -46,13 +46,12 @@
     (push link (gethash* :links (or *entry* *feed*)))))
 
 (defhandler :atom :name
-  (let ((name (get-text-safe sax-sanitize:default)))
+  (let ((name (sanitize-text (get-text))))
     (setf (gethash* :author (or *entry* *feed*)) name
           (gethash* :name *author*) name)))
 
 (defhandler :atom :email
-  (setf (gethash* :email *author*)
-        (get-text-safe sax-sanitize:default)))
+  (setf (gethash* :email *author*) (get-text/sanitized)))
 
 (defhandler :atom :uri
   (setf (gethash* :uri *author*)

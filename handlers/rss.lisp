@@ -17,7 +17,7 @@
           (resolve-uri string))))
 
 (defhandler nil :author
-  (let* ((author (get-text-safe sax-sanitize:default))
+  (let* ((author (get-text/trivial-markup))
          (email? (find #\@ author))
          creator)
 

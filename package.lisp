@@ -4,6 +4,10 @@
   (:use #:cl #:serapeum #:alexandria #:anaphora #:local-time)
   (:nicknames #:feedparser)
   (:export #:parse-feed
+           #:*keys* #:feedparser-key #:gethash*
            #:repair #:return-feed
            #:feed-sanitizer
-           #:unsanitized-string #:unsanitized-string-string #:string+))
+           #:unsanitized-string #:unsanitized-string-string #:string+
+           #:sanitize-title #:sanitize-content
+           #:feed-string
+           #:parse-time))
