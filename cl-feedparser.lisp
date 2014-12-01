@@ -9,6 +9,9 @@
 (defparameter *version*
   "0.2")
 
+(defvar *base* nil
+  "Default value for `current-xml-base'.")
+
 (defun version-string ()
   (fmt "cl-feedparser ~a" *version*))
 
@@ -109,7 +112,11 @@ result is an unsanitized string."
   (ppcre:scan "[<>&]" string))
 
 (defun sanitize-aux (x sanitizer)
-  (cond ((not (stringp x)) x)
+  (cond ((typep x 'stp:node)
+         (let ((sink (make-html-sink :sanitizer sanitizer)))
+           (or (stp:serialize x sink)
+               (sax:end-document sink))))
+        ((not (stringp x)) x)
         ((emptyp x) x)
         ((not (has-markup? x)) x)
         (t (etypecase-of sanitizer sanitizer
@@ -117,7 +124,7 @@ result is an unsanitized string."
              (sax-sanitize::mode
               (html5-sax:serialize-dom
                (html5-parser:parse-html5 x)
-               (make-html-sink)))))))
+               (make-html-sink :sanitizer sanitizer)))))))
 
 (defparameter *content-sanitizer* feed-sanitizer)
 
@@ -318,14 +325,12 @@ result is an unsanitized string."
 attribute: if there is no current XML base, and this is a Feedburner
 feed, use the :link property of the feed as the base."
   (let ((xml-base (klacks:current-xml-base *source*)))
-    (if (not (emptyp xml-base))
-        xml-base
-        (let ((proxy (gethash* :proxy feed)))
-          (when (equal proxy "feedburner")
-            (gethash* :link feed))))))
+    (if (not (emptyp xml-base)) xml-base
+        (when (equal (gethash* :proxy feed) "feedburner")
+          (gethash* :link feed)))))
 
 (defun current-xml-base ()
-  (or (current-xml-base-aux) ""))
+  (or *base* (current-xml-base-aux) ""))
 
 (defun get-content (&aux (source *source*))
   (let ((type (klacks:get-attribute source "type"))
