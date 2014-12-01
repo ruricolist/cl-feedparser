@@ -69,6 +69,9 @@
 (deftype sanitizer ()
   '(or null sax-sanitize::mode))
 
+(deftype sanitizer-designator ()
+  '(or sanitizer (eql t)))
+
 (defstruct (unsanitized-string (:constructor unsanitized-string (string)))
   "Wrapper for an unsanitized string."
   (string "" :type string))
@@ -102,27 +105,38 @@ result is an unsanitized string."
       (make-absolute-uri-handler :base base)
       (sax-sanitize:wrap-sanitize sanitizer)))
 
+(defun has-markup? (string)
+  (ppcre:scan "[<>&]" string))
+
 (defun sanitize-aux (x sanitizer)
-  (if (not (ppcre:scan "[<>&]" x)) x
-      (etypecase-of sanitizer sanitizer
-        (null (unsanitized-string x))
-        (sax-sanitize::mode
-         (html5-sax:serialize-dom
-          (html5-parser:parse-html5 x)
-          (make-html-sink))))))
+  (cond ((not (stringp x)) x)
+        ((emptyp x) x)
+        ((not (has-markup? x)) x)
+        (t (etypecase-of sanitizer sanitizer
+             (null (unsanitized-string x))
+             (sax-sanitize::mode
+              (html5-sax:serialize-dom
+               (html5-parser:parse-html5 x)
+               (make-html-sink)))))))
 
 (defparameter *content-sanitizer* feed-sanitizer)
 
 (defparameter *title-sanitizer* sax-sanitize:restricted)
 
-(defun sanitize-content (x)
-  (sanitize-aux x *content-sanitizer*))
+(defun sanitize-content (x &optional (sanitizer t))
+  (etypecase-of sanitizer-designator sanitizer
+    ((eql t) (sanitize-aux x *content-sanitizer*))
+    (sanitizer (sanitize-aux x sanitizer))))
 
-(defun sanitize-title (x)
-  (sanitize-aux x *title-sanitizer*))
+(defun sanitize-title (x &optional (sanitizer t))
+  (etypecase-of sanitizer-designator sanitizer
+    ((eql t) (sanitize-aux x *title-sanitizer*))
+    (sanitizer (sanitize-aux x sanitizer))))
 
 (defun sanitize-text (x)
-  (cond ((emptyp x) x)
+  (cond ((not (stringp x)) x)
+        ((emptyp x) x)
+        ((not (has-markup? x)) x)
         ;; If there are no entities, just strip all tags.
         ((not (find #\& x)) (ppcre:regex-replace-all "<[^>]*>" x " "))
         (t (sanitize-aux x sax-sanitize:default))))
@@ -494,8 +508,9 @@ is sanitized.
 
 \(Note that if you do disable sanitizing, you may still get string
 values in cases where the parser is able to determine that sanitizing
-is not needed at all, or where it uses special sanitizing
-strategies.)"
+is not needed at all, or where it uses special sanitizing strategies,
+or where the field is unconditionally sanitized, like dates and
+email addresses.)"
   (when (pathnamep feed)
     (setf feed (fad:file-exists-p feed)))
   (let ((bozo nil)
