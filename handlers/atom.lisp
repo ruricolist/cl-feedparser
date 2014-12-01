@@ -63,7 +63,8 @@
      (lambda (ns lname qname value dtdp)
        (declare (ignore ns lname dtdp))
        (when (equal qname "xml:lang")
-         (setf (gethash* :language *feed*) value)
+         (setf (gethash* :language *feed*)
+               (sanitize-text value))
          (return)))
      *source*)))
 
