@@ -54,7 +54,7 @@
   (setf (gethash* :email *author*) (get-text/sanitized)))
 
 (defhandler :atom :uri
-  (setf (gethash* :uri *author*)
+  (setf (gethash* :href *author*)
         (resolve-uri (get-text))))
 
 (defhandler :atom :feed
