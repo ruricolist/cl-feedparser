@@ -114,8 +114,11 @@ result is an unsanitized string."
 (defun sanitize-aux (x sanitizer)
   (cond ((typep x 'stp:node)
          (let ((sink (make-html-sink :sanitizer sanitizer)))
-           (or (stp:serialize x sink)
-               (sax:end-document sink))))
+           (if (typep x 'stp:document)
+               (stp:serialize x sink)
+               (progn
+                 (stp:serialize x sink)
+                 (sax:end-document sink)))))
         ((not (stringp x)) x)
         ((emptyp x) x)
         ((not (has-markup? x)) x)
