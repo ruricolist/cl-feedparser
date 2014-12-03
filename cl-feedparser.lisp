@@ -148,8 +148,14 @@ result is an unsanitized string."
         ((emptyp x) x)
         ((not (has-markup? x)) x)
         ;; If there are no entities, just strip all tags.
-        ((not (find #\& x)) (ppcre:regex-replace-all "<[^>]*>" x " "))
+        ((not (find #\& x))
+         ;; Tags that never close...
+         (ppcre:regex-replace-all "<[^>]*>?" x " "))
+        ;; If there are entities, we have to resort to a real parser.
         (t (sanitize-aux x sax-sanitize:default))))
+
+;; Unclosed tags.
+(assert (equal " " (sanitize-text "<video poster=javascript:alert(10)//")))
 
 
 
