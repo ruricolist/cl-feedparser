@@ -100,7 +100,7 @@ result is an unsanitized string."
                    (setf unsanitized t)
                    (write-string (unsanitized-string-string string) s)))))))
     (if unsanitized
-        (make-unsanitized-string s)
+        (unsanitized-string s)
         s)))
 
 (defun make-html-sink (&key base sanitizer)
@@ -366,9 +366,6 @@ feed, use the :link property of the feed as the base."
   (dolist (attr attrs)
     (resolve-attr attr))
   (call-next-method handler ns lname qname attrs))
-
-(defun can-sanitize/sax? ()
-  (eql *content-sanitizer* default-sanitizer))
 
 (defun get-xhtml-content-value (&aux (source *source*))
   (let* ((handler (make-html-sink :base (current-xml-base)
