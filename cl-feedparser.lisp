@@ -18,17 +18,17 @@
 (deftype universal-time ()
   'integer)
 
-(deftype time ()
+(deftype time-designator ()
   '(or universal-time timestamp))
 
 (deftype entry-mtime ()
-  '(or time null))
+  '(or time-designator null))
 
 (deftype id ()
   '(or null string puri:uri))
 
 (deftype mask-time ()
-  '(or time null string))
+  '(or time-designator null string))
 
 (deftype mask ()
   '(or string (cons string mask-time)))
@@ -319,10 +319,11 @@ result is an unsanitized string."
                       (let ((mtime (gethash* :updated-parsed entry)))
                         (etypecase-of entry-mtime mtime
                           (null t)
-                          (time
+                          (time-designator
                            (etypecase-of mask-time mask-mtime
                              (null nil)
-                             ((or time string) (time= mtime mask-mtime)))))))))))
+                             ((or time-designator string)
+                              (time= mtime mask-mtime)))))))))))
           (parser-guid-mask *parser*))))
 
 (defun check-guid-mask (&optional (entry *entry*))
