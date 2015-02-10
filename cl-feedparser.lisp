@@ -306,24 +306,28 @@ result is an unsanitized string."
     (string (equal id mask))
     (puri:uri (equal (puri:render-uri id nil) mask))))
 
-(defun guid-masked? (entry)
+(defun masked? (mask id &optional mtime)
+  "Compare ID and MTIME against MASK and return T if the mask applies."
   ;; Note the strategy here: unless an explicit modification time is
-  ;; provided, we assume the post has /not/ been modified.
+  ;; provided by the feed, we assume the post has /not/ been modified.
+  (etypecase-of mask mask
+    (string (id-masked? id mask))
+    ((cons string mask-time)
+     (destructuring-bind (mask-id . mask-mtime) mask
+       (and (id-masked? id mask-id)
+            (etypecase-of entry-mtime mtime
+              (null t)
+              (time-designator
+               (etypecase-of mask-time mask-mtime
+                 (null nil)
+                 ((or time-designator string)
+                  (time= mtime mask-mtime))))))))))
+
+(defun guid-masked? (entry)
   (let ((id (gethash* :id entry)))
     (some (lambda (mask)
-            (etypecase-of mask mask
-              (string (id-masked? id mask))
-              ((cons string mask-time)
-               (destructuring-bind (mask-id . mask-mtime) mask
-                 (and (id-masked? id mask-id)
-                      (let ((mtime (gethash* :updated-parsed entry)))
-                        (etypecase-of entry-mtime mtime
-                          (null t)
-                          (time-designator
-                           (etypecase-of mask-time mask-mtime
-                             (null nil)
-                             ((or time-designator string)
-                              (time= mtime mask-mtime)))))))))))
+            (let ((mtime (gethash* :updated-parsed entry)))
+              (masked? mask id mtime)))
           (parser-guid-mask *parser*))))
 
 (defun check-guid-mask (&optional (entry *entry*))
@@ -543,7 +547,7 @@ email addresses.)"
                (when safe
                  (when-let (exp (markup-grinder:expand-entity
                                  (cxml:undefined-entity-name c)))
-                   (use-value exp))
+                   (use-value (string exp)))
                  (continue))))
            (cxml:undeclared-namespace
              (lambda (c)
