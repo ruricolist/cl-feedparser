@@ -11,4 +11,5 @@
            #:sanitize-title #:sanitize-content #:sanitize-text
            #:feed-string
            #:*base*
-           #:parse-time))
+           #:parse-time
+           #:masked?))
