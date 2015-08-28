@@ -12,7 +12,7 @@
                #:local-time
                #:cl-fad
                #:babel
-               #:markup-grinder
+               #:plump
                #:sax-sanitize
                #:html5-sax
                #:fset

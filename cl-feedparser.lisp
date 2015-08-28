@@ -7,7 +7,7 @@
 ;; TODO Use Quri instead of Puri?
 
 (defparameter *version*
-  "0.2")
+  "0.3")
 
 (defvar *base* nil
   "Default value for `current-xml-base'.")
@@ -547,7 +547,7 @@ email addresses.)"
           ((cxml:undefined-entity
              (lambda (c)
                (when safe
-                 (when-let (exp (markup-grinder:expand-entity
+                 (when-let (exp (plump-dom:translate-entity
                                  (cxml:undefined-entity-name c)))
                    (use-value (string exp)))
                  (continue))))
@@ -578,8 +578,7 @@ email addresses.)"
               (parse feed)
             (repair ()
               :report "Try to repair the XML document and try again."
-              (parse
-               (markup-grinder:grind
-                feed
-                (cxml:make-string-sink :indentation nil)
-                :extra-namespaces namespace-map)))))))))
+              (~> feed
+                  plump:parse
+                  (plump:serialize nil)
+                  parse))))))))
