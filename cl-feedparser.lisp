@@ -472,10 +472,17 @@ feed, use the :link property of the feed as the base."
 
 (defun get-text (&aux (source *source*))
   (if (not (eql (klacks:peek source) :characters))
-      ""
+      (get-text-from-elements)
       (with-output-to-string (s)
         (loop while (eql (klacks:peek source) :characters)
               do (write-string (nth-value 1 (klacks:consume source)) s)))))
+
+(defun get-text-from-elements (&aux (source *source*))
+  "Handle the case where RSS is used without CDATA."
+  (let ((handler (cxml:make-string-sink)))
+    (loop while (eql (klacks:peek source) :start-element) do
+      (klacks:serialize-element source handler))
+    (sax:end-document handler)))
 
 (defun get-text/sanitized ()
   (sanitize-text (get-text)))
