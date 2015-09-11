@@ -585,7 +585,10 @@ email addresses.)"
               (parse feed)
             (repair ()
               :report "Try to repair the XML document and try again."
-              (~> feed
-                  plump:parse
-                  (plump:serialize nil)
-                  parse))))))))
+              (handler-bind (((or plump:invalid-xml-character
+                                  plump:discouraged-xml-character)
+                               #'abort))
+                (~> feed
+                    plump:parse
+                    (plump:serialize nil)
+                    parse)))))))))
