@@ -334,12 +334,13 @@ result is an unsanitized string."
   (when (guid-masked? entry)
     (setf *disabled* t)))
 
-(defun current-xml-base-aux (&aux (feed *feed*))
+(defun current-xml-base-aux ()
   "Hack to work around the fact that Feedburner wipes out the xml:base
 attribute: if there is no current XML base, and this is a Feedburner
 feed, use the :link property of the feed as the base."
   (when (boundp '*feed*)
-    (let ((xml-base (klacks:current-xml-base *source*)))
+    (let ((feed *feed*)
+          (xml-base (klacks:current-xml-base *source*)))
       (if (not (emptyp xml-base)) xml-base
           (when (equal (gethash* :proxy feed) "feedburner")
             (gethash* :link feed))))))
