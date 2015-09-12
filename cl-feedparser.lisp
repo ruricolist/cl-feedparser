@@ -7,7 +7,7 @@
 ;; TODO Use Quri instead of Puri?
 
 (defparameter *version*
-  "0.2")
+  "0.3")
 
 (defvar *base* nil
   "Default value for `current-xml-base'.")
@@ -472,10 +472,17 @@ feed, use the :link property of the feed as the base."
 
 (defun get-text (&aux (source *source*))
   (if (not (eql (klacks:peek source) :characters))
-      ""
+      (get-text-from-elements)
       (with-output-to-string (s)
         (loop while (eql (klacks:peek source) :characters)
               do (write-string (nth-value 1 (klacks:consume source)) s)))))
+
+(defun get-text-from-elements (&aux (source *source*))
+  "Handle the case where RSS is used without CDATA."
+  (let ((handler (cxml:make-string-sink)))
+    (loop while (eql (klacks:peek source) :start-element) do
+      (klacks:serialize-element source handler))
+    (sax:end-document handler)))
 
 (defun get-text/sanitized ()
   (sanitize-text (get-text)))
@@ -547,7 +554,7 @@ email addresses.)"
           ((cxml:undefined-entity
              (lambda (c)
                (when safe
-                 (when-let (exp (markup-grinder:expand-entity
+                 (when-let (exp (plump-dom:translate-entity
                                  (cxml:undefined-entity-name c)))
                    (use-value (string exp)))
                  (continue))))
@@ -578,8 +585,10 @@ email addresses.)"
               (parse feed)
             (repair ()
               :report "Try to repair the XML document and try again."
-              (parse
-               (markup-grinder:grind
-                feed
-                (cxml:make-string-sink :indentation nil)
-                :extra-namespaces namespace-map)))))))))
+              (handler-bind (((or plump:invalid-xml-character
+                                  plump:discouraged-xml-character)
+                               #'abort))
+                (~> feed
+                    plump:parse
+                    (plump:serialize nil)
+                    parse)))))))))
