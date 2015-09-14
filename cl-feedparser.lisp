@@ -266,10 +266,13 @@ result is an unsanitized string."
     (values string (parse-time string))))
 
 (defun parse-time (string)
-  (or (net.telent.date:parse-time string)
-      (ignoring local-time::invalid-timestring ;XXX
-        (timestamp-to-universal
-         (parse-timestring string)))))
+  (let ((string (ppcre:regex-replace "UT$" string "GMT")))
+    (or (net.telent.date:parse-time string)
+        (ignoring local-time::invalid-timestring ;XXX
+          (timestamp-to-universal
+           (parse-timestring string))))))
+
+(assert (= 3645907200 (parse-time "Wed, 15 Jul 2015 00:00:00 UT")))
 
 (defmethod time= ((t1 integer) (t2 integer))
   (= t1 t2))
