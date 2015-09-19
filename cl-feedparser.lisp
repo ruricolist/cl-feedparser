@@ -4,8 +4,6 @@
 
 ;;; "cl-feedparser" goes here. Hacks and glory await!
 
-;; TODO Use Quri instead of Puri?
-
 (defparameter *version*
   "0.3")
 
@@ -25,7 +23,7 @@
   '(or time-designator null))
 
 (deftype id ()
-  '(or null string puri:uri))
+  '(or null string quri:uri))
 
 (deftype mask-time ()
   '(or time-designator null string))
@@ -35,6 +33,9 @@
 
 (deftype max-entries ()
   '(or null wholenum))
+
+(deftype uri-protocol ()
+  '(or null string))
 
 
 
@@ -82,11 +83,23 @@
 (deftype feed-string ()
   '(or string unsanitized-string))
 
-(def empty-uri (puri:parse-uri ""))
+(def empty-uri (quri:uri ""))
 
-(defparameter *allow-protocols*
-  '(:http :https :relative)
-  "List of the allowed protocols.")
+(defun empty-uri? (uri)
+  (etypecase uri
+    (string (emptyp uri))
+    (quri:uri (quri:uri= uri empty-uri))))
+
+(def http :http)
+(def https :https)
+(def relative nil)
+
+(defun protocol-allowed? (protocol)
+  (etypecase-of uri-protocol protocol
+    (null t)
+    (string
+     (string-case protocol
+       (("http" "https") t)))))
 
 (defun string+ (&rest strings)
   "Concatenate STRINGS, ensuring that if any are unsanitized, the
@@ -307,7 +320,7 @@ result is an unsanitized string."
   (etypecase-of id id
     (null nil)
     (string (equal id mask))
-    (puri:uri (equal (puri:render-uri id nil) mask))))
+    (quri:uri (equal (quri:render-uri id nil) mask))))
 
 (defun masked? (mask id &optional mtime)
   "Compare ID and MTIME against MASK and return T if the mask applies."
@@ -376,10 +389,10 @@ feed, use the :link property of the feed as the base."
                    (value sax:attribute-value))
       attr
     (when (or (equal name "href") (equal name "src"))
-      (let ((abs-uri (resolve-uri value)))
-        (if (eq abs-uri empty-uri)
+      (let ((abs-uri (quri:uri (resolve-uri value))))
+        (if (empty-uri? abs-uri)
             (setf value "#")
-            (setf value (princ-to-string abs-uri)))))))
+            (setf value (quri:render-uri abs-uri nil)))))))
 
 (defmethod sax:start-element ((handler absolute-uri-handler) ns lname qname attrs)
   (dolist (attr attrs)
@@ -459,19 +472,20 @@ feed, use the :link property of the feed as the base."
 
 (defun resolve-uri/base (uri)
   (let ((base (current-xml-base)))
-    ;; Not that (ignoring puri:uri-parse-error ...) won't do it; e.g.
-    ;; (parse-uri "1!USER@FTP.JONATHANKINLAY.COM" signals
-    ;; `simple-error'.
-    (ignore-errors
-     (let* ((uri (puri:merge-uris uri base))
-            (protocol (or (puri:uri-scheme uri)
-                          :relative)))
-       (when (member protocol *allow-protocols*)
-         uri)))))
+    (ignoring quri:uri-error
+     (let* ((uri (merge-uris uri base))
+            (protocol (or (quri:uri-scheme uri) relative)))
+       (when (protocol-allowed? protocol)
+         (quri:render-uri uri nil))))))
+
+(defun merge-uris (uri base)
+  (quri:merge-uris
+   (quri:uri uri)
+   (quri:uri base)))
 
 (defun resolve-uri (uri)
   (when (stringp uri) (callf #'trim-uri uri))
-  (or (resolve-uri/base uri) empty-uri))
+  (or (resolve-uri/base uri) ""))
 
 (defun get-text (&aux (source *source*))
   (trim-whitespace

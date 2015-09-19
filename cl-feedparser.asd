@@ -18,7 +18,8 @@
                #:fset
                #:cxml
                #:closure-html
-               #:cl-ppcre)
+               #:cl-ppcre
+               #:quri)
   :components ((:file "package")
                (:file "sanitizer")
                (:file "namespaces")
