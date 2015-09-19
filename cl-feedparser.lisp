@@ -474,11 +474,12 @@ feed, use the :link property of the feed as the base."
   (or (resolve-uri/base uri) empty-uri))
 
 (defun get-text (&aux (source *source*))
-  (if (not (eql (klacks:peek source) :characters))
-      (get-text-from-elements)
-      (with-output-to-string (s)
-        (loop while (eql (klacks:peek source) :characters)
-              do (write-string (nth-value 1 (klacks:consume source)) s)))))
+  (trim-whitespace
+   (if (not (eql (klacks:peek source) :characters))
+       (get-text-from-elements)
+       (with-output-to-string (s)
+         (loop while (eql (klacks:peek source) :characters)
+               do (write-string (nth-value 1 (klacks:consume source)) s))))))
 
 (defun get-text-from-elements (&aux (source *source*))
   "Handle the case where RSS is used without CDATA."
