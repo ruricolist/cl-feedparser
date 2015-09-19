@@ -259,20 +259,29 @@ result is an unsanitized string."
         ((nil)
          (error "Read past end of source."))))))
 
+(defvar *lispified-ids* (dict))
+
 (defun lispify (id)
   "Convert ID from camel-case to hyphenated form."
   ;; A little faster than a string stream.
   (declare (optimize speed) (string id))
-  (let ((s (make-array 5
-                       :element-type 'character
-                       :adjustable t
-                       :fill-pointer 0)))
-    (loop for c across id
-          if (upper-case-p c)
-            do (vector-push-extend #\- s 2)
-               (vector-push c s)
-          else do (vector-push-extend c s)
-          finally (return (nstring-upcase s)))))
+  (or (gethash id *lispified-ids*)
+      (let ((s (make-array 5
+                           :element-type 'character
+                           :adjustable t
+                           :fill-pointer 0)))
+        (loop for c across id
+              if (upper-case-p c)
+                do (vector-push-extend #\- s 2)
+                   (vector-push c s)
+              else do (vector-push-extend c s)
+              finally (return (nstring-upcase s))))))
+
+(defun unlispify (id)
+  "Convert hyphenated ID to camel-case."
+  (let* ((id (string id))
+         (id (split-sequence #\- id)))
+    (fmt "~(~a~)~{~:(~a~)~}" (first id) (rest id))))
 
 (defgeneric handle-tag (ns lname)
   (:method (ns lname) (declare (ignore ns lname))
@@ -283,6 +292,7 @@ result is an unsanitized string."
 (defmacro defhandler (ns lname &body body)
   (unless (member ns namespace-prefixes)
     (error "Unknown namespace: ~a" ns))
+  (setf (gethash (unlispify lname) *lispified-ids*) lname)
   (with-gensyms (gns glname)
     (let ((ns-spec
             (if (eql ns nil)
