@@ -22,8 +22,11 @@
 (deftype entry-mtime ()
   '(or time-designator null))
 
+(deftype uri ()
+  '(or string quri:uri))
+
 (deftype id ()
-  '(or null string quri:uri))
+  '(or null uri))
 
 (deftype mask-time ()
   '(or time-designator null string))
@@ -36,6 +39,17 @@
 
 (deftype uri-protocol ()
   '(or null string))
+
+(deftype klacks-event ()
+  '(member :start-document
+    :characters
+    :processing-instruction
+    :comment
+    :dtd
+    :start-element
+    :end-element
+    :end-document
+    nil))
 
 
 
@@ -86,7 +100,7 @@
 (def empty-uri (quri:uri ""))
 
 (defun empty-uri? (uri)
-  (etypecase uri
+  (etypecase-of uri uri
     (string (emptyp uri))
     (quri:uri (quri:uri= uri empty-uri))))
 
@@ -223,7 +237,7 @@ result is an unsanitized string."
   (let ((*source* source)
         (depth 0))
     (loop for event = (klacks:peek source) while event do
-      (case event
+      (ecase-of klacks-event event
         (:start-element
          (incf depth)
          (multiple-value-bind (ev uri lname)
@@ -236,7 +250,14 @@ result is an unsanitized string."
          (klacks:consume source)
          (when (and recursive (minusp depth))
            (return)))
-        (t (klacks:consume source))))))
+        ((:start-document
+          :end-document
+          :characters
+          :processing-instruction
+          :comment :dtd)
+         (klacks:consume source))
+        ((nil)
+         (error "Read past end of source."))))))
 
 (defun lispify (id)
   "Convert ID from camel-case to hyphenated form."
@@ -468,7 +489,9 @@ feed, use the :link property of the feed as the base."
     (setf (gethash* :author entry) (gethash* :name author))))
 
 (defun trim-uri (uri)
-  (trim-whitespace (remove #\Newline uri)))
+  (etypecase-of uri uri
+    (string (trim-whitespace (remove #\Newline uri)))
+    (quri:uri uri)))
 
 (defun resolve-uri/base (uri)
   (let ((base (current-xml-base)))
@@ -484,8 +507,8 @@ feed, use the :link property of the feed as the base."
    (quri:uri base)))
 
 (defun resolve-uri (uri)
-  (when (stringp uri) (callf #'trim-uri uri))
-  (or (resolve-uri/base uri) ""))
+  (let ((uri (trim-uri uri)))
+    (or (resolve-uri/base uri) "")))
 
 (defun get-text (&aux (source *source*))
   (trim-whitespace
