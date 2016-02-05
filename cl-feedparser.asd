@@ -10,5 +10,7 @@
   :depends-on (:cl-feedparser/all))
 
 (asdf:register-system-packages :cxml '(:cxml :klacks :cxml-dom :sax))
+(asdf:register-system-packages :fxml '(:fxml :fxml-dom :fxml.klacks :fxml.sax))
 (asdf:register-system-packages :cxml-stp '(:stp :cxml-stp))
+(asdf:register-system-packages :fxml/stp '(:fxml.stp))
 
