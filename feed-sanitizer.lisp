@@ -1,11 +1,11 @@
 (defpackage :cl-feedparser/feed-sanitizer
   (:use :cl :alexandria :serapeum)
-  (:import-from :sax-sanitize :define-sanitize-mode)
+  (:import-from :fxml.sanitize :define-sanitize-mode)
   (:export feed-sanitizer))
 
 (in-package :cl-feedparser/feed-sanitizer)
 
-(sax-sanitize:define-sanitize-mode feed-sanitizer
+(define-sanitize-mode feed-sanitizer
   :elements ("a" "abbr" "acronym" "address" "area" "aside" "audio"
                  "b" "big" "bdo" "blockquote" "br"
                  "caption" "center" "cite" "code" "col" "colgroup"

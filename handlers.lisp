@@ -1,7 +1,7 @@
 (defpackage :cl-feedparser/handlers
   (:use :cl :alexandria :serapeum :anaphora
         :cl-feedparser/parser)
-  (:import-from :klacks
+  (:import-from :fxml.klacks
     :map-attributes :get-attribute))
 
 (in-package :cl-feedparser/handlers)
