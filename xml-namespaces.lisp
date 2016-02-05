@@ -1,4 +1,10 @@
-(in-package #:cl-feedparser)
+(defpackage :cl-feedparser/xml-namespaces
+  (:use :cl :alexandria :serapeum)
+  (:shadowing-import-from :fset :map)
+  (:import-from :fset :with :lookup)
+  (:export :find-ns :prefix-uri :namespace?))
+
+(in-package :cl-feedparser/xml-namespaces)
 
 (def namespaces
   (dict "http://backend.userland.com/rss" nil
@@ -108,10 +114,10 @@ feed validator.")
   (nstring-camel-case (copy-seq (string string))))
 
 (def namespace-map
-  (let ((map (fset:map)))
+  (let ((map (map)))
     (maphash (lambda (k v)
                (when k
-                 (setf map (fset:with map (string-camel-case v) k))))
+                 (setf map (with map (string-camel-case v) k))))
              namespaces)
     map)
   "Map from prefix to namespace.")
@@ -119,8 +125,11 @@ feed validator.")
 (def namespace-prefixes
   (adjoin nil (remove-duplicates (hash-table-values namespaces))))
 
+(defun namespace? (x)
+  (member x namespace-prefixes))
+
 (defun find-ns (uri)
   (gethash uri namespaces))
 
 (defun prefix-uri (prefix)
-  (fset:lookup namespace-map prefix))
+  (lookup namespace-map prefix))

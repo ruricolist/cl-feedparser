@@ -1,6 +1,46 @@
-;;;; cl-feedparser.lisp
+(in-package :cl-user)
+(defpackage :cl-feedparser/parser
+  (:use
+   :cl :alexandria :serapeum :anaphora
+   :cl-feedparser/xml-namespaces
+   :cl-feedparser/feed-sanitizer)
+  (:import-from :local-time :timestamp)
+  (:import-from :cl-ppcre :regex-replace-all)
+  (:shadowing-import-from :cl-ppcre :scan)
+  (:import-from :quri)
+  (:import-from :cxml)
+  (:import-from :sax-sanitize)
+  (:import-from :html5-sax)
+  (:import-from :plump)
+  (:export
+   :parse-feed
+   :*keys* :feedparser-key :gethash*
+   :repair :return-feed
+   :feed-sanitizer
+   :unsanitized-string :unsanitized-string-string :string+
+   :sanitize-title :sanitize-content :sanitize-text
+   :feed-string
+   :*base*
+   :parse-time
+   :masked?
 
-(in-package #:cl-feedparser)
+   :gethash*
+   :defhandler :handle-tag
+   :urlish?
+   :get-content :get-text :get-text/sanitized
+   :sanitize-title
+   :*entry*
+   :*feed*
+   :*source*
+   :*author*
+   :resolve-uri
+   :get-timestring
+   :check-guid-mask
+   :parser-loop
+   :entry-context
+   :strip-parens))
+
+(in-package #:cl-feedparser/parser)
 
 ;;; "cl-feedparser" goes here. Hacks and glory await!
 
@@ -53,8 +93,6 @@
 
 
 
-;;; TODO We should really switch from hash tables to objects.
-
 ;;; This is a hack to statically check that the wrong key can't be set
 ;;; due to a typo.
 
@@ -102,7 +140,7 @@
 (defun empty-uri? (uri)
   (etypecase-of uri uri
     (string (emptyp uri))
-    (quri:uri (quri:uri= uri empty-uri))))
+    (quri:uri (uri= uri empty-uri))))
 
 (def http :http)
 (def https :https)
@@ -290,7 +328,7 @@ result is an unsanitized string."
     (handle-tag ns (find-keyword (lispify lname)))))
 
 (defmacro defhandler (ns lname &body body)
-  (unless (member ns namespace-prefixes)
+  (unless (namespace? ns)
     (error "Unknown namespace: ~a" ns))
   (setf (gethash (unlispify lname) *lispified-ids*) lname)
   (with-gensyms (gns glname)
@@ -309,49 +347,11 @@ result is an unsanitized string."
   (when-let (string (get-text/sanitized))
     (values string (parse-time string))))
 
-(defun parse-time (string)
-  (let ((string (ppcre:regex-replace "UT$" string "GMT")))
-    (or (net.telent.date:parse-time string)
-        (ignoring local-time::invalid-timestring ;XXX
-          (timestamp-to-universal
-           (parse-timestring string))))))
-
-(assert (= 3645907200 (parse-time "Wed, 15 Jul 2015 00:00:00 UT")))
-
-(defmethod time= ((t1 integer) (t2 integer))
-  (= t1 t2))
-
-(defmethod time= ((t1 timestamp) (t2 timestamp))
-  (timestamp= t1 t2))
-
-(defmethod time= ((t1 timestamp) (t2 integer))
-  (time= t2 t1))
-
-(defmethod time= ((t1 integer) (t2 timestamp))
-  (mvlet* ((ss1 mm1 hh1 day1 month1 year1 (decode-universal-time t1))
-           (nsec2 ss2 mm2 hh2 day2 month2 year2 (decode-timestamp t2)))
-    (declare (ignore nsec2))
-    (and (= ss1 ss2)
-         (= mm1 mm2)
-         (= hh1 hh2)
-         (= day1 day2)
-         (= month1 month2)
-         (= year1 year2))))
-
-(defmethod time= ((t1 string) t2) (time= (parse-time t1) t2))
-(defmethod time= (t1 (t2 string)) (time= t1 (parse-time t2)))
-
-(assert
- (let* ((time (get-universal-time))
-        (timestamp (local-time:universal-to-timestamp time)))
-   (and (time= time timestamp)
-        (not (time= (1+ time) timestamp)))))
-
 (defun id-masked? (id mask)
   (etypecase-of id id
     (null nil)
     (string (equal id mask))
-    (quri:uri (equal (quri:render-uri id nil) mask))))
+    (quri:uri (equal (render-uri id nil) mask))))
 
 (defun masked? (mask id &optional mtime)
   "Compare ID and MTIME against MASK and return T if the mask applies."
@@ -423,7 +423,7 @@ feed, use the :link property of the feed as the base."
       (let ((abs-uri (quri:uri (resolve-uri value))))
         (if (empty-uri? abs-uri)
             (setf value "#")
-            (setf value (quri:render-uri abs-uri nil)))))))
+            (setf value (:render-uri abs-uri nil)))))))
 
 (defmethod sax:start-element ((handler absolute-uri-handler) ns lname qname attrs)
   (dolist (attr attrs)
@@ -505,11 +505,11 @@ feed, use the :link property of the feed as the base."
 
 (defun resolve-uri/base (uri)
   (let ((base (current-xml-base)))
-    (ignoring quri:uri-error
-     (let* ((uri (merge-uris uri base))
-            (protocol (or (quri:uri-scheme uri) relative)))
-       (when (protocol-allowed? protocol)
-         (quri:render-uri uri nil))))))
+    (ignoring uri-error
+      (let* ((uri (merge-uris uri base))
+             (protocol (or (uri-scheme uri) relative)))
+        (when (protocol-allowed? protocol)
+          (quri:render-uri uri nil))))))
 
 (defun merge-uris (uri base)
   (quri:merge-uris

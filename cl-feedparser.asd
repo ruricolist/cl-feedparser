@@ -5,30 +5,10 @@
   :description "Common Lisp universal feed parser"
   :author "Paul M. Rodriguez <pmr@ruricolist.com>"
   :license "LLGPL"
-  :depends-on (#:alexandria
-               #:serapeum
-               #:anaphora
-               #:net-telent-date
-               #:local-time
-               #:cl-fad
-               #:babel
-               #:plump
-               #:sax-sanitize
-               #:html5-sax
-               #:fset
-               #:cxml
-               #:closure-html
-               #:cl-ppcre
-               #:quri)
-  :components ((:file "package")
-               (:file "sanitizer")
-               (:file "namespaces")
-               (:file "cl-feedparser")
-               (:module handlers
-                :components ((:file "atom")
-                             (:file "atom03")
-                             (:file "rss")
-                             (:file "rdf")
-                             (:file "dc")
-                             (:file "feedburner")
-                             (:file "itunes")))))
+  :class :package-inferred-system
+  :defsystem-depends-on (:asdf-package-system)
+  :depends-on (:cl-feedparser/all))
+
+(asdf:register-system-packages :cxml '(:cxml :klacks :cxml-dom :sax))
+(asdf:register-system-packages :cxml-stp '(:stp :cxml-stp))
+
