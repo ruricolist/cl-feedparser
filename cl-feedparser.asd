@@ -13,4 +13,8 @@
 (asdf:register-system-packages :fxml '(:fxml :fxml-dom :fxml.klacks :fxml.sax))
 (asdf:register-system-packages :cxml-stp '(:stp :cxml-stp))
 (asdf:register-system-packages :fxml/stp '(:fxml.stp))
+(asdf:register-system-packages :fxml/html5 '(:fxml.html5))
+(asdf:register-system-packages :fxml/sanitize '(:fxml.sanitize))
+(asdf:register-system-packages :cl-html5-parser '(:html5-parser))
+(asdf:register-system-packages :net-telent-date '(:net.telent.date))
 
