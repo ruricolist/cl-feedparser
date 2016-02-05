@@ -1,6 +1,49 @@
-;;;; cl-feedparser.lisp
+(in-package :cl-user)
+(defpackage :cl-feedparser/parser
+  (:use
+   :cl :alexandria :serapeum :anaphora
+   :cl-feedparser/xml-namespaces
+   :cl-feedparser/feed-sanitizer
+   :cl-feedparser/time)
+  (:import-from :local-time :timestamp)
+  (:import-from :cl-ppcre :regex-replace-all)
+  (:shadowing-import-from :cl-ppcre :scan)
+  (:import-from :quri)
+  (:import-from :fxml)
+  (:import-from :fxml.sanitize)
+  (:import-from :fxml.html5)
+  (:import-from :fxml.stp)
+  (:import-from :plump)
+  (:import-from :html5-parser :parse-html5)
+  (:export
+   :parse-feed
+   :*keys* :feedparser-key :gethash*
+   :repair :return-feed
+   :feed-sanitizer
+   :unsanitized-string :unsanitized-string-string :string+
+   :sanitize-title :sanitize-content :sanitize-text
+   :feed-string
+   :*base*
+   :parse-time
+   :masked?
 
-(in-package #:cl-feedparser)
+   :gethash*
+   :defhandler :handle-tag
+   :urlish?
+   :get-content :get-text :get-text/sanitized
+   :sanitize-title
+   :*entry*
+   :*feed*
+   :*source*
+   :*author*
+   :resolve-uri
+   :get-timestring
+   :check-guid-mask
+   :parser-loop
+   :entry-context
+   :strip-parens))
+
+(in-package #:cl-feedparser/parser)
 
 ;;; "cl-feedparser" goes here. Hacks and glory await!
 
@@ -53,8 +96,6 @@
 
 
 
-;;; TODO We should really switch from hash tables to objects.
-
 ;;; This is a hack to statically check that the wrong key can't be set
 ;;; due to a typo.
 
@@ -85,7 +126,7 @@
 
 
 (deftype sanitizer ()
-  '(or null sax-sanitize::mode))
+  '(or null fxml.sanitize:mode))
 
 (deftype sanitizer-designator ()
   '(or sanitizer (eql t)))
@@ -131,34 +172,34 @@ result is an unsanitized string."
         s)))
 
 (defun make-html-sink (&key base sanitizer)
-  (~> (html5-sax:make-html5-sink)
+  (~> (fxml.html5:make-html5-sink)
       (make-absolute-uri-handler :base base)
-      (sax-sanitize:wrap-sanitize sanitizer)))
+      (fxml.sanitize:wrap-sanitize sanitizer)))
 
 (defun has-markup? (string)
-  (ppcre:scan "[<>&]" string))
+  (scan "[<>&]" string))
 
 (defun sanitize-aux (x sanitizer)
-  (cond ((typep x 'stp:node)
+  (cond ((typep x 'fxml.stp:node)
          (let ((sink (make-html-sink :sanitizer sanitizer)))
-           (if (typep x 'stp:document)
-               (stp:serialize x sink)
+           (if (typep x 'fxml.stp:document)
+               (fxml.stp:serialize x sink)
                (progn
-                 (stp:serialize x sink)
-                 (sax:end-document sink)))))
+                 (fxml.stp:serialize x sink)
+                 (fxml.sax:end-document sink)))))
         ((not (stringp x)) x)
         ((emptyp x) x)
         ((not (has-markup? x)) x)
         (t (etypecase-of sanitizer sanitizer
              (null (unsanitized-string x))
-             (sax-sanitize::mode
-              (html5-sax:serialize-dom
-               (html5-parser:parse-html5 x)
+             (fxml.sanitize:mode
+              (fxml.html5:serialize-dom
+               (parse-html5 x)
                (make-html-sink :sanitizer sanitizer)))))))
 
 (defparameter *content-sanitizer* feed-sanitizer)
 
-(defparameter *title-sanitizer* sax-sanitize:restricted)
+(defparameter *title-sanitizer* fxml.sanitize:restricted)
 
 (defun sanitize-content (x &optional (sanitizer t))
   (etypecase-of sanitizer-designator sanitizer
@@ -177,9 +218,9 @@ result is an unsanitized string."
         ;; If there are no entities, just strip all tags.
         ((not (find #\& x))
          ;; Tags that never close...
-         (ppcre:regex-replace-all "<[^>]*>?" x " "))
+         (regex-replace-all "<[^>]*>?" x " "))
         ;; If there are entities, we have to resort to a real parser.
-        (t (sanitize-aux x sax-sanitize:default))))
+        (t (sanitize-aux x fxml.sanitize:default))))
 
 ;; Unclosed tags.
 (assert (equal " " (sanitize-text "<video poster=javascript:alert(10)//")))
@@ -227,7 +268,7 @@ result is an unsanitized string."
                (values feed parser))))
       (restart-case
           (catch 'parser-done
-            (parser-loop (cxml:make-source input)))
+            (parser-loop (fxml:make-source input)))
         (return-feed ()
           :report "Return whatever we have so far."
           (return-feed :bozo t)))
@@ -236,18 +277,18 @@ result is an unsanitized string."
 (defun parser-loop (source &key recursive)
   (let ((*source* source)
         (depth 0))
-    (loop for event = (klacks:peek source) while event do
+    (loop for event = (fxml.klacks:peek source) while event do
       (ecase-of klacks-event event
         (:start-element
          (incf depth)
          (multiple-value-bind (ev uri lname)
-             (klacks:consume source)
+             (fxml.klacks:consume source)
            (declare (ignore ev))
            (unless *disabled*
              (handle-tag (find-ns uri) lname))))
         (:end-element
          (decf depth)
-         (klacks:consume source)
+         (fxml.klacks:consume source)
          (when (and recursive (minusp depth))
            (return)))
         ((:start-document
@@ -255,7 +296,7 @@ result is an unsanitized string."
           :characters
           :processing-instruction
           :comment :dtd)
-         (klacks:consume source))
+         (fxml.klacks:consume source))
         ((nil)
          (error "Read past end of source."))))))
 
@@ -290,7 +331,7 @@ result is an unsanitized string."
     (handle-tag ns (find-keyword (lispify lname)))))
 
 (defmacro defhandler (ns lname &body body)
-  (unless (member ns namespace-prefixes)
+  (unless (namespace? ns)
     (error "Unknown namespace: ~a" ns))
   (setf (gethash (unlispify lname) *lispified-ids*) lname)
   (with-gensyms (gns glname)
@@ -308,44 +349,6 @@ result is an unsanitized string."
 (defun get-timestring ()
   (when-let (string (get-text/sanitized))
     (values string (parse-time string))))
-
-(defun parse-time (string)
-  (let ((string (ppcre:regex-replace "UT$" string "GMT")))
-    (or (net.telent.date:parse-time string)
-        (ignoring local-time::invalid-timestring ;XXX
-          (timestamp-to-universal
-           (parse-timestring string))))))
-
-(assert (= 3645907200 (parse-time "Wed, 15 Jul 2015 00:00:00 UT")))
-
-(defmethod time= ((t1 integer) (t2 integer))
-  (= t1 t2))
-
-(defmethod time= ((t1 timestamp) (t2 timestamp))
-  (timestamp= t1 t2))
-
-(defmethod time= ((t1 timestamp) (t2 integer))
-  (time= t2 t1))
-
-(defmethod time= ((t1 integer) (t2 timestamp))
-  (mvlet* ((ss1 mm1 hh1 day1 month1 year1 (decode-universal-time t1))
-           (nsec2 ss2 mm2 hh2 day2 month2 year2 (decode-timestamp t2)))
-    (declare (ignore nsec2))
-    (and (= ss1 ss2)
-         (= mm1 mm2)
-         (= hh1 hh2)
-         (= day1 day2)
-         (= month1 month2)
-         (= year1 year2))))
-
-(defmethod time= ((t1 string) t2) (time= (parse-time t1) t2))
-(defmethod time= (t1 (t2 string)) (time= t1 (parse-time t2)))
-
-(assert
- (let* ((time (get-universal-time))
-        (timestamp (local-time:universal-to-timestamp time)))
-   (and (time= time timestamp)
-        (not (time= (1+ time) timestamp)))))
 
 (defun id-masked? (id mask)
   (etypecase-of id id
@@ -387,7 +390,7 @@ attribute: if there is no current XML base, and this is a Feedburner
 feed, use the :link property of the feed as the base."
   (when (boundp '*feed*)
     (let ((feed *feed*)
-          (xml-base (klacks:current-xml-base *source*)))
+          (xml-base (fxml.klacks:current-xml-base *source*)))
       (if (not (emptyp xml-base)) xml-base
           (when (equal (gethash* :proxy feed) "feedburner")
             (gethash* :link feed))))))
@@ -396,28 +399,28 @@ feed, use the :link property of the feed as the base."
   (or *base* (current-xml-base-aux) ""))
 
 (defun get-content (&aux (source *source*))
-  (let ((type (klacks:get-attribute source "type"))
+  (let ((type (fxml.klacks:get-attribute source "type"))
         (content (dict :base (current-xml-base))))
     (if (equal type "xhtml")
         (xhtml-content content)
         (text-content content))))
 
 (defun text-content (content)
-  (let* ((attrs (klacks:list-attributes *source*))
+  (let* ((attrs (fxml.klacks:list-attributes *source*))
          (string (sanitize-content (get-text))))
     (setf (gethash* :value content) string
           (gethash* :type content)  (guess-type string attrs))
     content))
 
-(defclass absolute-uri-handler (cxml:broadcast-handler)
+(defclass absolute-uri-handler (fxml:broadcast-handler)
   ((base :initarg :base :accessor base-of)))
 
 (defun make-absolute-uri-handler (handler &key (base (current-xml-base)))
   (make 'absolute-uri-handler :base base :handlers (list handler)))
 
 (defun resolve-attr (attr)
-  (with-accessors ((name sax:attribute-local-name)
-                   (value sax:attribute-value))
+  (with-accessors ((name fxml.sax:attribute-local-name)
+                   (value fxml.sax:attribute-value))
       attr
     (when (or (equal name "href") (equal name "src"))
       (let ((abs-uri (quri:uri (resolve-uri value))))
@@ -425,7 +428,7 @@ feed, use the :link property of the feed as the base."
             (setf value "#")
             (setf value (quri:render-uri abs-uri nil)))))))
 
-(defmethod sax:start-element ((handler absolute-uri-handler) ns lname qname attrs)
+(defmethod fxml.sax:start-element ((handler absolute-uri-handler) ns lname qname attrs)
   (dolist (attr attrs)
     (resolve-attr attr))
   (call-next-method handler ns lname qname attrs))
@@ -434,13 +437,13 @@ feed, use the :link property of the feed as the base."
   (let* ((handler (make-html-sink :base (current-xml-base)
                                   :sanitizer *content-sanitizer*))
          (string
-           (klacks:serialize-element source handler :document-events t)))
+           (fxml.klacks:serialize-element source handler :document-events t)))
     (etypecase-of sanitizer *content-sanitizer*
       (null (unsanitized-string string))
-      (sax-sanitize::mode string))))
+      (fxml.sanitize:mode string))))
 
 (defun xhtml-content (content &aux (source *source*))
-  (klacks:find-element source "div")
+  (fxml.klacks:find-element source "div")
   (let ((value (get-xhtml-content-value)))
     (setf (gethash* :value content) value ;Already sanitized.
           (gethash* :type content)  "text/html"
@@ -448,8 +451,8 @@ feed, use the :link property of the feed as the base."
   content)
 
 (defun attrs-type (attrs)
-  (when-let (attr (find "type" attrs :test 'equal :key #'sax:attribute-local-name))
-    (sax:attribute-value attr)))
+  (when-let (attr (find "type" attrs :test 'equal :key #'fxml.sax:attribute-local-name))
+    (fxml.sax:attribute-value attr)))
 
 (defun guess-type (value attrs)
   (let ((type (attrs-type attrs)))
@@ -506,10 +509,10 @@ feed, use the :link property of the feed as the base."
 (defun resolve-uri/base (uri)
   (let ((base (current-xml-base)))
     (ignoring quri:uri-error
-     (let* ((uri (merge-uris uri base))
-            (protocol (or (quri:uri-scheme uri) relative)))
-       (when (protocol-allowed? protocol)
-         (quri:render-uri uri nil))))))
+      (let* ((uri (merge-uris uri base))
+             (protocol (or (quri:uri-scheme uri) relative)))
+        (when (protocol-allowed? protocol)
+          (quri:render-uri uri nil))))))
 
 (defun merge-uris (uri base)
   (quri:merge-uris
@@ -522,25 +525,25 @@ feed, use the :link property of the feed as the base."
 
 (defun get-text (&aux (source *source*))
   (trim-whitespace
-   (if (not (eql (klacks:peek source) :characters))
+   (if (not (eql (fxml.klacks:peek source) :characters))
        (get-text-from-elements)
        (with-output-to-string (s)
-         (loop while (eql (klacks:peek source) :characters)
-               do (write-string (nth-value 1 (klacks:consume source)) s))))))
+         (loop while (eql (fxml.klacks:peek source) :characters)
+               do (write-string (nth-value 1 (fxml.klacks:consume source)) s))))))
 
 (defun get-text-from-elements (&aux (source *source*))
   "Handle the case where RSS is used without CDATA."
-  (let ((handler (cxml:make-string-sink)))
-    (loop while (eql (klacks:peek source) :start-element) do
-      (klacks:serialize-element source handler))
-    (sax:end-document handler)))
+  (let ((handler (fxml:make-string-sink)))
+    (loop while (eql (fxml.klacks:peek source) :start-element) do
+      (fxml.klacks:serialize-element source handler))
+    (fxml.sax:end-document handler)))
 
 (defun get-text/sanitized ()
   (sanitize-text (get-text)))
 
 (defun urlish? (x)
   "Does X look like a URL?"
-  (ppcre:scan "(?s)^\\s*https?://" x))
+  (scan "(?s)^\\s*https?://" x))
 
 
 
@@ -571,7 +574,7 @@ time you called PARSE-FEED.
 
 Sanitizing content can be turned off with SANITIZE-CONTENT (defaults
 to T). SANITIZE-TITLES controls sanitizing titles. Sanitizing titles
-uses the sanitizer `sax-sanitize:restricted'. Sanitizing content uses
+uses the sanitizer `fxml.sanitize:restricted'. Sanitizing content uses
 the sanitizer `feedparser:feed-sanitizer'. There is no way to change
 this, but you can turn sanitizing off. If you do so, then the hash
 table returned will contain, instead of strings, objects of type
@@ -602,21 +605,21 @@ email addresses.)"
                ;; Last resort: return whatever we've got so far.
                (return-feed)))))
       (handler-bind
-          ((cxml:undefined-entity
+          ((fxml:undefined-entity
              (lambda (c)
                (when safe
                  (when-let (exp (plump-dom:translate-entity
-                                 (cxml:undefined-entity-name c)))
+                                 (fxml:undefined-entity-name c)))
                    (use-value (string exp)))
                  (continue))))
-           (cxml:undeclared-namespace
+           (fxml:undeclared-namespace
              (lambda (c)
                (when safe
-                 (let* ((prefix (cxml:undeclared-namespace-prefix c))
+                 (let* ((prefix (fxml:undeclared-namespace-prefix c))
                         (uri (prefix-uri prefix)))
                    (store-value uri)
                    (continue)))))
-           (cxml:well-formedness-violation
+           (fxml:well-formedness-violation
              (lambda (c)
                (when safe
                  (continue c)))))
