@@ -15,6 +15,7 @@
   (:import-from :fxml.stp)
   (:import-from :plump)
   (:import-from :html5-parser :parse-html5)
+  (:import-from :uiop :file-exists-p)
   (:export
    :parse-feed
    :*keys* :feedparser-key :gethash*
@@ -591,7 +592,7 @@ is not needed at all, or where it uses special sanitizing strategies,
 or where the field is unconditionally sanitized, like dates and
 email addresses.)"
   (when (pathnamep feed)
-    (setf feed (fad:file-exists-p feed)))
+    (setf feed (file-exists-p feed)))
   (let ((bozo nil)
         (*content-sanitizer* (if sanitize-content *content-sanitizer* nil))
         (*title-sanitizer* (if sanitize-titles *title-sanitizer* nil)))
