@@ -599,8 +599,8 @@ email addresses.)"
         ((error
            (lambda (c) (declare (ignore c))
              (when safe
-               ;; If CXML can't repair the damage,
-               ;; fall back to markup-grinder.
+               ;; If FXML can't repair the damage,
+               ;; fall back to plump.
                (repair)
                ;; Last resort: return whatever we've got so far.
                (return-feed)))))
