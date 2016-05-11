@@ -7,11 +7,18 @@
 (in-package :cl-feedparser/time)
 
 (defun parse-time (string)
+  "Parse STRING as a date.
+As a second value, return the parser used: either :net.telent.date
+or :local-time."
   (let ((string (regex-replace "UT$" string "GMT")))
-    (or (net.telent.date:parse-time string)
-        (ignoring local-time::invalid-timestring ;XXX
-          (timestamp-to-universal
-           (parse-timestring string))))))
+    (if-let (date (net.telent.date:parse-time string))
+      (values date :net.telent.date)
+      (ignoring local-time::invalid-timestring ;XXX
+        (handler-case
+            (when-let (date
+                       (timestamp-to-universal
+                        (parse-timestring string)))
+              (values date :local-time)))))))
 
 (assert (= 3645907200 (parse-time "Wed, 15 Jul 2015 00:00:00 UT")))
 
