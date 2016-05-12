@@ -95,6 +95,13 @@
                   (gethash* :published-parsed target))
           (get-timestring))))
 
+;;; E.g. 3QD.
+(defhandler :atom :issued
+  (let ((target (or *entry* *feed*)))
+    (setf (values (gethash* :published target)
+                  (gethash* :published-parsed target))
+          (get-timestring))))
+
 (defhandler :atom :updated
   (let ((target (or *entry* *feed*)))
     (setf (values (gethash* :updated target)
