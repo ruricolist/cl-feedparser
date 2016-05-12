@@ -95,13 +95,6 @@
                   (gethash* :published-parsed target))
           (get-timestring))))
 
-;;; E.g. 3QD.
-(defhandler :atom :issued
-  (let ((target (or *entry* *feed*)))
-    (setf (values (gethash* :published target)
-                  (gethash* :published-parsed target))
-          (get-timestring))))
-
 (defhandler :atom :updated
   (let ((target (or *entry* *feed*)))
     (setf (values (gethash* :updated target)
@@ -149,6 +142,10 @@
 (defhandler :atom03 :created
   (awhen (get-timestring)
     (setf (gethash* :created *entry*) t)))
+
+;;; E.g. 3QD.
+(defhandler :atom03 :issued
+  (handle-tag :atom :published))
 
 ;;; Dublin Core.
 
