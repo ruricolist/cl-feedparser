@@ -167,6 +167,9 @@
 (defhandler :dcterms :modified
   (handle-tag :atom :updated))
 
+(defhandler :dcterms :issued
+  (handle-tag :atom :published))
+
 (defhandler :dcterms :contributor
   (push (dict :name (get-text))
         (gethash* :contributors *entry*)))
