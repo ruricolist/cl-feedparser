@@ -1,10 +1,10 @@
 (in-package :cl-user)
 (defpackage :cl-feedparser/parser
   (:use
-   :cl :alexandria :serapeum :anaphora
-   :cl-feedparser/xml-namespaces
-   :cl-feedparser/feed-sanitizer
-   :cl-feedparser/time)
+    :cl :alexandria :serapeum :anaphora
+    :cl-feedparser/xml-namespaces
+    :cl-feedparser/feed-sanitizer
+    :cl-feedparser/time)
   (:import-from :local-time :timestamp)
   (:import-from :cl-ppcre :regex-replace-all)
   (:shadowing-import-from :cl-ppcre :scan)
