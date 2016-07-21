@@ -305,9 +305,10 @@ result is an unsanitized string."
 
 (defun lispify (id)
   "Convert ID from camel-case to hyphenated form."
-  ;; A little faster than a string stream.
   (declare (optimize speed) (string id))
+  ;; The theory is that most identifiers will be known.
   (or (gethash id *lispified-ids*)
+      ;; A little faster than a string stream.
       (let ((s (make-array 5
                            :element-type 'character
                            :adjustable t
