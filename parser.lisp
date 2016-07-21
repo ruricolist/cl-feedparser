@@ -18,7 +18,7 @@
   (:import-from :uiop :file-exists-p)
   (:export
    :parse-feed
-   :*keys* :feedparser-key :gethash*
+   :*keys* :feedparser-key :feed-ref :gethash*
    :repair :return-feed
    :feed-sanitizer
    :unsanitized-string :unsanitized-string-string :string+
@@ -123,6 +123,32 @@
 `*keys*'."
   (check-type key feedparser-key)
   `(gethash ,key ,hash ,@(unsplice default)))
+
+(defsubst feed-ref (feed key &optional default)
+  (gethash (assure feedparser-key key) feed default))
+
+(define-compiler-macro feed-ref (&whole call feed key &optional default &environment env)
+  (cond ((constantp key)
+         `(gethash ,(assure feedparser-key key) ,feed ,default))
+        ((constantp key env)
+         `(gethash (load-time-value (assure feedparser-key ,key))
+                   ,feed
+                   ,default))
+        (t call)))
+
+(defsubst (setf feed-ref) (value feed key)
+  (setf (gethash (assure feedparser-key key) feed) value))
+
+(define-compiler-macro (setf feed-ref) (&whole call value feed key &environment env)
+  (cond ((constantp key)
+         `(setf (gethash ,(assure feedparser-key key)
+                         ,feed)
+                ,value))
+        ((constantp key env)
+         `(setf (gethash (load-time-value (assure feedparser-key ,key))
+                         ,feed)
+                ,value))
+        (t call)))
 
 
 
@@ -264,7 +290,7 @@ result is an unsanitized string."
     (flet ((return-feed (&key bozo)
              (nreversef (gethash* :entries feed))
              (when bozo
-               (setf (gethash* :bozo feed) t))
+               (setf (feed-ref feed :bozo) t))
              (return-from parser-context
                (values feed parser))))
       (restart-case
