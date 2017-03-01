@@ -16,6 +16,7 @@
   (:import-from :plump)
   (:import-from :html5-parser :parse-html5)
   (:import-from :uiop :file-exists-p)
+  (:shadow :string+)
   (:export
    :parse-feed
    :*keys* :feedparser-key :feed-ref :gethash*
