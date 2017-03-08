@@ -1,6 +1,7 @@
 (defpackage :cl-feedparser/handlers
   (:use :cl :alexandria :serapeum :anaphora
-        :cl-feedparser/parser)
+    :cl-feedparser/parser)
+  (:shadowing-import-from :cl-feedparser/parser :string+)
   (:import-from :fxml.klacks
     :map-attributes :get-attribute))
 
