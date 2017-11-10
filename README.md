@@ -5,15 +5,16 @@ CL-FEEDPARSER is designed specifically around the needs of [TBRSS][],
 but should be useful generally.
 
 The API of cl-feedparser is very close to the API of feedparser. As in
-Feedparser, the parsed feed is returned as a set of nested dictionary
-tables. Unsurprisingly, keys that are strings in Python are keywords
-in cl-feedparser, with dashes instead of underscores.
+Feedparser, the parsed feed is returned as a set of nested
+dictionaries (hash tables). Unsurprisingly, keys that are strings in
+Python are keywords in cl-feedparser, with dashes instead of
+underscores.
 
     feed['author'] -> (feedparser:feed-ref feed :author)
     feed['author_detail'] -> (feedparser:feed-ref feed :author-detail)
 
 (What is `feed-ref`? It is just like `gethash`, but if the provided
-key is constant, then it does a compile-time static check that the key
+key is constant, then it does a compile-time check that the key
 provided is valid.)
 
 There are a few important differences:
@@ -26,7 +27,7 @@ There are a few important differences:
 - `bozo-exception` is a list of exceptions.
 
 In regard to sanitizing, cl-feedparser offers a guarantee Python’s
-feedparser does not: values that are returned as string are *always*
+feedparser does not: values that are returned as strings are *always*
 sanitized. It is possible to turn sanitizing off, but with sanitizing
 off, instances of `unsanitized-string` are returned in place of
 strings.
