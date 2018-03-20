@@ -5,6 +5,7 @@
   :description "Common Lisp universal feed parser"
   :author "Paul M. Rodriguez <pmr@ruricolist.com>"
   :license "LLGPL"
+  :version "1.0.0"
   :class :package-inferred-system
   :defsystem-depends-on (:asdf-package-system)
   :depends-on (:cl-feedparser/all))
