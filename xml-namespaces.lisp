@@ -93,6 +93,7 @@
         "http://www.w3.org/XML/1998/namespace"                     :xml
         "xri://$xrd*($v*2.0)"                                      :xrd
         "xri://$xrds"                                              :xrds
+        "http://www.youtube.com/xml/schemas/2015"                  :yt
         "http://podlove.org/simple-chapters"                       :psc)
   "Table from namespace to prefix.
 Collected from the source of feedparser.py and the list at the W3C
