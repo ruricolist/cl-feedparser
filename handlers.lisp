@@ -1,11 +1,36 @@
 (defpackage :cl-feedparser/handlers
   (:use :cl :alexandria :serapeum :anaphora
     :cl-feedparser/parser)
+  (:import-from :cl-feedparser/parser :lispify)
   (:shadowing-import-from :cl-feedparser/parser :string+)
   (:import-from :fxml.klacks
-    :map-attributes :get-attribute))
+    :map-attributes
+    :get-attribute))
 
 (in-package :cl-feedparser/handlers)
+
+(defun add-content-key (table)
+  (prog1 table
+    (let ((content (get-text)))
+      (unless (emptyp content)
+        (setf (@ table :content) content)))))
+
+(defun defaulted-key (table key value)
+  (ensure-gethash key table value)
+  table)
+
+(defun resolve-attr (table attr)
+  (callf #'resolve-uri (@ table attr))
+  table)
+
+(defmacro attrs-table (&rest attrs)
+  (with-unique-names (ht source value)
+    `(lret ((,source *source*)
+            (,ht (make-hash-table :size ,(length attrs))))
+       ,@(loop for attr in attrs
+               for keyword = (make-keyword (lispify attr))
+               collect `(when-let (,value (get-attribute ,source ,attr))
+                          (setf (@ ,ht ,keyword) ,value))))))
 
 ;;; Atom 1.0.
 
@@ -216,6 +241,100 @@
 (defhandler :rdf :item
   (when-let (id (get-attribute *source* "about"))
     (entry-context :id id)))
+
+;;; Media RSS.
+
+(defhandler :media :category
+  (setf (gethash* :media-category *entry*)
+        (~> (attrs-table "scheme" "label")
+            (defaulted-key :schema "http://search.yahoo.com/mrss/category_schema")
+            add-content-key)))
+
+(defhandler :media :hash
+  (setf (gethash* :media-hash *entry*)
+        (~> (attrs-table "algo")
+            (add-content-key))))
+
+(defhandler :media :description
+  (setf (gethash* :media-description *entry*)
+        (get-text/sanitized)))
+
+(defhandler :media :content
+  (~> (attrs-table "url"
+                   "fileSize"
+                   "type"
+                   "medium"
+                   "isDefault"
+                   "expression"
+                   "bitrate"
+                   "framerate"
+                   "samplingrate"
+                   "channels"
+                   "duration"
+                   "height"
+                   "width"
+                   "lang")
+      add-content-key
+      (resolve-attr :url)
+      (push (gethash* :media-content *entry*))))
+
+(defhandler :media :credit
+  (~> (attrs-table "role" "schema")
+      add-content-key
+      (defaulted-key :schema "urn:ebu")
+      (push (gethash* :media-credit *entry*))))
+
+(defhandler :media :keywords
+  (setf (gethash* :media-keywords *entry*)
+        (~>> (get-text)
+             (split-sequence #\,)
+             (mapcar #'trim-whitespace)
+             (remove-if #'emptyp))))
+
+(defhandler :media :player
+  (setf (gethash* :media-player *entry*)
+        (~> (attrs-table "url" "height" "width")
+            (resolve-attr :url))))
+
+(defhandler :media :copyright
+  (setf (gethash* :media-copyright *entry*)
+        (~> (attrs-table "url")
+            (resolve-attr :url)
+            add-content-key)))
+
+(defhandler :media :rating
+  (setf (gethash* :media-rating *entry*)
+        (~> (attrs-table "schema")
+            (defaulted-key :schema "urn:simple")
+            add-content-key)))
+
+(defhandler :media :restriction
+  (setf (gethash* :media-restriction *entry*)
+        (~> (attrs-table "relationship" "type")
+            add-content-key)))
+
+(defhandler :media :statistics
+  (setf (gethash* :media-statistics *entry*)
+        (attrs-table "views" "favorites")))
+
+(defhandler :media :star-rating
+  (setf (gethash* :media-star-rating *entry*)
+        (attrs-table "count" "max" "average" "min")))
+
+(defhandler :media :tags
+  (setf (gethash* :media-tags *entry*)
+        (~>> (get-text)
+             (split-sequence #\,)
+             (mapcar #'trim-whitespace)
+             (remove-if #'emptyp))))
+
+(defhandler :media :thumbnail
+  (~> (attrs-table "url" "height" "width" "time")
+      (resolve-attr :url)
+      (push (gethash* :media-thumbnail *entry*))))
+
+(defhandler :media :title
+  (handle-tag :atom :title))
 
 ;;; RSS.
 

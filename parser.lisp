@@ -29,7 +29,7 @@
    :parse-time
    :masked?
 
-   :gethash*
+   :gethash* :ensure-gethash*
    :defhandler :handle-tag
    :urlish?
    :get-content :get-text :get-text/sanitized
@@ -114,7 +114,26 @@
       :base :value :type
       :author-detail :links
       :enclosures :contributors
-      :created :comments)))
+      :created :comments
+      ;; mrss
+      :media-category
+      :media-community
+      :media-content
+      :media-copyright
+      :media-credit
+      :media-description
+      :media-group
+      :media-hash
+      :media-keywords
+      :media-license
+      :media-player
+      :media-rating
+      :media-restriction
+      :media-star-rating
+      :media-statistics
+      :media-tags
+      :media-title
+      :media-thumbnail)))
 
 (deftype feedparser-key ()
   `(member ,@*keys*))
@@ -124,6 +143,12 @@
 `*keys*'."
   (check-type key feedparser-key)
   `(gethash ,key ,hash ,@(unsplice default)))
+
+(defmacro ensure-gethash* (key hash &optional default)
+  "Like `ensure-gethash', but check (statically) that KEY is a member
+of `*keys*'."
+  (check-type key feedparser-key)
+  `(ensure-gethash ,key ,hash ,@(unsplice default)))
 
 (defsubst feed-ref (feed key &optional default)
   (gethash (assure feedparser-key key) feed default))
