@@ -260,29 +260,31 @@
         (get-text/sanitized)))
 
 (defhandler :media :content
-  (~> (attrs-table "url"
-                   "fileSize"
-                   "type"
-                   "medium"
-                   "isDefault"
-                   "expression"
-                   "bitrate"
-                   "framerate"
-                   "samplingrate"
-                   "channels"
-                   "duration"
-                   "height"
-                   "width"
-                   "lang")
-      add-content-key
-      (resolve-attr :url)
-      (push (gethash* :media-content *entry*))))
+  (push
+   (~> (attrs-table "url"
+                    "fileSize"
+                    "type"
+                    "medium"
+                    "isDefault"
+                    "expression"
+                    "bitrate"
+                    "framerate"
+                    "samplingrate"
+                    "channels"
+                    "duration"
+                    "height"
+                    "width"
+                    "lang")
+       add-content-key
+       (resolve-attr :url))
+   (gethash* :media-content *entry*)))
 
 (defhandler :media :credit
-  (~> (attrs-table "role" "schema")
-      add-content-key
-      (defaulted-key :schema "urn:ebu")
-      (push (gethash* :media-credit *entry*))))
+  (push
+   (~> (attrs-table "role" "schema")
+       add-content-key
+       (defaulted-key :schema "urn:ebu"))
+   (gethash* :media-credit *entry*)))
 
 (defhandler :media :keywords
   (setf (gethash* :media-keywords *entry*)
@@ -329,9 +331,10 @@
              (remove-if #'emptyp))))
 
 (defhandler :media :thumbnail
-  (~> (attrs-table "url" "height" "width" "time")
-      (resolve-attr :url)
-      (push (gethash* :media-thumbnail *entry*))))
+  (push
+   (~> (attrs-table "url" "height" "width" "time")
+       (resolve-attr :url))
+   (gethash* :media-thumbnail *entry*)))
 
 (defhandler :media :title
   (handle-tag :atom :title))
