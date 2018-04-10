@@ -184,9 +184,9 @@ of `*keys*'."
 (deftype sanitizer-designator ()
   '(or sanitizer (eql t)))
 
-(defstruct (unsanitized-string (:constructor unsanitized-string (string)))
-  "Wrapper for an unsanitized string."
-  (string "" :type string))
+(defconstructor unsanitized-string
+  "A string that has yet to be sanitized."
+  (string string))
 
 (deftype feed-string ()
   '(or string unsanitized-string))
