@@ -55,6 +55,9 @@
 (defvar *base* nil
   "Default value for `current-xml-base'.")
 
+(defvar *text-length-limit* nil
+  "Limit for text length, if one is in effect.")
+
 (defun version-string ()
   (fmt "cl-feedparser ~a" *version*))
 
@@ -577,15 +580,25 @@ feed, use the :link property of the feed as the base."
   (let ((uri (trim-uri uri)))
     (or (resolve-uri/base uri) "")))
 
-(defun get-text (&aux (source *source*))
-  (trim-whitespace
-   (if (not (eql (fxml.klacks:peek source) :characters))
-       (get-text-from-elements)
-       (with-output-to-string (s)
-         (loop while (eql (fxml.klacks:peek source) :characters)
-               do (write-string (nth-value 1 (fxml.klacks:consume source)) s))))))
+(defun limit-text-length (string &aux (limit *text-length-limit*))
+  (if (no limit) string
+      (ellipsize string limit)))
 
-(defun get-text-from-elements (&aux (source *source*))
+(defun get-text (&aux (source *source*))
+  (let ((text
+          (if (not (eql :characters (fxml.klacks:peek source)))
+              (get-text-from-elements source)
+              (get-text-from-cdata source))))
+    (~> text
+        trim-whitespace
+        limit-text-length)))
+
+(defun get-text-from-cdata (source)
+  (with-output-to-string (s)
+    (loop while (eql (fxml.klacks:peek source) :characters)
+          do (write-string (nth-value 1 (fxml.klacks:consume source)) s))))
+
+(defun get-text-from-elements (source)
   "Handle the case where RSS is used without CDATA."
   (let ((handler (fxml:make-string-sink)))
     (loop while (eql (fxml.klacks:peek source) :start-element) do
@@ -613,7 +626,8 @@ feed, use the :link property of the feed as the base."
                              (sanitize-content t)
                              (sanitize-titles t)
                              guid-mask
-                             (safe t))
+                             (safe t)
+                             ((:text-length-limit *text-length-limit*) nil))
   "Try to parse FEED.
 MAX-ENTRIES is the maximum number of entries to retrieve; GUID-MASK is
 a list of GUIDs of entries that are already known to the caller and
@@ -625,6 +639,11 @@ GUID. (Actually, entries with masked GUIDs are not even parsed.)
 Consider a feed with thousands of entries (they do exist): if the mask
 were applied first, you would get another set of older entries each
 time you called PARSE-FEED.
+
+The argument TEXT-LENGTH-LIMIT restricts text to a maximum size
+whenever text is extracted. Passing this make parsing more robust
+against, say, some bozo who accidentally copy-pastes the complete text
+of Moby Dick into a blog post.
 
 Sanitizing content can be turned off with SANITIZE-CONTENT (defaults
 to T). SANITIZE-TITLES controls sanitizing titles. Sanitizing titles
