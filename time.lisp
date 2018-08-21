@@ -45,8 +45,8 @@ or :local-time."
 (defmethod time= ((t1 string) t2) (time= (parse-time t1) t2))
 (defmethod time= (t1 (t2 string)) (time= t1 (parse-time t2)))
 
-(assert
- (let* ((time (get-universal-time))
-        (timestamp (local-time:universal-to-timestamp time)))
-   (and (time= time timestamp)
-        (not (time= (1+ time) timestamp)))))
+;; (assert
+;;  (let* ((time (get-universal-time))
+;;         (timestamp (local-time:universal-to-timestamp time)))
+;;    (and (time= time timestamp)
+;;         (not (time= (1+ time) timestamp)))))
