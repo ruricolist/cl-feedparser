@@ -2,7 +2,7 @@
     (:nicknames :cl-feedparser :feedparser)
   (:use :cl-feedparser/parser :cl-feedparser/handlers)
   (:export
-   :parse-feed
+   :parse-feed :feed-ref
    :*keys* :feedparser-key :gethash*
    :repair :return-feed
    :feed-sanitizer
