@@ -1,21 +1,18 @@
 CL-FEEDPARSER is a Common Lisp port of a subset of Python’s
 [feedparser][]. It does not do fetching; it only does parsing.
 
-CL-FEEDPARSER is designed specifically around the needs of [TBRSS][],
-but should be useful generally.
-
 The API of cl-feedparser is very close to the API of feedparser. As in
 Feedparser, the parsed feed is returned as a set of nested
 dictionaries (hash tables). Unsurprisingly, keys that are strings in
 Python are keywords in cl-feedparser, with dashes instead of
 underscores.
 
-    feed['author'] -> (feedparser:feed-ref feed :author)
+    feed['author']        -> (feedparser:feed-ref feed :author)
     feed['author_detail'] -> (feedparser:feed-ref feed :author-detail)
 
 (What is `feed-ref`? It is just like `gethash`, but if the provided
 key is constant, then it does a compile-time check that the key
-provided is valid.)
+provided is valid. You can always just use `gethash`, of course.)
 
 There are a few important differences:
 
@@ -47,9 +44,9 @@ Python; finally, Lisp took over.
 ``` lisp
 (ql:quickload '(:cl-feedparser :drakma))
 
-(defparameter *feed* (cl-feedparser:parse-feed (drakma:http-request "http://planet.lisp.org/rss20.xml")))
+(defparameter *feed* (feedparser:parse-feed (drakma:http-request "http://planet.lisp.org/rss20.xml")))
 
-(gethash :title *feed*)
+(feedparser:feed-ref *feed* :title)
 => "Planet Lisp"
 ```
 
@@ -61,7 +58,7 @@ namespace, as Feedblitz does).
 
 It is also the case that the Feedburner link is always overridden with
 the feedburner:origLink. This is in the interest of future-proofing:
-Feedburner may not be around forever, so you want the real links
+Feedburner may not be around forever, so for archival purposes you want the real links
 instead of the Feedburner redirects.
 
 # SKIPPING ENTRIES
@@ -106,9 +103,9 @@ contents, and the other turns it off for everything else (titles and
 other metadata).
 
     ;; Don't sanitize entry contents.
-    (parse-feed-safe feed :sanitize-content nil)
+    (parse-feed feed :sanitize-content nil)
     ;; Don’t sanitize titles or other metadata.
-    (parse-feed-safe feed :sanitize-title nil)
+    (parse-feed feed :sanitize-title nil)
 
 The idea here is that if you are going to be re-parsing the entry
 contents anyway, you may want to skip the round-trip from string to
@@ -133,6 +130,8 @@ nil` to `parse-feed`:
 
     (parse-feed buggy-feed :safe nil)
     => <ERROR>
+
+Otherwise, errors during parsing are stored under the `:bozo-exception` key of the feed.
 
 [feedparser]: https://pythonhosted.org/feedparser/
 [TBRSS]: https://tbrss.com
