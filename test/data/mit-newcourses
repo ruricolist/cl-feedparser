@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="/css/rss10.xsl" type="text/xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#"
+         xmlns:media="http://search.yahoo.com/mrss/">
+	<channel rdf:about="http://ocw.mit.edu/courses/">
+		<title>MIT OpenCourseWare: New Courses</title>
+		<description>New courses in all departments from MIT OpenCourseWare, provider of free and open MIT course materials.</description>
+		<link>http://ocw.mit.edu/courses/</link>
+		<dc:date>2013-06-27T14:34:56+05:00</dc:date>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:language>en-US</dc:language>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+		<items>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/linguistics-and-philosophy/24-03-good-food-the-ethics-and-politics-of-food-choices-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/biology/7-29j-cellular-neurobiology-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-s990-quantifying-uncertainty-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/mathematics/18-703-modern-algebra-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/biology/7-013-introductory-biology-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/economics/14-471-public-economics-i-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-340-global-warming-science-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/comparative-media-studies/cms-360-introduction-to-civic-media-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/economics/14-12-economic-applications-of-game-theory-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/foreign-languages-and-literatures/21f-321-childhood-and-youth-in-french-and-francophone-cultures-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/chemistry/5-72-statistical-mechanics-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/history/21h-007j-empire-introduction-to-ancient-and-medieval-studies-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/economics/14-461-advanced-macroeconomics-i-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/mechanical-engineering/2-96-management-in-engineering-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/biology/7-340-unusual-biology-the-science-of-emerging-pathogens-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/science-technology-and-society/sts-009-evolution-and-society-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/anthropology/21a-01-how-culture-works-fall-2012"/>
+			</rdf:Seq>
+		</items>
+	</channel>
+	<item rdf:about="http://ocw.mit.edu/courses/linguistics-and-philosophy/24-03-good-food-the-ethics-and-politics-of-food-choices-fall-2012">
+		<title>24.03 Good Food: The Ethics and Politics of Food Choices (MIT)</title>
+		<description>This course explores the values (aesthetic, moral, cultural, religious, prudential, political) expressed in the choices of food people eat. It analyzes the decisions individuals make about what to eat, how society should manage food production and consumption collectively, and how reflection on food choices might help resolve conflicts between different values.</description>
+		<link>http://ocw.mit.edu/courses/linguistics-and-philosophy/24-03-good-food-the-ethics-and-politics-of-food-choices-fall-2012</link>
+		<dc:creator>Haslanger, Sally</dc:creator>
+		<dc:date>2013-06-26T20:27:23+05:00</dc:date>
+		<dc:relation>24.03</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>food</dc:subject>
+		<dc:subject>hunger</dc:subject>
+		<dc:subject>human welfare</dc:subject>
+		<dc:subject>obesity</dc:subject>
+		<dc:subject>weight</dc:subject>
+		<dc:subject>omnivore</dc:subject>
+		<dc:subject>ethics</dc:subject>
+		<dc:subject>agriculture</dc:subject>
+		<dc:subject>poverty</dc:subject>
+		<dc:subject>ecology</dc:subject>
+		<dc:subject>locavorism</dc:subject>
+		<dc:subject>vegan</dc:subject>
+		<dc:subject>vegetarian</dc:subject>
+		<dc:subject>speciesism</dc:subject>
+		<dc:subject>activism</dc:subject>
+		<dc:subject>junk food</dc:subject>
+		<dc:subject>gender</dc:subject>
+		<dc:subject>animal death</dc:subject>
+		<dc:subject>nutrition</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/biology/7-29j-cellular-neurobiology-spring-2012">
+		<title>7.29J Cellular Neurobiology (MIT)</title>
+		<description>This course serves as an introduction to the structure and function of the nervous system. Emphasis is placed on the cellular properties of neurons and other excitable cells. Topics covered include the structure and biophysical properties of excitable cells, synaptic transmission, neurochemistry, neurodevelopment, and the integration of information in simple systems and the visual system.</description>
+		<link>http://ocw.mit.edu/courses/biology/7-29j-cellular-neurobiology-spring-2012</link>
+		<dc:creator>Littleton, Troy</dc:creator>
+		<dc:creator>Quinn, William</dc:creator>
+		<dc:date>2013-06-26T20:27:43+05:00</dc:date>
+		<dc:relation>7.29J</dc:relation>
+		<dc:relation>9.09J</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>nervous system</dc:subject>
+		<dc:subject>neurons</dc:subject>
+		<dc:subject>synaptic transmission</dc:subject>
+		<dc:subject>neurochemistry</dc:subject>
+		<dc:subject>neurodevelopment</dc:subject>
+		<dc:subject>membrane channels</dc:subject>
+		<dc:subject>resting potential</dc:subject>
+		<dc:subject>action potential</dc:subject>
+		<dc:subject>synapse</dc:subject>
+		<dc:subject>neurotransmitters</dc:subject>
+		<dc:subject>receptors</dc:subject>
+		<dc:subject>axon</dc:subject>
+		<dc:subject>olfaction</dc:subject>
+		<dc:subject>thermoreception</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-s990-quantifying-uncertainty-fall-2012">
+		<title>12.S990 Quantifying Uncertainty (MIT)</title>
+		<description>The ability to quantify the uncertainty in our models of nature is fundamental to many inference problems in Science and Engineering. In this course, we study advanced methods to represent, sample, update and propagate uncertainty. This is a &amp;quot;hands on&amp;quot; course: Methodology will be coupled with applications. The course will include lectures, invited talks, discussions, reviews and projects and will meet once a week to discuss a method and its applications.</description>
+		<link>http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-s990-quantifying-uncertainty-fall-2012</link>
+		<dc:creator>Ravela, Sai</dc:creator>
+		<dc:date>2013-06-26T14:00:51+05:00</dc:date>
+		<dc:relation>12.S990</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>boundary value problems</dc:subject>
+		<dc:subject>Polynomial Chaos</dc:subject>
+		<dc:subject>Hierarchical Bayes</dc:subject>
+		<dc:subject>Variational Bayes</dc:subject>
+		<dc:subject>Particle Filters &amp; Smoothers</dc:subject>
+		<dc:subject>Dimensionality Reduction</dc:subject>
+		<dc:subject>Sparse Optimization</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/mathematics/18-703-modern-algebra-spring-2013">
+		<title>18.703 Modern Algebra (MIT)</title>
+		<description>This undergraduate course focuses on traditional algebra topics that have found greatest application in science and engineering as well as in mathematics.</description>
+		<link>http://ocw.mit.edu/courses/mathematics/18-703-modern-algebra-spring-2013</link>
+		<dc:creator>McKernan, James</dc:creator>
+		<dc:date>2013-06-26T01:17:39+05:00</dc:date>
+		<dc:relation>18.703</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>algebra</dc:subject>
+		<dc:subject>group theory</dc:subject>
+		<dc:subject>finite groups</dc:subject>
+		<dc:subject>ring theory</dc:subject>
+		<dc:subject>unique factorization</dc:subject>
+		<dc:subject>Euclidean rings</dc:subject>
+		<dc:subject>field theory</dc:subject>
+		<dc:subject>finite fields</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/biology/7-013-introductory-biology-spring-2013">
+		<title>7.013 Introductory Biology (MIT)</title>
+		<description>The MIT Biology Department core courses, 7.012, 7.013, and 7.014, all cover the same core material, which includes the fundamental principles of biochemistry, genetics, molecular biology, and cell biology. 7.013 focuses on the application of the fundamental principles toward an  understanding of human biology. Topics include genetics, cell biology,  molecular biology, disease (infectious agents, inherited diseases and  cancer), developmental biology, neurobiology and evolution.Biological function at the molecular level is particularly emphasized in all courses and covers the structure and regulation of genes, as well as, the structure and synthesis of proteins, how these molecules are integrated into cells, and how these cells are integrated into multicellular systems and organisms. In addition, each version of the subject has its own distinctive material. &amp;nbsp;</description>
+		<link>http://ocw.mit.edu/courses/biology/7-013-introductory-biology-spring-2013</link>
+		<dc:creator>Sive, Hazel</dc:creator>
+		<dc:creator>Jacks, Tyler</dc:creator>
+		<dc:creator>Sinha, Diviya</dc:creator>
+		<dc:date>2013-06-26T01:17:05+05:00</dc:date>
+		<dc:relation>7.013</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>biology</dc:subject>
+		<dc:subject>biochemistry</dc:subject>
+		<dc:subject>genetics</dc:subject>
+		<dc:subject>molecular biology</dc:subject>
+		<dc:subject>recombinant DNA</dc:subject>
+		<dc:subject>cell cycle</dc:subject>
+		<dc:subject>cell signaling</dc:subject>
+		<dc:subject>cloning</dc:subject>
+		<dc:subject>stem cells</dc:subject>
+		<dc:subject>cancer</dc:subject>
+		<dc:subject>immunology</dc:subject>
+		<dc:subject>virology</dc:subject>
+		<dc:subject>genomics</dc:subject>
+		<dc:subject>molecular medicine</dc:subject>
+		<dc:subject>DNA</dc:subject>
+		<dc:subject>RNA</dc:subject>
+		<dc:subject>proteins</dc:subject>
+		<dc:subject>replication</dc:subject>
+		<dc:subject>transcription</dc:subject>
+		<dc:subject>mRNA</dc:subject>
+		<dc:subject>translation</dc:subject>
+		<dc:subject>ribosome</dc:subject>
+		<dc:subject>nervous system</dc:subject>
+		<dc:subject>amino acids</dc:subject>
+		<dc:subject>polypeptide chain</dc:subject>
+		<dc:subject>cell biology</dc:subject>
+		<dc:subject>neurobiology</dc:subject>
+		<dc:subject>gene regulation</dc:subject>
+		<dc:subject>protein structure</dc:subject>
+		<dc:subject>protein synthesis</dc:subject>
+		<dc:subject>gene structure</dc:subject>
+		<dc:subject>PCR</dc:subject>
+		<dc:subject>polymerase chain reaction</dc:subject>
+		<dc:subject>protein localization</dc:subject>
+		<dc:subject>endoplasmic reticulum</dc:subject>
+		<dc:subject>human biology</dc:subject>
+		<dc:subject>inherited diseases</dc:subject>
+		<dc:subject>developmental biology</dc:subject>
+		<dc:subject>evolution</dc:subject>
+		<dc:subject>human genetics</dc:subject>
+		<dc:subject>human diseases</dc:subject>
+		<dc:subject>infectious agents</dc:subject>
+		<dc:subject>infectious diseases</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/economics/14-471-public-economics-i-fall-2012">
+		<title>14.471 Public Economics I (MIT)</title>
+		<description>This course covers theory and evidence on government taxation policy. Topics include tax incidence, optimal tax theory, the effect of taxation on labor supply and savings, taxation and corporate behavior, and tax expenditure policy.</description>
+		<link>http://ocw.mit.edu/courses/economics/14-471-public-economics-i-fall-2012</link>
+		<dc:creator>Poterba, James</dc:creator>
+		<dc:creator>Werning, Iván</dc:creator>
+		<dc:date>2013-06-26T01:14:56+05:00</dc:date>
+		<dc:relation>14.471</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>economic analysis</dc:subject>
+		<dc:subject>taxation</dc:subject>
+		<dc:subject>wealth</dc:subject>
+		<dc:subject>financial policy</dc:subject>
+		<dc:subject>income</dc:subject>
+		<dc:subject>investment</dc:subject>
+		<dc:subject>asset</dc:subject>
+		<dc:subject>political economy</dc:subject>
+		<dc:subject>labor</dc:subject>
+		<dc:subject>capital</dc:subject>
+		<dc:subject>public policy</dc:subject>
+		<dc:subject>corporate finance</dc:subject>
+		<dc:subject>tax reform</dc:subject>
+		<dc:subject>optimal commodity taxes</dc:subject>
+		<dc:subject>optimal corrective taxation</dc:subject>
+		<dc:subject>optimal stochastic taxes</dc:subject>
+		<dc:subject>dynamic consistency issues</dc:subject>
+		<dc:subject>debt</dc:subject>
+		<dc:subject>equity</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-340-global-warming-science-spring-2012">
+		<title>12.340 Global Warming Science (MIT)</title>
+		<description>This course provides students with a scientific foundation of anthropogenic climate change and an introduction to climate models. It focuses on fundamental physical processes that shape climate (e.g. solar variability, orbital mechanics, greenhouse gases, atmospheric and oceanic circulation, and volcanic and soil aerosols) and on evidence for past and present climate change. During the course they discuss material consequences of climate change, including sea level change, variations in precipitation, vegetation, storminess, and the incidence of disease. This course also examines the science behind mitigation and adaptation proposals.</description>
+		<link>http://ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-340-global-warming-science-spring-2012</link>
+		<dc:creator>Emanuel, Kerry</dc:creator>
+		<dc:creator>Seager, Sara</dc:creator>
+		<dc:creator>Cziczo, Daniel</dc:creator>
+		<dc:creator>McGee, David</dc:creator>
+		<dc:date>2013-06-24T21:57:52+05:00</dc:date>
+		<dc:relation>12.340</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>climate change</dc:subject>
+		<dc:subject>climate model</dc:subject>
+		<dc:subject>solar variability</dc:subject>
+		<dc:subject>orbital mechanics</dc:subject>
+		<dc:subject>greenhouse gases</dc:subject>
+		<dc:subject>atmospheric circulation</dc:subject>
+		<dc:subject>oceanic circulation</dc:subject>
+		<dc:subject>volcanic aerosols</dc:subject>
+		<dc:subject>soil aerosols</dc:subject>
+		<dc:subject>precipitation</dc:subject>
+		<dc:subject>vegetation</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012">
+		<title>4.105 Geometric Disciplines and Architecture Skills: Reciprocal Methodologies (MIT)</title>
+		<description>This course is an intensive introduction to architectural design tools and process, and is taught through a series of short exercises. The conceptual basis of each exercise is in the interrogation of the geometric principles that lie at the core of each skill. Skills covered in this course range from techniques of hand drafting, to generation of 3D computer models, physical model-building, sketching, and diagramming. Weekly lectures and pin-ups address the conventions associated with modes of architectural representation and their capacity to convey ideas. This course is tailored and offered only to first-year M.Arch students.</description>
+		<link>http://ocw.mit.edu/courses/architecture/4-105-geometric-disciplines-and-architecture-skills-reciprocal-methodologies-fall-2012</link>
+		<dc:creator>Clifford, Brandon</dc:creator>
+		<dc:date>2013-06-20T16:20:35+05:00</dc:date>
+		<dc:relation>4.105</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>geometry</dc:subject>
+		<dc:subject>representation</dc:subject>
+		<dc:subject>architecture</dc:subject>
+		<dc:subject>drawing</dc:subject>
+		<dc:subject>projection</dc:subject>
+		<dc:subject>perspective</dc:subject>
+		<dc:subject>planes</dc:subject>
+		<dc:subject>axonometric</dc:subject>
+		<dc:subject>stereotomy</dc:subject>
+		<dc:subject>volume</dc:subject>
+		<dc:subject>surface</dc:subject>
+		<dc:subject>curvature</dc:subject>
+		<dc:subject>curves</dc:subject>
+		<dc:subject>discretization</dc:subject>
+		<dc:subject>generation</dc:subject>
+		<dc:subject>construction</dc:subject>
+		<dc:subject>publication</dc:subject>
+		<dc:subject>presentation</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/comparative-media-studies/cms-360-introduction-to-civic-media-fall-2012">
+		<title>CMS.360 Introduction to Civic Media (MIT)</title>
+		<description>This course examines civic media in comparative, transnational and historical perspectives through the use of various theoretical tools, research approaches, and project design methods.</description>
+		<link>http://ocw.mit.edu/courses/comparative-media-studies/cms-360-introduction-to-civic-media-fall-2012</link>
+		<dc:creator>Costanza-Chock, Sasha</dc:creator>
+		<dc:creator>Hurwitz, Rebecca</dc:creator>
+		<dc:date>2013-06-19T16:45:44+05:00</dc:date>
+		<dc:relation>CMS.360</dc:relation>
+		<dc:relation>CMS.860</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>social media</dc:subject>
+		<dc:subject>civic media</dc:subject>
+		<dc:subject>hacktivism</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/economics/14-12-economic-applications-of-game-theory-fall-2012">
+		<title>14.12 Economic Applications of Game Theory (MIT)</title>
+		<description>Game Theory, also known as Multiperson Decision Theory, is the analysis of situations in which the payoff of a decision maker depends not only on his own actions but also on those of others. Game Theory has applications in several fields, such as economics, politics, law, biology, and computer science. In this course, I will introduce the basic tools of game theoretic analysis. In the process, I will outline some of the many applications of Game Theory, primarily in economics.</description>
+		<link>http://ocw.mit.edu/courses/economics/14-12-economic-applications-of-game-theory-fall-2012</link>
+		<dc:creator>Yildiz, Muhamet</dc:creator>
+		<dc:date>2013-06-19T16:45:53+05:00</dc:date>
+		<dc:relation>14.12</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>game theory</dc:subject>
+		<dc:subject>economics</dc:subject>
+		<dc:subject>multiperson decision theory</dc:subject>
+		<dc:subject>payoff</dc:subject>
+		<dc:subject>games</dc:subject>
+		<dc:subject>backward induction</dc:subject>
+		<dc:subject>subgame perfection</dc:subject>
+		<dc:subject>implicit cartels</dc:subject>
+		<dc:subject>dynamic games</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/foreign-languages-and-literatures/21f-321-childhood-and-youth-in-french-and-francophone-cultures-spring-2013">
+		<title>21F.321 Childhood and Youth in French and Francophone Cultures (MIT)</title>
+		<description>This course studies the transformation of childhood and youth since the 18th century in France, as well as the development of sentimentality within the family in a francophone context. Students will examine the personification of children, both as a source of inspiration for artistic creation and a political ideal aimed at protecting future generations, and consider various representations of childhood and youth in literature (e.g., Pagnol, Proust, Sarraute, Lave, Morgievre), movies (e.g., Truffaut), and songs (e.g., Brel, Barbara). This course is taught entirely in French.</description>
+		<link>http://ocw.mit.edu/courses/foreign-languages-and-literatures/21f-321-childhood-and-youth-in-french-and-francophone-cultures-spring-2013</link>
+		<dc:creator>Perreau, Bruno</dc:creator>
+		<dc:date>2013-06-17T16:15:51+05:00</dc:date>
+		<dc:relation>21F.321</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>francophone</dc:subject>
+		<dc:subject>youth culture</dc:subject>
+		<dc:subject>adolescence</dc:subject>
+		<dc:subject>literature</dc:subject>
+		<dc:subject>childhood</dc:subject>
+		<dc:subject>Florence Foresti</dc:subject>
+		<dc:subject>Serge Reggiani</dc:subject>
+		<dc:subject>Jean Cocteau</dc:subject>
+		<dc:subject>jeunesse</dc:subject>
+		<dc:subject>Arthur Rimbaud</dc:subject>
+		<dc:subject>François Ozon</dc:subject>
+		<dc:subject>Damien Saez</dc:subject>
+		<dc:subject>Kev Adams</dc:subject>
+		<dc:subject>Riad Sattouf</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/chemistry/5-72-statistical-mechanics-spring-2012">
+		<title>5.72 Statistical Mechanics (MIT)</title>
+		<description>This course discusses the principles and methods of statistical mechanics. Topics covered include classical and quantum statistics, grand ensembles, fluctuations, molecular distribution functions, other concepts in equilibrium statistical mechanics, and topics in thermodynamics and statistical mechanics of irreversible processes.</description>
+		<link>http://ocw.mit.edu/courses/chemistry/5-72-statistical-mechanics-spring-2012</link>
+		<dc:creator>Cao, Jianshu</dc:creator>
+		<dc:date>2013-06-14T15:54:30+05:00</dc:date>
+		<dc:relation>5.72</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>statistical mechanics</dc:subject>
+		<dc:subject>quantum</dc:subject>
+		<dc:subject>statistics</dc:subject>
+		<dc:subject>atoms</dc:subject>
+		<dc:subject>materials</dc:subject>
+		<dc:subject>master equations</dc:subject>
+		<dc:subject>random walk</dc:subject>
+		<dc:subject>langevin</dc:subject>
+		<dc:subject>fokker</dc:subject>
+		<dc:subject>planck</dc:subject>
+		<dc:subject>probability theory</dc:subject>
+		<dc:subject>bloch-redfield</dc:subject>
+		<dc:subject>navier-stokes</dc:subject>
+		<dc:subject>hydrodynamic</dc:subject>
+		<dc:subject>scattering</dc:subject>
+		<dc:subject>projection operator</dc:subject>
+		<dc:subject>thermodynamics</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/history/21h-007j-empire-introduction-to-ancient-and-medieval-studies-fall-2012">
+		<title>21H.007J Empire: Introduction to Ancient and Medieval Studies (MIT)</title>
+		<description>This course is an investigation of the Roman empire of Augustus, the Frankish empire of Charlemagne, and the English empire in the age of the Hundred Years War. Students examine different types of evidence, read across a variety of disciplines, and develop skills to identify continuities and changes in ancient and medieval societies. Each term this course is different, looking at different materials from a variety of domains to explore ancient and mideveal studies. This version is a capture of the course as it was taught in 2012, and does not reflect how it is taught currently. </description>
+		<link>http://ocw.mit.edu/courses/history/21h-007j-empire-introduction-to-ancient-and-medieval-studies-fall-2012</link>
+		<dc:creator>Bahr, Arthur</dc:creator>
+		<dc:creator>Broadhead, William</dc:creator>
+		<dc:creator>Goldberg, Eric</dc:creator>
+		<dc:date>2013-06-14T15:54:22+05:00</dc:date>
+		<dc:relation>21H.007J</dc:relation>
+		<dc:relation>21L.014J</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>rome</dc:subject>
+		<dc:subject>roman empire</dc:subject>
+		<dc:subject>augustus</dc:subject>
+		<dc:subject>charlemagne</dc:subject>
+		<dc:subject>emperor louis</dc:subject>
+		<dc:subject>english empire</dc:subject>
+		<dc:subject>edward III</dc:subject>
+		<dc:subject>louis the pious</dc:subject>
+		<dc:subject>virgil</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012">
+		<title>4.112 Architecture Design Fundamentals I: Nano-Machines (MIT)</title>
+		<description>This is the second undergraduate architecture design studio, which introduces design logic and skills that enable design thinking, representation, and development. Through the lens of nano-scale machines, technologies, and phenomena, students are asked to explore techniques for describing form, space, and architecture. Exercises encourage various connotations of the &amp;quot;machine&amp;quot; and challenge students to translate conceptual strategies into more integrated design propositions through both digital and analog means.</description>
+		<link>http://ocw.mit.edu/courses/architecture/4-112-architecture-design-fundamentals-i-nano-machines-fall-2012</link>
+		<dc:creator>Tibbits, Skylar</dc:creator>
+		<dc:date>2013-06-14T15:54:07+05:00</dc:date>
+		<dc:relation>4.112</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>architecture</dc:subject>
+		<dc:subject>architectural design</dc:subject>
+		<dc:subject>nano-machine</dc:subject>
+		<dc:subject>programmable matter</dc:subject>
+		<dc:subject>drawing</dc:subject>
+		<dc:subject>scripting</dc:subject>
+		<dc:subject>casting</dc:subject>
+		<dc:subject>modeling</dc:subject>
+		<dc:subject>self-assembly</dc:subject>
+		<dc:subject>self-replication</dc:subject>
+		<dc:subject>Processing</dc:subject>
+		<dc:subject>generation</dc:subject>
+		<dc:subject>machine</dc:subject>
+		<dc:subject>space</dc:subject>
+		<dc:subject>scale</dc:subject>
+		<dc:subject>void</dc:subject>
+		<dc:subject>bounding box</dc:subject>
+		<dc:subject>system</dc:subject>
+		<dc:subject>habitation</dc:subject>
+		<dc:subject>architectural space</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/economics/14-461-advanced-macroeconomics-i-fall-2012">
+		<title>14.461 Advanced Macroeconomics I (MIT)</title>
+		<description>14.461 is an advanced course in macroeconomics that seeks to bring students to the research frontier. The course is divided into two sections. The first half is taught by Prof. Iván Werning and covers topics such as how to formulate and solve optimal problems. Students will study fiscal and monetary policy, among other issues. The second half, taught by Prof. George-Marios Angeletos, covers recent work on multiple equilibria, global games, and informational fictions.</description>
+		<link>http://ocw.mit.edu/courses/economics/14-461-advanced-macroeconomics-i-fall-2012</link>
+		<dc:creator>Werning, Iván</dc:creator>
+		<dc:creator>Angeletos, George-Marios</dc:creator>
+		<dc:date>2013-06-14T15:54:15+05:00</dc:date>
+		<dc:relation>14.461</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>macroeconomics</dc:subject>
+		<dc:subject>macroeconomic theory</dc:subject>
+		<dc:subject>policy</dc:subject>
+		<dc:subject>fiscal policy</dc:subject>
+		<dc:subject>monetary policy</dc:subject>
+		<dc:subject>research</dc:subject>
+		<dc:subject>business cycles</dc:subject>
+		<dc:subject>financial crisis</dc:subject>
+		<dc:subject>global games</dc:subject>
+		<dc:subject>multiple equilibria</dc:subject>
+		<dc:subject>informational fictions</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013">
+		<title>15.761 Introduction to Operations Management (MIT)</title>
+		<description>This course provides students with concepts, techniques and tools to design, analyze, and improve core operational capabilities, and apply them to a broad range of application domains and industries. It emphasizes the effect of uncertainty in decision-making, as well as the interplay between high-level financial objectives and operational capabilities. Topics covered include production control, risk pooling, quality management, process design, and revenue management. Also included are case studies, guest lectures, and simulation games which demonstrate central concepts.</description>
+		<link>http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013</link>
+		<dc:creator>Fine, Charles H.</dc:creator>
+		<dc:creator>Zaman, Tauhid</dc:creator>
+		<dc:date>2013-06-12T12:22:56+05:00</dc:date>
+		<dc:relation>15.761</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>process analysis</dc:subject>
+		<dc:subject>capacity analysis</dc:subject>
+		<dc:subject>innovation</dc:subject>
+		<dc:subject>inventory management</dc:subject>
+		<dc:subject>production</dc:subject>
+		<dc:subject>supply chain design</dc:subject>
+		<dc:subject>sustainability</dc:subject>
+		<dc:subject>operational risk</dc:subject>
+		<dc:subject>quality management</dc:subject>
+		<dc:subject>revenue management</dc:subject>
+		<dc:subject>pricing</dc:subject>
+		<dc:subject>queuing</dc:subject>
+		<dc:subject>process re-engineering</dc:subject>
+		<dc:subject>Toyota</dc:subject>
+		<dc:subject>Amazon</dc:subject>
+		<dc:subject>CVS</dc:subject>
+		<dc:subject>McDonald's</dc:subject>
+		<dc:subject>Burger King</dc:subject>
+		<dc:subject>Hewlett-Packard</dc:subject>
+		<dc:subject>Sport Obermeyer</dc:subject>
+		<dc:subject>Walmart</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/mechanical-engineering/2-96-management-in-engineering-fall-2012">
+		<title>2.96 Management in Engineering (MIT)</title>
+		<description>This course gives an overview of engineering management and covers topics such as financial principles, management of innovation, technology strategy, and best management practices. The focus of the course is the development of individual skills and team work. This is carried out through an exposure to management tools.</description>
+		<link>http://ocw.mit.edu/courses/mechanical-engineering/2-96-management-in-engineering-fall-2012</link>
+		<dc:creator>Chun, Jung-Hoon</dc:creator>
+		<dc:creator>Marcus, Henry S.</dc:creator>
+		<dc:creator>Weiss, Abbott</dc:creator>
+		<dc:date>2013-06-07T12:27:55+05:00</dc:date>
+		<dc:relation>2.96</dc:relation>
+		<dc:relation>2.961</dc:relation>
+		<dc:relation>6.930</dc:relation>
+		<dc:relation>10.806</dc:relation>
+		<dc:relation>16.653</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>engineering management</dc:subject>
+		<dc:subject>financial principles</dc:subject>
+		<dc:subject>innovation in management</dc:subject>
+		<dc:subject>technology strategy</dc:subject>
+		<dc:subject>management practices</dc:subject>
+		<dc:subject>project planning</dc:subject>
+		<dc:subject>technical strategy</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/biology/7-340-unusual-biology-the-science-of-emerging-pathogens-spring-2013">
+		<title>7.340 Unusual Biology: The Science of Emerging Pathogens (MIT)</title>
+		<description>Infectious diseases represent a serious global public health problem. They have the potential to kill millions of people, whether they emerge naturally as outbreaks or pandemics, or deliberately through bioterrorism. Some examples of diseases caused by emerging pathogens are the Bubonic Plague, Toxoplasmosis, African Sleeping Sickness, and Chagas Disease. Each day, infectious disease scientists serve on the front lines protecting us from such threats.  In this course students will learn how to design and critique experiments through the discussion of primary research articles that explore the molecular basis of disease caused by emerging pathogens. This course is one of many Advanced Undergraduate Seminars offered by the Biology Department at MIT. These seminars are tailored for students with an interest in using primary research literature to discuss and learn about current biological research in a highly interactive setting. Many instructors of the Advanced Undergraduate Seminars are postdoctoral scientists with a strong interest in teaching.</description>
+		<link>http://ocw.mit.edu/courses/biology/7-340-unusual-biology-the-science-of-emerging-pathogens-spring-2013</link>
+		<dc:creator>Camejo, Ana</dc:creator>
+		<dc:creator>Gold, Daniel</dc:creator>
+		<dc:date>2013-06-03T14:55:22+05:00</dc:date>
+		<dc:relation>7.340</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>pathogens</dc:subject>
+		<dc:subject>Infectious diseases</dc:subject>
+		<dc:subject>parasite</dc:subject>
+		<dc:subject>host cell</dc:subject>
+		<dc:subject>gene expression</dc:subject>
+		<dc:subject>Toxoplasma rhoptry protein 16 (ROP16)</dc:subject>
+		<dc:subject>Toxoplasma gondii</dc:subject>
+		<dc:subject>STAT6</dc:subject>
+		<dc:subject>Plasmodium falciparum</dc:subject>
+		<dc:subject>malaria</dc:subject>
+		<dc:subject>RON8</dc:subject>
+		<dc:subject>Trypanosoma cruzi</dc:subject>
+		<dc:subject>Chagas disease</dc:subject>
+		<dc:subject>Listeria monocytogenes</dc:subject>
+		<dc:subject>Leishmaniasis</dc:subject>
+		<dc:subject>Francisella</dc:subject>
+		<dc:subject>pathogen proliferation</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/science-technology-and-society/sts-009-evolution-and-society-spring-2012">
+		<title>STS.009 Evolution and Society (MIT)</title>
+		<description>This course provides a broad conceptual and historical introduction to scientific theories of evolution and their place in the wider culture. It embraces historical, scientific and anthropological/cultural perspectives grounded in relevant developments in the biological sciences since 1800 that are largely responsible for the development of the modern theory of evolution by natural selection. Students read key texts, analyze key debates (e.g. Darwinian debates in the 19th century, and the creation controversies in the 20th century) and give class presentations.</description>
+		<link>http://ocw.mit.edu/courses/science-technology-and-society/sts-009-evolution-and-society-spring-2012</link>
+		<dc:creator>Durant, John</dc:creator>
+		<dc:creator>Wildman, Jeanne </dc:creator>
+		<dc:creator>Thompson, Michaela</dc:creator>
+		<dc:date>2013-05-31T16:33:17+05:00</dc:date>
+		<dc:relation>STS.009</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>evolution</dc:subject>
+		<dc:subject>darwin</dc:subject>
+		<dc:subject>huxley</dc:subject>
+		<dc:subject>scopes</dc:subject>
+		<dc:subject>natural theology</dc:subject>
+		<dc:subject>natural science</dc:subject>
+		<dc:subject>wallace</dc:subject>
+		<dc:subject>bates</dc:subject>
+		<dc:subject>on the origin of species</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/anthropology/21a-01-how-culture-works-fall-2012">
+		<title>21A.01 How Culture Works (MIT)</title>
+		<description>This course introduces diverse meanings and uses of the concept of culture with historical and contemporary examples from scholarship and popular media around the globe. It includes first-hand observations, synthesized histories and ethnographies, and visual and narrated representations of human experiences. Students conduct empirical research on cultural differences through the systematic observation of human interaction, employ methods of interpretative analysis, and practice convincing others of the accuracy of their findings.</description>
+		<link>http://ocw.mit.edu/courses/anthropology/21a-01-how-culture-works-fall-2012</link>
+		<dc:creator>Buyandelger, Manduhai</dc:creator>
+		<dc:date>2013-05-31T10:01:46+05:00</dc:date>
+		<dc:relation>21A.01</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>culture</dc:subject>
+		<dc:subject>anthropology</dc:subject>
+		<dc:subject>fieldwork</dc:subject>
+		<dc:subject>observation</dc:subject>
+		<dc:subject>interviews</dc:subject>
+		<dc:subject>Halloween</dc:subject>
+		<dc:subject>public spaces</dc:subject>
+		<dc:subject>gender</dc:subject>
+		<dc:subject>style</dc:subject>
+		<dc:subject>race</dc:subject>
+		<dc:subject>class</dc:subject>
+		<dc:subject>religion</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+</rdf:RDF>

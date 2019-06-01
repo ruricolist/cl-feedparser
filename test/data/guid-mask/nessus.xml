@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="http://www.nessus.org/">
+<title>Nessus.org Plugins</title>
+<link>http://www.nessus.org/scripts.php</link>
+<description>All the newest security checks for the Nessus scanner</description>
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81206" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81205" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81204" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81203" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81202" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81201" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81200" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81199" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81198" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81197" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81196" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81195" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81194" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81193" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81192" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81191" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81190" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81189" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81188" />
+<rdf:li rdf:resource="http://www.nessus.org/plugins/index.php?view=single&amp;id=81187" />
+</rdf:Seq>
+</items>
+</channel>
+
+<image rdf:about="http://www.nessus.org/images/RssLogo.jpg">
+<title>Nessus Plugins</title>
+<url>http://www.nessus.org/images/RssLogo.jpg</url>
+<link>http://www.nessus.org/</link>
+</image>
+
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81206">
+<title>HP SiteScope 11.1x &lt; 11.13 or 11.2x &lt; 11.24 IP3 Remote Privilege Escalation</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+A web application installed on the remote host is affected by a<br />
+privilege escalation vulnerability.<br />
+<br />
+Description :<br />
+<br />
+According to it's self reported version, the installation of HP<br />
+SiteScope on the remote host is 11.1x prior to 11.13 or 11.2x prior to<br />
+11.24 IP3. It is potentially affected by a privilege escalation<br />
+vulnerability where authorized users can gain privileges not assigned<br />
+to their role on the system.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://www.nessus.org/u?c2de791e" target="_blank">http://www.nessus.org/u?c2de791e</a><br />
+<br />
+Solution :<br />
+<br />
+Upgrade to 11.24 IP3 or 11.13 apply the appropriate patch.<br />
+<br />
+Risk factor :<br />
+<br />
+Medium / CVSS Base Score : 5.5<br />
+(CVSS2#AV:N/AC:L/Au:S/C:P/I:P/A:N)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81206</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81205">
+<title>Asterisk chan_pjsip Incompatible Codecs DoS (AST-2015-001)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The version of Asterisk installed on the remote host may be affected<br />
+by a denial of service vulnerability.<br />
+<br />
+Description :<br />
+<br />
+According to its SIP banner, the version of Asterisk running on the<br />
+remote host has a flaw in which it fails to reclaim allocated RTP<br />
+ports whenever a connection is made to an authenticated endpoint whose<br />
+SPD offers only codecs that are not allowed by Asterisk. An attacker<br />
+could exploit this vulnerability to cause an exhaustion of available<br />
+ports, leading to a denial of service. Note that this only affects<br />
+Asterisk using the PJSIP channel driver.<br />
+<br />
+Note that Nessus has not tested for this issue but has instead relied<br />
+only on the application's self-reported version number.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://downloads.asterisk.org/pub/security/AST-2015-001.html" target="_blank">http://downloads.asterisk.org/pub/security/AST-2015-001.html</a><br />
+<a href="https://issues.asterisk.org/jira/browse/ASTERISK-24666" target="_blank">https://issues.asterisk.org/jira/browse/ASTERISK-24666</a><br />
+<br />
+Solution :<br />
+<br />
+Upgrade to Asterisk 12.8.1 / 13.1.1 or apply the appropriate patch<br />
+listed in the Asterisk advisory.<br />
+<br />
+Risk factor :<br />
+<br />
+Medium / CVSS Base Score : 4.0<br />
+(CVSS2#AV:N/AC:L/Au:S/C:N/I:N/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81205</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81204">
+<title>RHEL 5 / 6 : java-1.5.0-ibm (RHSA-2015:0136)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Red Hat host is missing one or more security updates.<br />
+<br />
+Description :<br />
+<br />
+Updated java-1.5.0-ibm packages that fix several security issues are<br />
+now available for Red Hat Enterprise Linux 5 and 6 Supplementary.<br />
+<br />
+Red Hat Product Security has rated this update as having Important<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+IBM J2SE version 5.0 includes the IBM Java Runtime Environment and the<br />
+IBM Java Software Development Kit.<br />
+<br />
+This update fixes several vulnerabilities in the IBM Java Runtime<br />
+Environment and the IBM Java Software Development Kit. Detailed<br />
+vulnerability descriptions are linked from the IBM Security alerts<br />
+page, listed in the References section. (CVE-2014-6585, CVE-2014-6591,<br />
+CVE-2014-6593, CVE-2014-8891, CVE-2014-8892, CVE-2015-0395,<br />
+CVE-2015-0407, CVE-2015-0408, CVE-2015-0410)<br />
+<br />
+All users of java-1.5.0-ibm are advised to upgrade to these updated<br />
+packages, containing the IBM J2SE 5.0 SR16-FP9 release. All running<br />
+instances of IBM Java must be restarted for this update to take<br />
+effect.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6585.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6585.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6591.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6591.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6593.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6593.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8891.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8891.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8892.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8892.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0395.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0395.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0407.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0407.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0408.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0408.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0410.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0410.html</a><br />
+<a href="https://www.ibm.com/developerworks/java/jdk/alerts/" target="_blank">https://www.ibm.com/developerworks/java/jdk/alerts/</a><br />
+<a href="http://rhn.redhat.com/errata/RHSA-2015-0136.html" target="_blank">http://rhn.redhat.com/errata/RHSA-2015-0136.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Critical / CVSS Base Score : 10.0<br />
+(CVSS2#AV:N/AC:L/Au:N/C:C/I:C/A:C)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81204</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81203">
+<title>RHEL 5 / 6 : java-1.6.0-ibm (RHSA-2015:0135)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Red Hat host is missing one or more security updates.<br />
+<br />
+Description :<br />
+<br />
+Updated java-1.6.0-ibm packages that fix several security issues are<br />
+now available for Red Hat Enterprise Linux 5 and 6 Supplementary.<br />
+<br />
+Red Hat Product Security has rated this update as having Critical<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+IBM Java SE version 6 includes the IBM Java Runtime Environment and<br />
+the IBM Java Software Development Kit.<br />
+<br />
+This update fixes several vulnerabilities in the IBM Java Runtime<br />
+Environment and the IBM Java Software Development Kit. Detailed<br />
+vulnerability descriptions are linked from the IBM Security alerts<br />
+page, listed in the References section. (CVE-2014-6585, CVE-2014-6587,<br />
+CVE-2014-6591, CVE-2014-6593, CVE-2014-8891, CVE-2014-8892,<br />
+CVE-2015-0395, CVE-2015-0403, CVE-2015-0406, CVE-2015-0407,<br />
+CVE-2015-0408, CVE-2015-0410, CVE-2015-0412)<br />
+<br />
+All users of java-1.6.0-ibm are advised to upgrade to these updated<br />
+packages, containing the IBM Java SE 6 SR16-FP3 release. All running<br />
+instances of IBM Java must be restarted for the update to take effect.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6585.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6585.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6587.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6587.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6591.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6591.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6593.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6593.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8891.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8891.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8892.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8892.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0395.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0395.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0403.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0403.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0406.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0406.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0407.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0407.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0408.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0408.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0410.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0410.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0412.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0412.html</a><br />
+<a href="https://www.ibm.com/developerworks/java/jdk/alerts/" target="_blank">https://www.ibm.com/developerworks/java/jdk/alerts/</a><br />
+<a href="http://rhn.redhat.com/errata/RHSA-2015-0135.html" target="_blank">http://rhn.redhat.com/errata/RHSA-2015-0135.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Critical / CVSS Base Score : 10.0<br />
+(CVSS2#AV:N/AC:L/Au:N/C:C/I:C/A:C)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81203</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81202">
+<title>RHEL 5 : java-1.7.0-ibm (RHSA-2015:0134)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Red Hat host is missing one or more security updates.<br />
+<br />
+Description :<br />
+<br />
+Updated java-1.7.0-ibm packages that fix several security issues are<br />
+now available for Red Hat Enterprise Linux 5 Supplementary.<br />
+<br />
+Red Hat Product Security has rated this update as having Critical<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+IBM Java SE version 7 includes the IBM Java Runtime Environment and<br />
+the IBM Java Software Development Kit.<br />
+<br />
+This update fixes several vulnerabilities in the IBM Java Runtime<br />
+Environment and the IBM Java Software Development Kit. Detailed<br />
+vulnerability descriptions are linked from the IBM Security alerts<br />
+page, listed in the References section. (CVE-2014-6549, CVE-2014-6585,<br />
+CVE-2014-6587, CVE-2014-6591, CVE-2014-6593, CVE-2014-8891,<br />
+CVE-2014-8892, CVE-2015-0403, CVE-2015-0406, CVE-2015-0407,<br />
+CVE-2015-0408, CVE-2015-0410, CVE-2015-0412)<br />
+<br />
+All users of java-1.7.0-ibm are advised to upgrade to these updated<br />
+packages, containing the IBM Java SE 7 SR8-FP10 release. All running<br />
+instances of IBM Java must be restarted for the update to take effect.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6549.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6549.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6585.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6585.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6587.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6587.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6591.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6591.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6593.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6593.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8891.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8891.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8892.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8892.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0403.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0403.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0406.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0406.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0407.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0407.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0408.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0408.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0410.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0410.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0412.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0412.html</a><br />
+<a href="https://www.ibm.com/developerworks/java/jdk/alerts/" target="_blank">https://www.ibm.com/developerworks/java/jdk/alerts/</a><br />
+<a href="http://rhn.redhat.com/errata/RHSA-2015-0134.html" target="_blank">http://rhn.redhat.com/errata/RHSA-2015-0134.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Critical / CVSS Base Score : 10.0<br />
+(CVSS2#AV:N/AC:L/Au:N/C:C/I:C/A:C)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81202</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81201">
+<title>RHEL 6 / 7 : java-1.7.1-ibm (RHSA-2015:0133)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Red Hat host is missing one or more security updates.<br />
+<br />
+Description :<br />
+<br />
+Updated java-1.7.1-ibm packages that fix several security issues are<br />
+now available for Red Hat Enterprise Linux 6 and 7 Supplementary.<br />
+<br />
+Red Hat Product Security has rated this update as having Critical<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+IBM Java SE version 7 Release 1 includes the IBM Java Runtime<br />
+Environment and the IBM Java Software Development Kit.<br />
+<br />
+This update fixes several vulnerabilities in the IBM Java Runtime<br />
+Environment and the IBM Java Software Development Kit. Detailed<br />
+vulnerability descriptions are linked from the IBM Security alerts<br />
+page, listed in the References section. (CVE-2014-6549, CVE-2014-6585,<br />
+CVE-2014-6587, CVE-2014-6591, CVE-2014-6593, CVE-2014-8891,<br />
+CVE-2014-8892, CVE-2015-0403, CVE-2015-0406, CVE-2015-0407,<br />
+CVE-2015-0408, CVE-2015-0410, CVE-2015-0412)<br />
+<br />
+All users of java-1.7.1-ibm are advised to upgrade to these updated<br />
+packages, containing the IBM Java SE 7R1 SR2-FP10 release. All running<br />
+instances of IBM Java must be restarted for the update to take effect.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6549.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6549.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6585.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6585.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6587.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6587.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6591.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6591.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6593.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-6593.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8891.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8891.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-8892.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-8892.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0403.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0403.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0406.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0406.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0407.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0407.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0408.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0408.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0410.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0410.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0412.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0412.html</a><br />
+<a href="https://www.ibm.com/developerworks/java/jdk/alerts/" target="_blank">https://www.ibm.com/developerworks/java/jdk/alerts/</a><br />
+<a href="http://rhn.redhat.com/errata/RHSA-2015-0133.html" target="_blank">http://rhn.redhat.com/errata/RHSA-2015-0133.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Critical / CVSS Base Score : 10.0<br />
+(CVSS2#AV:N/AC:L/Au:N/C:C/I:C/A:C)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81201</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81200">
+<title>RHEL 6 : rhev-hypervisor6 (RHSA-2015:0126)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Red Hat host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+An updated rhev-hypervisor6 package that fixes multiple security<br />
+issues is now available for Red Hat Enterprise Virtualization 3.<br />
+<br />
+Red Hat Product Security has rated this update as having Critical<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+The rhev-hypervisor6 package provides a Red Hat Enterprise<br />
+Virtualization Hypervisor ISO disk image. The Red Hat Enterprise<br />
+Virtualization Hypervisor is a dedicated Kernel-based Virtual Machine<br />
+(KVM) hypervisor. It includes everything necessary to run and manage<br />
+virtual machines: a subset of the Red Hat Enterprise Linux operating<br />
+environment and the Red Hat Enterprise Virtualization Agent.<br />
+<br />
+Note: Red Hat Enterprise Virtualization Hypervisor is only available<br />
+for the Intel 64 and AMD64 architectures with virtualization<br />
+extensions.<br />
+<br />
+A heap-based buffer overflow was found in glibc's<br />
+__nss_hostname_digits_dots() function, which is used by the<br />
+gethostbyname() and gethostbyname2() glibc function calls. A remote<br />
+attacker able to make an application call either of these functions<br />
+could use this flaw to execute arbitrary code with the permissions of<br />
+the user running the application. (CVE-2015-0235)<br />
+<br />
+A race condition flaw was found in the way the Linux kernel's KVM<br />
+subsystem handled PIT (Programmable Interval Timer) emulation. A guest<br />
+user who has access to the PIT I/O ports could use this flaw to crash<br />
+the host. (CVE-2014-3611)<br />
+<br />
+A flaw was found in the way OpenSSL handled fragmented handshake<br />
+packets. A man-in-the-middle attacker could use this flaw to force a<br />
+TLS/SSL server using OpenSSL to use TLS 1.0, even if both the client<br />
+and the server supported newer protocol versions. (CVE-2014-3511)<br />
+<br />
+A memory leak flaw was found in the way an OpenSSL handled failed<br />
+session ticket integrity checks. A remote attacker could exhaust all<br />
+available memory of an SSL/TLS or DTLS server by sending a large<br />
+number of invalid session tickets to that server. (CVE-2014-3567)<br />
+<br />
+It was found that the Linux kernel's KVM subsystem did not handle the<br />
+VM exits gracefully for the invept (Invalidate Translations Derived<br />
+from EPT) and invvpid (Invalidate Translations Based on VPID)<br />
+instructions. On hosts with an Intel processor and invept/invppid VM<br />
+exit support, an unprivileged guest user could use these instructions<br />
+to crash the guest. (CVE-2014-3645, CVE-2014-3646)<br />
+<br />
+Red Hat would like to thank Qualys for reporting the CVE-2015-0235<br />
+issue, Lars Bull of Google for reporting the CVE-2014-3611 issue, and<br />
+the Advanced Threat Research team at Intel Security for reporting the<br />
+CVE-2014-3645 and CVE-2014-3646 issues.<br />
+<br />
+Users of the Red Hat Enterprise Virtualization Hypervisor are advised<br />
+to upgrade to this updated package.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3511.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-3511.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3567.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-3567.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3611.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-3611.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3645.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-3645.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3646.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2014-3646.html</a><br />
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0235.html" target="_blank">https://www.redhat.com/security/data/cve/CVE-2015-0235.html</a><br />
+<a href="http://rhn.redhat.com/errata/RHSA-2015-0126.html" target="_blank">http://rhn.redhat.com/errata/RHSA-2015-0126.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected rhev-hypervisor6 package.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.6<br />
+(CVSS2#AV:N/AC:H/Au:N/C:C/I:C/A:C)<br />
+CVSS Temporal Score : 6.6<br />
+(CVSS2#E:ND/RL:OF/RC:C)<br />
+Public Exploit Available : false<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81200</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81199">
+<title>openSUSE Security Update : vlc (openSUSE-SU-2015:0201-1)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote openSUSE host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+vlc was updated to the current openSUSE Tumbleweed version.<br />
+<br />
+live555 was also updated to the current openSUSE Tumbleweed version as<br />
+a dependency.<br />
+<br />
+Security issues fixed :<br />
+<br />
+  - Fix various buffer overflows and null ptr dereferencing<br />
+    (boo#914268, CVE-2014-9625).<br />
+<br />
+Other fixes :<br />
+<br />
+  - Enable SSE2 instruction set for x86_64<br />
+<br />
+  - Disable fluidsynth again: the crashes we had earlier are<br />
+    still not all fixed. They are less, but less common<br />
+    makes it more difficult to debug.<br />
+<br />
+On openSUSE 13.1 :<br />
+<br />
+  - Update to version 2.1.5 :<br />
+<br />
+  + Core: Fix compilation on OS/2.<br />
+<br />
+  + Access: Stability improvements for the QTSound capture<br />
+    module.<br />
+<br />
+  + Mac OS X audio output :<br />
+<br />
+  - Fix channel ordering.<br />
+<br />
+  - Increase the buffersize.<br />
+<br />
+  + Decoders :<br />
+<br />
+  - Fix DxVA2 decoding of samples needing more surfaces.<br />
+<br />
+  - Improve MAD resistance to broken mp3 streams.<br />
+<br />
+  - Fix PGS alignment in MKV.<br />
+<br />
+  + Qt Interface: Don't rename mp3 converted files to .raw.<br />
+<br />
+  + Mac OS X Interface :<br />
+<br />
+  - Correctly support video-on-top.<br />
+<br />
+  - Fix video output event propagation on Macs with retina<br />
+    displays.<br />
+<br />
+  - Stability improvements when using future VLC releases<br />
+    side by side.<br />
+<br />
+  + Streaming: Fix transcode when audio format changes.<br />
+<br />
+  + Updated translations.<br />
+<br />
+  - Update to version 2.1.4 :<br />
+<br />
+  + Demuxers: Fix issue in WMV with multiple compressed<br />
+    payload and empty payloads.<br />
+<br />
+  + Video Output: Fix subtitles size rendering on Windows.<br />
+<br />
+  + Mac OS X :<br />
+<br />
+  - Fix DVD playback regression.<br />
+<br />
+  - Fix misleading error message during video playback on OS<br />
+    X 10.9.<br />
+<br />
+  - Fix hardware acceleration memleaks.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-CVE-2014-9625" target="_blank">http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-CVE-2014-9625</a><br />
+<a href="http://lists.opensuse.org/opensuse-updates/2015-02/msg00015.html" target="_blank">http://lists.opensuse.org/opensuse-updates/2015-02/msg00015.html</a><br />
+<a href="https://bugzilla.opensuse.org/show_bug.cgi?id=914268" target="_blank">https://bugzilla.opensuse.org/show_bug.cgi?id=914268</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected vlc packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Medium<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81199</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81198">
+<title>Mandriva Linux Security Advisory : php (MDVSA-2015:032)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Mandriva Linux host is missing one or more security<br />
+updates.<br />
+<br />
+Description :<br />
+<br />
+Multiple vulnerabilities has been discovered and corrected in php :<br />
+<br />
+sapi/cgi/cgi_main.c in the CGI component in PHP through 5.4.36, 5.5.x<br />
+through 5.5.20, and 5.6.x through 5.6.4, when mmap is used to read a<br />
+.php file, does not properly consider the mapping's length during<br />
+processing of an invalid file that begins with a # character and lacks<br />
+a newline character, which causes an out-of-bounds read and might (1)<br />
+allow remote attackers to obtain sensitive information from php-cgi<br />
+process memory by leveraging the ability to upload a .php file or (2)<br />
+trigger unexpected code execution if a valid PHP script is present in<br />
+memory locations adjacent to the mapping (CVE-2014-9427).<br />
+<br />
+Use-after-free vulnerability in the process_nested_data function in<br />
+ext/standard/var_unserializer.re in PHP before 5.4.37, 5.5.x before<br />
+5.5.21, and 5.6.x before 5.6.5 allows remote attackers to execute<br />
+arbitrary code via a crafted unserialize call that leverages improper<br />
+handling of duplicate numerical keys within the serialized properties<br />
+of an object. NOTE: this vulnerability exists because of an incomplete<br />
+fix for CVE-2014-8142 (CVE-2015-0231).<br />
+<br />
+The exif_process_unicode function in ext/exif/exif.c in PHP before<br />
+5.4.37, 5.5.x before 5.5.21, and 5.6.x before 5.6.5 allows remote<br />
+attackers to execute arbitrary code or cause a denial of service<br />
+(uninitialized pointer free and application crash) via crafted EXIF<br />
+data in a JPEG image (CVE-2015-0232).<br />
+<br />
+The updated php packages have been upgraded to the 5.5.21 version<br />
+which is not vulnerable to these issues.<br />
+<br />
+Additionally, the timezonedb package has been upgraded to the latest<br />
+2015.1 version, the php-suhosin package has been upgraded to the<br />
+latest 0.9.37.1 and the PECL packages which requires so has been<br />
+rebuilt for php-5.5.21.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://php.net/ChangeLog-5.php#5.5.21" target="_blank">http://php.net/ChangeLog-5.php#5.5.21</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.5<br />
+(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81198</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81197">
+<title>Mandriva Linux Security Advisory : busybox (MDVSA-2015:031)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Mandriva Linux host is missing one or more security<br />
+updates.<br />
+<br />
+Description :<br />
+<br />
+Updated busybox packages fix security vulnerability :<br />
+<br />
+The modprobe command in busybox before 1.23.0 uses the basename of the<br />
+module argument as the module to load, allowing arbitrary modules,<br />
+even when some kernel subsystems try to prevent this (CVE-2014-9645).<br />
+<br />
+See also :<br />
+<br />
+<a href="http://advisories.mageia.org/MGASA-2015-0041.html" target="_blank">http://advisories.mageia.org/MGASA-2015-0041.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected busybox and / or busybox-static packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Low / CVSS Base Score : 2.1<br />
+(CVSS2#AV:L/AC:L/Au:N/C:N/I:P/A:N)<br />
+CVSS Temporal Score : 1.8<br />
+(CVSS2#E:ND/RL:OF/RC:C)<br />
+Public Exploit Available : true<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81197</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81196">
+<title>Mandriva Linux Security Advisory : bugzilla (MDVSA-2015:030)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Mandriva Linux host is missing one or more security<br />
+updates.<br />
+<br />
+Description :<br />
+<br />
+Updated bugzilla packages fix security vulnerability :<br />
+<br />
+Some code in Bugzilla does not properly utilize 3 arguments form for<br />
+open() and it is possible for an account with editcomponents<br />
+permissions to inject commands into product names and other attributes<br />
+(CVE-2014-8630).<br />
+<br />
+See also :<br />
+<br />
+<a href="http://advisories.mageia.org/MGASA-2015-0048.html" target="_blank">http://advisories.mageia.org/MGASA-2015-0048.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected bugzilla and / or bugzilla-contrib packages.<br />
+<br />
+Risk factor :<br />
+<br />
+Medium / CVSS Base Score : 6.5<br />
+(CVSS2#AV:N/AC:L/Au:S/C:P/I:P/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81196</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81195">
+<title>Mandriva Linux Security Advisory : binutils (MDVSA-2015:029)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Mandriva Linux host is missing one or more security<br />
+updates.<br />
+<br />
+Description :<br />
+<br />
+Multiple vulnerabilities has been found and corrected in binutils :<br />
+<br />
+Multiple integer overflows in the (1) _objalloc_alloc function in<br />
+objalloc.c and (2) objalloc_alloc macro in include/objalloc.h in GNU<br />
+libiberty, as used by binutils 2.22, allow remote attackers to cause a<br />
+denial of service (crash) via vectors related to the addition of<br />
+CHUNK_HEADER_SIZE to the length, which triggers a heap-based buffer<br />
+overflow (CVE-2012-3509).<br />
+<br />
+The srec_scan function in bfd/srec.c in libdbfd in GNU binutils before<br />
+2.25 allows remote attackers to cause a denial of service<br />
+(out-of-bounds read) via a small S-record (CVE-2014-8484).<br />
+<br />
+The setup_group function in bfd/elf.c in libbfd in GNU binutils 2.24<br />
+and earlier allows remote attackers to cause a denial of service<br />
+(crash) and possibly execute arbitrary code via crafted section group<br />
+headers in an ELF file (CVE-2014-8485).<br />
+<br />
+The _bfd_XXi_swap_aouthdr_in function in bfd/peXXigen.c in GNU<br />
+binutils 2.24 and earlier allows remote attackers to cause a denial of<br />
+service (out-of-bounds write) and possibly have other unspecified<br />
+impact via a crafted NumberOfRvaAndSizes field in the AOUT header in a<br />
+PE executable (CVE-2014-8501).<br />
+<br />
+Heap-based buffer overflow in the pe_print_edata function in<br />
+bfd/peXXigen.c in GNU binutils 2.24 and earlier allows remote<br />
+attackers to cause a denial of service (crash) and possibly have other<br />
+unspecified impact via a truncated export table in a PE file<br />
+(CVE-2014-8502).<br />
+<br />
+Stack-based buffer overflow in the ihex_scan function in bfd/ihex.c in<br />
+GNU binutils 2.24 and earlier allows remote attackers to cause a<br />
+denial of service (crash) and possibly have other unspecified impact<br />
+via a crafted ihex file (CVE-2014-8503).<br />
+<br />
+Stack-based buffer overflow in the srec_scan function in bfd/srec.c in<br />
+GNU binutils 2.24 and earlier allows remote attackers to cause a<br />
+denial of service (crash) and possibly have other unspecified impact<br />
+via a crafted file (CVE-2014-8504).<br />
+<br />
+Multiple directory traversal vulnerabilities in GNU binutils 2.24 and<br />
+earlier allow local users to delete arbitrary files via a .. (dot dot)<br />
+or full path name in an archive to (1) strip or (2) objcopy or create<br />
+arbitrary files via (3) a .. (dot dot) or full path name in an archive<br />
+to ar (CVE-2014-8737).<br />
+<br />
+The _bfd_slurp_extended_name_table function in bfd/archive.c in GNU<br />
+binutils 2.24 and earlier allows remote attackers to cause a denial of<br />
+service (invalid write, segmentation fault, and crash) via a crafted<br />
+extended name table in an archive (CVE-2014-8738).<br />
+<br />
+The updated packages provides a solution for these security issues.<br />
+<br />
+Solution :<br />
+<br />
+Update the affected binutils and / or lib64binutils-devel packages.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.5<br />
+(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P)<br />
+CVSS Temporal Score : 6.5<br />
+(CVSS2#E:ND/RL:OF/RC:C)<br />
+Public Exploit Available : true<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81195</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81194">
+<title>Mandriva Linux Security Advisory : aircrack-ng (MDVSA-2015:028)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Mandriva Linux host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+Updated aircrack-ng package fixes security vulnerabilities :<br />
+<br />
+A length parameter inconsistency in Aircrack-ng before 1.2-rc1 at<br />
+aireplay tcp_test() which may lead to remote code execution<br />
+(CVE-2014-8322).<br />
+<br />
+A missing check for data format in Aircrack-ng before 1.2-rc1 at<br />
+buddy-ng which may lead to denial of service (CVE-2014-8323).<br />
+<br />
+A missing check for invalid values in Aircrack-ng before 1.2-rc1 at<br />
+airserv-ng net_get() which may lead to denial of service<br />
+(CVE-2014-8324).<br />
+<br />
+See also :<br />
+<br />
+<a href="http://advisories.mageia.org/MGASA-2015-0035.html" target="_blank">http://advisories.mageia.org/MGASA-2015-0035.html</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected aircrack-ng package.<br />
+<br />
+Risk factor :<br />
+<br />
+Low / CVSS Base Score : 3.2<br />
+(CVSS2#AV:A/AC:H/Au:N/C:P/I:N/A:P)<br />
+CVSS Temporal Score : 2.8<br />
+(CVSS2#E:ND/RL:OF/RC:C)<br />
+Public Exploit Available : false<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81194</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81193">
+<title>FreeBSD : PostgreSQL -- multiple buffer overflows and memory issues (3b40bf2c-ad83-11e4-a2b2-0026551a22dc)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote FreeBSD host is missing one or more security-related<br />
+updates.<br />
+<br />
+Description :<br />
+<br />
+PostgreSQL Project reports :<br />
+<br />
+This update fixes multiple security issues reported in PostgreSQL over<br />
+the past few months. All of these issues require prior authentication,<br />
+and some require additional conditions, and as such are not considered<br />
+generally urgent. However, users should examine the list of security<br />
+holes patched below in case they are particularly vulnerable.<br />
+<br />
+- CVE-2015-0241 Buffer overruns in 'to_char' functions.<br />
+<br />
+- CVE-2015-0242 Buffer overrun in replacement printf family of<br />
+functions.<br />
+<br />
+- CVE-2015-0243 Memory errors in functions in the pgcrypto extension.<br />
+<br />
+- CVE-2015-0244 An error in extended protocol message reading.<br />
+<br />
+- CVE-2014-8161 Constraint violation errors can cause display of<br />
+values in columns which the user would not normally have rights to<br />
+see.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://www.nessus.org/u?24dc8aac" target="_blank">http://www.nessus.org/u?24dc8aac</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected packages.<br />
+<br />
+Risk factor :<br />
+<br />
+High<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81193</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81192">
+<title>Fedora 21 : kernel-3.18.5-201.fc21 (2015-1657)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Fedora host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+This update should fix the adjtimex issues seen on 32bit systems with<br />
+3.18.5-200 The 3.18.5 stable update contains a number of important<br />
+fixes across the tree. The 3.18.4 stable update contains a number of<br />
+important fixes across the tree.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1183744" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1183744</a><br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1186448" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1186448</a><br />
+<a href="http://www.nessus.org/u?b1f0bccc" target="_blank">http://www.nessus.org/u?b1f0bccc</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected kernel package.<br />
+<br />
+Risk factor :<br />
+<br />
+High<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81192</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81191">
+<title>Fedora 20 : php-5.5.21-1.fc20 (2015-1101)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Fedora host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+22 Jan 2014, PHP 5.5.21<br />
+<br />
+Core :<br />
+<br />
+  - Upgraded crypt_blowfish to version 1.3. (Leigh)<br />
+<br />
+    - Fixed bug #60704 (unlink() bug with some files path).<br />
+<br />
+    - Fixed bug #65419 (Inside trait, self::class !=<br />
+      __CLASS__). (Julien)<br />
+<br />
+    - Fixed bug #65576 (Constructor from trait conflicts<br />
+      with inherited constructor). (dunglas at gmail dot<br />
+      com)<br />
+<br />
+    - Fixed bug #55541 (errors spawn MessageBox, which<br />
+      blocks test automation). (Anatol)<br />
+<br />
+    - Fixed bug #68297 (Application Popup provides too few<br />
+      information). (Anatol)<br />
+<br />
+    - Fixed bug #65769 (localeconv() broken in TS builds).<br />
+      (Anatol)<br />
+<br />
+    - Fixed bug #65230 (setting locale randomly broken).<br />
+      (Anatol)<br />
+<br />
+    - Fixed bug #66764 (configure doesn't define<br />
+      EXPANDED_DATADIR / PHP_DATADIR correctly). (Ferenc)<br />
+<br />
+    - Fixed bug #68583 (Crash in timeout thread). (Anatol)<br />
+<br />
+    - Fixed bug #68676 (Explicit Double Free). (Kalle)<br />
+<br />
+    - Fixed bug #68710 (Use After Free Vulnerability in<br />
+      PHP's unserialize()). (CVE-2015-0231) (Stefan Esser)<br />
+<br />
+CGI :<br />
+<br />
+  - Fixed bug #68618 (out of bounds read crashes<br />
+    php-cgi).(CVE-2014-9427) (Stas)<br />
+<br />
+CLI server :<br />
+<br />
+  - Fixed bug #68745 (Invalid HTTP requests make web server<br />
+    segfault). (Adam)<br />
+<br />
+cURL :<br />
+<br />
+  - Fixed bug #67643 (curl_multi_getcontent returns '' when<br />
+    CURLOPT_RETURNTRANSFER isn't set). (Jille Timmermans)<br />
+<br />
+EXIF :<br />
+<br />
+  - Fixed bug #68799: Free called on unitialized pointer.<br />
+    (CVE-2015-0232) (Stas)<br />
+<br />
+Fileinfo :<br />
+<br />
+  - Fixed bug #68671 (incorrect expression in libmagic).<br />
+    (Joshua Rogers, Anatol Belski)<br />
+<br />
+    - Removed readelf.c and related code from libmagic<br />
+      sources (Remi, Anatol)<br />
+<br />
+    - Fixed bug #68735 (fileinfo out-of-bounds memory<br />
+      access). (Anatol)<br />
+<br />
+FPM :<br />
+<br />
+  - Fixed bug #68751 (listen.allowed_clients is broken).<br />
+    (Remi)<br />
+<br />
+GD :<br />
+<br />
+  - Fixed bug #68601 (buffer read overflow in gd_gif_in.c).<br />
+    (Jan Bee, Remi)<br />
+<br />
+Mbstring :<br />
+<br />
+  - Fixed bug #68504 (--with-libmbfl configure option not<br />
+    present on Windows). (Ashesh Vashi)<br />
+<br />
+Mcrypt :<br />
+<br />
+  - Fixed possible read after end of buffer and use after<br />
+    free. (Dmitry)<br />
+<br />
+Opcache :<br />
+<br />
+  - Fixed bug #67111 (Memory leak when using 'continue 2'<br />
+    inside two foreach loops). (Nikita)<br />
+<br />
+OpenSSL :<br />
+<br />
+  - Fixed bug #55618 (use case-insensitive cert name<br />
+    matching). (Daniel Lowrey)<br />
+<br />
+Pcntl :<br />
+<br />
+  - Fixed bug #60509 (pcntl_signal doesn't decrease<br />
+    ref-count of old handler when setting SIG_DFL). (Julien)<br />
+<br />
+PCRE :<br />
+<br />
+  - Fixed bug #66679 (Alignment Bug in PCRE 8.34 upstream).<br />
+    (Rainer Jung, Anatol Belski)<br />
+<br />
+pgsql :<br />
+<br />
+  - Fixed bug #68697 (lo_export return -1 on failure).<br />
+    (Ond&amp;Aring<br />
+&amp;#153<br />
+ej Sur&amp;Atilde<br />
+&amp;frac12<br />
+)<br />
+<br />
+PDO :<br />
+<br />
+  - Fixed bug #68371 (PDO#getAttribute() cannot be called<br />
+    with platform-specific attribute names). (Matteo)<br />
+<br />
+PDO_mysql :<br />
+<br />
+  - Fixed bug #68424 (Add new PDO mysql connection attr to<br />
+    control multi statements option). (peter dot wolanin at<br />
+    acquia dot com)<br />
+<br />
+SPL :<br />
+<br />
+  - Fixed bug #66405<br />
+    (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME breaks<br />
+    the RecursiveIterator). (Paul Garvin)<br />
+<br />
+    - Fixed bug #65213 (cannot cast SplFileInfo to boolean)<br />
+      (Tjerk)<br />
+<br />
+    - Fixed bug #68479 (Added escape parameter to<br />
+      SplFileObject::fputcsv). (Salathe)<br />
+<br />
+SQLite :<br />
+<br />
+  - Fixed bug #68120 (Update bundled libsqlite to 3.8.7.2).<br />
+    (Anatol)<br />
+<br />
+Streams :<br />
+<br />
+  - Fixed bug #68532 (convert.base64-encode omits padding<br />
+    bytes). (blaesius at krumedia dot de)<br />
+<br />
+See also :<br />
+<br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1178736" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1178736</a><br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1185397" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1185397</a><br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1185472" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1185472</a><br />
+<a href="http://www.nessus.org/u?88137ef8" target="_blank">http://www.nessus.org/u?88137ef8</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected php package.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.5<br />
+(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81191</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81190">
+<title>Fedora 21 : php-5.6.5-1.fc21 (2015-1058)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Fedora host is missing a security update.<br />
+<br />
+Description :<br />
+<br />
+22 Jan 2015, PHP 5.6.5<br />
+<br />
+Core :<br />
+<br />
+  - Upgraded crypt_blowfish to version 1.3. (Leigh)<br />
+<br />
+    - Fixed bug #60704 (unlink() bug with some files path).<br />
+<br />
+    - Fixed bug #65419 (Inside trait, self::class !=<br />
+      __CLASS__). (Julien)<br />
+<br />
+    - Fixed bug #68536 (pack for 64bits integer is broken on<br />
+      bigendian). (Remi)<br />
+<br />
+    - Fixed bug #55541 (errors spawn MessageBox, which<br />
+      blocks test automation). (Anatol)<br />
+<br />
+    - Fixed bug #68297 (Application Popup provides too few<br />
+      information). (Anatol)<br />
+<br />
+    - Fixed bug #65769 (localeconv() broken in TS builds).<br />
+      (Anatol)<br />
+<br />
+    - Fixed bug #65230 (setting locale randomly broken).<br />
+      (Anatol)<br />
+<br />
+    - Fixed bug #66764 (configure doesn't define<br />
+      EXPANDED_DATADIR / PHP_DATADIR correctly). (Ferenc)<br />
+<br />
+    - Fixed bug #68583 (Crash in timeout thread). (Anatol)<br />
+<br />
+    - Fixed bug #65576 (Constructor from trait conflicts<br />
+      with inherited constructor). (dunglas at gmail dot<br />
+      com)<br />
+<br />
+    - Fixed bug #68676 (Explicit Double Free). (Kalle)<br />
+<br />
+    - Fixed bug #68710 (Use After Free Vulnerability in<br />
+      PHP's unserialize()). (CVE-2015-0231) (Stefan Esser)<br />
+<br />
+CGI :<br />
+<br />
+  - Fixed bug #68618 (out of bounds read crashes php-cgi).<br />
+    (CVE-2014-9427) (Stas)<br />
+<br />
+CLI server :<br />
+<br />
+  - Fixed bug #68745 (Invalid HTTP requests make web server<br />
+    segfault). (Adam)<br />
+<br />
+cURL :<br />
+<br />
+  - Fixed bug #67643 (curl_multi_getcontent returns '' when<br />
+    CURLOPT_RETURNTRANSFER isn't set). (Jille Timmermans)<br />
+<br />
+Date :<br />
+<br />
+  - Implemented FR #68268 (DatePeriod: Getter for start<br />
+    date, end date and interval). (Marc Bennewitz)<br />
+<br />
+EXIF :<br />
+<br />
+  - Fixed bug #68799: Free called on unitialized pointer.<br />
+    (CVE-2015-0232) (Stas)<br />
+<br />
+Fileinfo :<br />
+<br />
+  - Fixed bug #68398 (msooxml matches too many archives).<br />
+    (Anatol)<br />
+<br />
+    - Fixed bug #68665 (invalid free in libmagic). (Joshua<br />
+      Rogers, Anatol Belski)<br />
+<br />
+    - Fixed bug #68671 (incorrect expression in libmagic).<br />
+      (Joshua Rogers, Anatol Belski)<br />
+<br />
+    - Removed readelf.c and related code from libmagic<br />
+      sources (Remi, Anatol)<br />
+<br />
+    - Fixed bug #68735 (fileinfo out-of-bounds memory<br />
+      access). (Anatol)<br />
+<br />
+FPM :<br />
+<br />
+  - Fixed request #68526 (Implement POSIX Access Control<br />
+    List for UDS). (Remi)<br />
+<br />
+    - Fixed bug #68751 (listen.allowed_clients is broken).<br />
+      (Remi)<br />
+<br />
+GD :<br />
+<br />
+  - Fixed bug #68601 (buffer read overflow in gd_gif_in.c).<br />
+    (Jan Bee, Remi)<br />
+<br />
+    - Fixed request #68656 (Report gd library version).<br />
+      (Remi)<br />
+<br />
+mbstring :<br />
+<br />
+  - Fixed bug #68504 (--with-libmbfl configure option not<br />
+    present on Windows). (Ashesh Vashi)<br />
+<br />
+Opcache :<br />
+<br />
+  - Fixed bug #68644 (strlen incorrect : mbstring +<br />
+    func_overload=2 +UTF-8 + Opcache). (Laruence)<br />
+<br />
+    - Fixed bug #67111 (Memory leak when using 'continue 2'<br />
+      inside two foreach loops). (Nikita)<br />
+<br />
+OpenSSL :<br />
+<br />
+  - Improved handling of OPENSSL_KEYTYPE_EC keys. (Dominic<br />
+    Luechinger)<br />
+<br />
+pcntl :<br />
+<br />
+  - Fixed bug #60509 (pcntl_signal doesn't decrease<br />
+    ref-count of old handler when setting SIG_DFL). (Julien)<br />
+<br />
+PCRE :<br />
+<br />
+  - Fixed bug #66679 (Alignment Bug in PCRE 8.34 upstream).<br />
+    (Rainer Jung, Anatol Belski)<br />
+<br />
+pgsql :<br />
+<br />
+  - Fixed bug #68697 (lo_export return -1 on failure).<br />
+    (Ond&amp;Aring<br />
+&amp;#153<br />
+ej Sur&amp;Atilde<br />
+&amp;frac12<br />
+)<br />
+<br />
+PDO :<br />
+<br />
+  - Fixed bug #68371 (PDO#getAttribute() cannot be called<br />
+    with platform-specifi attribute names). (Matteo)<br />
+<br />
+PDO_mysql :<br />
+<br />
+  - Fixed bug #68424 (Add new PDO mysql connection attr to<br />
+    control multi statements option). (peter dot wolanin at<br />
+    acquia dot com)<br />
+<br />
+SPL :<br />
+<br />
+  - Fixed bug #66405<br />
+    (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME breaks<br />
+    the RecursiveIterator). (Paul Garvin)<br />
+<br />
+    - Fixed bug #68479 (Added escape parameter to<br />
+      SplFileObject::fputcsv). (Salathe)<br />
+<br />
+SQLite :<br />
+<br />
+  - Fixed bug #68120 (Update bundled libsqlite to 3.8.7.2).<br />
+    (Anatol)<br />
+<br />
+Streams :<br />
+<br />
+  - Fixed bug #68532 (convert.base64-encode omits padding<br />
+    bytes). (blaesius at krumedia dot de)<br />
+<br />
+See also :<br />
+<br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1178736" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1178736</a><br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1185397" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1185397</a><br />
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1185472" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1185472</a><br />
+<a href="http://www.nessus.org/u?d04ad9b8" target="_blank">http://www.nessus.org/u?d04ad9b8</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected php package.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.5<br />
+(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81190</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81189">
+<title>Debian DSA-3154-1 : ntp - security update</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote Debian host is missing a security-related update.<br />
+<br />
+Description :<br />
+<br />
+Several vulnerabilities were discovered in the ntp package, an<br />
+implementation of the Network Time Protocol. The Common<br />
+Vulnerabilities and Exposures project identifies the following<br />
+problems :<br />
+<br />
+  - CVE-2014-9297<br />
+    Stephen Roettger of the Google Security Team, Sebastian<br />
+    Krahmer of the SUSE Security Team and Harlan Stenn of<br />
+    Network Time Foundation discovered that the length value<br />
+    in extension fields is not properly validated in several<br />
+    code paths in ntp_crypto.c, which could lead to<br />
+    information leakage or denial of service (ntpd crash).<br />
+<br />
+  - CVE-2014-9298<br />
+    Stephen Roettger of the Google Security Team reported<br />
+    that ACLs based on IPv6 ::1 addresses can be bypassed.<br />
+<br />
+See also :<br />
+<br />
+<a href="https://security-tracker.debian.org/tracker/CVE-2014-9297" target="_blank">https://security-tracker.debian.org/tracker/CVE-2014-9297</a><br />
+<a href="https://security-tracker.debian.org/tracker/CVE-2014-9298" target="_blank">https://security-tracker.debian.org/tracker/CVE-2014-9298</a><br />
+<a href="http://www.debian.org/security/2015/dsa-3154" target="_blank">http://www.debian.org/security/2015/dsa-3154</a><br />
+<br />
+Solution :<br />
+<br />
+Upgrade the ntp packages.<br />
+<br />
+For the stable distribution (wheezy), these problems have been fixed<br />
+in version 1:4.2.6.p5+dfsg-2+deb7u2.<br />
+<br />
+Risk factor :<br />
+<br />
+High<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81189</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81188">
+<title>CentOS 7 : mariadb (CESA-2015:0118)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote CentOS host is missing one or more security updates.<br />
+<br />
+Description :<br />
+<br />
+Updated mariadb packages that fix several security issues are now<br />
+available for Red Hat Enterprise Linux 7.<br />
+<br />
+Red Hat Product Security has rated this update as having Moderate<br />
+security impact. Common Vulnerability Scoring System (CVSS) base<br />
+scores, which give detailed severity ratings, are available for each<br />
+vulnerability from the CVE links in the References section.<br />
+<br />
+MariaDB is a multi-user, multi-threaded SQL database server that is<br />
+binary compatible with MySQL.<br />
+<br />
+This update fixes several vulnerabilities in the MariaDB database<br />
+server. Information about these flaws can be found on the Oracle<br />
+Critical Patch Update Advisory page, listed in the References section.<br />
+(CVE-2015-0381, CVE-2015-0382, CVE-2015-0391, CVE-2015-0411,<br />
+CVE-2015-0432, CVE-2014-6568, CVE-2015-0374)<br />
+<br />
+These updated packages upgrade MariaDB to version 5.5.41. Refer to the<br />
+MariaDB Release Notes listed in the References section for a complete<br />
+list of changes.<br />
+<br />
+All MariaDB users should upgrade to these updated packages, which<br />
+correct these issues. After installing this update, the MariaDB server<br />
+daemon (mysqld) will be restarted automatically.<br />
+<br />
+See also :<br />
+<br />
+<a href="http://www.nessus.org/u?e43aad2d" target="_blank">http://www.nessus.org/u?e43aad2d</a><br />
+<br />
+Solution :<br />
+<br />
+Update the affected mariadb packages.<br />
+<br />
+Risk factor :<br />
+<br />
+High / CVSS Base Score : 7.5<br />
+(CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P)<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81188</link>
+<dc:date>?</dc:date>
+</item>
+<item rdf:about="http://www.nessus.org/plugins/index.php?view=single&amp;id=81187">
+<title>VMware Workstation 10.x &lt; 10.0.5 Multiple Vulnerabilities (VMSA-2015-0001) (Windows)</title>
+<description><![CDATA[<br />
+Synopsis :<br />
+<br />
+The remote host contains a virtualization application that is affected<br />
+by multiple vulnerabilities.<br />
+<br />
+Description :<br />
+<br />
+The version of VMware Workstation installed on the remote host is<br />
+version 10.x prior to 10.0.5. It is, therefore, affected by the<br />
+following vulnerabilities :<br />
+<br />
+  - An unspecified flaw exists that allows a local attacker<br />
+    to escalate privileges or cause a denial of service<br />
+    via an arbitrary write to a file. (CVE-2014-8370)<br />
+<br />
+  - An input validation error exists in the Host Guest File<br />
+    System (HGFS) that allows a local attacker to cause a<br />
+    denial of service of the guest operating system.<br />
+    (CVE-2015-1043)<br />
+<br />
+  - An input validation error exists in the VMware<br />
+    Authorization process (vmware-authd) that allows a<br />
+    remote attacker to cause a denial of service of the host<br />
+    operating system. (CVE-2015-1044)<br />
+<br />
+See also :<br />
+<br />
+<a href="http://www.nessus.org/u?3bded33c" target="_blank">http://www.nessus.org/u?3bded33c</a><br />
+<a href="http://www.vmware.com/security/advisories/VMSA-2015-0001.html" target="_blank">http://www.vmware.com/security/advisories/VMSA-2015-0001.html</a><br />
+<br />
+Solution :<br />
+<br />
+Upgrade to VMware Workstation 10.0.5 or later.<br />
+<br />
+Risk factor :<br />
+<br />
+Medium / CVSS Base Score : 6.4<br />
+(CVSS2#AV:N/AC:L/Au:N/C:N/I:P/A:P)<br />
+CVSS Temporal Score : 5.6<br />
+(CVSS2#E:ND/RL:OF/RC:C)<br />
+Public Exploit Available : false<br />
+<br />
+]]></description>
+<link>http://www.nessus.org/plugins/index.php?view=single&amp;id=81187</link>
+<dc:date>?</dc:date>
+</item>
+</rdf:RDF>
+

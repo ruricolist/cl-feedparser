@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/atom10full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Elliot Jay Stocks</title>
+  
+  <link href="http://www.elliotjaystocks.com" />
+  <id>http://www.elliotjaystocks.com</id>
+  <updated>Fri, 26 Sep 2014 15:13:00 +0000</updated>
+ 
+  
+    
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://feeds.feedburner.com/elliotjaystocks" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="elliotjaystocks" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><logo>http://elliotjaystocks.harmonyapp.com/assets/4c1c89b8dabe9d0f84000001/feed_icon.jpg</logo><entry>
+  <title>Generate</title>
+  <link href="/speaking/#generate" />
+  <id>/speaking/generate</id>
+  <updated>Fri, 26 Sep 2014 15:13:00 +0000</updated>
+  <published>Fri, 26 Sep 2014 15:13:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#generate">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#generate">Find out more</a>.]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>On digital publishing in 2014</title>
+  <link href="/blog/on-digital-publishing-in-2014" />
+  <id>/blog/on-digital-publishing-in-2014</id>
+  <updated>Tue, 12 Aug 2014 09:38:00 +0000</updated>
+  <published>Tue, 12 Aug 2014 09:38:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>My friend Jo Keeling — Editor of the wonderful <a href="http://www.ernestjournal.co.uk/">Ernest Journal</a> that launched earlier this year — asked me to send across some thoughts on digital publishing to include in her forthcoming <a href="http://www.theguardian.com/guardian-masterclasses/the-future-of-digital-magazines-peter-houston-publishing-course">&#39;The Future of Digital Magazines&#39; Guardian Masterclass</a>. However, as I began to write, I realised I wasn&#39;t able to be particularly concise, so here we are with a blog post on the subject.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/illustration-for-publishing-post-2.png" alt="Illustration for On digital publishing in 2014" /></p> <p>My friend Jo Keeling — Editor of the wonderful <a href="http://www.ernestjournal.co.uk/">Ernest Journal</a> that launched earlier this year — asked me to send across some thoughts on digital publishing to include in her forthcoming <a href="http://www.theguardian.com/guardian-masterclasses/the-future-of-digital-magazines-peter-houston-publishing-course">&lsquo;The Future of Digital Magazines&rsquo; Guardian Masterclass</a>. However, as I began to write, I realised I wasn&rsquo;t able to be particularly concise, so here we are with a blog post on the subject.</p>
+
+<p>I&rsquo;m on the eve of launching <a href="https://twitter.com/readlagom">a brand new magazine</a> with my wife (more on that very soon) and so I&rsquo;m naturally doing a lot of thinking around digital formats and the best route to take in 2014.</p>
+
+<h3>The leftovers from Wired</h3>
+
+<p>Even though I think there are many publishers — Ernest especially — doing great things with iPad magazines, I don&rsquo;t believe that iPad magazines in their current form are the future of digital publishing. Static image files with type embedded in them prevent the user from making selections, performing searches, or setting their own reading preferences. They&rsquo;re also a nightmare to update. A few years ago, we universally agreed that image replacement was a terrible idea for the web and put a stop to it; yet here we are in 2014, apparently okay with the fact that iPad magazines are essentially just a collection of <em>pictures of type.</em> And, perhaps more astonishingly, nothing seems to have changed since the launch of <a href="http://www.wired.co.uk/magazine/ipad">that fateful Wired app back in 2011</a>: iPad magazines have not evolved in functionality or production processes since they first appeared on the scene. Comparatively, consider the huge changes the web has gone through in the same period of time.</p>
+
+<p>However, I concede that there <em>is</em> a valuable ecosystem in the Newsstand / App Store model, and a magazine&rsquo;s presence there represents the considerable potential for exposure to new readers. And so, for this reason alone, we&rsquo;re currently still considering a Newsstand app for our new magazine.</p>
+
+<p>But I&rsquo;ll say it again: this isn&rsquo;t the future of magazine publishing. The current system is flawed and its production processes cumbersome. It&rsquo;s everything the web is not. And although iPad magazines need <em>not</em> behave like the web, it feels to me like dynamic, updatable, re-renderable, re-scalable text should be considered the <em>de facto</em> choice for on-screen reading, whether or not it&rsquo;s a website, book, or magazine.</p>
+
+<h3>Control</h3>
+
+<p>Of course, it&rsquo;s fair to say that designers — and I include myself in the guilty party — have an innate desire to control the presentation of a publication&rsquo;s content, and the current model allows for precisely that: two fixed views (portrait and landscape) that mimic the printed page and allow for pixel-perfect correlations between the digital and paper versions. It&rsquo;s understandable! But the idea of screen-based design being fixed is an idea that isn&rsquo;t sustainable. Designing for two orientations is a chore. And when Apple bring out new iPads that have different dimensions and / or resolutions to the current offerings, everything will have to redesigned again. And again. And again. </p>
+
+<p>Seriously, that problem is not going away, folks. </p>
+
+<p>Oh, and that&rsquo;s only when we&rsquo;re talking about Apple gear. What if we want to design for other tablet dimensions? Adobe&rsquo;s Digital Publishing Suite and InDesign allow for some degree of flexibility, but when compared to the flexibility of a responsively-designed website, there&rsquo;s&hellip; well&hellip; <em>no</em> comparison.</p>
+
+<p>So is a website the answer? An antidote to the native iPad app? Well, I don&rsquo;t believe that&rsquo;s necessarily the case either. When Keir and I released <a href="http://readdigest.com/">Digest</a> last year (which is being retired, by the way, but more on that soon), our <a href="http://readdigest.com/1/">digital edition</a> was a responsive web site accessed via a password that was generated for each user during the checkout process. It was simple, it was quick and easy to create, and it worked well: it offered a pretty decent long-form reading experience. We&rsquo;ve built exactly the same for <a href="http://8faces.com/">8 Faces</a>, too, although it never launched.</p>
+
+<p>But that&rsquo;s also exactly where it failed: the design was so text-focussed that it would have actually better suited to a book. Multiple images, box-outs, captions, etc. simply require more design considerations.</p>
+
+<h3>So what <em>is</em> the answer?</h3>
+
+<p>Right now, I believe that the best option for a magazine publishing a digital edition in 2014 is to offer something halfway between a website and a native app: a browser-rendered, responsive &lsquo;site&rsquo; that lives locally inside a wrapper that is purchased / downloaded via the relevant App Stores.</p>
+
+<p>Such a digital magazine would flex and bend to fit any number of devices (including <em>future</em> devices) and use real, live type that could be highlighted, copied, searched, enlarged, and re-rendered if necessary. And yet it would also benefit from being part of a Newsstand (or equivalent) ecosystem: on as equal a playing field as any current digital publication, and yet far more future-facing, and a fraction of the file size.</p>
+
+<p>And, of course, it would exist on the regular ol&#39; web as well — behind a paywall if you want. But the key thing is: it doesn&rsquo;t matter. The work has already been done. You only need to create one version. That time you&rsquo;d previously spent designing multiple fixed versions can be spent instead on subtle tweaks to your media queries to keep it looking great at all viewport sizes.</p>
+
+<p>None of this is a new idea. Craig Mod outlined some very similar ideas in <a href="http://craigmod.com/journal/subcompact_publishing/">&lsquo;Subcompact Publishing&rsquo;</a> way back in November 2012:</p>
+
+<blockquote>
+<p>By constraining Subcompact Publishing systems to HTML we bake portability and future-proofness into the platforms. We also minimize engineering efforts because most all computing devices come with high-quality HTML rendering engines built in.</p>
+</blockquote>
+
+<p>And on the increased share-ability of content that exists simultaneously on the web:</p>
+
+<blockquote>
+<p>Whatever content is published on a tablet should have a corresponding, touchable home on the open web. Content without a public address is non-existent in the eyes of all the inter-operable sharing mechanisms that together bind the web.</p>
+</blockquote>
+
+<p>(At this point, if you haven&rsquo;t done so already, please go and read <a href="http://craigmod.com/journal/">everything Craig has ever written about digital publishing</a>.)</p>
+
+<p>That particular piece by Craig was written shortly after the release of Marco Arment&rsquo;s <a href="http://the-magazine.org/">The Magazine</a>, which I&rsquo;ve always admired for its attempt to <em>not</em> conform to iPad magazine standards. However, I think The Magazine suffers from the same symptom as our Digest digital edition: it&rsquo;s great for long-form reading, but is — from an aesthetic point of view — rather <em>un-magazine-like.</em> Perhaps that&rsquo;s why publishers in 2014 are still sticking to the safety of the standard Newsstand format.</p>
+
+<p>But come on, let&rsquo;s change that. App Stores can be used to reach readers and earn money, but they needn&rsquo;t dictate how we produce our digital magazines — and those production methods certainly shouldn&rsquo;t enforce a sub-optimal experience for our readers; our readers, that is, who are far, far, far more used to <em>interacting</em> with type on the web (and e-books) than static pictures of type in an iPad magazine. </p>
+
+<p>It&rsquo;s not 2011 anymore. The tablet offers a great format. App Stores offer a proven business model. Browsers offer powerful rendering environments. Web technologies offer the publisher a flexible, re-usable, universal set of tools for future-facing content creation. Let&rsquo;s smush those things together and create something truly innovative.</p>
+]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>The Type Directors Club</title>
+  <link href="/speaking/#the-type-directors-club" />
+  <id>/speaking/the-type-directors-club</id>
+  <updated>Tue, 22 Jul 2014 01:00:00 +0000</updated>
+  <published>Tue, 22 Jul 2014 01:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#the-type-directors-club">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#the-type-directors-club">Find out more</a>.]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Google’s Material Design</title>
+  <link href="/blog/googles-material-design" />
+  <id>/blog/googles-material-design</id>
+  <updated>Thu, 26 Jun 2014 16:02:00 +0000</updated>
+  <published>Thu, 26 Jun 2014 16:02:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Amongst <a href="http://www.theverge.com/2014/6/25/5842050/the-most-important-things-google-announced-at-i-o">the flurry of new releases at yesterday&#39;s Google I/O</a>, one stood out to me above all else: the unveiling of the company&#39;s ‘<a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design</a>’ visual language. And not just its announcement, but the fact that Google have put the entire documentation online. </p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/materialdesign-goals-landingimage_large_mdpi.png" alt="Illustration for Google’s Material Design" /></p> <p>Amongst <a href="http://www.theverge.com/2014/6/25/5842050/the-most-important-things-google-announced-at-i-o">the flurry of new releases at yesterday&rsquo;s Google I/O</a>, one stood out to me above all else: the unveiling of the company&rsquo;s ‘<a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design</a>’ visual language. And not just its announcement, but the fact that Google have put the entire documentation online. </p>
+
+<p>The specs are an impressive read to say the least, and with lofty goals. The first:</p>
+
+<blockquote>
+<p>Create a visual language that synthesizes classic principles of good design with the innovation and possibility of technology and science.</p>
+</blockquote>
+
+<p>And the second:</p>
+
+<blockquote>
+<p>Develop a single underlying system that allows for a unified experience across platforms and device sizes. Mobile precepts are fundamental, but touch, voice, mouse, and keyboard are all ﬁrst-class input methods.</p>
+</blockquote>
+
+<p>Reading through the documentation, from <a href="http://www.google.com/design/spec/animation/authentic-motion.html">the detailed guidelines on authentic motion in animation</a> to <a href="http://www.google.com/design/spec/style/typography.html#typography-standard-styles">the rigorous tracking rules for typography</a>, one thing is clear: Google&rsquo;s design has grown up. It&rsquo;s been gaining maturity for some time now (the company&rsquo;s recent iOS apps are a great example), but this feels more significant to me: <em>this feels like a turning point.</em></p>
+
+<p><img src="/assets/style-typography-36_large_mdpi.png" alt="style-typography-36_large_mdpi"></p>
+
+<p>When considering mobile operating systems, this could very well be the moment that Android sheds its cheap, iOS-immitating cocoon — by contrast, <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html">Apple&rsquo;s Human Interface Guidelines</a> look dated and inelegant — but we&rsquo;re not even just talking about Android here: &lsquo;Material Design&rsquo; represents Google&rsquo;s <em>entire</em> unified design system. And many of the principles outlined in the documentation are universal standards for good design, regardless of the medium. It&rsquo;s great to see Google championing good design.</p>
+
+<p>For the first time ever, I found myself begin to wonder: next time I purchase some hardware, might I consider choosing Google over Apple? For me, personally, that&rsquo;s why this represents a fork in the road.</p>
+
+<p>Hats off, Google.</p>
+]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Typekit updates for CC 2014</title>
+  <link href="/blog/typekit-updates-for-cc-2014" />
+  <id>/blog/typekit-updates-for-cc-2014</id>
+  <updated>Fri, 20 Jun 2014 10:54:00 +0000</updated>
+  <published>Fri, 20 Jun 2014 10:54:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Earlier this week, when Adobe announced the ‘CC 2014’ apps, we rolled out some pretty cool new <a href="http://typekit.com/">Typekit</a> features, too.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article-typekit-jun14-01.jpg" alt="Illustration for Typekit updates for CC 2014" /></p> <p>Earlier this week, when Adobe announced the ‘CC 2014’ apps, we rolled out some pretty cool new <a href="http://typekit.com/">Typekit</a> features, too.</p>
+
+<p>The biggest news is probably our integration with Photoshop: if you open a document that has missing fonts, Photoshop can check to see if they&rsquo;re in the Typekit Desktop library, and, if so, sync them straight to your computer without you even having to leave the app. This is <a href="https://helpx.adobe.com/photoshop/how-to/type-typekit-fonts.html?set=photoshop--whats-new--2014-06">a pretty awesome feature</a> that will only get <em>more</em> awesome as our Desktop font library continues to grow.</p>
+
+<p><img src="/assets/article-typekit-jun14-05.png" alt="article-typekit-jun14-05"> </p>
+
+<p>We&rsquo;ve had this feature in Illustrator and InDesign since the previous release, and with the CC 2014 integrations we&rsquo;ve refined it somewhat. Ai and Id&rsquo;s implementation works a little differently from Ps, but the end result is the same. </p>
+
+<p>All three apps also now allow you to filter fonts in your font menu by those that are Typekit fonts or not, which is pretty handy. There&rsquo;s also a button in there to take you directly to Typekit&rsquo;s Desktop library.</p>
+
+<p><img src="/assets/article-typekit-jun14-04.png" alt="article-typekit-jun14-04"></p>
+
+<p>It&rsquo;s been fun working with the various app teams and we have some pretty huge plans for the next iterations. I was also rather chuffed to see my name in the Photoshop credits!</p>
+
+<p><img src="/assets/article-typekit-jun14-03.png" alt="article-typekit-jun14-03"> </p>
+
+<p>If you&rsquo;ve had a look at the beautiful new <a href="http://www.adobe.com/">adobe.com</a> and all of the lovely <a href="http://www.adobe.com/products/photoshop.html">Ps</a>, <a href="http://www.adobe.com/products/illustrator.html">Ai</a>, <a href="http://www.adobe.com/products/indesign.html">Id</a>, etc. product pages (seriously, has Adobe&rsquo;s web presence ever looked this good before?), you&rsquo;ll notice how there&rsquo;s a really strong consistency running throughout, and <a href="http://typekit.com/home">we&rsquo;ve brought that into Typekit</a>. </p>
+
+<p>First and foremost, we&rsquo;ve got the shared global nav that you can see across all Adobe sites. Integrating that produced some interesting challenges with how to handle items in our header, and we&rsquo;ve had a significant re-think — all the while, hopefully, not shaking things up too much for our existing users. (Watch this space for updates to the kit menu — we have big plans there!)</p>
+
+<p>We&rsquo;ve also set the entire site in Adobe Clean. That&rsquo;s right: <a href="http://typekit.com/fonts">our UI</a> now uses web fonts throughout!</p>
+
+<p><img src="/assets/article-typekit-jun14-02-v2.png" alt="article-typekit-jun14-02-v2"> </p>
+
+<p>Lastly, we rolled out a new hero area for <a href="http://typekit.com/home">the typekit.com home page</a>. I had great fun on this, from creating the ‘Bristol Roasting Co.’ assets used in the photo, to commissioning the photography itself; from  setting the main display type in <a href="https://typekit.com/fonts/franklin-gothic-urw-extra-compressed">Franklin Gothic</a>, <a href="https://typekit.com/fonts/lush">Lush</a>, <a href="https://typekit.com/fonts/lust">Lust</a>, and <a href="https://typekit.com/fonts/rosewood-std-fill">Rosewood</a> (a nod to <a href="http://jasonsantamaria.com/">Jason</a>’s <a href="http://cloud.elliotjaystocks.com/WAam">old home page</a>), to finding the balance between Typekit&rsquo;s own identity and its role as part of Creative Cloud.</p>
+
+<p>Huge thanks to our new recruit <a href="http://jke.me/">Jake</a> for his massive contributions to all of this work. I hope you like our changes.</p>
+]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Siteleaf</title>
+  <link href="/blog/siteleaf" />
+  <id>/blog/siteleaf</id>
+  <updated>Tue, 10 Jun 2014 16:02:00 +0000</updated>
+  <published>Tue, 10 Jun 2014 16:02:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Back in June 2010 <em>(bloody hell, that was four years ago!)</em>, I moved my site&#39;s backend over from self-hosted WordPress to <a href="http://get.harmonyapp.com/">Harmony</a>, the CMS created by my friend <a href="http://orderedlist.com/">Steve Smith</a>. And although Harmony has continued to be a joy to use and extremely reliable after it was sold to <a href="http://collectiveidea.com/">Collective Idea</a> (when Steve joined GitHub), it&#39;s now time for me to move on. So, I&#39;m pleased to announce that this site is now powered by <a href="http://oak.is/">Oak Studios</a>’wonderful CMS <a href="http://www.siteleaf.com/">Siteleaf</a>.</p>
+
+<p>The great thing about Siteleaf is that it generates static files, so it&#39;s extremely fast and the site can live on even if the backend goes down, or I decide to swap CMSs again. Only the admin lives on Siteleaf&#39;s servers — you can host the rendered files wherever you like. That said, I&#39;ve chosen to use their hosting as well, as their CDN setup is lightning-fast.</p>
+
+<p>Switching CMSs is rarely a pleasant task, but <a href="https://twitter.com/sskylar">Skylar</a> and his team have been so, so, so helpful in getting me set up, and will soon be blogging about how they ported over my theme. Because both Siteleaf and Harmony use the <a href="http://liquidmarkup.org/">Liquid templating language</a>, it&#39;s been relatively easy for me to get my head around the code, and although the site&#39;s design currently remains unchanged as of today, I&#39;m working on a redesign that should go live this summer. <em>(Famous last words.)</em></p>
+
+<p>For those interested, the reason I switched from Harmony after four years was the relatively expensive monthly cost ($60 because I had three live sites using it) and the lack of product development since it was acquired.</p>
+
+<p>Hope you&#39;re enjoying the new speeds.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article-siteleaf.jpg" alt="Illustration for Siteleaf" /></p> <p>Back in June 2010 <em>(bloody hell, that was four years ago!)</em>, I moved my site&rsquo;s backend over from self-hosted WordPress to <a href="http://get.harmonyapp.com/">Harmony</a>, the CMS created by my friend <a href="http://orderedlist.com/">Steve Smith</a>. And although Harmony has continued to be a joy to use and extremely reliable after it was sold to <a href="http://collectiveidea.com/">Collective Idea</a> (when Steve joined GitHub), it&rsquo;s now time for me to move on. So, I&rsquo;m pleased to announce that this site is now powered by <a href="http://oak.is/">Oak Studios</a>’wonderful CMS <a href="http://www.siteleaf.com/">Siteleaf</a>.</p>
+
+<p>The great thing about Siteleaf is that it generates static files, so it&rsquo;s extremely fast and the site can live on even if the backend goes down, or I decide to swap CMSs again. Only the admin lives on Siteleaf&rsquo;s servers — you can host the rendered files wherever you like. That said, I&rsquo;ve chosen to use their hosting as well, as their CDN setup is lightning-fast.</p>
+
+<p>Switching CMSs is rarely a pleasant task, but <a href="https://twitter.com/sskylar">Skylar</a> and his team have been so, so, so helpful in getting me set up, and will soon be blogging about how they ported over my theme. Because both Siteleaf and Harmony use the <a href="http://liquidmarkup.org/">Liquid templating language</a>, it&rsquo;s been relatively easy for me to get my head around the code, and although the site&rsquo;s design currently remains unchanged as of today, I&rsquo;m working on a redesign that should go live this summer. <em>(Famous last words.)</em></p>
+
+<p>For those interested, the reason I switched from Harmony after four years was the relatively expensive monthly cost ($60 because I had three live sites using it) and the lack of product development since it was acquired.</p>
+
+<p>Hope you&rsquo;re enjoying the new speeds.</p>
+]]></content>
+  <author>
+    <name>Elliot Jay Stocks</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Kerning</title>
+  <link href="/speaking/#kerning" />
+  <id>/speaking/kerning</id>
+  <updated>Thu, 05 Jun 2014 00:00:00 +0000</updated>
+  <published>Thu, 05 Jun 2014 00:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#kerning">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#kerning">Find out more</a>.]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>TYPO San Francisco</title>
+  <link href="/speaking/#typo-san-francisco" />
+  <id>/speaking/typo-san-francisco</id>
+  <updated>Thu, 10 Apr 2014 00:00:00 +0000</updated>
+  <published>Thu, 10 Apr 2014 00:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#typo-san-francisco">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#typo-san-francisco">Find out more</a>.]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Advanced web typography: Responsive web typography</title>
+  <link href="/blog/responsive-web-typography" />
+  <id>/blog/responsive-web-typography</id>
+  <updated>Wed, 09 Apr 2014 18:00:00 +0000</updated>
+  <published>Wed, 09 Apr 2014 18:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Responsive Web Design is not merely concerned with layout — done properly, there are a number of considerations one should take into account with typography. After all, <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">the web is 99% typography</a>, right?</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_rwt2.png" alt="Illustration for Advanced web typography: Responsive web typography" /></p> <p>Responsive Web Design is not merely concerned with layout — done properly, there are a number of considerations one should take into account with typography. After all, <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">the web is 99% typography</a>, right?</p>
+
+<h3>Responsive body type</h3>
+
+<p>For me, my principle concern around web type in a responsive world is all about <em>measure</em>. After all, when you have viewports that can grow (or shrink) indefinitely, the length of a line can very quickly become uncomfortably long (or short). If I have one major criticism of early-adopting responsive sites, it’s that many of them didn’t take this into consideration, and although the situation is improving, it’s a mistake a I still see a lot of people make.</p>
+
+<p>Robert Bringhurst suggests that the optimum measure is <a href="http://webtypography.net/2.1.2">around 45 to 75 characters per line</a>. I agree that this is a good indicator, although like most things in design, I prefer to just do it by feel: it soon becomes obvious if something doesn’t feel right. Whenever I have a line of type that starts to feel like it’s getting uncomfortably long as my viewport grows wider, I throw in a media query to remedy the situation.</p>
+
+<p>For the last year or two, my approach to media queries (with particular reference to measure) has been to:</p>
+
+<ul>
+<li>increase the font size, or</li>
+<li>decrease the padding on the containing element, or</li>
+<li>do both.</li>
+</ul>
+
+<p>You can see this in effect on this very site. Here’s a simplified version of the <span class="caps">CSS</span> that controls this part of the design:</p>
+
+<pre><code>@media screen and (min-width:1200px) {
+    body { font-size:110%; } /* Increase the font size */
+}
+@media screen and (min-width:1400px) {
+    html { padding:0 15%; } /* Reduce the container width */
+}
+@media screen and (min-width:1600px) {
+    body { font-size:125%; } /* Increase the font size */
+}
+@media screen and (min-width:1800px) {
+    html { padding:0 20%; } /* Reduce the container width */
+}
+</code></pre>
+
+<p>Of course, I’ll admit that this is much easier to do on simpler sites like blogs, but the principle is the same no matter how complex the design: as your overall space grows, adapt your measure by tweaking the font size and the element’s width.</p>
+
+<p><a href="http://trentwalton.com/2012/06/19/fluid-type/">Trent Walton has a great technique</a> for keeping your eye on an optimum measure that’s especially handy if you prefer hard facts over the ‘feel’ approach: simply place an asterisk at character 45 and character 75, and add in a new breakpoint every time the two asterisks appear on the same line. Sorted!</p>
+
+<figure><img src="/assets/article_trent.png" alt="Trent Walton’s site"><br>
+<figcaption><a href="http://trentwalton.com/2012/06/19/fluid-type/">Trent Walton</a>’s asterisk technique</figcaption></figure>
+
+<p>It’s worth noting that you could just put in a <code>max-width</code> declaration once you’ve got a measure you feel is optimal for large screens, but personally I feel like <code>max-width</code> flies in the face of <span class="caps">RWD</span>: because we don’t know the size of future viewports, we should let things be as open as possible. I admit, though, that this can end up with gigantic text on large monitors (as an experiment, I took this to its logical conclusion with <a href="http://csszengarden.com/217/">my recent <span class="caps">CSS</span> Zen Garden theme</a>), so use your own discretion. Oh, and as an interesting side note in case you live in a cave and missed this last year, Marko Dugonjić conducted <a href="http://webdesign.maratz.com/lab/responsivetypography/">an interesting experiment</a> with font size in relation to the user’s proximity to the screen. <a href="http://vimeo.com/74368443">His talk from last year’s Kerning conference</a> is well worth a watch.</p>
+
+<p>And, if you haven’t done so already, take a look at   <a href="http://css-tricks.com/viewport-sized-typography/">using viewport units for viewport-sized typography</a>. This is an interesting development, although I’ll admit that I haven’t yet looked into it that deeply.</p>
+
+<h3>Responsive display type</h3>
+
+<p>When dealing with display type, we often want deeper control over our headings, and that’s where <a href="http://fittextjs.com/">Fittext.js</a> comes in. Just like when I mentioned <a href="http://letteringjs.com/">Lettering.js</a> in <a href="http://elliotjaystocks.com/blog/kerning/">yesterday’s post on kerning</a>, I don’t think (yet another of) Dave’s awesome plugins needs much explanation, since it’s been around a while now, but in short it forces your type to perform more like an image; specifically, an image set to 100% of the container’s width. You can see it in action on my site in all of my ’Tomorrow’s Web Type Today’ series of blog posts ( <a href="http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/">1</a>, <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">2</a>, <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">3</a>, <a href="http://elliotjaystocks.com/blog/stylesets/">4</a>).</p>
+
+<p>If we’re to take our typography to the next level, though, we need to focus on the details, not just the big-picture stuff that’s easier to spot like measure and image-like display type.</p>
+
+<p>Something that’s often overlooked is that changes to font size or container width should also result in changes to leading (or <code>line-height</code> in <span class="caps">CSS</span>). I’ve seen so many sites (my own included, I should add) that exhibit unpleasant gaps between lines when viewed at certain sizes. The same can be said of margin or padding values between paragraphs, or lists, or headings. To achieve a more balanced <code>line-height</code> value, there are some very clever maths you can do to make sure your values are directly proportional to your font size. Or you can just do it by feel, which is the method I prefer. If it doesn’t look right, change the number a bit!</p>
+
+<p>Let’s not forget that we work in an inherently flexible medium; there are no hard and fast rules here. Responsive Web Typography is all about treating type with the respect it deserves in a variety of contexts, over which you don’t have finite control.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Advanced web typography: Justification &amp; hyphenation</title>
+  <link href="/blog/justification-hyphenation" />
+  <id>/blog/justification-hyphenation</id>
+  <updated>Wed, 09 Apr 2014 01:00:00 +0000</updated>
+  <published>Wed, 09 Apr 2014 01:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>I’m probably about as biased as it’s possible to be, but in the last issue of my magazine <a href="http://8faces.com/">8 Faces</a>, my Typekit colleague <a href="http://bramstein.com/">Bram Stein</a> wrote a <em>fantastic</em> piece about justification and hyphenation. And, like the intricacies of <a href="http://elliotjaystocks.com/blog/kerning/">kerning</a>, there’s an air of mystery about implementing justification and hyphenation in web type, so I’m going to attempt to distill Bram’s knowledge into this blog post. (The image above is also from the same piece.)</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_bram.png" alt="Illustration for Advanced web typography: Justification & hyphenation" /></p> <p>I’m probably about as biased as it’s possible to be, but in the last issue of my magazine <a href="http://8faces.com/">8 Faces</a>, my Typekit colleague <a href="http://bramstein.com/">Bram Stein</a> wrote a <em>fantastic</em> piece about justification and hyphenation. And, like the intricacies of <a href="http://elliotjaystocks.com/blog/kerning/">kerning</a>, there’s an air of mystery about implementing justification and hyphenation in web type, so I’m going to attempt to distill Bram’s knowledge into this blog post. (The image above is also from the same piece.)</p>
+
+<h3>Justification</h3>
+
+<p>There are two major justification algorithms we come into contact with regularly: the Greedy algorithm that analyses only one line, and the far more advanced Knuth / Plass algorithm that looks at all lines in a paragraph, and which is used in advanced typesetting applications such as InDesign. Now, guess which one we have in browsers, ladies and gents? That’s right: the crap one.</p>
+
+<p>So what does this mean? We can use justification now (and we’ve been able to for years), but the results are pretty poor. The CSS3 spec introduced <code>text-justify</code> , which allows us to control some aspects of justification, but it doesn’t specify which algorithm to use, which means that it’s in the hands of the browser vendors. Implementing the Knuth / Plass algorithm involves taking a performance hit, so unsurprisingly the browsers have stuck with ol’ faithful: Greedy. Good justification has no support outside — can you believe it? — Internet Explorer, which <em>seems</em> to use the Knuth / Plass algorithm, or an approximation of it, enabled through the <code>text-justify: newspaper</code> <span class="caps">CSS</span> property.</p>
+
+<p>Some Javascript-based alternative solutions exist that attempt to partially plug the hole, however: one is <a href="http://bramstein.com/projects/typeset/">Typeset</a> (created by Bram), which implements the Knuth / Plass algorithm. It’s more of an experiment and has a number of issues, but it’s worth checking out as a work-in-progress and proof-of-concept.</p>
+
+<h3>Hyphenation</h3>
+
+<p>As anyone who’s ever attempted to set lengthy text can attest, using justification without hyphenation is virtually impossible. No matter how clever your algorithm or human typesetter, you’ll eventually have to use a hyphen. Surprisingly, hyphenation support in browsers is more widespread, although it’s not supported at all in Chrome. For Chrome and older browsers, you’d do well to turn to JavaScript solutions such as <a href="https://code.google.com/p/hyphenator/">Hyphenator.js</a> and Bram’s own <a href="http://bramstein.com/projects/hypher/">Hypher</a>.</p>
+
+<h3>Conclusion</h3>
+
+<p>To summarise: we can hyphenate pretty well, but justification still has a way to go, so I’m afraid to say that we’re not going to be using them together the way we do in print any time soon. We have Javascript polyfills for both, but keep in mind the performance trade-offs before you typeset <em>War &amp; Peace</em> on the web.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Advanced web typography: Kerning</title>
+  <link href="/blog/kerning" />
+  <id>/blog/kerning</id>
+  <updated>Tue, 08 Apr 2014 16:00:00 +0000</updated>
+  <published>Tue, 08 Apr 2014 16:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Kerning has to be one of the most widely-used terms by the typography enthusiast. How often have you found that you’ve been able to prove your typographic integrity by pointing out poorly-kerned type in public places to your long-suffering partner?</p>
+
+<p>And yet it’s one of those typographic controls that remains shrouded in semi-mystery when it comes to web type. Which browsers support kerning? Do you have to manually turn it on? Why are there different way of turning it on? Even as the Creative Director of Adobe Typekit, I personally still often find myself confused. So, for your benefit and for mine, I’m going to attempt a quick round-up on kerning for the web. And at this point I should thank my colleague <a href="http://bramstein.com/">Bram Stein</a> for his <a href="http://blog.typekit.com/2014/02/05/kerning-on-the-web/">excellent post on the Typekit blog</a>, from which I’ve drawn extensively.</p>
+
+<p>First of all, before we worry about support for kerning in the browser and how we enable it, it’s important to consider the problem from the base level of the font itself. Any decent font worth its salt should contain information on kerning pairs and any given font’s ability to optimise the spacing between two glyphs is dependent on this built-in data. Thankfully, there’s no real difference between web fonts and non-web fonts: if the kerning data is there in, it will most likely be present in the web font you serve to your site.</p>
+
+<p>With that out of the way, let’s take a look at how to enable kerning, because it’s not usually enabled by default (although we’ll get to those specifics in a minute).</p>
+
+<p>The simplest way to turn on kerning is to use <code>text-rendering: optimizeLegibility;</code> , which, depending on the browser, will also enable other OpenType features. Like I said <a href="http://elliotjaystocks.com/blog/a-recap-on-opentype-features/">yesterday</a>, though, that this isn’t an official <span class="caps">CSS</span> property and in theory could become unsupported at any time. It’s also been known to cause <a href="http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text/12430050#12430050">a few issues</a>.</p>
+
+<p>The more future-proof, powerful, and safer way of turning on kerning is to use the <code>font-feature-settings</code> property that I enthused about so much in <a href="http://elliotjaystocks.com/blog/a-recap-on-opentype-features/">yesterday’s post</a>. The property allows you to switch on OpenType features one by one and therefore offer greater control over what you are / are not enabling.</p>
+
+<p>At the time of writing, support for <code>font-feature-settings</code> is still in the semi-experimental phase, so we need to use browser prefixes. If you’re being particularly thorough, you might include the slight variations between older and newer versions of Firefox (the third line is for FF14 and below):</p>
+
+<pre><code>p {
+  text-rendering: optimizeLegibility; /* Use with caution */
+  -moz-font-feature-settings: &quot;kern&quot;;
+  -moz-font-feature-settings: &quot;kern=1&quot;;
+  -ms-font-feature-settings: &quot;kern&quot;;
+  -o-font-feature-settings: &quot;kern&quot;;
+  -webkit-font-feature-settings: &quot;kern&quot;;
+  font-feature-settings: &quot;kern&quot;;
+}
+</code></pre>
+
+<p>However, it’s worth noting that kerning is turned on by default in Firefox.</p>
+
+<p>In the future, we’ll be able to use <code>font-kerning: normal</code> , which is currently supported by Safari 7 on OS X and iOS. You can find more information about this in <a href="http://www.w3.org/TR/css3-fonts/#font-kerning-prop">the CSS3 spec</a>.</p>
+
+<p>Speaking of Safari 7 on OS X and iOS, this browser also has kerning enabled by default, which means that you don’t need to do anything: if kerning data exists in the font file, it’ll be applied automatically. We can almost excuse Safari for its total lack of <code>font-feature-settings</code> support!</p>
+
+<p>In terms of general browser support, kerning is actually very widely adopted. There’s a very useful and current (at the time of writing) chart in <a href="http://blog.typekit.com/2014/02/05/kerning-on-the-web/">Bram’s article</a> and it’s worth noting that Chrome support is excellent, <em>except</em> on Windows. Sigh!</p>
+
+<h3>Manual kerning with <span class="caps">CSS</span></h3>
+
+<p>Built-in kerning is all well and good, but what if you want some additional control over your text, especially display type? Doing it manually is supported everywhere if you manipulate the spacing between individual glyphs by using the age-old <code>letter-spacing</code> , but it is of course rather tedious and usually involves wrapping each letter in a <code>span</code> . Thankfully, this is made easy by <a href="http://daverupert.com/">Dave Rupert</a>’s <a href="http://letteringjs.com/">Lettering.js</a>, which automatically throws spans around individual letters (or individual words) using Javascript. I don’t think I need to go into it here because it’s a pretty popular plugin and widely used, but it’s certainly worth a mention in any discussion on kerning. You might also find <a href="https://twitter.com/bstrom">Brendan Stromberger</a>’s <a href="http://www.kernjs.com/">kern.js bookmarklet</a> quite handy: it builds upon Lettering.js and allows you to visually adjust the kerning on any particular glyph, and then generates some <span class="caps">CSS</span> for you to use in your production files.</p>
+
+<p>So that’s kerning. Of the more advanced typographic controls we have over web type, kerning adoption in some shape or form is pretty damn good. For the next post in this series, I’ll be looking at justification and hyphenation, which is where things get a little more complex.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_kerning.png" alt="Illustration for Advanced web typography: Kerning" /></p> <p>Kerning has to be one of the most widely-used terms by the typography enthusiast. How often have you found that you’ve been able to prove your typographic integrity by pointing out poorly-kerned type in public places to your long-suffering partner?</p>
+
+<p>And yet it’s one of those typographic controls that remains shrouded in semi-mystery when it comes to web type. Which browsers support kerning? Do you have to manually turn it on? Why are there different way of turning it on? Even as the Creative Director of Adobe Typekit, I personally still often find myself confused. So, for your benefit and for mine, I’m going to attempt a quick round-up on kerning for the web. And at this point I should thank my colleague <a href="http://bramstein.com/">Bram Stein</a> for his <a href="http://blog.typekit.com/2014/02/05/kerning-on-the-web/">excellent post on the Typekit blog</a>, from which I’ve drawn extensively.</p>
+
+<p>First of all, before we worry about support for kerning in the browser and how we enable it, it’s important to consider the problem from the base level of the font itself. Any decent font worth its salt should contain information on kerning pairs and any given font’s ability to optimise the spacing between two glyphs is dependent on this built-in data. Thankfully, there’s no real difference between web fonts and non-web fonts: if the kerning data is there in, it will most likely be present in the web font you serve to your site.</p>
+
+<p>With that out of the way, let’s take a look at how to enable kerning, because it’s not usually enabled by default (although we’ll get to those specifics in a minute).</p>
+
+<p>The simplest way to turn on kerning is to use <code>text-rendering: optimizeLegibility;</code> , which, depending on the browser, will also enable other OpenType features. Like I said <a href="http://elliotjaystocks.com/blog/a-recap-on-opentype-features/">yesterday</a>, though, that this isn’t an official <span class="caps">CSS</span> property and in theory could become unsupported at any time. It’s also been known to cause <a href="http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text/12430050#12430050">a few issues</a>.</p>
+
+<p>The more future-proof, powerful, and safer way of turning on kerning is to use the <code>font-feature-settings</code> property that I enthused about so much in <a href="http://elliotjaystocks.com/blog/a-recap-on-opentype-features/">yesterday’s post</a>. The property allows you to switch on OpenType features one by one and therefore offer greater control over what you are / are not enabling.</p>
+
+<p>At the time of writing, support for <code>font-feature-settings</code> is still in the semi-experimental phase, so we need to use browser prefixes. If you’re being particularly thorough, you might include the slight variations between older and newer versions of Firefox (the third line is for FF14 and below):</p>
+
+<pre><code>p {
+  text-rendering: optimizeLegibility; /* Use with caution */
+  -moz-font-feature-settings: &quot;kern&quot;;
+  -moz-font-feature-settings: &quot;kern=1&quot;;
+  -ms-font-feature-settings: &quot;kern&quot;;
+  -o-font-feature-settings: &quot;kern&quot;;
+  -webkit-font-feature-settings: &quot;kern&quot;;
+  font-feature-settings: &quot;kern&quot;;
+}
+</code></pre>
+
+<p>However, it’s worth noting that kerning is turned on by default in Firefox.</p>
+
+<p>In the future, we’ll be able to use <code>font-kerning: normal</code> , which is currently supported by Safari 7 on OS X and iOS. You can find more information about this in <a href="http://www.w3.org/TR/css3-fonts/#font-kerning-prop">the CSS3 spec</a>.</p>
+
+<p>Speaking of Safari 7 on OS X and iOS, this browser also has kerning enabled by default, which means that you don’t need to do anything: if kerning data exists in the font file, it’ll be applied automatically. We can almost excuse Safari for its total lack of <code>font-feature-settings</code> support!</p>
+
+<p>In terms of general browser support, kerning is actually very widely adopted. There’s a very useful and current (at the time of writing) chart in <a href="http://blog.typekit.com/2014/02/05/kerning-on-the-web/">Bram’s article</a> and it’s worth noting that Chrome support is excellent, <em>except</em> on Windows. Sigh!</p>
+
+<h3>Manual kerning with <span class="caps">CSS</span></h3>
+
+<p>Built-in kerning is all well and good, but what if you want some additional control over your text, especially display type? Doing it manually is supported everywhere if you manipulate the spacing between individual glyphs by using the age-old <code>letter-spacing</code> , but it is of course rather tedious and usually involves wrapping each letter in a <code>span</code> . Thankfully, this is made easy by <a href="http://daverupert.com/">Dave Rupert</a>’s <a href="http://letteringjs.com/">Lettering.js</a>, which automatically throws spans around individual letters (or individual words) using Javascript. I don’t think I need to go into it here because it’s a pretty popular plugin and widely used, but it’s certainly worth a mention in any discussion on kerning. You might also find <a href="https://twitter.com/bstrom">Brendan Stromberger</a>’s <a href="http://www.kernjs.com/">kern.js bookmarklet</a> quite handy: it builds upon Lettering.js and allows you to visually adjust the kerning on any particular glyph, and then generates some <span class="caps">CSS</span> for you to use in your production files.</p>
+
+<p>So that’s kerning. Of the more advanced typographic controls we have over web type, kerning adoption in some shape or form is pretty damn good. For the next post in this series, I’ll be looking at justification and hyphenation, which is where things get a little more complex.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Advanced web typography: A recap on OpenType features</title>
+  <link href="/blog/a-recap-on-opentype-features" />
+  <id>/blog/a-recap-on-opentype-features</id>
+  <updated>Tue, 08 Apr 2014 06:00:00 +0000</updated>
+  <published>Tue, 08 Apr 2014 06:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>How time flies! It was now almost two years ago that I wrote my ’Tomorrow’s Web Type Today’ series of blog posts ( <a href="http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/">1</a>, <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">2</a>, <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">3</a>, <a href="http://elliotjaystocks.com/blog/stylesets/">4</a>) and did a talk based on their content at the Ampersand and <span class="caps">TYPO</span> Berlin conferences. (You can still <a href="http://typotalks.com/berlin/2012/speakers/single-speaker/?tid=365&amp;et=TYPO%20Berlin%202012">watch the video</a> from the latter event, if you’re interested.)</p>
+
+<p>This week I’m in the process of preparing for a new talk at <span class="caps">TYPO</span> SF ( <a href="http://typotalks.com/sanfrancisco/">tickets are still available</a>, by the way) and although I’m focussing on topics such as kerning and responsive typography (accompanying posts will follow in the next couple of days), I thought it was worth returning to the topics I covered before; mainly as a refresher, but also to see what’s changed since then.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p>How time flies! It was now almost two years ago that I wrote my ’Tomorrow’s Web Type Today’ series of blog posts ( <a href="http://elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/">1</a>, <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">2</a>, <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">3</a>, <a href="http://elliotjaystocks.com/blog/stylesets/">4</a>) and did a talk based on their content at the Ampersand and <span class="caps">TYPO</span> Berlin conferences. (You can still <a href="http://typotalks.com/berlin/2012/speakers/single-speaker/?tid=365&amp;et=TYPO%20Berlin%202012">watch the video</a> from the latter event, if you’re interested.)</p>
+
+<p>This week I’m in the process of preparing for a new talk at <span class="caps">TYPO</span> SF ( <a href="http://typotalks.com/sanfrancisco/">tickets are still available</a>, by the way) and although I’m focussing on topics such as kerning and responsive typography (accompanying posts will follow in the next couple of days), I thought it was worth returning to the topics I covered before; mainly as a refresher, but also to see what’s changed since then.</p>
+
+<p>In short, not much has changed, and in a way that makes me a little sad. Two years ago it felt like things were changing almost daily and that this bleeding edge stuff was, well, bleeding edge. There’s not much to report in terms of new features, and although browser support has improved, progress seems to have slowed and the varying levels of support are still pretty confusing. So let’s try and demystify some of this.</p>
+
+<p>The four areas I covered previously were:</p>
+
+<ul>
+<li>ligatures,</li>
+<li>small caps and old style numerals (with subsets for polyfilling),</li>
+<li>swashes (with subsets again), and</li>
+<li>stylesets.</li>
+</ul>
+
+<h3>Recap: ligature support</h3>
+
+<p>Overall support for standard ligatures is now very good and easy to turn on by using <code>text-rendering: optimizeLegibility;</code> (they’re turned on by default in Firefox). However, that’s non-standard code (<strong><span class="caps">EDIT</span>:</strong> and, as pointed out by Chris Adams in the comment below, <code>text-rendering: optimizeLegibility;</code> has also been known to cause <a href="http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text/12430050#12430050">issues</a>), and it’s a far better idea to use the standardised and more powerful <code>font-feature-settings</code> property. Support for this property is actually pretty well supported overall, but the various features it controls (ligatures, kerning, stylesets, etc.) varies from browser to browser, so it’s perhaps not as straightforward as you might think from looking at a table on <a href="http://caniuse.com/#feat=font-feature">caniuse.com</a>. <strong><span class="caps">EDIT</span>:</strong> Ligatures, fortunately, <em>do</em> have good support, and although Safari 7 on both OS X and iOS doesn’t support <code>font-feature-settings</code> , the browser does have support for ligatures, contextual ligatures, and required ligatures, because they’re enabled by default — just not discretionary ligatures. (Weirdly, Safari 6 supported <code>font-feature-settings</code> for enabling ligatures, contextual ligatures, and required ligatures.)</p>
+
+<p>For a more future-facing but generally unsupported way of enabling ligatures, refer to <code>font-variant-ligatures</code> in <a href="http://www.w3.org/TR/css3-fonts/#font-variant-ligatures-prop">the ‘<span class="caps">CSS</span> Fonts Module Level 3’ spec</a>, last updated in October 2013.</p>
+
+<h3>Recap: small caps &amp; old style numerals support</h3>
+
+<p>Like all of the features I’m covering here, there are plans in <a href="http://www.w3.org/TR/css3-fonts">the ‘<span class="caps">CSS</span> Fonts Module Level 3’ spec</a> to give us very specific, high-level controls over OpenType features, but because it’s very much a work in progress and support is highly experimental (read: mostly unusable at the time of writing), we stand a much better chance by using the <code>font-feature-settings</code> property. The spec defines it as ‘low level’, but I think that’s misleading — it’s certainly a lot more high level than <code>text-rendering: optimizeLegibility;</code> and you can get pretty granular with your control.</p>
+
+<p>For example, excluding the necessary vendor prefixes (see the ‘So, to summarise…’ section, below), here’s how we can turn on small caps and old style numerals:</p>
+
+<pre><code>font-feature-settings: &#39;smcp&#39; 1;
+font-feature-settings: &#39;onum&#39; 1;
+</code></pre>
+
+<p>Pretty simple, eh? In <a href="http://elliotjaystocks.com/blog/expert-subsets-for-css-in-123/">my example from a couple of years ago</a>, I used subsets to polyfill the lack of support for these features (see the subsets recap, below).</p>
+
+<p>For the aforementioned future-facing but generally unsupported way of enabling small caps, refer to <code>font-variant</code> in <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-variant">the ‘<span class="caps">CSS</span> Fonts Module Level 3’ spec</a>, last updated in October 2013.</p>
+
+<h3>Recap: swashes and stylesets support</h3>
+
+<p>Guess what? Implementing swashes and stylesets is exactly the same: we use the <code>font-feature-settings</code> property. But remember that although browser support is good for the overall property, each specific feature has its own level of support. By and large, the rule of thumb should be to test across multiple platforms and browsers, and use a subset to ‘cheat’ your way around poor support.</p>
+
+<p>For a more future-facing but generally unsupported way of enabling swashes, stylsets, and stylistic alternates, refer to <code>font-variant-alternates</code> in <a href="http://www.w3.org/TR/css3-fonts/#font-variant-alternates-prop">the ‘<span class="caps">CSS</span> Fonts Module Level 3’ spec</a>, last updated in October 2013.</p>
+
+<h3>Recap: subsets</h3>
+
+<p>As mentioned above numerous times, it’s possible to polyfill the absence of support for bleeding edge features by using subsets instead. Subsets are an idea that come from the pre-OpenType age of fonts: to utilise certain features, you literally serve up a different file that contains only those extra features you need (such as swashes, old style numerals, etc.). A good example is something like <a href="https://typekit.com/fonts/acta-poster-swashes">Acta Poster Swashes</a>, which I used for the ‘S’ and ‘W’ glyphs on <a href="http://elliotjaystocks.com/blog/say-it-with-a-swash/">the swashes post</a>.</p>
+
+<h3>So, to summarise…</h3>
+
+<p>A subtle but relatively important change since writing my original posts has been that the <code>font-feature-settings</code> syntax has become standardised and most people no longer seem to worry about using the outdated, non-standard syntax required for older versions of Firefox ( <code>-moz-font-feature-settings: &quot;liga=1&quot;;</code> ). Also, assuming you use vendor prefixes, there are a lot of features you can get working in most major browsers. IE10+ support is great as long as you’ve got the oft-omitted <code>-ms-</code> prefix in there. (Opera’s <code>-o-</code> prefix, meanwhile, is relatively useless at the time of writing.)</p>
+
+<p>Here’s the <span class="caps">CSS</span> generated by the wonderful <a href="http://typecast.com/">Typecast</a> for standard ligature support:</p>
+
+<pre><code>-webkit-font-feature-settings: &#39;liga&#39; 1;
+-o-font-feature-settings: &#39;liga&#39; 1;
+-moz-font-feature-settings: &#39;liga&#39; 1;
+-ms-font-feature-settings: &#39;liga&#39; 1;
+font-feature-settings: &#39;liga&#39; 1;
+</code></pre>
+
+<p>For other OpenType features, you’ll be pleased to know that the naming conventions follow those used in font files’ tables, such as:</p>
+
+<ul>
+<li>Discretionary ligatures: <code>&quot;dlig&quot;</code></li>
+<li>Lining numerals: <code>&quot;lnum&quot;</code></li>
+<li>Old-style numerals : <code>&quot;onum&quot;</code></li>
+<li>Small caps: <code>&quot;smcp&quot;</code></li>
+<li>Swash alternates (with the index number): <code>&quot;swsh&quot; n</code></li>
+<li>Stylesets (01–20): <code>&quot;ss01–20&quot;</code></li>
+</ul>
+
+<p>However, regardless of the particular feature or browser support, using OpenType on the web today <em>still</em> essentially comes down to these four key considerations:</p>
+
+<p><strong>Consider the typeface:</strong> does the actual typeface contain swashes, ligatures, and the like?</p>
+
+<p><strong>Consider the font file:</strong> is it actually an OpenType file being served? Even if it is, are the extra glyphs you need included in that particular font? Do you need to adjust any settings to export additional characters? (In Typekit, that involves choose ‘all characters’ in the Kit Editor.)</p>
+
+<p><strong>Consider the browser:</strong> which features does it support? Remember: support can differ massively between version numbers and operating systems. Do you need to polyfill support by adding special characters via subsets?</p>
+
+<p><strong>Consider the user:</strong> will the design break if certain OpenType features are missing? Does the type actually look that good? Even generous feature support is subject to poor type rendering on some operating systems.</p>
+
+<p>For further reading, I thoroughly recommend <a href="https://www.typotheque.com/articles/opentype_features_in_web_browsers">this excellent (but slightly outdated) article</a> on the Typotheque blog by Gustavo Ferreira, and <a href="http://blog.fontdeck.com/post/15777165734/opentype-1">this OpenType primer</a> on the Fontdeck blog by Rich Rutter.</p>
+
+<p>Now that we’ve recapped all of that stuff, I’ll be exploring some new topics in my next posts. Tomorrow’s will be on kerning!</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Say hello to Skull Tubes</title>
+  <link href="/blog/say-hello-to-skull-tubes" />
+  <id>/blog/say-hello-to-skull-tubes</id>
+  <updated>Mon, 31 Mar 2014 11:00:00 +0000</updated>
+  <published>Mon, 31 Mar 2014 11:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>If you follow me on Twitter, you’ve probably noticed that I’ve started to talk more and more about my music-making side project that goes by the name of <a href="http://skulltubes.com/">Skull Tubes</a>. This is because I’ve been getting pretty serious about music lately; as well as squeezing recording / mixing sessions into every spare hour I can find, I’ve also been trying to spread the word on social media. Until now, though, I’ve barely said a word on this blog.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/skulltubes_week_poster_1000px.jpg" alt="Illustration for Say hello to Skull Tubes" /></p> <p>If you follow me on Twitter, you’ve probably noticed that I’ve started to talk more and more about my music-making side project that goes by the name of <a href="http://skulltubes.com/">Skull Tubes</a>. This is because I’ve been getting pretty serious about music lately; as well as squeezing recording / mixing sessions into every spare hour I can find, I’ve also been trying to spread the word on social media. Until now, though, I’ve barely said a word on this blog.</p>
+
+<p>So, to change that, I’d like to officially introduce Skull Tubes to the world, and I would be absolutely thrilled if you were to consider following my little electronic music project on <a href="https://twitter.com/skulltubes">Twitter</a>, <a href="https://www.facebook.com/skulltubes">Facebook</a>, <a href="https://soundcloud.com/skulltubes">SoundCloud</a>, and <a href="http://skulltubes.com/">Tumblr</a>. The Tumblr actually serves as the official site and aggregates all of the work-in-progress tracks I post to SoundCloud, along with some commentary and occasional photos.</p>
+
+<p>For a quick taste of Skull Tubes, here’s some work-in-progress tracks for a series of forthcoming EPs:</p>
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/5872982&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+
+<p>This week (as you can see in the image above) I’m posting a new track every single day: today it’s a brand new song, tomorrow it’s a new render of an existing work-in-progress song, Wednesday I’m doing a new Volca jam (with video!), Thursday it’s another new song, and finally on Friday it’s another new render. Full details are on <a href="https://www.facebook.com/skulltubes">the Facebook page</a>.</p>
+
+<p>Those of you who were aware of my previous musical output under the <a href="http://sourhaze.com/">Sourhaze</a> guise will note how Skull Tubes shares common roots, but heads way more in a techno / dub-techno direction. The music of Skull Tubes is recommended for fans of Anders Ilar, Andy Stott, Blamstrain, BronzeAge, Byetone, Conforce, Dadub, Diamond Version, Dino Sabatini, Forest Swords, Frank Bretschneider, Jon Hopkins, Killawatt, Legowelt, Milton Bradley, Monolake, Muslimgauze, Peter Van Hoesen, Raime, Regis, Resoe, Sandwell District, Shifted, Solyst, Sven Weisemann, The Haxan Cloak, These Hidden Hands, Tommy Four Seven, Trentemøller, Tropic of Cancer, Vatican Shadow, Violet Poison, and Yves de Mey… to name a few.</p>
+
+<p>I’m really proud of this new music and I love sharing how it all comes together so publicly. I hope you enjoy it, too!</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>A lament for Readmill</title>
+  <link href="/blog/a-lament-for-readmill" />
+  <id>/blog/a-lament-for-readmill</id>
+  <updated>Sat, 29 Mar 2014 11:00:00 +0000</updated>
+  <published>Sat, 29 Mar 2014 11:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Last night, as I scrolled through my Twitter feed, I was sad to learn that <a href="https://readmill.com/">Readmill</a> — the beautiful app that allows you to read, store, share, and annotate ebooks — will be closing its doors. Sometimes it feels like each day heralds the closure of another decent startup, but I feel particularly sad about Readmill’s demise.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_readmill.png" alt="Illustration for A lament for Readmill" /></p> <p>Last night, as I scrolled through my Twitter feed, I was sad to learn that <a href="https://readmill.com/">Readmill</a> — the beautiful app that allows you to read, store, share, and annotate ebooks — will be closing its doors. Sometimes it feels like each day heralds the closure of another decent startup, but I feel particularly sad about Readmill’s demise.</p>
+
+<p>I’m trying to evaluate why that is. Perhaps it’s because Readmill fulfilled the two simple expectations I have for any app: it genuinely solved a problem to make my digital life easier (I could read and archive all of ebooks in one place) and it was an absolute joy to use (the marriage of a beautifully-designed UI and well-considered behaviours). As it happens, I rarely used the highlighting features and didn’t engage much with the social aspects that so many others loved, but simply having one place to put all of my ebooks was a godsend. I could open the app on my iPhone, my iPad, or my web browser, and find my library ready to read, synced with all the appropriate bookmarks. (Yes, Amazon’s Kindle app offers the same functionality, but is of course limited to Kindle’s walled garden and inferior UI.) I could even upload my own pre-existing ebook files and PDFs and have them all there in my Readmill library.</p>
+
+<p>Up until this point, I was actually pretty reluctant about reading long text on screen. I really cannot place enough emphasis on this statement: <em>Readmill made me start reading ebooks.</em></p>
+
+<p>Perhaps one of the other features about Readmill I loved the most was the humble-but-powerful <a href="https://readmill.com/developers/send-to-readmill">‘Send to Readmill’</a> button that many publishers added to their payment confirmation pages. I used it to send books I’d purchased from <a href="http://abookapart.com/">A Book Apart</a> and <a href="http://fivesimplesteps.com/">Five Simple Steps</a>, and we (that is, <a href="http://viewportindustries.com/">Viewport Industries</a>) added it to our site for <a href="http://viewportindustries.com/insites-the-book">Insites: The Book</a>, which we published in 2012. The button is but one example of how Readmill ingrained themselves within the indie publishing industry, and it’s an example of just how <em>friendly</em> the app felt. Let’s not forget how they opened up a whole world of public domain books — complete with beautiful new covers — with their <a href="https://readmill.com/explore">Explore</a> section.</p>
+
+<p>And so, with Readmill’s passing, I feel sad. Sad and guilty, because I feel like I should’ve done more. I should’ve contributed more, shared more, been more vocal about just how much I loved the app. But amidst this guilt, I also wonder if somehow I could’ve given Readmill my money: could a revenue model have saved them? I’m often critical of startups that have no business plan, but then who’s to say that would’ve worked? Just a few short months ago we saw the death of <a href="http://everpix.com/">Everpix</a>: another excellent startup whose app / service solved genuine problems (check!) and was an absolute joy to use (check!). Even with paying customers, the revenue was not enough to sustain them.</p>
+
+<p>In <a href="https://readmill.com/epilogue">Readmill’s ‘epilogue’ open letter</a> to the community, they reveal that the whole team will be joining Dropbox. At the moment, I’m not sure how this deal relates to the closure of Readmill, but I do thoroughly respect them for writing a letter of farewell in which they explain that they, <em>‘failed to create a sustainable platform for reading,’</em> rather than spouting the usual, <em>‘hooray, we just got acquired!’</em> nonsense that we read so often. As ever, the team behind Readmill were tasteful, respectful, and classy until the last.</p>
+
+<p>I’ll miss you Readmill. My home screen will feel empty without you. Oh, and I don’t think you failed at all.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Celebrating non-venture-backed companies</title>
+  <link href="/blog/celebrating-non-venture-backed-companies" />
+  <id>/blog/celebrating-non-venture-backed-companies</id>
+  <updated>Wed, 05 Mar 2014 11:00:00 +0000</updated>
+  <published>Wed, 05 Mar 2014 11:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>I get so tired of the web / tech industry’s constant praise of venture-backed companies (especially those in San Francisco) that have no viable business model and then sell for ludicrous amounts of money, only to be shut down because — guess what? — they haven’t thought about how to make money. So it was extremely refreshing to see <a href="http://hunterwalk.com/2014/03/04/youre-either-venture-backed-or-a-lifestyle-business-the-big-lie/">Hunter Walk</a> write this on his blog:</p>
+
+<blockquote>
+<p>[…] Our proclivity as an industry [is] to demean these smaller companies as ‘lifestyle businesses’, which suggests an easy path, a coasting team, the four hour work week. Bullshit. These companies represent the majority of entrepreneurs across the US and should be celebrated. […] So <span class="caps">RIP</span> calling anything not venture-backed a ‘lifestyle business’. Go build your business the way you want.</p>
+</blockquote>
+]]></summary>
+  <content type="html"><![CDATA[<p>I get so tired of the web / tech industry’s constant praise of venture-backed companies (especially those in San Francisco) that have no viable business model and then sell for ludicrous amounts of money, only to be shut down because — guess what? — they haven’t thought about how to make money. So it was extremely refreshing to see <a href="http://hunterwalk.com/2014/03/04/youre-either-venture-backed-or-a-lifestyle-business-the-big-lie/">Hunter Walk</a> write this on his blog:</p>
+
+<blockquote>
+<p>[…] Our proclivity as an industry [is] to demean these smaller companies as ‘lifestyle businesses’, which suggests an easy path, a coasting team, the four hour work week. Bullshit. These companies represent the majority of entrepreneurs across the US and should be celebrated. […] So <span class="caps">RIP</span> calling anything not venture-backed a ‘lifestyle business’. Go build your business the way you want.</p>
+</blockquote>
+
+<p><cite>~ <a href="http://hunterwalk.com/2014/03/04/youre-either-venture-backed-or-a-lifestyle-business-the-big-lie/">Hunter Walk</a></cite></p>
+
+<p>Amen to that. What’s especially refreshing is that Hunter is actually a VC.</p>
+
+<p>(Via <a href="http://seanmcb.com/">Sean McBride</a>.)</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>This is not 2013 in review</title>
+  <link href="/blog/this-is-not-2013-in-review" />
+  <id>/blog/this-is-not-2013-in-review</id>
+  <updated>Fri, 03 Jan 2014 17:25:00 +0000</updated>
+  <published>Fri, 03 Jan 2014 17:25:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Tradition dictates that it’s time for my annual round-up of the year that was, with some goals for the year that will be. This time around, though, I feel less inclined to stick with this self-imposed tradition. Perhaps it’s the countless brag-tastic posts that friends have been posting on Facebook, or the predictable new year messages on Twitter, but I find myself feeling less and less enthusiastic about sharing my life online. And that, as it happens, is exactly why 2013 was one of the best years of my life so far: I made a conscious effort to focus less on the web and spend more time in the real world with the people I care about.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p>Tradition dictates that it’s time for my annual round-up of the year that was, with some goals for the year that will be. This time around, though, I feel less inclined to stick with this self-imposed tradition. Perhaps it’s the countless brag-tastic posts that friends have been posting on Facebook, or the predictable new year messages on Twitter, but I find myself feeling less and less enthusiastic about sharing my life online. And that, as it happens, is exactly why 2013 was one of the best years of my life so far: I made a conscious effort to focus less on the web and spend more time in the real world with the people I care about.</p>
+
+<p>This was in part motivated by our wedding in 2012, which made my wife and I realise just who it was that mattered to us. On the first day of 2013, we made a number of plans for things to do throughout the year, and a strong theme running through those plans was that we would see more of our favourite people. We succeeded and had a great year, but as promised I’m not going to go into a list of achievements, because I’m sick of reading that self-indulgent nonsense. As 2013 progressed, I found myself caring less and less about social media, less and less about online debates in the web community, and less and less about the representation of myself online. Partly by accident and partly by design, I became quieter.</p>
+
+<p>This new-found ‘quietness’ and desire to move life back offline seems to be a consistent theme with a number of other friends. I wasn’t even going to write this post until I was motivated by <a href="http://colly.com/">Colly</a>’s excellent — and completely brag-free — <a href="http://colly.com/comments/2013_a_year_in_review/">end-of-year round-up</a>, in which he described his decision, <em>‘to be quieter and just get on with my work and personal life.’</em> The pressures of internet life have been <a href="http://fsck.monographic.org/">highlighted in depth</a> by my close friend <a href="http://monographic.org/">Christopher Murphy</a> of late, too. A few weeks ago, at <a href="http://viewportindustries.com/insites-the-xmas-special">Insites: The Xmas Special</a>, the pre-Christmas meet-up run by me and <a href="http://keirwhitaker.com/">Keir</a>, there was an almost unanimous acceptance that we spread ourselves too thin; we focus too much on the web and our online personas; we let our personal lives suffer as a result.</p>
+
+<p>Well, in 2013 — particularly the end of it — I worked hard on switching this behaviour, and will continue to do so throughout 2014. I feel happier for caring less. Or, specifically, caring about more important things.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>CSS Regions and Edge Reflow</title>
+  <link href="/blog/css-regions-and-edge-reflow" />
+  <id>/blog/css-regions-and-edge-reflow</id>
+  <updated>Fri, 27 Sep 2013 11:00:00 +0000</updated>
+  <published>Fri, 27 Sep 2013 11:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Since <a href="http://elliotjaystocks.com/blog/hello-typekit/">joining the ranks of Adobe</a>, I’ve been lucky enough to get sneak peeks at early betas and access to the folks building some of these exciting new tools. The <a href="http://html.adobe.com/edge/">Edge</a> team, like Typekit, seem to enjoy a degree of autonomy that allows them to work on some seriously boundary-pushing new apps, and lately they’ve been showing me what they’ve been up to with <a href="http://html.adobe.com/edge/reflow/">Edge Reflow</a>.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_regions_reflow.png" alt="Illustration for CSS Regions and Edge Reflow" /></p> <p>Since <a href="http://elliotjaystocks.com/blog/hello-typekit/">joining the ranks of Adobe</a>, I’ve been lucky enough to get sneak peeks at early betas and access to the folks building some of these exciting new tools. The <a href="http://html.adobe.com/edge/">Edge</a> team, like Typekit, seem to enjoy a degree of autonomy that allows them to work on some seriously boundary-pushing new apps, and lately they’ve been showing me what they’ve been up to with <a href="http://html.adobe.com/edge/reflow/">Edge Reflow</a>.</p>
+
+<h3>CSS Regions</h3>
+
+<p>I’ve been excited about <a href="http://html.adobe.com/webplatform/layout/regions/">CSS Regions</a> for quite some time. Not only will they play a huge part in making responsive designs more robust, but they also enable web designers to flow content in a print-like manner — if you’ve ever used InDesign to flow a Story over several text boxes, you’ll get the idea. As <a href="http://dev.w3.org/csswg/css-regions/">the W3C spec</a> says:</p>
+
+<blockquote>
+<p>The CSS regions module allows content to flow across multiple areas called regions. The regions are not necessarily contiguous in the document order. The CSS regions module provides an advanced content flow mechanism, which can be combined with positioning schemes as defined by other CSS modules.</p>
+</blockquote>
+
+<p>In the latest version of Reflow, CSS Regions are baked right in. Here’s a quick video walkthrough from <a href="http://twitter.com/jacobsurber">Jacob</a>:</p>
+
+<p>There’s more information on <a href="http://blogs.adobe.com/edgereflow/2013/09/24/the-future-of-responsive-layouts-is-here/">the Reflow blog</a> and <a href="http://blogs.adobe.com/webplatform/2013/09/23/design-next-generation-responsive-designs-for-ios7-with-edge-reflow-cc-and-css-regions-a-story-of-collaboration/">the Web Platform team’s blog</a>. I thoroughly recommend reading them for the full details.</p>
+
+<h3>CSS Filters</h3>
+
+<p>While we’re on the subject of experimental CSS features, <a href="http://html.adobe.com/edge/code/">Edge Code</a> — the code editor built by the Edge team — has a number of them built in as well, in addition to CSS Regions ( <a href="http://blogs.adobe.com/edgecode/2013/09/24/edge-code-supports-css-regions/">here’s how you use CSS Regions in Edge Code</a>). <a href="http://html.adobe.com/webplatform/graphics/customfilters/">CSS Filters</a> (graphical filters in the Photoshop sense) are now available to use in the latest build, and you might be surprised to know that they work in the latest versions of Chrome and Safari (including iOS 7 Safari).</p>
+
+<h3>Reflow / Photoshop sync</h3>
+
+<p>Jumping back to Reflow, the latest build now sports some extremely useful integration with Photoshop. At this point I’ll be honest and admit that for a long time I wondered how the app could fit into my workflow, given that I usually jump back and forth between Photoshop and hand-coding during the design process (I’ll probably blog about this properly at some point, but for now it’s safe to say that I share <a href="http://danielmall.com/articles/the-post-psd-era/">Dan Mall’s opinion</a> on this sort of design process), but given Reflow’s recent updates and what I’m about to show you, it’s clear that it’s become a real web design application:</p>
+
+<p>In essence this means I can move my loose design ideas straight over into Reflow without needing to start a new Reflow project from scratch, and in my mind that’s a massive hurdle that’s just been removed. You can get the full details in <a href="http://blogs.adobe.com/edgereflow/2013/09/09/photoshop-reflow/">the Edge team’s blog post</a>.</p>
+
+<p>Also worth noting, in case you missed it: <a href="http://blogs.adobe.com/photoshopdotcom/2013/09/introducing-adobe-generator-for-photoshop-cc.html">you can now generate assets from Photoshop just by naming your layers</a>. That’s pretty cool, isn’t it?</p>
+
+<p>You can get all this awesome new stuff from <a href="http://creative.adobe.com/">creative.adobe.com</a>.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Digest is out now</title>
+  <link href="/blog/digest-is-out-now" />
+  <id>/blog/digest-is-out-now</id>
+  <updated>Wed, 14 Aug 2013 16:00:00 +0000</updated>
+  <published>Wed, 14 Aug 2013 16:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>A very quick post today to let you all know that Digest is now available to buy from <a href="http://readdigest.com/">readdigest.com</a>. And, once you’ve bought a licence, it’s available to read online on <a href="http://readdigest.com/1/">readdigest.com/1/</a>. Phone, tablet, desktop, whatever. I’m really proud of this one.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/Cover___angle.jpg" alt="Illustration for Digest is out now" /></p> <p>A very quick post today to let you all know that Digest is now available to buy from <a href="http://readdigest.com/">readdigest.com</a>. And, once you’ve bought a licence, it’s available to read online on <a href="http://readdigest.com/1/">readdigest.com/1/</a>. Phone, tablet, desktop, whatever. I’m really proud of this one.</p>
+
+<p>If you missed the build-up to Digest’s release and would like to have your appetite whet, I’ve been posting a whole load of teasers on <a href="http://dribbble.com/elliotjaystocks/tags/digest">Dribbble</a> and <a href="http://instagram.com/elliotjaystocks">Instagram</a>, and I’ve recently uploaded <a href="http://www.flickr.com/photos/elliotjaystocks/sets/72157635066319603/">the ‘press pack’ to Flickr</a>. Last week I published <a href="http://elliotjaystocks.com/blog/digests-typography-and-grids-part-1/">the first blog post about Digest’s typography and grids</a> — part two will arrive later this week.</p>
+
+<p>Thanks for your time, folks. It’s an incredible feeling to launch a brand new product, and across multiple media this time, too. Phew!</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Digest’s typography &amp; grids (part 1)</title>
+  <link href="/blog/digests-typography-and-grids-part-1" />
+  <id>/blog/digests-typography-and-grids-part-1</id>
+  <updated>Wed, 07 Aug 2013 14:00:00 +0000</updated>
+  <published>Wed, 07 Aug 2013 14:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Ahead of <a href="http://viewportindustries.com/digest">Digest</a>’s release next Wednesday, I wanted to talk a bit about the typography and grids I used to design the debut issue, which will in turn form the templates for our future issues.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_digest_0.jpg" alt="Illustration for Digest’s typography & grids (part 1)" /></p> <p>Ahead of <a href="http://viewportindustries.com/digest">Digest</a>’s release next Wednesday, I wanted to talk a bit about the typography and grids I used to design the debut issue, which will in turn form the templates for our future issues.</p>
+
+<p>Way back in February <a href="http://drbl.in/gGLB">I dribbbled a teaser of the page grid</a>, and very little changed from that early work. Here’s the final grid, along with a few guides:</p>
+
+<p><img src="/assets/article_digest_1.png" alt="Digest"></p>
+
+<p>The red diagonal guides represent the <em>Van de Graaf Canon</em>, which dictates the ideal placement of text blocks on the page. It also happens to correspond to <em>Rosarivo’s Gutenberg Canon</em> — indicated here by the cyan horizontal and vertical guides — which splits the page into ninths. For a concise yet thorough overview of these tried and tested grids, I can thoroughly recommend Alexander Ross Charchar’s article <a href="http://retinart.net/graphic-design/secret-law-of-page-harmony/"><em>‘The Secret Law of Page Harmony’</em></a>. It’s a fantastic topic and Alex explains it beautifully. Never before has the medium of the animated GIF been put to such <a href="http://retinart.net/wp-content/uploads/media/images/secret-law-of-page-harmony/graaf.gif">educational uses</a>.</p>
+
+<p>I chose a baseline of 12pt, which gives me eleven lines per one-ninth unit. Actually, the baseline doesn’t correspond to the guides exactly, but the ‘slippage’ is so slight, it’s not worth worrying about (in my opinion).</p>
+
+<p><img src="/assets/article_digest_2.png" alt="Digest"> At the top of the page, the baseline corresponds exactly to the one-ninth Gutenberg divisions; by the bottom of the page, the correlation has gradually slipped.</p>
+
+<p>I’m always expounding the benefits of designing from the type out and designing Digest was no exception. Although I picked my baseline first to correspond with the overall grid, deciding on the actual leading was simply a case of changing the font size until the balance felt right. In the end, the body type was set in <a href="http://www.suitcasetype.com/tabac-slab/specimen">Tabac Slab Light</a> at 7.5pt over 12pt.</p>
+
+<p>For smaller type, like the 6pt footnotes, I used an incremental leading of 8pt to align the type with the main 12pt baseline every three lines.</p>
+
+<p><img src="/assets/article_digest_3.png" alt="Digest"> Body type at 7.5pt/12pt and footnote at 6pt/8pt, aligned every three lines.</p>
+
+<p>However, before I delve too deeply into the nuances of the type, let’s return to the grid. Originally I’d planned on swapping between a two-column and three-column layout within the main content area, but during production it became clear that a three-column layout would allow for much more freedom once I started inserting headings and images. So every article in Digest uses a three-column layout except for the messages from us, the editors, which use two wider columns.</p>
+
+<p><img src="/assets/article_digest_4.jpg" alt="Digest"> The three-column layout used for articles (left) vs. the two-column layout used for messages from the editors (right).</p>
+
+<p>So, let’s talk type. I won’t go into the various typefaces I considered for Digest, other than to say that there weren’t really that many: I’d been wanting to use Tomáš Brousil’s Tabac ( <a href="https://www.suitcasetype.com/tabac/specimen">serif</a> / <a href="http://www.suitcasetype.com/tabac-slab/specimen">slab</a> / <a href="https://www.suitcasetype.com/tabac-sans/specimen">sans</a> / <a href="https://www.suitcasetype.com/tabac-mono/specimen">mono</a>) superfamily since I submitted the Slab as <a href="http://typographica.org/typeface-reviews/tabac-slab/">my contribution to Typographica’s favourite typefaces of 2012</a> and I’m always fond of superfamilies, because it means combining typefaces is a much easier task: the serif, slab, and sans (I didn’t use the mono) each perform different roles, and the generous spectrum of weights within each typeface give you pretty much every flavour you could ask for.</p>
+
+<p>In fact, the variety available in the serif alone is incredible: <a href="http://www.suitcasetype.com/tabac/styles">Tabac’s styles are divided over four grades</a>, with G1 offering the highest contrast and suitability for display sizes, through to G4, with lower contrast and better suitability as body type. The highest contrast available — Tabac G1 Bold — is used in Digest for (most of) the primary headings, page numbers, and drop-caps. It’s not a Bodoni, of course, but has the same sort of authoritative elegance that Bodonis have in high-end fashion publications, and which we wanted as well.</p>
+
+<p><img src="/assets/article_digest_5.jpg" alt="Digest"> Tabac G1 Bold for headings, Tabac Sans (Bold and Light) for credits, and Tabac G4 Italic for intros.</p>
+
+<p>Tabac G4 Italic is used for article intros, while various weights of Tabac Sans are used for the credits, running footer, footnotes, and interview questions.</p>
+
+<p>The main body text is set entirely in Tabac Slab Light. I’m partial to slabs anyway — and they’re almost always more legible at body sizes than a serif or sans — but this really is a beautiful typeface. For Digest, it sets our serious-but-not-too-serious tone perfectly.</p>
+
+<p><img src="/assets/article_digest_6.png" alt="Digest"></p>
+
+<p>With the main typography styles set, and with the grids and columns in place, the next step was to start mapping out some of the more detailed placements, defining how text blocks and images might interact; how different scenarios or lengths of content might require adjustments to the rules. Personally, that’s where I find things get a bit more fun, and that’s what I’ll be covering in part two.</p>
+
+<p>I’ll also be going into more detail about the typography, including the decisions that went into solving some of <a href="http://viewportindustries.com/digest">Digest</a>’s trickier typesetting problems, and some of the techniques that set this new magazine apart from my previous print projects like <a href="http://8faces.com/">8 Faces</a> and <a href="http://viewportindustries.com/insites-the-book">Insites: The Book</a>. Stay tuned!</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>My new magazine: Digest</title>
+  <link href="/blog/my-new-magazine-digest" />
+  <id>/blog/my-new-magazine-digest</id>
+  <updated>Mon, 29 Jul 2013 14:00:00 +0000</updated>
+  <published>Mon, 29 Jul 2013 14:00:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>If you’ve seen any of <a href="http://dribbble.com/elliotjaystocks">my recent Dribbble shots</a>, you’ll be aware of <a href="http://viewportindustries.com/digest">Digest</a> — a new magazine from me, my Viewport Industries cohort <a href="http://keirwhitaker.com/">Keir Whitaker</a>, and the incredible team of talented writers, editors, photographers, and illustrators we’ve assembled for the publication. I’ve not yet mentioned this latest side project on the blog, so this post is an attempt to rectify that.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/P1030324.jpg" alt="Illustration for My new magazine: Digest" /></p> <p>If you’ve seen any of <a href="http://dribbble.com/elliotjaystocks">my recent Dribbble shots</a>, you’ll be aware of <a href="http://viewportindustries.com/digest">Digest</a> — a new magazine from me, my Viewport Industries cohort <a href="http://keirwhitaker.com/">Keir Whitaker</a>, and the incredible team of talented writers, editors, photographers, and illustrators we’ve assembled for the publication. I’ve not yet mentioned this latest side project on the blog, so this post is an attempt to rectify that.</p>
+
+<p>First and foremost, I have a date for you: <strong>Wednesday 14th August</strong>. Put that in your diary, because that’s when issue one will go on sale. That’s just over two weeks away. Like <a href="http://8faces.com/">8 Faces</a>, we have a limited print run.</p>
+
+<p>So, what exactly is this new publication of ours? Put simply, it’s <em>‘a seasonal digest of culture that surrounds the world of the creative professional.’</em> Digest is not about the web, or design, or technology, but its content exists very much in our spectrum. It’s a lifestyle magazine. Allow me to quote from the issue’s introduction:</p>
+
+<blockquote>
+<p>When we talk to our friends in the web / tech / design communities, we rarely talk about page composition theory or the latest Javascript library. (Well, not that much, anyway.) Instead, our discussions have a tendency to revolve around great coffee places that are a joy to work from; boutique restaurants that are perfect for treating our favourite clients; tucked-away corners of the world’s cities that are worth a visit on that spare day or two after a conference. Digest is an attempt to bring those conversations to the printed page. Conversations that — for the large part — are about the culture we’ve found on our travels around the globe: the world away from our desks.</p>
+</blockquote>
+
+<p>With Digest we’re aiming to provide a seasonal dose of inspiration for the discerning traveller and a reminder that the world away from our computers is ripe for exploration. And we’re doing so on lovingly-crafted A3 pages. It’s big!</p>
+
+<p>In the next couple of weeks, I’ll be blogging more about Digest: its production, its contents, and its raison d’être. I’ll also be posting more on <a href="http://dribbble.com/elliotjaystocks">Dribbble</a> and <a href="http://instagram.com/elliotjaystocks">my Instagram feed</a>, so follow along for more pre-release details.</p>
+
+<p>See that photo above? That’s one of the spreads (an article I wrote about craft beer), going through the press last Tuesday. ( <a href="http://vimeo.com/71262014">Here it is in action</a>.) As I write this, the magazines are on their way from the binders to our distributor, and I’ll be picking up the very first copies tomorrow. I can’t wait to smell those pages!</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>(R)evolution</title>
+  <link href="/speaking/#smashing-conference-1" />
+  <id>/speaking/smashing-conference-1</id>
+  <updated>Mon, 08 Jul 2013 12:05:00 +0000</updated>
+  <published>Mon, 08 Jul 2013 12:05:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#smashing-conference-1">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#smashing-conference-1">Find out more</a>.]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Smashing Conference</title>
+  <link href="/speaking/#smashing-conference-2" />
+  <id>/speaking/smashing-conference-2</id>
+  <updated>Sun, 07 Jul 2013 14:05:00 +0000</updated>
+  <published>Sun, 07 Jul 2013 14:05:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<a href="/speaking/#smashing-conference-2">Find out more</a>.]]></summary>
+  <content type="html"><![CDATA[<a href="/speaking/#smashing-conference-2">Find out more</a>.]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Countdone is now available in the App Store</title>
+  <link href="/blog/countdone-is-now-available-in-the-app-store" />
+  <id>/blog/countdone-is-now-available-in-the-app-store</id>
+  <updated>Wed, 26 Jun 2013 11:25:00 +0000</updated>
+  <published>Wed, 26 Jun 2013 11:25:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>After offering <a href="http://elliotjaystocks.com/blog/coming-soon-countdone-for-ios/">a tease</a> a few months ago, I’m very pleased to say that Countdone — my first ever iOS app — is now available to <a href="https://itunes.apple.com/gb/app/countdone/id659428913?mt=8&amp;uo=4">buy in the App Store</a> for a mere sixty-nine of your English pence!</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_countdone_available_now.jpg" alt="Illustration for Countdone is now available in the App Store" /></p> <p>After offering <a href="http://elliotjaystocks.com/blog/coming-soon-countdone-for-ios/">a tease</a> a few months ago, I’m very pleased to say that Countdone — my first ever iOS app — is now available to <a href="https://itunes.apple.com/gb/app/countdone/id659428913?mt=8&amp;uo=4">buy in the App Store</a> for a mere sixty-nine of your English pence!</p>
+
+<p>At some point I’m going to blog about the entire process, but in the meantime I’ve made a (very unprofessional) <a href="https://vimeo.com/69156611">video</a> to show you the main parts of the app:</p>
+
+<p>(The video’s soundtrack is a preview of <a href="https://soundcloud.com/skulltubes/nordiske-traer-render-1">one of my new songs</a>, by the way.)</p>
+
+<p>In case you’re wondering what exactly Countdone is, it’s essentially the essence of the <a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a>, distilled into a beautifully simple interface. Set time limits for your to-dos and watch as the timer counts down and the screen turns from green to red, motivating you to get things done by applying a gentle amount of pressure. For added motivation, turn on the optional sounds for a further indication of how much time you have left and hit that ‘done’ button as fast as you can!</p>
+
+<p>So, <a href="https://itunes.apple.com/gb/app/countdone/id659428913?mt=8&amp;uo=4">head on over to the App Store</a> to get the app, and if you like it, please leave us a nice review! We’ve also got <a href="http://viewportindustries.com/countdone">a page for Countdone on the brand new Viewport Industries site</a>.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>3 reasons I’m excited about WWDC 2013</title>
+  <link href="/blog/3-reasons-im-excited-about-wwdc-2013" />
+  <id>/blog/3-reasons-im-excited-about-wwdc-2013</id>
+  <updated>Tue, 04 Jun 2013 09:15:00 +0000</updated>
+  <published>Tue, 04 Jun 2013 09:15:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>As with any lead-up to an Apple event, the rumour mills and speculations are building to a frenzy ahead of next week’s <a href="https://developer.apple.com/wwdc/">WWDC</a>. However, this one is particularly exciting to me, and not only because I’ll be in San Francisco while it’s on.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/wwdc13_about_main.jpg" alt="Illustration for 3 reasons I’m excited about WWDC 2013" /></p> <p>As with any lead-up to an Apple event, the rumour mills and speculations are building to a frenzy ahead of next week’s <a href="https://developer.apple.com/wwdc/">WWDC</a>. However, this one is particularly exciting to me, and not only because I’ll be in San Francisco while it’s on.</p>
+
+<h3>1. Apple’s long-awaited music streaming service</h3>
+
+<p>Sunday’s news about <a href="http://theverge.com/2013/6/2/4389230/apple-reportedly-signs-iradio-agreement-warner-music/in/4157165">Apple signing with Warner Music</a> seems like ‘iRadio’ (please don’t let them actually call it that) could be a reality pretty soon, and now Sony is the only major label holding out. (I guess you can’t blame them: <a href="http://www.digitaljournal.com/article/351448">film and music is the only area they make money in these days</a>.) All signs point towards <a href="http://nytimes.com/2013/06/03/technology/apple-is-said-to-be-pressing-to-complete-deals-for-internet-radio.html?pagewanted=all&amp;_r=2&amp;">Apple announcing its streaming service at WWDC</a> if they can get Sony on board, and I’m pretty excited by that.</p>
+
+<p>I feel pretty strongly about <a href="http://elliotjaystocks.com/blog/a-new-model-for-the-musician-to-listener-relationship/">the way we consume music</a>, and although artists and labels bemoan the reduced royalties generated by the likes of Spotify, Rdio, and Pandora, the tide <em>is</em> changing and it seems futile to resist listeners’ move away from ownership. However, I believe that there’s space for someone to evolve our existing sense of ownership (well, the iTunes library) and combine it with the best parts of the existing streaming services, leading to something truly innovative. <a href="http://elliotjaystocks.com/blog/music-collections-in-the-era-of-the-cloud/">As I’ve said before</a>, Apple are well-placed to create such a service and I sincerely hope that’s what we see unveiled next week.</p>
+
+<p>I have my doubts, though:</p>
+
+<ul>
+<li>Firstly, all these tailored-to-your-taste radio rumours don’t sound particularly innovating. I want to be pointed towards new music, but I’ve always avoided radio-like experiences built into the likes of Spotify. Personally I hate listening to music on a one-song-at-a-time basis. Give me albums!</li>
+<li>Secondly, can we trust Apple to get this right? Let’s not forget <a href="http://9to5mac.com/2012/05/29/cook-apple-considering-killing-off-ping-admits-it-has-to-be-more-social/">the disaster that was Ping</a> and iTunes’ clumsy Genius UI.</li>
+<li>Thirdly, there are a few questions about integration: if the streaming service is part of the iTunes application, is it merely another tab, and how will that work across multiple devices? The iTunes / App Store apps across OS X and two different versions of iOS have been wildly inconsistent (some part of the same app, others not). And as much as I liked the desktop iTunes 11 redesign when it launched, I’ve found it to be a somewhat frustrating library experience and I know I’m not alone. Will this be addressed as part of the introduction of iRadio? Probably not, I’m guessing.</li>
+</ul>
+
+<p>For further reading, I suggest <a href="http://theverge.com/2013/6/3/4393124/apple-i-radio-streaming-music-stream">The Verge’s summary of Apple’s journey towards a streaming service</a>.</p>
+
+<h3>2. iOS 7, led by Jony Ive</h3>
+
+<p>Whilst I try to ignore those silly ‘flat design’ arguments and actively avoid those ‘like’-baiting Dribbble shots of what iOS could look like if it had its gradients removed (sigh), there’s no doubt that an Ive-led redesign of iOS is around the corner and I’m confident that it’ll be a step forward, no matter how subtle or drastic a form it takes.</p>
+
+<h3>3. New hardware</h3>
+
+<p>It’s unusual for hardware to be announced at WWDC due to its obvious <em>developer</em> focus, but based on Apple’s release cycle and almost-guaranteed announcement of iOS 7, I’d say the iPhone 5S is a sure bet.</p>
+
+<p>There are lots of rumours floating around about <a href="http://9to5mac.com/2013/06/03/leaked-skus-likely-point-to-macbook-refresh-at-wwdc-as-inventory-tightens/">subtle refreshes to the MacBook line-up based mainly on reduced stock levels</a>, although it’s likely they’re mainly <a href="http://9to5mac.com/2013/06/02/wwdc-2013-slimmer-retina-macbook-pro-w1080p-camera-and-macbook-air-microphone-improvements-expected/">processor and camera upgrades</a>. I’d love to see the Airs get a Retina upgrade, but it seems unlikely. Let’s hope I’m proven wrong! From a purely curious perspective, I’m intrigued by the rumours of <a href="http://macrumors.com/2013/05/31/mac-pro-supplies-tightening-as-wwdc-approaches/">a new Mac Pro, again mainly based on dwindling inventory</a>, but personally I’m still hoping for a Retina iPad Mini. Sadly I think it’s less likely, with <a href="http://techradar.com/news/mobile-computing/tablets/ipad-mini-2-release-date-news-and-rumours-1110910">rumours point to it appearing at the end of the year</a>.</p>
+
+<p>There’s the potential for Apple to unveil some seriously cool stuff next week, and of course a huge potential for disappointment. With this WWDC pointing to the possibility of so many future products, in many ways I wonder if this could be an event that defines a post-Jobs Apple. Whatever happens, I’m looking forward to it.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+    
+<entry>
+  <title>Hello, Typekit</title>
+  <link href="/blog/hello-typekit" />
+  <id>/blog/hello-typekit</id>
+  <updated>Thu, 23 May 2013 13:55:00 +0000</updated>
+  <published>Thu, 23 May 2013 13:55:00 +0000</published>
+  
+  <summary type="html"><![CDATA[<p>Today I’ve got some very exciting personal news to share: I’m proud to announce that I’ve joined the <a href="http://typekit.com/">Adobe Typekit</a> team as Creative Director.</p>
+
+<p>It’s a thrill and an honour to be stepping into <a href="http://jasonsantamaria.com/">Jason Santa Maria</a>’s shoes and to be working with such a talented bunch of people on a product I genuinely love and use daily. It’s made even more exciting by the new directions the product itself is taking: I believe that <a href="http://blog.typekit.com/2013/05/06/sneak-preview-syncing-fonts-to-your-desktop/">the recent MAX announcement about desktop fonts</a> is a real game-changer and it’s just the tip of the iceberg.</p>
+]]></summary>
+  <content type="html"><![CDATA[<p><img src="/assets/article_typekit.png" alt="Illustration for Hello, Typekit" /></p> <p>Today I’ve got some very exciting personal news to share: I’m proud to announce that I’ve joined the <a href="http://typekit.com/">Adobe Typekit</a> team as Creative Director.</p>
+
+<p>It’s a thrill and an honour to be stepping into <a href="http://jasonsantamaria.com/">Jason Santa Maria</a>’s shoes and to be working with such a talented bunch of people on a product I genuinely love and use daily. It’s made even more exciting by the new directions the product itself is taking: I believe that <a href="http://blog.typekit.com/2013/05/06/sneak-preview-syncing-fonts-to-your-desktop/">the recent MAX announcement about desktop fonts</a> is a real game-changer and it’s just the tip of the iceberg.</p>
+
+<p>I’ve actually been working with Typekit since January, and over the last few months I’ve been helping the team to solve the design problems posed by the introduction of desktop-syncing (some of which could be seen in <a href="http://max.adobe.com/watch.html">Jeff’s MAX demo</a>), as well as some more future-facing stuff that will see the light of day over the next few months. For me, joining the Typekit team is about bringing together two worlds: the web, which has always been my background, and type, my focus in the last couple of years. If anyone’s been wondering why I’ve been <a href="http://foursquare.com/elliotjaystocks/history">checking in a lot in San Francisco</a> lately, this is why!</p>
+
+<p>So, what does this mean for my other projects, like <a href="http://8faces.com/">8 Faces</a> or <a href="http://viewportindustries.com/">Viewport Industries</a>? Well, I’m happy to say that they’re not going anywhere: Jason managed to balance his Typekit commitments with his work on <a href="http://abookapart.com/">A Book Apart</a> and <a href="http://madebymighty.com/">Mighty</a>, and I intend to do the same for my projects. I’ll also continue to work remotely from Bristol, with quarterly-ish trips to the Typekit office. As I mentioned, we’ve been working together with this set-up since January, and it’s been wonderful.</p>
+
+<p>I imagine there will be some sceptical reactions to this news, especially from the anti-Adobe camp, but I honestly feel that Adobe have turned things around in recent years, exemplified by their great <a href="http://adobe.com/products/creativecloud.html">Creative Cloud</a> product, their next-generation suite of <a href="http://html.adobe.com/edge/">Edge tools and services</a>, their <a href="http://html.adobe.com/webplatform/">contributions to new web standards</a>, and of course their acquisition of Typekit. With many acquisitions ending in the death of a product, being part of the Adobe family has actually allowed Typekit to grow and — most importantly — get <em>better</em>. I feel incredibly proud to be in a position where I can contribute to this continued success, and incredibly lucky that I can do so in a way that still allows me creative freedom in other areas of my life.</p>
+
+<p>These are exciting times. Thanks for coming along for the ride.</p>
+]]></content>
+  <author>
+    <name>Skylar Challand</name>
+  </author>
+</entry>
+
+  
+</feed>

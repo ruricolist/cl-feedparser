@@ -1,0 +1,920 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom'
+      xmlns:thr='http://purl.org/syndication/thread/1.0'
+      xml:base='https://www.tbray.org/ongoing/ongoing.atom'
+      xml:lang='en-us'>
+ <title>ongoing by Tim Bray</title>
+ <link rel='hub' href='http://pubsubhubbub.appspot.com/' />
+ <id>https://www.tbray.org/ongoing/</id>
+ <link href='./' />
+ <link rel='self' href='' />
+ <link rel='replies'       thr:count='101'       href='/home/tbray.org/www/html/ongoing/comments.atom' />
+ <logo>rsslogo.jpg</logo>
+ <icon>/favicon.ico</icon>
+ <updated>2013-07-20T14:55:02-07:00</updated>
+ <author><name>Tim Bray</name></author>
+ <subtitle>ongoing fragmented essay by Tim Bray</subtitle>
+ <rights>All content written by Tim Bray and photos by Tim Bray Copyright Tim Bray, some rights reserved, see /ongoing/misc/Copyright</rights>
+ <generator uri='/misc/Colophon'>Generated from XML source code using Perl, Expat, Emacs, Mysql, Ruby, Java, and ImageMagick.  Industrial-strength technology, baby.</generator>
+
+<entry xml:base='When/201x/2013/07/20/'>
+ <title>Cameraccessories</title>
+ <link href='Luma-Cinch-and-Helios-M44m-58m' />
+ <link rel='replies'        thr:count='1'        type='application/xhtml+xml'        href='Luma-Cinch-and-Helios-M44m-58m#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/20/Luma-Cinch-and-Helios-M44m-58m</id>
+ <published>2013-07-20T12:00:00-07:00</published>
+ <updated>2013-07-20T00:50:55-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Photos/Cameras' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Photos' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Cameras' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>Words and pictures about add-ons, specifically the <a href='http://www.luma-labs.com/cinch'>Luma Cinch</a> (a new thing) and the <a href='http://en.wikipedia.org/wiki/Helios_(lens_brand)'>Helios</a> 44m-4 58mm f/2 lens (a very old thing).</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>Words and pictures about add-ons, specifically the
+<a href="http://www.luma-labs.com/cinch">Luma Cinch</a> (a new thing) and the
+<a href="http://en.wikipedia.org/wiki/Helios_(lens_brand)">Helios</a> 44m-4
+58mm f/2 lens (a very old thing).</p>
+<h2 id='p-1'>Soviet Lenses</h2>
+<p>What happened was, since I got on board the Fujifilm soul train via the mighty
+<a href="http://www.amazon.com/s/?_encoding=UTF8&amp;camp=1789&amp;creative=390957&amp;field-keywords=fujifilm%20x-e1&amp;linkCode=ur2&amp;rh=i%3Aaps%2Ck%3Afujifilm%20x-e1&amp;sprefix=fujifilm%20x-%2Caps&amp;tag=ongoing-20&amp;url=search-alias%3Daps">Fuji X-E1</a>
+and the astoundingly-good little Fujinon XF35 35m f/1.4, I’ve been tracking
+the Fuji-X-rated blogs, where I ran across Jonas Dyhr Rask’s
+<a href="http://jonasraskphotography.com/2013/06/23/vintage-standard-lens-shootout/">Vintage Standard Lens Shootout</a>,
+where I heard about the Helios 44m-4 58mm F/2.0.  I hated some of the
+more-garish
+pix in his <a href="http://jonasraskphotography.com/2013/05/17/helios-44m-4-58mm-f2-review/">review
+of the lens</a> but was struck by its potential.</p>
+<p>A little research suggested that this product of the USSR-that-was falls into the vanishingly-small
+category of pretty-damn-good lenses you can EBay for cheap.  So I EBayed one
+from somewhere in the Ukraine, and also an M42-screwmount-to-Fujinon-X-mount
+adapter from somewhere else on EBay.  It cost me less than $100 for both put
+together, including shipping. Here’s the first picture I took with it.</p>
+<img src="DSCF3840.png" alt="Floorlamp, Fuji X-E1, Helios 44m-4" />
+<p>I didn’t think about that one much and it still came out OK, but just like
+the weight-loss ads on TV say, this is not a typical result. The lens is
+<em>difficult</em>. Since everything is manual, you have to think hard about
+focus <em>and</em> aperture <em>and</em> shutter speed <em>and</em> ISO on
+every damn shot. You have an important ally in this struggle, namely the Fuji
+cameras’ manual-focus-assist mode, which is pretty magical. Having said that,
+at least half of my shots come out too light or too dark. And having said
+<em>that</em>, the remarkable depth and quality of the Fuji raw files let me
+save lots of those.  I’m thinking that a lens being difficult is not
+necessarily a bad thing</p>
+<p>As I write this, my twin nieces are visiting me; here’s one.</p>
+<img src="DSCF3866.png" alt="Young woman, Fuji X-E1, Helios m44m-4" />
+<div class="caption"><p>Check out her right earring’s shadow, and her left
+eyelash.</p></div>
+<p>Now, lots of sunshine makes everything easy and I didn’t have to work too
+hard to dial that in. But then my niece got between me and the sun;
+Soviet lenses don’t come with hoods, and the incoming local star totally made
+it lose its shit; but in a not entirely unattractive way.</p>
+<img src="DSCF3888.png" alt="Young woman and sunbeams, Fuje X-E1, Helios 44m-4" />
+<p>The lens claims it goes down to f/2.0, but it’s got no stabilization plus
+I’m wondering if there might be Soviet perfidy happening, because
+I’ve had no luck in low light with this sucker, even at stupidly high
+ISOs.  Haven’t given up on the challenge though.</p> 
+<p>I should probably mention that the X-E1 with the adapter and Helios on it
+is adorably steampunk.</p>
+<img src="RUNE6841.png" alt="Fujifilm X-E1 with Helios 44m-4 58mm f/2 mounted" />
+<p>See the strap on the left side of the picture?  That would be a Luma labs
+Cinch, which turns out to be a real good choice.</p>
+<h2 id='p-1'>Strapping</h2>
+<p>I was an early adopter of the Luma Loop, partly because I know and admire 
+<a href="http://duncandavidson.com/">James Duncan Davidson</a>, Luma’s
+co-founder.  It’s served me well with my Pentaxes, to which I often attach
+<a href="/ongoing/When/200x/2009/01/30/Lensing#p-2">big
+fat lenses</a>; dangling by my thigh with instant-one-hand-grab potential is
+just the thing for that form factor.</p>
+<p>Unfortunately you can’t buy a new Loop any more
+<a href="http://petapixel.com/2011/11/15/luma-loop-camera-strap-killed-off-after-patent-awarded-to-black-rapid/">for
+legal reasons</a>.</p>
+<p>I tried the Loop on the X-E1 but went back to the flimsy neckstrap
+that came in its box.  Because that little camera wants to sit
+softly on the middle of your chest; you can get it from there to your eye
+faster than any big-lensed SLR down on your hip.  Plus you get to feel like a
+glamorous old-school war-photog with a Leica.</p>
+<p>I got my hands on a new  Luma-labs
+<a href="http://www.luma-labs.com/cinch">Cinch</a> and tried it on the big
+Pentaxes but it wasn’t obviously better. So I cinched it down to a real-short
+position and swapped it in for the came-in-the-box strap, and wow, that’s just
+the ticket.
+The part that goes around the back of your neck is comfy and stable,
+and you can position the camera anywhere between your sex organs and Adam’s
+apple and have it up to your face with a chance to catch a passing orca or
+tugboat.</p>
+<p>I’m hooked, or cinched, or something.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/07/15/'>
+ <title>Golang Diaries II</title>
+ <link href='Golang-Diaries-2' />
+ <link rel='replies'        thr:count='9'        type='application/xhtml+xml'        href='Golang-Diaries-2#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/15/Golang-Diaries-2</id>
+ <published>2013-07-15T12:00:00-07:00</published>
+ <updated>2013-07-15T15:18:15-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Software' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Software' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>I still haven&#x2019;t written a thousand lines of Go; but what I have created does useful work and (considering I had to learn a language and a bunch of libraries along the way) didn&#x2019;t burn that much time.  Herewith another batch of <a href='/ongoing/When/201x/2011/08/05/Permanoob'>programming-permanoob</a> reportage.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>I still haven’t written a thousand lines of Go; but what I have created
+does useful work and (considering I had to learn a language and a bunch of
+libraries along the way) didn’t burn that much time.  Herewith another batch
+of
+<a href="/ongoing/When/201x/2011/08/05/Permanoob">programming-permanoob</a>
+reportage.</p>
+<p>Previously:
+<a href="/ongoing/When/201x/2013/06/16/Go-Love-Hate">Golang Diaries I</a>.</p>
+<h2 id='p-1'>Illustrated Love Letter</h2>
+<p>I’m a Web guy, and this speaks for itself:</p>
+<pre><code>  resp, err := http.Get(uri)
+
+  if err != nil {
+    // horrible networking error, deal
+    return failure
+  }
+  if resp.StatusCode != 200 {
+    // grouchy server, deal
+    return failure
+  }
+  mediaType := resp.Header.Get("Content-Type")
+  if !strings.HasPrefix(mediaType, "application/json") {
+    // bogus media type, deal
+    return failure
+  }
+
+  defer resp.Body.Close()
+  body, err := ioutil.ReadAll(resp.Body)
+  // body is a byte array with the server response</code></pre>
+<p>Isn’t it pathetic that so many allegedly-mainstream languages don’t have
+HTTP libraries that are this natural and idiomatic?</p>
+<h2 id='p-1'>Other Good Stuff</h2>
+<p>Just like everyone says, Go makes concurrency a lot easier, without having
+to think about monads or actors or transactions.  Just write simple linear
+code (like that HTTP stuff above) and farm it out with go-routines and
+channels.</p>
+<p>Here’s sort of the core app logic in findIDP:</p>
+<pre><code>  c := make(chan SearchResult)
+  go timeout(c)
+  go searchDNS(email, c, logger)
+  go searchWebfinger(email, c, logger)
+  go searchWebFist(email, c, logger)
+  go matchDomainPatterns(email, c, logger)</code></pre>
+<p>This is great... these all go do their thing and send the results back
+whenever they get them (the <a href="http://webfist.org/">WebFist</a> flow
+involves two different HTTP round-trips).  Then I watch the results trickle
+in, bail on a time-out (currently 2 seconds, hmm), exit if I get an
+authoritative result, otherwise select from among the others based on a bunch
+of heuristics; I don’t spend a microsecond thinking about concurrency
+issues.</p> 
+<p>Some of the important virtues of Erlang here, without the dorky syntax and
+general weirdness.</p>
+<h2 id='p-3'>Happiness</h2>
+<p>Matz wrote Ruby to make programmers happy, and it makes me happy.  Go
+doesn’t particularly, but I’ll probably keep using it.</p>
+<p>In Ruby code I find the smallest semantic gap between the image of the
+problem in my head and the code on my screen.  In C, I find the smallest
+semantic gap between the code on the screen and my understanding of what the
+computer does.</p>
+<p>Go gets real close to C in terms of the mapping onto the underlying
+machine. There’s no reason that Go shouldn’t be as fast as C, and given the
+quality of the team working on it, I’m sure it will be.</p>
+<p>Go isn’t nearly as close as Ruby to the model in my head, but it’s a whole
+hell of a lot closer than C is. This seems to me like a decent trade-off.</p>
+<p>I stumbled across
+<a href="http://go-lang.cat-v.org/quotes">Quotes About Go Programming</a> at
+cat-v.org, and while the enthusiasts are kind of boring, I found I was
+resonating with some of the more balanced takes, such as <i>If I had to
+describe Go with one word it’d be “sensible”.</i> and <i>Why would you have a
+language that is not theoretically exciting? Because it’s very useful.</i></p>
+<h2 id='p-5'>Type -= Ceremony</h2>
+<p>Static typing is <em>so much</em> less painful when you have good type
+inference, as Go has.  I’m wondering how much of my cursing at Java
+is really at all the declaration ceremony; it gets in the way of the work I’m
+trying to do. Sometimes it’s helpful for readability to make a type visible,
+and Go has the 
+<code>var</code> facility for doing that.</p>
+<h2 id='p-1'>And Last, the Gripes</h2>
+<p>It really irritates me, that in a modern programming
+language, if I have an array full of type <code>Foo</code>, and a function
+that converts <code>Foo</code> to <code>Bar</code>, there isn’t a
+<code>map()</code> method that just gives me an array full of
+<code>Bar</code>.  And then a separate <code>concurrentMap()</code>, which
+does the obvious.</p>
+<p>Golang is sort of half-pregnant; it provides the incredibly-useful
+<a href="http://golang.org/ref/spec#Appending_and_copying_slices">append()</a>
+method, that appends to any type of array.</p>
+<p>No, this is <em>not</em> a plea for generics!  I just want some functional
+goodies.</p>
+<p>Speaking of missing goodies, a little introspection would be nice.  If you
+glance at that findIDP code fragment above, it’s obvious that I have a lot of
+different chunks of software that offer what you might call a
+<code>Searcher</code> interface.  Why can’t I have them all in a directory
+or package or somewhere and let the program figure out how many there are and
+fire them all off?  Quite possibly it can and I just haven’t got there yet.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/07/11/'>
+ <title>CL XXV: Work Week</title>
+ <link href='Cabin-Week' />
+ <link rel='replies'        thr:count='3'        type='application/xhtml+xml'        href='Cabin-Week#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/11/Cabin-Week</id>
+ <published>2013-07-11T12:00:00-07:00</published>
+ <updated>2013-07-12T08:43:16-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Photos' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Photos' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Cottage Life' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Cottage Life' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>There were two nations&#x2019; birthdays in four days, thus a slow spell at work; so we decided on a solid week of <a href='/ongoing/What/The%20World/Cottage%20Life/'>Cottage Life</a>.  And we invited all our friends to come for lunch. Friends came, work got done, and photos got taken.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>There were two nations’ birthdays in four days, thus a slow spell at work;
+so we decided on a solid week of
+<a href="/ongoing/What/The%20World/Cottage%20Life/">Cottage Life</a>.  And we invited all our friends
+to come for lunch. Friends came, work got done, and photos got taken.</p>
+<h2 id='p-1'>Work</h2>
+<p>We have pretty good cell coverage on
+<a href="http://en.wikipedia.org/wiki/Keats_Island_(British_Columbia)">the island</a> from
+<a href="https://mobility.telus.com/en/BC/home/">Telus Mobility</a> and get 3
+bars of HSPA+;
+<a href="http://www.speedtest.net/">Speedtest.net</a> says 3.5M down/2.3 up,
+which is plenty enough for my job. We make a hotspot with a Galaxy Nexus;
+reliability is better out on the deck than in the cabin, which is a better
+place to work anyhow.</p>
+<!--  Here’s a screen grab from a group meeting; full audio
+and video for an hour, no problem.</p>
+<img src="meeting-via-hspa.png" alt="Google meeting" />
+<div class="caption"><p>The room was a little too small for the group;
+normally we get to sit down to talk.  Note the evergreens behind my bald
+head.</p></div>
+-->
+<p>The only major productivity hit working over there was from not
+having my 30" Dell screen. It slowed me down more than I expected; If we were
+going to make a habit out of this, our
+quaint maritime cabin would have to find room for some sort of big honking
+outboard monitor.</p>
+<h2 id='p-2'>Cameras and Kids</h2>
+<p>I’m still very much in honeymoon mode with my Fujifilm X-E1. But
+that’s the road camera; the Pentax K-5 it replaced is the right choice for the
+cabin. It feels huge compared to the Fuji, though it’s about the smallest
+APS-C SLR on the market. But that’s not a big deal there, I’m usually sitting
+on the deck or leaning on the railing as I shoot.  And also, for Pentax I have
+the big heavy glass.  Most especially the
+<a href="/ongoing/When/200x/2009/06/21/Tokina-SL-400-f5.6">Tokina 400mm</a>
+that lets me do things like this.</p>
+<img src="RUNE6689.png" alt="Tugboat on Howe Sound" />
+<div class="caption"><p>I have a thing for tugboats. They’re 100% utilitarian
+and I still find them beautiful to look at.  I’d love to spend a couple of
+working shifts on one sometime, see what that life is like.</p></div>
+<p>And then there’s the
+<a href="http://www.amazon.com/gp/product/B000NO5QVG/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B000NO5QVG&amp;linkCode=as2&amp;tag=ongoing-20">Pentax
+50-135mm f/2.8</a>, by any sane measure the best camera lens I’ve ever
+owned. Yeah, I may rave on about the Tokina or the Fuji 35mm, but this thing
+is razor-sharp at any aperture and zoom, focuses in a flash, and the
+focal-length range hits a huge 80/20 point.</p>
+<p>Mind you, it weighs more than the camera body and is the size of a small
+cannon, but it makes shots like this easy.</p>
+<img src="RUNE6813.png" alt="Boy leaps off boat" />
+<div class="caption"><p>Yes, a boat is also a diving platform, given no
+alternatives. The propensity among young males for leaping off the highest
+available surface seems part of them, like their knees or noses.</p></div>
+<p>Lest I give the impression that we play hard all the time, here we have a
+7-year-old in a hammock with a tablet. Game designers of the world: This is
+what you’re trying to achieve!</p>
+<img src="RUNE6769.png" alt="Girl in hammock with tablet" />
+<div class="caption"><p>This hammock was purchased at the
+<a href="http://www.hilofarmersmarket.com/">Hilo farmers’ market</a>, and if
+you ever get to the Big Island, I totally recommend a visit.</p></div>
+<p>Much and all as I love both the Pentax and the Fuji, I
+have to say that the Fuji raw files are better; the highlights here are blown
+out to a degree that even the formidable powers of Lightroom 5 can’t entirely
+rescue. With the X-E1 I’d have less harshness. But then again, I wouldn’t have
+had a telephoto and she would have seen me coming.</p>
+<h2 id='p-3'>If You Know Me</h2>
+<p>If you’re in Vancouver, at some point you’ll get an invite to come visit us
+at the cabin. If you know me but are elsewhere and are coming here, let me
+know in advance and let’s try to set up some island time.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/07/04/'>
+ <title>Spies, Hypocrites, and Fools</title>
+ <link href='Intelligence-and-Hypocrisy' />
+ <link rel='replies'        thr:count='16'        type='application/xhtml+xml'        href='Intelligence-and-Hypocrisy#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/04/Intelligence-and-Hypocrisy</id>
+ <published>2013-07-04T12:00:00-07:00</published>
+ <updated>2013-07-05T00:35:42-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Politics' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Politics' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>There are <a href='http://www.spiegel.de/international/europe/eu-officials-furious-at-nsa-spying-in-brussels-and-germany-a-908614.html'>angry voices sounding in Europe</a> over the NSA&#x2019;s large-scale indiscriminate information-gathering there. It&#x2019;s perfectly possible to be suspicious and cynical about the US spooks, a fan of Ed Snowden, and still think those voices are those of either Euro-hypocrites or Euro-fools.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>There are
+<a href="http://www.spiegel.de/international/europe/eu-officials-furious-at-nsa-spying-in-brussels-and-germany-a-908614.html">angry
+voices sounding in Europe</a> over the NSA’s large-scale
+indiscriminate information-gathering there. It’s perfectly possible to be
+suspicious and cynical about the US spooks, a fan of Ed Snowden, and still
+think those voices are those of either Euro-hypocrites or Euro-fools.</p>
+<p>In general, I approve of espionage and yet intensely distrust
+law-enforcement organizations. I think a healthy civic society should:</p>
+<ul>
+<li><p>Aggressively regulate its own security establishment.</p></li>
+<li><p>Worry intensely about overreach and privacy abuse by security
+officials. </p></li>
+<li><p>Empower those officials to watch its enemies closely and its
+allies even more closely.</p></li>
+<li><p>Assume that foreign security establishments will routinely try to
+capture every word spoken and every picture taken.</p></li>
+<li><p>Where there are useful measures that can be taken to protect citizens’
+privacy from foreign snoops, take them.</p></li>
+</ul>
+<h2 id='p-1'>Why Spying Is Good</h2>
+<p>Governments are less likely to do risky things that might have the
+side-effect of starting wars when they know that other governments know what
+they’re up to.  It’s as simple as that.</p>
+<p>And as long as religious leaders are out there teaching the clueless that
+God wants them to kill, I want spooks trying to head them off.  Yes, I’m
+wearing my atheist heart on my sleeve here, but face facts: 
+Contemporary terrorism is by and large a faith-based activity.</p>
+<h2 id='p-2'>Why Distrust and Regulate Spooks?</h2>
+<p>Because every law-enforcement organization in history has had an
+us-against-them psychology.  And every one has also had a
+statistically-unsurprising number of members who are corrupt, paranoid, or
+just stupid, and will abuse their access to privileged information.</p>
+<p>And while the risk of a sudden lurch into tyranny seems remote in the
+civilized nations of the developed world, a good way to keep that risk
+low is to keep your security professionals on a damn short lease.</p>
+<p>The notion that you need a search warrant to break down doors or tap phones
+or unlock emails is absolutely a central keystone of civilized life. Anything
+that weakens it is terribly dangerous.</p>
+<p>I’m confident that Ed Snowden has done the world in general and America
+in particular a favor, by forcing into the public conversation what most
+“insiders” already knew.  Among other things, my impression is that the spook
+organizations are ludicrously inefficient and wasteful.  Whether or not it’s a
+good thing for them to be capturing all that information, it’s pretty likely
+that whatever the benefits are, they’re not worth what we’re paying.  Let’s
+talk about that.</p>
+<p>What would be even more valuable to the public discourse would be some
+public-finance insider opening the kimono on how much we’re actually paying
+for whatever it is that funding the spooks is buying us.</p>
+<h2 id='p-3'>Home Spooks Vs Foreign Spooks</h2>
+<p>Assuming you’re not actually planning to bomb a legislature, it
+seems obvious that your own government’s spies are way more dangerous to you
+than are foreigners. Your own can put you on a no-fly list or hand you to a foreign
+government to torture or quietly advise a funding agency that your research
+proposals shouldn’t get a warm welcome or arrange that you go to secondary
+inspection every time you re-enter your homeland.</p>
+<p>And they can do any of these things because they’re paranoid or corrupt or
+just stupid.  Which some proportion of them will always be.</p>
+<p>Foreign intelligence pros are simply not apt to care that much about what
+you do unless there are good reasons to think you’re a threat to them.</p>
+<h2 id='p-4'>So You Like Being Watched?</h2>
+<p>Uh, no. I think it’s entirely sane to be paranoid, in a balanced way.  Use
+HTTPS everywhere. Don’t share your location freely, trade it for things you
+need. Bear in mind that your telephone company always knows where you are, and
+has no business reason not to tell anyone in a uniform, if asked. 
+And that your email provider, presented with a
+proper warrant, will efficiently cough up yours, including those you
+thought you’d deleted.  And that anything going any distance over the public
+telephone network is probably being tapped by at least one government. And
+that Internet-voice and Internet-video operators may not even ask for a
+warrant before they spill your beans.</p>
+<p>There are lots of perfectly-legal reasons to want privacy. If you act all
+the time in a way that sensibly preserves yours, when one of those legal
+reasons becomes important you suddenly won’t be acting different in an
+attention-catching way.</p>
+<h2 id='p-5'>Antispooking</h2>
+<p>I’m not so idealistic as to think that the Canadian government has any
+interest in defending my privacy from the NSA; it’s actually more likely that
+they’re cheerfully handing anything they know over on request.  But if there’s
+anything that a developed-world state could do to defend its citizens’ privacy from
+barbarians equipped with listening technology, I hope they are.</p>
+<h2 id='p-6'>The Euro Angle</h2>
+<p>So, the Germans are upset that the Yanks are listening in to whatever they
+can?  Given that 9/11 was planned in Frankfurt, they can’t plausibly claim to
+be surprised.  So like the title says, I’m thinking hypocrisy or
+foolishness.</p>
+<p>And since Germans in particular regulate their own security establishment
+with what looks to me like an eminently intelligent and sanely-paranoid
+framework, let’s rule out foolishness.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/07/02/'>
+ <title>The Kids and Miles</title>
+ <link href='Kids-and-Miles' />
+ <link rel='replies'        thr:count='2'        type='application/xhtml+xml'        href='Kids-and-Miles#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/02/Kids-and-Miles</id>
+ <published>2013-07-02T12:00:00-07:00</published>
+ <updated>2013-07-02T19:45:00-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Music' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Music' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>It was my turn to do the dishes and I needed a little extra energy, so I cued up <cite>Spanish Key</cite> from <a href='http://www.amazon.com/s/?_encoding=UTF8&amp;camp=1789&amp;creative=390957&amp;field-keywords=bitches%20brew&amp;linkCode=ur2&amp;tag=ongoing-20&amp;url=search-alias%3Daps'>Bitches Brew</a>. The 7-year old was table-clearing, the 14-year-old drying, and after a bit they were both bopping along with Miles and the band.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>It was my turn to do the dishes and I needed a little extra energy, so I
+cued up <cite>Spanish Key</cite> from
+<a href="http://www.amazon.com/s/?_encoding=UTF8&amp;camp=1789&amp;creative=390957&amp;field-keywords=bitches%20brew&amp;linkCode=ur2&amp;tag=ongoing-20&amp;url=search-alias%3Daps">Bitches
+Brew</a>. The 7-year old was table-clearing, the 14-year-old drying, and after
+a bit they were both bopping along with Miles and the band.</p>
+<img src="Bitches_brew.png" alt="Bitches Brew" class="inline" />
+<p>I just can’t listen to that music in a simple way, my mind keeps going
+“Wayne Shorter just did <em>what</em>?” or “Yow, 3 measures of pure
+hard-bop” or “Ease off on the wah-wah, John”.</p>
+<p>But the kids are teaching me: You don’t have to know the subtext or the
+context, nor need any pretexts, to want to shake your butt.</p>
+<p>For them, this is
+just cleanup music and it doesn’t matter what went before or came after.
+Nobody would call it pure anything; but hey, it’s got a good beat, you could
+dance to it.</p>
+<p>I suppose it’s possible there are one or two people out there who don’t
+know about <cite>Bitches Brew</cite>.  If you buy it and you don’t like it,
+the problem is you not the music.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/07/02/'>
+ <title>Meta Meta Meta</title>
+ <link href='Meta-Meta-Meta' />
+ <link rel='replies'        thr:count='2'        type='application/xhtml+xml'        href='Meta-Meta-Meta#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/07/02/Meta-Meta-Meta</id>
+ <published>2013-07-02T12:00:00-07:00</published>
+ <updated>2013-07-02T13:34:42-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Publishing' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Publishing' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Life Online' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Life Online' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>On Sunday I <a href='/ongoing/When/201x/2013/06/30/Medium'>wrote</a> <cite>On Medium</cite> about writing on  <cite>Medium</cite>, after I posted <a href='https://medium.com/gender-justice-feminism/2857662d6a01'>a rewrite</a> there of a piece <a href='/ongoing/When/201x/2013/06/26/Texas-Politics'>I wrote</a> about Texas politics.  Now let&#x2019;s write about that.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>On Sunday I
+<a href="/ongoing/When/201x/2013/06/30/Medium">wrote</a> <cite>On
+Medium</cite> about writing on 
+<cite>Medium</cite>, after I posted
+<a href="https://medium.com/gender-justice-feminism/2857662d6a01">a
+rewrite</a> there of a piece
+<a href="/ongoing/When/201x/2013/06/26/Texas-Politics">I wrote</a> about Texas
+politics.  Now let’s write about that.</p>
+<p>At the point I wrote <cite>On Medium</cite>, my blog had 1250 reads of the
+original piece, not counting those who might’ve read it in my feed. The
+<cite>Medium</cite> version had had 455 reads.</p>
+<p>Today, the numbers are 1560 for my blog (feed-exclusive) and 1700 or so at
+Medium. But today, I glanced at the stats and got a shock: the
+meta-piece had 13.3K feed-exclusive reads.  Huh?  A bit of poking around
+reveals that those folks had mostly come from
+<a href="https://news.ycombinator.com/item?id=5968593">a Hacker News thread</a>,
+where there’s worthwhile discussion of blogging in general and
+<cite>Medium</cite> in particular.</p>
+<p>I’m hoping something interesting falls out of this so I can write again at
+four levels of meta.  Texas politics... where’s that again?</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/30/'>
+ <title>On Medium</title>
+ <link href='Medium' />
+ <link rel='replies'        thr:count='1'        type='application/xhtml+xml'        href='Medium#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/30/Medium</id>
+ <published>2013-06-30T12:00:00-07:00</published>
+ <updated>2013-06-30T21:04:17-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Publishing' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Publishing' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Business/Internet' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Business' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Internet' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>Last week I wrote  <a href='/ongoing/When/201x/2013/06/26/Texas-Politics'>Texas Politics</a> about the legislative-gamesmanship theatrics around Wendy Davis&#x2019; filibuster.  It did OK on the blog, nothing special.  Evan Hansen of <a href='https://medium.com'>Medium</a> reached out asking if I wanted to republish there.  I couldn&#x2019;t think of a good reason to do that, but then I also couldn&#x2019;t think of a good reason not to.  So here&#x2019;s a blogger&#x2019;s-eye view of being a <cite>Medium</cite> author.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>Last week I wrote 
+<a href="/ongoing/When/201x/2013/06/26/Texas-Politics">Texas Politics</a>
+about the legislative-gamesmanship theatrics around Wendy
+Davis’ filibuster.  It did OK on the blog, nothing special.  Evan Hansen of
+<a href="https://medium.com">Medium</a> reached out asking if I wanted
+to republish there.  I couldn’t think of a good reason to do that, but then I
+also couldn’t think of a good reason not to.  So here’s a blogger’s-eye view
+of being a <cite>Medium</cite> author.</p>
+<ul>
+<li><p>The <cite>Medium</cite> version is
+<a href="https://medium.com/gender-justice-feminism/2857662d6a01">Don’t Mess
+With Them</a> and it’s better than my version, because I did a couple more
+editing passes and tightened things up. Also, the presentation over there is
+terrific; minimal and very readable.</p></li>
+<li><p>The <cite>Medium</cite> authoring environment is excellent, gets right
+out of the way. Everything I wanted to do was easy, with zero learning
+curve.</p></li>
+<li><p>The piece was written on the 26th.  I have some tens of thousands of
+feed subscribers; it’s hard to measure, since I like the wide-open freedom of
+constructing and serving my own feed. Some of them probably read the piece
+but, since it’s a full-content feed,
+there’s no need for them to visit the blog.  In addition, something over 1250
+people came from somewhere external and read the piece.</p></li>
+<li><p>The Medium
+version has had 455 reads.</p></li>
+<li><p>There’s too much stuff on Medium.  My piece got more or less exactly
+zero notice until it got promoted to the 
+<a href="https://medium.com/editors-picks">Editor’s Picks</a> stream.
+I wonder why <cite>Medium</cite> would want to publish something if it weren’t
+an editor’s pick?  There are 
+millions of places on the Net to do self-publishing.</p></li>
+</ul>
+<p>Will I publish on Medium again?  Honestly, I’m not sure.  I’m 100% happy
+with my own little space on the Web right here; but everyone should try new
+things sometimes.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/29/'>
+ <title>Better OS X Control</title>
+ <link href='OS-X-Emacs-Keystrokes' />
+ <link rel='replies'        thr:count='12'        type='application/xhtml+xml'        href='OS-X-Emacs-Keystrokes#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/29/OS-X-Emacs-Keystrokes</id>
+ <published>2013-06-29T12:00:00-07:00</published>
+ <updated>2013-06-30T17:51:16-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/OS X' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='OS X' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>If you use Emacs, you can stop reading now.  If you don&#x2019;t, there&#x2019;s a possibility that you may not be aware of an incredibly powerful productivity-boosting tool that works in almost every OS X app.  Read on.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>If you use Emacs, you can stop reading now.  If you don’t, there’s a
+possibility that you may not be aware of an incredibly powerful
+productivity-boosting tool that works in almost every OS X app.  Read on.</p>
+<h2 id='p-2'>Take Control</h2>
+<p>The trick I’m about to describe works whenever you’re editing text: Gmail,
+Pages, Keynote, wherever. It
+relies on the “Control” key, which is down on the lower left corner of most OS
+X keyboards (but stay tuned for a trick to make it more accessible). The trick
+is, hold down the “Control” key while you’re hitting another, for example “A”;
+let’s call this “C-A”.</p>
+<table cellpadding="5">
+<tr><td><p><b>C-A</b></p></td><td><p>Go to the beginning of the line.</p></td></tr>
+<tr><td><p><b>C-E</b></p></td><td><p>Go to the end of the line.</p></td></tr>
+<tr><td><p><b>C-F</b></p></td><td><p>Go one character forward.</p></td></tr>
+<tr><td><p><b>C-B</b></p></td><td><p>Go one character backward.</p></td></tr>
+<tr><td><p><b>C-P</b></p></td><td><p>Go to the previous line.</p></td></tr>
+<tr><td><p><b>C-D</b></p></td><td><p>Delete the character at the cursor.</p></td></tr>
+<tr><td><p><b>C-N</b></p></td><td><p>Go to the next line.</p></td></tr>
+<tr><td><p><b>C-K</b></p></td><td><p>Erase all the characters to the end of the
+line.</p></td></tr>
+<tr><td><p><b>C-T</b></p></td><td><p>Flip the character your cursor is on and the one
+before it.</p></td></tr>
+</table>
+<h2>Notes</h2>
+<p>Not all these are available in all programs.  I’ve listed them in
+decreasing order of availability;  C-K and C-T sometimes don’t work.  Also, you
+get surprises; for example, in Firefox, if you hit Command-F to search, that
+opens a little search window at the bottom and it steals C-A and C-F and a few
+others.  Bad, <em>bad</em> Firefox!</p>
+<p>Control-K is particularly useful when you’re in a Google search window and
+it insists in filling in more words than you want to search for.  I.e., you
+type in “owl dropping” and it insists you want “owl droppings photos”. Get as
+far as you want, C-K, Enter, and there you go.</p>
+<h2>The Bottom Line</h2>
+<p>When you’re working hard with your keyboard, you can work harder and go
+faster if you don’t have to take your fingers off the keyboard, which you do
+most often to reach the arrow keys; only with these keystrokes, you
+usually don’t need to.  So you can go faster.</p>
+<h2>Fatter Control Key</h2>
+<p>If you like these, you may become irritated that the control key is stuck
+way down in the corner of the keyboard where you have to fish around for
+it. So, here’s what you do:  Open the Mac system preferences, then the
+Keyboard preferences, and down in the lower right corner of that screen
+there’s a “Modifier Keys” button.  Open that up, and tell it to use the Caps
+Lock key as the Control key. Who needs Caps Lock anyhow?  And having a big fat
+Control key right there beside the “A” is pretty wonderful.</p>
+<h2>Emacs</h2>
+<p>These keystrokes were first seen in Emacs, which you don’t need to know
+about for this to be useful,  but just
+for background, here’s what noted geek/author
+<a href="http://en.wikipedia.org/wiki/Neal_Stephenson">Neal Stephenson</a> had
+to say about it:</p> 
+<blockquote><p>In the GNU/Linux world there are two major text editing
+programs: the minimalist vi (known in some implementations as elvis) and the
+maximalist emacs. I use emacs, which might be thought of as a thermonuclear
+word processor. It was created by RichardStallman; enough said. It is written
+in Lisp, which is the only computer language that is beautiful. It is
+colossal, and yet it only edits straight ASCII text files, which is to say, no
+fonts, no boldface, no underlining. In other words, the engineer-hours that,
+in the case of Microsoft Word, were devoted to features like mail merge, and
+the ability to embed feature-length motion pictures in corporate memoranda,
+were, in the case of emacs, focused with maniacal intensity on the deceptively
+simple-seeming problem of editing text. If you are a professional
+writer – i.e., if someone else is getting paid to worry about how your words
+are formatted and printed – emacs outshines all other editing software in
+approximately the same way that the noonday sun does the stars. It is not just
+bigger and brighter; it simply makes everything else vanish. – from
+<a href="http://www.cryptonomicon.com/beginning.html">In the Beginning was the
+Command Line (1998)</a></p></blockquote>
+<p>This blog entry, and all the others here, are written in Emacs.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/27/'>
+ <title>Rent-seeking for Nomads</title>
+ <link href='Air-Travel' />
+ <link rel='replies'        thr:count='2'        type='application/xhtml+xml'        href='Air-Travel#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/27/Air-Travel</id>
+ <published>2013-06-27T12:00:00-07:00</published>
+ <updated>2013-06-27T22:53:19-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Travel' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Travel' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>A friend was telling me of a young woman he knows who&#x2019;d been struggling to get by in New York and he&#x2019;d been sort of mentoring.  Only she&#x2019;s spent most of this year traveling in Southeast Asia and South America, &#x201c;finding herself&#x201d;.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>A friend was telling me of a young woman he knows who’d been struggling to
+get by in New
+York and he’d been sort of mentoring.  Only she’s spent most of this year
+traveling in Southeast Asia and South America, “finding herself”.</p>
+<p>I wondered what she was living on.
+Turns out she’s offering her Manhattan apartment on Airbnb and covering its
+rent with enough left over to fuel her nomadic self-discovery.</p>
+<p>I wonder if it’s even legal? Whatever, when there’s something desirable to be sold
+and people who want to buy it, deals get done; particularly in NYC.  A
+21st-century lifestyle, to be sure.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/26/'>
+ <title>Texas Politics</title>
+ <link href='Texas-Politics' />
+ <link rel='replies'        thr:count='6'        type='application/xhtml+xml'        href='Texas-Politics#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/26/Texas-Politics</id>
+ <published>2013-06-26T12:00:00-07:00</published>
+ <updated>2013-06-26T08:08:56-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Places/America' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Places' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='America' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='The World/Politics' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Politics' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>If you weren&#x2019;t watching the livestream (courtesy of <a href='http://www.texastribune.org/2013/06/26/led-davis-democrats-defeat-abortion-legislation/'>The Texas Tribune</a>) you missed an astounding piece of drama.  I only caught the last 90 minutes, but wow.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>If you weren’t watching the livestream (courtesy of
+<a href="http://www.texastribune.org/2013/06/26/led-davis-democrats-defeat-abortion-legislation/">The Texas Tribune</a>) you missed an
+astounding piece of drama.  I only caught the last 90 minutes, but wow.</p>
+<h2 id='p-1'>Wendy</h2>
+<p>The charisma and eloquence of
+<a href="http://en.wikipedia.org/wiki/Wendy_Davis_(politician)">Senator
+Davis</a> was astonishing. By the time I started watching, she’d been silenced
+by the Republican legislators’ tactics and just stood there, watching and
+smiling.</p>
+<img src="Sen-Davis.png" alt="Texas Senator Wendy Davis" />
+<h2 id='p-2'>Gaming the System</h2>
+<p>I don’t think the transparent sleaze of the efforts to rule 
+her out of order were all that terrible. The whole point of being governed by
+elected legislatures is that it’s rule-based, and wherever there are rules
+they can be gamed, and <em>that’s OK</em>. Ms Davis gamed the rules to head
+off an awful piece of legislation that would essentially restrict access to
+abortion to rich women in urban centers. The Republicans gamed the rules to
+try to push it through. 
+The real issue is the legislated policy, not the legislative tactics.</p>
+<h2 id='p-3'>Sports Metaphor</h2>
+<p>Whatever the real issue was, those tactics were pretty damn gripping to
+watch. At 2:57AM Texas time, the bill was
+<a href="http://trailblazersblog.dallasnews.com/2013/06/wendy-davis-begins-filibuster-to-stop-omnibus-abortion-bill.html/">officially
+dead</a>; and, if I may be forgiven a view through baseball lenses, this was
+small 
+ball; Beating 
+out a bouncer to reach first, getting to second on a sacrifice and third on
+a passed ball; then beating the throw home on a short fly out.</p>
+<p><em>First</em>, Wendy Davis held the floor for all those hours and kept the
+openings for opportunistic Points of Order to a minimum;
+forcing the Repubs way into transparent-overreach territory.</p>
+<p><em>Second</em>, the immense legislative skill of the Democratic Senators
+in running out the clock. There were lots of them, but in particular,  
+the lawyerly silver-haired lizard-skinned slow-talking Texas-drawling 
+<a href="http://www.watson.senate.state.tx.us/">Senator Kirk Watson</a>
+burned an incredibly valuable 15 minutes or so of the last hour 
+politely dissecting
+the finer points of the motion to close debate on the motion to
+appeal the ruling on the motion to kill Wendy Davis’ filibuster so they could
+pass the bill. I’d hire that guy to 
+represent me in a complicated big-money litigation, <em>any time</em>.</p>
+<img src="Kirk-Watson.png" alt="Texas Senator Kirk Davis" />
+<div class="caption"><p>Senator Watson, courtesy of UStream contributor
+<a href="http://www.ustream.tv/channel/christopherdido">ChristopherDido</a>.</p></div>
+<p><em>Third</em>, the eloquence and timing of
+<a href="http://www.vandeputte.senate.state.tx.us/">Senator Van de Putte</a>,
+rushed to the debate from her father’s funeral, carefully ignored by the
+Republican chair in a useful legislative delaying tactic, raising the stakes
+from rules-gaming to gender-politics with “At what point must a female senator
+raise her hand or her voice to be recognized over her male colleagues?”</p>
+<p>Which only reinforced the subtext of pudgy old white Republican men
+silencing strong-voiced women speaking for other women. This can’t be good for
+them, 
+electorally.</p> 
+<p><em>Fourth</em>, the activists in the gallery who, when the 
+majority had mercilessly squished all the Democratic legislative tactics, just
+started 
+screaming and wouldn’t shut up till the clock ran out. At ten minutes to
+midnight, I 
+said to my wife, equally fascinated beside me on the couch, “That gallery has
+staying power” and yeah, they did.</p>
+<p>The real inside-baseball Texas-legislature cognoscenti will have more to
+say about how the Republican backup chair was out-dueled by the Democratic
+point-of-parliamentary-inquiry veterans, on average at least twenty years
+older than him by the look of them.  But at the end of the day it wouldn’t
+have worked if a bunch of ordinary people hadn’t come to scream at the people
+they elected; and I can’t imagine a more fundamental exercise of democratic
+power.</p>
+<p>What a show. My faith in the usefulness of democracy is refreshed.
+And I’m not even American.</p>
+<!--
+talkig as long as we needed to talk, to talk that bill to death
+on behalf of our democratic colleagues... we’ll take that
+-->
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/24/'>
+ <title>Horror Story</title>
+ <link href='Horror-story' />
+ <link rel='replies'        thr:count='7'        type='application/xhtml+xml'        href='Horror-story#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/24/Horror-story</id>
+ <published>2013-06-24T12:00:00-07:00</published>
+ <updated>2013-06-24T18:34:41-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Books' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Books' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>I just read Neil Gaiman&#x2019;s <a href='http://www.amazon.com/gp/product/0062255657/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0062255657&amp;linkCode=as2&amp;tag=ongoing-20'>The Ocean at the End of the Lane</a> and it&#x2019;s wonderfully done but I didn&#x2019;t enjoy it. There&#x2019;s a good chance you might, though.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>I just read Neil Gaiman’s
+<a href="http://www.amazon.com/gp/product/0062255657/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0062255657&amp;linkCode=as2&amp;tag=ongoing-20">The
+Ocean at the End of the Lane</a> and it’s wonderfully done but I didn’t enjoy it.
+There’s a good chance you might, though.</p>
+<p>Gaiman is one of the very few writers whose books I just go ahead and buy
+without waiting to read reviews or even sniffing the social-media fumes.
+This book won’t change that even though it made me unhappy.</p>
+<p>Gaiman’s in good form, so the magic here is magical, the people are real
+(except for the ones that aren’t supposed to be), the monsters are monstrous,
+and the ambiance is intensely felt: <em>You are there</em>.</p>
+<p>But I didn’t like it because it scared the hell out of me.  
+The situation is just way too plausibly horrible, even
+if it involves an immortal intruder from outside our reality.  I had to put
+the book down and 
+go out on the back porch at one point, and nearly didn’t pick it up again.</p>
+<p>But hold on; the horror involves a father and his 7-year-old and I’m one of
+those and have one of those. So it was right there in my gut, the fear and
+desperation of a kid finding a monster invading his family and sharing his
+life.  But for people not quite so close to the situation, it might just be
+pleasantly thrilling.</p>
+<p>Ewwww.  But really, really well-done.  Lighten up next time please, Mr
+G.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/24/'>
+ <title>Two Factor, Twice</title>
+ <link href='Two-Factor' />
+ <link rel='replies'        thr:count='17'        type='application/xhtml+xml'        href='Two-Factor#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/24/Two-Factor</id>
+ <published>2013-06-24T12:00:00-07:00</published>
+ <updated>2013-06-24T11:41:53-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Identity' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Identity' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Open Source' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Open Source' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>One of my jobs is browbeating people to turn on <a href='http://www.google.com/landing/2step/'>2-Step Verification</a>, and it&#x2019;s working; more and more people are.  Today I learned that we&#x2019;ve got some open-source technology you can use to add 2-factor to your own app.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>One of my jobs is browbeating people to turn on
+<a href="http://www.google.com/landing/2step/">2-Step Verification</a>, and
+it’s working; more and more people are.  Today I learned that we’ve got some
+open-source technology you can use to add 2-factor to your own app.</p>
+<h2 id='p-1'>Please Get Safe</h2>
+<p>Seriously, if you haven’t already, and if someone hacking your Google
+account would screw up your life, then
+<a href="http://www.google.com/landing/2step/">start here</a> right now and
+come back after you’ve turned it on.  I’ll wait.</p>
+<p>What, you didn’t do it? You’re not convinced?  You think it’ll be
+inconvenient? Wrong.  It’s super-smooth; every so often, when Google asks you to
+refresh your login, it’ll ask you to enter a number that we send you by
+SMS. Don’t like SMS? No problemo, just grab the
+<a href="http://en.wikipedia.org/wiki/Google_Authenticator">Google
+Authenticator</a> app for your Android or Blackberry or iOS device, and it’ll
+generate a code locally.</p>
+<p>It’s just not inconvenient. What <em>is</em> inconvenient is having to
+apologize to everyone when your account gets hacked and your friends all get
+spammed or worse, scammed.  So please, get on board.</p>
+<h2 id='p-2'>Add It To Your App</h2>
+<p>I don’t think that apps should be doing their own authentication, I think
+they should be farming that out to Identity Providers, the better to preserve
+the sanity of their users. But if you really must authenticate people, give
+serious thought to offering 2-factor.</p>
+<p>It turns out that your app can use Authenticator too; 
+<a href="https://code.google.com/p/google-authenticator/wiki/KeyUriFormat">it
+works with</a> those
+<a href="http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">OATH
+TOTP</a> constructs.  (Yes, that’s
+OATH not OAuth, life is confusing.)  Dropbox is
+<a href="https://www.dropbox.com/help/363/en">already doing this</a>, so you’d
+be in good company.</p>
+<p>Authenticator is also an
+<a href="https://code.google.com/p/google-authenticator/">open-source
+project</a>, which makes it easier to be confident about what it does and how
+it works. Also, it would be perfectly reasonable and OK for you to fork it
+(Apache license) for your own purposes.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/22/'>
+ <title>3 Camera Reviews</title>
+ <link href='Three-and-a-half-Camera-Reviews' />
+ <link rel='replies'        thr:count='0'        type='application/xhtml+xml'        href='Three-and-a-half-Camera-Reviews#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/22/Three-and-a-half-Camera-Reviews</id>
+ <published>2013-06-22T12:00:00-07:00</published>
+ <updated>2013-06-22T17:47:57-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Photos' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Photos' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Photos/Cameras' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Cameras' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>It&#x2019;s a wonderful time in the camera biz, with new device flavors grabbing market share all over the place.  I&#x2019;ve made my bet on the <a href='/ongoing/When/201x/2013/03/06/Fuji-X-E1-in-Tokyo'>Fujifilm X series</a>, so let&#x2019;s start with a 2-parter over at The Online Photographer, <a href='http://theonlinephotographer.typepad.com/the_online_photographer/2013/06/fuji-x-e1-the-keeper.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+typepad%2FZSjz+%28The+Online+Photographer%29'>Fuji X-E1: The Keeper (Part I)</a> and <a href='http://theonlinephotographer.typepad.com/the_online_photographer/2013/06/fuji-x-e1-the-keeper-part-ii.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+typepad%2FZSjz+%28The+Online+Photographer%29'>Part II</a>. There&#x2019;s not that much new information here, but it&#x2019;s fun piece to read.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>It’s a wonderful time in the camera biz, with new device flavors grabbing
+market share all over the place.  I’ve made my bet on the
+<a href="/ongoing/When/201x/2013/03/06/Fuji-X-E1-in-Tokyo">Fujifilm
+X series</a>, so let’s start with a 2-parter over at The Online Photographer,
+<a href="http://theonlinephotographer.typepad.com/the_online_photographer/2013/06/fuji-x-e1-the-keeper.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+typepad%2FZSjz+%28The+Online+Photographer%29">Fuji
+X-E1: The Keeper (Part I)</a> and
+<a href="http://theonlinephotographer.typepad.com/the_online_photographer/2013/06/fuji-x-e1-the-keeper-part-ii.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+typepad%2FZSjz+%28The+Online+Photographer%29">Part II</a>.
+There’s not that much new information here, but it’s fun piece to read.</p>
+<p>For something completely different, check out this early DPReview
+<a href="http://www.dpreview.com/previews/samsung-galaxy-nx">look at the
+Galaxy NX</a>, Samsung’s big serious camera that’s also an Android Jellybean
+device.  I’m sure there’s photographic gold in them thar hills somewhere.
+At the moment I have no urge to abandon Fuji’s diminutive form factor
+and fabulous Fujinon lenses, but if I get an idea for an Android app
+that uses the camera hardware, that could change fast.</p>
+<p>And for something completely different again, there’s this really rather
+amusing
+<a href="http://www.dpreview.com/reviews/ricoh-gr">Ricoh GR comparative
+review</a> (also in DPReview); comparative in the sense that the Ricoh faces
+off against the Nikon Coolpix A.</p>
+<p>I’m not a customer for the GR because, as I’ve
+<a href="/ongoing/When/201x/2012/12/10/Cameras">written here before</a>, I
+think 
+a pocket camera should be primarily a good zoom lens with a camera on the back
+(and your bigger camera should mostly wear opinionated prime
+lenses). But still, there are lots of smart words in this comparo on the
+directions that cameras are moving.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/19/'>
+ <title>Feature Phone</title>
+ <link href='Feature-Phone' />
+ <link rel='replies'        thr:count='8'        type='application/xhtml+xml'        href='Feature-Phone#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/19/Feature-Phone</id>
+ <published>2013-06-19T12:00:00-07:00</published>
+ <updated>2013-06-19T22:09:49-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology/Mobile' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Technology' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Mobile' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>My Galaxy Nexus unfortunately Died The Death. It&#x2019;ll boot and seem to work, but as soon as you try to open an email or whatever, kiss it goodbye. So I rummaged through the back of the closet and, well, it&#x2019;s amazing how little you can get by with.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>My Galaxy Nexus unfortunately Died The Death. It’ll boot and seem to
+work, but as soon as you try to open an email or whatever, kiss it
+goodbye. So I rummaged through the back of the closet and, well, it’s amazing
+how little you can get by with.</p>
+<p>I’d like to replace the GNexus with one of those pure-Android HTC Ones
+they’re talking up, but you can’t get those yet so I needed a stopgap.
+The closet yielded an old Nexus S which I put
+my SIM in and turned on; up come some antique Android
+version. </p>
+<p>Also, it was broken; probably this is some best-forgotten engineering
+build from three years ago.  The keyboard keeps vanishing while you type on
+it, and basically nothing works.</p>
+<p>So I ran out of patience and erased all the accounts and turned off WiFi
+and mobile data and now it’s a dumbphone er I mean “Feature Phone”; it
+makes and receives phone calls and SMSes and does that just fine.  I’m OK
+because my Nexus 7 with 3G keeps me on the Net when I need that.  The combo
+will get me through till I figure out how to score that HTC One.</p>
+<p>But wait... just now I checked into some hotel or other on El Camino in
+Silly Valley and its Internet wasn’t working (they rarely do). But it dawned
+on me that the dumphone can still get 3G and make a hot spot, and so
+I can still talk to the world.</p>
+<p>I’m sure there’s a lesson to take away from all this; you figure it out.</p>
+</div></content></entry>
+
+<entry xml:base='When/201x/2013/06/16/'>
+ <title>Unmapped Lands</title>
+ <link href='The-Unmapped-Lands' />
+ <link rel='replies'        thr:count='2'        type='application/xhtml+xml'        href='The-Unmapped-Lands#comments' />
+ <id>https://www.tbray.org/ongoing/When/201x/2013/06/16/The-Unmapped-Lands</id>
+ <published>2013-06-16T12:00:00-07:00</published>
+ <updated>2013-06-16T09:47:15-07:00</updated>
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts/Books' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Arts' />
+ <category scheme='https://www.tbray.org/ongoing/What/' term='Books' />
+ <summary type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>I ran across <a href='http://theresacouchman.com/'>Theresa Couchman</a> on <a href='http://theresa.couchman.usesthis.com/'>The Setup</a> (always recommended), which convinced me to buy <a href='http://www.amazon.com/gp/product/1481289985/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1481289985&amp;linkCode=as2&amp;tag=ongoing-20'>The Unmapped Lands</a>, and wow, is it ever fun.</div></summary>
+<content type='xhtml'><div xmlns='http://www.w3.org/1999/xhtml'>
+<p>I ran across
+<a href="http://theresacouchman.com/">Theresa Couchman</a> on
+<a href="http://theresa.couchman.usesthis.com/">The Setup</a> (always
+recommended), which convinced me to buy
+<a href="http://www.amazon.com/gp/product/1481289985/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1481289985&amp;linkCode=as2&amp;tag=ongoing-20">The
+Unmapped Lands</a>, and wow, is it ever fun.</p>
+<p>There is <em>a whole lot of stuff</em> in this book; probably more
+than really necessary, because the people in it are so
+interesting. I was actually sort of hoping Ms Couchman would ease off on the
+action a bit and just run with them a bit, but I never wasn’t
+entertained. Let’s see, we start with a hardass witch in Albany, NY, and
+then we get a demon and a smart rat and an Intuitive and a Magician and
+an alternate-reality portal and a grimoire and dragons and giant spiders and,
+yeah, there’s more, but you get the idea. It’s even coherent, mostly.</p>
+<p>It’s her first &amp; only book.  Discovering someone with this much talent
+just getting started, what a stroke of luck.</p>
+</div></content></entry>
+
+</feed>

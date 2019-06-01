@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="/css/rss10.xsl" type="text/xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#"
+         xmlns:media="http://search.yahoo.com/mrss/" xmlns:pheedo="http://www.pheedo.com/namespace/pheedo">
+	<channel rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management">
+		<title>MIT OpenCourseWare: New Courses in Sloan School of Management</title>
+		<description>New courses in Sloan School of Management from MIT OpenCourseWare, provider of free and open MIT course materials.</description>
+		<link>http://ocw.mit.edu/courses/sloan-school-of-management</link>
+		<dc:date>2013-06-27T14:35:04+05:00</dc:date>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:language>en-US</dc:language>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+		<items>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-229-managing-global-integration-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-220-global-strategy-and-organization-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-279-management-communication-for-undergraduates-fall-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-097-prediction-machine-learning-and-statistics-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-031j-energy-decisions-markets-and-policies-spring-2012"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-223-global-markets-national-politics-and-the-competitive-advantage-of-firms-fall-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-599-workshop-in-it-collaborative-innovation-networks-fall-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-015-macro-and-international-economics-fall-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-075j-statistical-thinking-and-data-analysis-fall-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-389a-global-entrepreneurship-lab-asia-pacific-fall-2010"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-389b-global-entrepreneurship-lab-latin-america-the-middle-east-and-africa-fall-2010"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-320-strategic-organizational-design-spring-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-317-organizational-leadership-and-change-summer-2009"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-431-entrepreneurial-finance-spring-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-762j-supply-chain-planning-spring-2011"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-391-early-stage-capital-fall-2010"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-769-operations-strategy-fall-2010"/>
+				<rdf:li rdf:resource="http://ocw.mit.edu/courses/sloan-school-of-management/15-012-applied-macro-and-international-economics-spring-2011"/>
+			</rdf:Seq>
+		</items>
+	</channel>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013">
+		<title>15.761 Introduction to Operations Management (MIT)</title>
+		<description>This course provides students with concepts, techniques and tools to design, analyze, and improve core operational capabilities, and apply them to a broad range of application domains and industries. It emphasizes the effect of uncertainty in decision-making, as well as the interplay between high-level financial objectives and operational capabilities. Topics covered include production control, risk pooling, quality management, process design, and revenue management. Also included are case studies, guest lectures, and simulation games which demonstrate central concepts.</description>
+		<link>http://ocw.mit.edu/courses/sloan-school-of-management/15-761-introduction-to-operations-management-spring-2013</link>
+		<dc:creator>Fine, Charles H.</dc:creator>
+		<dc:creator>Zaman, Tauhid</dc:creator>
+		<dc:date>2013-06-12T12:22:56+05:00</dc:date>
+		<dc:relation>15.761</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>process analysis</dc:subject>
+		<dc:subject>capacity analysis</dc:subject>
+		<dc:subject>innovation</dc:subject>
+		<dc:subject>inventory management</dc:subject>
+		<dc:subject>production</dc:subject>
+		<dc:subject>supply chain design</dc:subject>
+		<dc:subject>sustainability</dc:subject>
+		<dc:subject>operational risk</dc:subject>
+		<dc:subject>quality management</dc:subject>
+		<dc:subject>revenue management</dc:subject>
+		<dc:subject>pricing</dc:subject>
+		<dc:subject>queuing</dc:subject>
+		<dc:subject>process re-engineering</dc:subject>
+		<dc:subject>Toyota</dc:subject>
+		<dc:subject>Amazon</dc:subject>
+		<dc:subject>CVS</dc:subject>
+		<dc:subject>McDonald's</dc:subject>
+		<dc:subject>Burger King</dc:subject>
+		<dc:subject>Hewlett-Packard</dc:subject>
+		<dc:subject>Sport Obermeyer</dc:subject>
+		<dc:subject>Walmart</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-229-managing-global-integration-spring-2012">
+		<title>15.229 Managing Global Integration (MIT)</title>
+		<description>This course on global integration brings together matters of global markets and institutions, global strategy, organization, and leadership. Global integration, the process by which an organization with units around the world becomes united, will be presented as a link to entrepreneurship and general management. The seminar is offered only to those enrolled in the MIT Sloan Fellows Program and challenges the participants to draw upon their past managerial experiences, especially those affiliated with multinational companies.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=cfd6c19db1adc135bc81acdb13e23ff3&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=cfd6c19db1adc135bc81acdb13e23ff3&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=cfd6c19db1adc135bc81acdb13e23ff3</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-229-managing-global-integration-spring-2012</pheedo:origLink>
+		<dc:creator>Santos, José</dc:creator>
+		<dc:date>2013-05-22T15:25:31+05:00</dc:date>
+		<dc:relation>15.229</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>global integration</dc:subject>
+		<dc:subject>global innovation</dc:subject>
+		<dc:subject>organization</dc:subject>
+		<dc:subject>environment</dc:subject>
+		<dc:subject>strategy</dc:subject>
+		<dc:subject>teamwork</dc:subject>
+		<dc:subject>metanational</dc:subject>
+		<dc:subject>multinational</dc:subject>
+		<dc:subject>national</dc:subject>
+		<dc:subject>context</dc:subject>
+		<dc:subject>culture</dc:subject>
+		<dc:subject>collective performance</dc:subject>
+		<dc:subject>virtual team</dc:subject>
+		<dc:subject>matrix</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008">
+		<title>15.401 Finance Theory I (MIT)</title>
+		<description>This course introduces the core theory of modern financial economics and financial management, with a focus on capital markets and investments. Topics include functions of capital markets and financial intermediaries, asset valuation, fixed-income securities, common stocks, capital budgeting, diversification and portfolio selection, equilibrium pricing of risky assets, the theory of efficient markets, and an introduction to derivatives and options.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=bdeafe8ac77cdf9bf059b2cb80fec9ee&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=bdeafe8ac77cdf9bf059b2cb80fec9ee&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=bdeafe8ac77cdf9bf059b2cb80fec9ee</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008</pheedo:origLink>
+		<dc:creator>Lo, Andrew</dc:creator>
+		<dc:date>2013-05-10T14:54:55+05:00</dc:date>
+		<dc:relation>15.401</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>present value relations</dc:subject>
+		<dc:subject>fixed income securities</dc:subject>
+		<dc:subject>equities</dc:subject>
+		<dc:subject>forward and futures contracts</dc:subject>
+		<dc:subject>options</dc:subject>
+		<dc:subject>risk and return</dc:subject>
+		<dc:subject>risk analytics</dc:subject>
+		<dc:subject>portfolio theory</dc:subject>
+		<dc:subject>CAPM</dc:subject>
+		<dc:subject>APT</dc:subject>
+		<dc:subject>capital budgeting</dc:subject>
+		<dc:subject>efficient markets</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-220-global-strategy-and-organization-spring-2012">
+		<title>15.220 Global Strategy and Organization (MIT)</title>
+		<description>This subject focuses on the specifics of strategy and organization of the multinational company, and provides a framework for formulating successful and adaptive strategies in an increasingly complex world economy. Topics include the globalization of industries, the continuing role of country factors in competition, organization of multinational enterprises, and building global networks. This particular version of the subject is taught and tailored specifically to those enrolled in the MIT Sloan Fellows Program.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=8fe13a93f1fc811bca551480eaaef4ba&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=8fe13a93f1fc811bca551480eaaef4ba&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=8fe13a93f1fc811bca551480eaaef4ba</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-220-global-strategy-and-organization-spring-2012</pheedo:origLink>
+		<dc:creator>Santos, José</dc:creator>
+		<dc:date>2013-03-21T10:45:49+05:00</dc:date>
+		<dc:relation>15.220</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-279-management-communication-for-undergraduates-fall-2012">
+		<title>15.279 Management Communication for Undergraduates (MIT)</title>
+		<description>The goal of this course is to help students learn to communicate strategically within a professional setting.  Students are asked to analyze their intended audience, the purpose of their communication, and the context in which they are operating before developing the message. The course focuses specifically on improving students&amp;rsquo; ability to write, speak, work in a team, and communicate across cultures in their roles as future managers.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=6e2f4905c1ae446133cea1de50c0c439&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=6e2f4905c1ae446133cea1de50c0c439&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=6e2f4905c1ae446133cea1de50c0c439</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-279-management-communication-for-undergraduates-fall-2012</pheedo:origLink>
+		<dc:creator>Breslow, Lori</dc:creator>
+		<dc:creator>Heagney, Terence</dc:creator>
+		<dc:date>2013-02-26T15:00:24+05:00</dc:date>
+		<dc:relation>15.279</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>management</dc:subject>
+		<dc:subject>communication</dc:subject>
+		<dc:subject>oral presentation</dc:subject>
+		<dc:subject>presentation</dc:subject>
+		<dc:subject>leadership</dc:subject>
+		<dc:subject>writing</dc:subject>
+		<dc:subject>teamwork</dc:subject>
+		<dc:subject>business</dc:subject>
+		<dc:subject>professional skills</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-097-prediction-machine-learning-and-statistics-spring-2012">
+		<title>15.097 Prediction: Machine Learning and Statistics (MIT)</title>
+		<description>Prediction is at the heart of almost every scientific discipline, and the study of generalization (that is, prediction) from data is the central topic of machine learning and statistics, and more generally, data mining. Machine learning and statistical methods are used throughout the scientific world for their use in handling the &amp;quot;information overload&amp;quot; that characterizes our current digital age. Machine learning developed from the artificial intelligence community, mainly within the last 30 years, at the same time that statistics has made major advances due to the availability of modern computing. However, parts of these two fields aim at the same goal, that is, of prediction from data. This course provides a selection of the most important topics from both of these subjects.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=685764e08ad25da20c2564b20d00118b&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=685764e08ad25da20c2564b20d00118b&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=685764e08ad25da20c2564b20d00118b</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-097-prediction-machine-learning-and-statistics-spring-2012</pheedo:origLink>
+		<dc:creator>Rudin, Cynthia</dc:creator>
+		<dc:date>2013-01-30T11:24:40+05:00</dc:date>
+		<dc:relation>15.097</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>prediction</dc:subject>
+		<dc:subject>machine learning</dc:subject>
+		<dc:subject>statistics</dc:subject>
+		<dc:subject>data mining</dc:subject>
+		<dc:subject>algorithms</dc:subject>
+		<dc:subject>statistical learning theory</dc:subject>
+		<dc:subject>Bayesian analysis</dc:subject>
+		<dc:subject>top 10 algorithms</dc:subject>
+		<dc:subject>support vector machines</dc:subject>
+		<dc:subject>boosting</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-031j-energy-decisions-markets-and-policies-spring-2012">
+		<title>15.031J Energy Decisions, Markets, and Policies (MIT)</title>
+		<description>This course examines the choices and constraints regarding sources and uses of energy by households, firms, and governments through a number of frameworks to describe and explain behavior at various levels of aggregation. Examples include a wide range of countries, scope, settings, and analytical approaches. This course is one of many OCW Energy Courses, and it is a core subject in MIT's undergraduate Energy Studies Minor. This Institute-wide program complements the deep expertise obtained in any major with a broad understanding of the interlinked realms of science, technology, and social sciences as they relate to energy and associated environmental challenges.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=598fcc16df04b08a058dcf4b94c5cf3b&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=598fcc16df04b08a058dcf4b94c5cf3b&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=598fcc16df04b08a058dcf4b94c5cf3b</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-031j-energy-decisions-markets-and-policies-spring-2012</pheedo:origLink>
+		<dc:creator>Schmalensee, Richard</dc:creator>
+		<dc:date>2013-01-04T13:01:26+05:00</dc:date>
+		<dc:relation>15.031J</dc:relation>
+		<dc:relation>14.43J</dc:relation>
+		<dc:relation>21A.341J</dc:relation>
+		<dc:relation>11.161J</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>energy</dc:subject>
+		<dc:subject>energy systems</dc:subject>
+		<dc:subject>oil reserves</dc:subject>
+		<dc:subject>public policy</dc:subject>
+		<dc:subject>environmental policy</dc:subject>
+		<dc:subject>path dependence</dc:subject>
+		<dc:subject>climate science</dc:subject>
+		<dc:subject>business decisions</dc:subject>
+		<dc:subject>NPV analysis</dc:subject>
+		<dc:subject>negotiations</dc:subject>
+		<dc:subject>globalization</dc:subject>
+		<dc:subject>regulation</dc:subject>
+		<dc:subject>power systems</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-223-global-markets-national-politics-and-the-competitive-advantage-of-firms-fall-2011">
+		<title>15.223 Global Markets, National Politics and the Competitive Advantage of Firms (MIT)</title>
+		<description>This course examines opportunities and risks firms face in today's global market. It provides conceptual tools for analyzing how governments and social institutions influence economic competition among firms embedded in different national settings. Public policies and institutions that shape competitive outcomes are examined through cases and analytical readings on different companies and industries operating in both developed and emerging markets.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=f8960158ef537c53e55765e865bc4a26&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=f8960158ef537c53e55765e865bc4a26&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=f8960158ef537c53e55765e865bc4a26</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-223-global-markets-national-politics-and-the-competitive-advantage-of-firms-fall-2011</pheedo:origLink>
+		<dc:creator>Johnson, Simon</dc:creator>
+		<dc:date>2012-05-31T12:26:24+05:00</dc:date>
+		<dc:relation>15.223</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>global markets</dc:subject>
+		<dc:subject>national politics</dc:subject>
+		<dc:subject>competitive advantage</dc:subject>
+		<dc:subject>global economy</dc:subject>
+		<dc:subject>emerging markets</dc:subject>
+		<dc:subject>market economies</dc:subject>
+		<dc:subject>human rights</dc:subject>
+		<dc:subject>intellectual property</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-599-workshop-in-it-collaborative-innovation-networks-fall-2011">
+		<title>15.599 Workshop in IT: Collaborative Innovation Networks (MIT)</title>
+		<description>Diversity begets creativity&amp;mdash;in this seminar we tap the amazing power of swarm creativity on the Web by studying and working together as Collaborative Innovation Networks (COINs). As interdisciplinary teams of MIT management, SCAD design, University of Cologne informatics, and Aalto University software engineering students we will explore how to discover latest trends on the Web, and how to make them succeed in online social networks. We study a wide range of methods for predictive analytics (coolhunting) and online social marketing (coolfarming), mostly based on social network analysis and the emerging science of collaboration. Students will also learn to use our own unique MIT-developed Condor tool for Web mining, social network analysis, and trend prediction.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=87ea551e91ec3d79cd67481fbebe32a3&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=87ea551e91ec3d79cd67481fbebe32a3&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=87ea551e91ec3d79cd67481fbebe32a3</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-599-workshop-in-it-collaborative-innovation-networks-fall-2011</pheedo:origLink>
+		<dc:creator>Gloor, Peter</dc:creator>
+		<dc:date>2012-05-16T16:56:17+05:00</dc:date>
+		<dc:relation>15.599</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>collaborative innovation networks</dc:subject>
+		<dc:subject>social networks</dc:subject>
+		<dc:subject>social marketing</dc:subject>
+		<dc:subject>Web</dc:subject>
+		<dc:subject>swarm creativity</dc:subject>
+		<dc:subject>predictive analytics</dc:subject>
+		<dc:subject>Web trends</dc:subject>
+		<dc:subject>Facebook</dc:subject>
+		<dc:subject>email</dc:subject>
+		<dc:subject>Web mining</dc:subject>
+		<dc:subject>social network analysis</dc:subject>
+		<dc:subject>trend predictions</dc:subject>
+		<dc:subject>viral marketing</dc:subject>
+		<dc:subject>global virtual collaboration</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-015-macro-and-international-economics-fall-2011">
+		<title>15.015 Macro and International Economics (MIT)</title>
+		<description>15.015 Macro and International Economics focuses on the policy and economic environment of firms. This subject divided in three parts. The first part of the course is a study of the closed economy and how monetary and fiscal policy interacts with employment, GNP, inflation, and interest rates. Next, the course provides an examination of national economic strategies for development and growth and recent financial and currency crises in emerging markets. Finally, the course addresses the problems faced by transition economies and the role of institutions both as the engine of growth, and as the constraints for policy.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=964e92e8dbac0463110585339fd7d2ed&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=964e92e8dbac0463110585339fd7d2ed&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=964e92e8dbac0463110585339fd7d2ed</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-015-macro-and-international-economics-fall-2011</pheedo:origLink>
+		<dc:creator>Johnson, Simon</dc:creator>
+		<dc:date>2012-05-11T15:11:00+05:00</dc:date>
+		<dc:relation>15.015</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>international economics</dc:subject>
+		<dc:subject>macroeconomics</dc:subject>
+		<dc:subject>BB-NN</dc:subject>
+		<dc:subject>IS-LM</dc:subject>
+		<dc:subject>fiscal policy</dc:subject>
+		<dc:subject>inflation</dc:subject>
+		<dc:subject>financial sector dynamics</dc:subject>
+		<dc:subject>exchange rates</dc:subject>
+		<dc:subject>banking crisis</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-075j-statistical-thinking-and-data-analysis-fall-2011">
+		<title>15.075J Statistical Thinking and Data Analysis (MIT)</title>
+		<description>This course is an introduction to statistical data analysis. Topics are chosen from applied probability, sampling, estimation, hypothesis testing, linear regression, analysis of variance, categorical data analysis, and nonparametric statistics.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=790ce1b47161ae06235f76e915e3cc07&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=790ce1b47161ae06235f76e915e3cc07&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=790ce1b47161ae06235f76e915e3cc07</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-075j-statistical-thinking-and-data-analysis-fall-2011</pheedo:origLink>
+		<dc:creator>Rudin, Cynthia</dc:creator>
+		<dc:creator>Chang, Allison</dc:creator>
+		<dc:creator>Bisias, Dimitrios</dc:creator>
+		<dc:date>2012-03-21T09:57:40+05:00</dc:date>
+		<dc:relation>15.075J</dc:relation>
+		<dc:relation>ESD.07J</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>statistics</dc:subject>
+		<dc:subject>data analysis</dc:subject>
+		<dc:subject>multiple regression</dc:subject>
+		<dc:subject>analysis of variance</dc:subject>
+		<dc:subject>multivariate analysis</dc:subject>
+		<dc:subject>data mining</dc:subject>
+		<dc:subject>probability</dc:subject>
+		<dc:subject>collecting data</dc:subject>
+		<dc:subject>sampling distributions</dc:subject>
+		<dc:subject>inference</dc:subject>
+		<dc:subject>linear regression</dc:subject>
+		<dc:subject>ANOVA</dc:subject>
+		<dc:subject>chi-square test</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-389a-global-entrepreneurship-lab-asia-pacific-fall-2010">
+		<title>15.389A Global Entrepreneurship Lab: Asia-Pacific (MIT)</title>
+		<description>15.389A Global Entrepreneurship Lab: Asia-Pacific enables teams of students to work with the top management of global start-ups and gain experience in running, and consulting to, a new enterprise outside the United States. The focus is on start-ups operating in emerging markets throughout the world, with a special focus on the Asia-Pacific region. The course combines an internship in a growing firm with in-class discussions of the issues and policies that affect the climate for innovation and start-up success around the world.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=1817630bf34c5a9a063e234dd7378724&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=1817630bf34c5a9a063e234dd7378724&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=1817630bf34c5a9a063e234dd7378724</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-389a-global-entrepreneurship-lab-asia-pacific-fall-2010</pheedo:origLink>
+		<dc:creator>Huang, Yasheng</dc:creator>
+		<dc:creator>Johnson, Simon</dc:creator>
+		<dc:creator>Jester, Michellana</dc:creator>
+		<dc:date>2011-12-29T14:34:34+05:00</dc:date>
+		<dc:relation>15.389A</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>entrepreneurship</dc:subject>
+		<dc:subject>developing markets</dc:subject>
+		<dc:subject>corruption</dc:subject>
+		<dc:subject>entrepreneurial</dc:subject>
+		<dc:subject>internationalization</dc:subject>
+		<dc:subject>entrepreneurial finance</dc:subject>
+		<dc:subject>entrepreneur</dc:subject>
+		<dc:subject>venture capital</dc:subject>
+		<dc:subject>commercialization</dc:subject>
+		<dc:subject>organizational development</dc:subject>
+		<dc:subject>Asia-Pacific</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-389b-global-entrepreneurship-lab-latin-america-the-middle-east-and-africa-fall-2010">
+		<title>15.389B Global Entrepreneurship Lab: Latin America, the Middle East, and Africa (MIT)</title>
+		<description>15.389B Global Entrepreneurship Lab: Latin America, the Middle East, and Africa enables teams of students to work with the top management of global start-ups and gain experience in running, and consulting to, a new enterprise outside the United States. The focus is on start-ups operating in emerging markets throughout the world, with a special focus on Latin America, the Middle East, and Africa. The course combines an internship in a growing firm with in-class discussions of the issues and policies that affect the climate for innovation and start-up success around the world.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=134be7d8f6e36c101baeae322a1b6313&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=134be7d8f6e36c101baeae322a1b6313&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=134be7d8f6e36c101baeae322a1b6313</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-389b-global-entrepreneurship-lab-latin-america-the-middle-east-and-africa-fall-2010</pheedo:origLink>
+		<dc:creator>Johnson, Simon</dc:creator>
+		<dc:creator>Huang, Yasheng</dc:creator>
+		<dc:creator>Jester, Michellana</dc:creator>
+		<dc:date>2011-12-27T15:39:54+05:00</dc:date>
+		<dc:relation>15.389B</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>entrepreneurship</dc:subject>
+		<dc:subject>developing markets</dc:subject>
+		<dc:subject>corruption</dc:subject>
+		<dc:subject>entrepreneurial</dc:subject>
+		<dc:subject>internationalization</dc:subject>
+		<dc:subject>entrepreneurial finance</dc:subject>
+		<dc:subject>entrepreneur</dc:subject>
+		<dc:subject>commercialization</dc:subject>
+		<dc:subject>venture capital</dc:subject>
+		<dc:subject>organizational development</dc:subject>
+		<dc:subject>Latin America</dc:subject>
+		<dc:subject>Africa</dc:subject>
+		<dc:subject>the Middle East</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-320-strategic-organizational-design-spring-2011">
+		<title>15.320 Strategic Organizational Design (MIT)</title>
+		<description>15.320 Strategic Organizational Design focuses on effective organizational design in both traditional and innovative organizations, with special emphasis on innovative organizational forms that can provide strategic advantage. Topics include when to use functional, divisional, or matrix organizations, how IT creates new organizational possibilities, and examples of innovative organizational possibilities, such as democratic decision-making, crowd-based organizations, internal resource markets, and other forms of collective intelligence. Team projects include inventing new possibilities for real organizations.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=855ffe3fdcf35baabc9ad76bf0388e97&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=855ffe3fdcf35baabc9ad76bf0388e97&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=855ffe3fdcf35baabc9ad76bf0388e97</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-320-strategic-organizational-design-spring-2011</pheedo:origLink>
+		<dc:creator>Malone, Thomas</dc:creator>
+		<dc:date>2011-12-06T09:16:36+05:00</dc:date>
+		<dc:relation>15.320</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>organizational design</dc:subject>
+		<dc:subject>product innovation</dc:subject>
+		<dc:subject>conglomerates</dc:subject>
+		<dc:subject>lateral coordination processes</dc:subject>
+		<dc:subject>crowd-sourcing</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-317-organizational-leadership-and-change-summer-2009">
+		<title>15.317 Organizational Leadership and Change (MIT)</title>
+		<description>15.317 Organizational Leadership and Change focuses on practical experience that blends theory and practice. Students reflect on prior leadership experiences and then apply lessons learned to further develop their leadership capabilities. The course requires active participation in all leadership classes and/or activities as well as short deliverables throughout the program.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=6ae842eda399c60f73df79bbc646f654&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=6ae842eda399c60f73df79bbc646f654&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=6ae842eda399c60f73df79bbc646f654</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-317-organizational-leadership-and-change-summer-2009</pheedo:origLink>
+		<dc:creator>Klein, Janice</dc:creator>
+		<dc:date>2011-11-29T13:52:13+05:00</dc:date>
+		<dc:relation>15.317</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>organizational leadership</dc:subject>
+		<dc:subject>LGO</dc:subject>
+		<dc:subject>operations management</dc:subject>
+		<dc:subject>leadership techniques</dc:subject>
+		<dc:subject>leadership ethics</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-431-entrepreneurial-finance-spring-2011">
+		<title>15.431 Entrepreneurial Finance (MIT)</title>
+		<description>15.431 Entrepreneurial Finance examines the elements of entrepreneurial finance, focusing on technology-based start-up ventures and the early stages of company development. The course addresses key questions which challenge all entrepreneurs: how much money can and should be raised; when should it be raised and from whom; what is a reasonable valuation of the company; and how should funding, employment contracts and exit decisions be structured. It aims to prepare students for these decisions, both as entrepreneurs and venture capitalists. In addition, the course includes an in-depth analysis of the structure of the private equity industry.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=d6be0a5ec0a2e6962b73e346474ee4e7&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=d6be0a5ec0a2e6962b73e346474ee4e7&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=d6be0a5ec0a2e6962b73e346474ee4e7</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-431-entrepreneurial-finance-spring-2011</pheedo:origLink>
+		<dc:creator>Schoar, Antoinette</dc:creator>
+		<dc:date>2011-11-21T14:31:31+05:00</dc:date>
+		<dc:relation>15.431</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>entrepreneurship</dc:subject>
+		<dc:subject>entrepreneurial finance</dc:subject>
+		<dc:subject>venture capital</dc:subject>
+		<dc:subject>discounted cash flow</dc:subject>
+		<dc:subject>real option valuation</dc:subject>
+		<dc:subject>initial public offering</dc:subject>
+		<dc:subject>deal structure</dc:subject>
+		<dc:subject>angels</dc:subject>
+		<dc:subject>private equity</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-762j-supply-chain-planning-spring-2011">
+		<title>15.762J Supply Chain Planning (MIT)</title>
+		<description>15.762J Supply Chain Planning focuses on effective supply chain strategies for companies that operate globally, with an emphasis on how to plan and integrate supply chain components into a coordinated system. Students are exposed to concepts and models important in supply chain planning with emphasis on key tradeoffs and phenomena. The course introduces and utilizes key tactics such as risk pooling and inventory placement, integrated planning and collaboration, and information sharing. Lectures, computer exercises, and case discussions introduce various models and methods for supply chain analysis and optimization.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=095b9d76c0b1121584170f0368d1da3b&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=095b9d76c0b1121584170f0368d1da3b&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=095b9d76c0b1121584170f0368d1da3b</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-762j-supply-chain-planning-spring-2011</pheedo:origLink>
+		<dc:creator>Graves, Stephen</dc:creator>
+		<dc:creator>Simchi-Levi, David</dc:creator>
+		<dc:date>2011-06-30T10:10:10+05:00</dc:date>
+		<dc:relation>15.762J</dc:relation>
+		<dc:relation>ESD.267J</dc:relation>
+		<dc:relation>1.273J</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>supply chain strategy</dc:subject>
+		<dc:subject>inventory models</dc:subject>
+		<dc:subject>supply contracts</dc:subject>
+		<dc:subject>supply chain integration</dc:subject>
+		<dc:subject>inventory systems</dc:subject>
+		<dc:subject>product design</dc:subject>
+		<dc:subject>risk pooling</dc:subject>
+		<dc:subject>inventory placement</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-391-early-stage-capital-fall-2010">
+		<title>15.391 Early Stage Capital (MIT)</title>
+		<description>If you are an entrepreneur, one of your priorities, in addition to building your company, is ensuring you have enough money at the right times. Early Stage Capital will consider a broad range of questions that entrepreneurs deal with on this front, including the following: What should your strategy and your priorities be in raising early stage capital? What are the market norms and standards in structuring VC deals? What are the critical negotiating strategies and tactics? How will your company be valued? How can you obtain the optimal valuation for your new venture? What are the critical elements in the relationship between venture capitalists and entrepreneurs? How is the &amp;quot;venture model&amp;quot; evolving? Is it broken? What is the impact of Super Angels and micro VCs? These are key questions that face all entrepreneurs in 2010, particularly first-time entrepreneurs. This course aims to prepare you for these decisions, as either a potential entrepreneur or venture capitalist. Using live interactions with leading figures in the venture finance community, most of the class sessions will analyze fundamental strategies of the venture-capital investment process and the critical importance of the relationship between entrepreneur and investor. As well, we will have a tactical focus on demystifying the legalities and jargon of the term sheet and the &amp;quot;A round&amp;quot; financing process. Significantly for 2010, we will also frequently consider the rapid and arguably fundamental change in VC today as the &amp;quot;lean startup&amp;quot; model threatens much of the traditional role and value of the venture investor. Disclaimer: The websites for this course and the materials they offer are provided for educational use only.  They are not a substitute for the advice of an attorney and no attorney-client relationship is created by using them. All materials are provided &amp;quot;as-is&amp;quot;, without any express or implied warranties.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=2e3a5c91523a7c70fa4b28c1be17b34b&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=2e3a5c91523a7c70fa4b28c1be17b34b&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=2e3a5c91523a7c70fa4b28c1be17b34b</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-391-early-stage-capital-fall-2010</pheedo:origLink>
+		<dc:creator>Loessberg, Shari</dc:creator>
+		<dc:date>2011-06-24T13:11:45+05:00</dc:date>
+		<dc:relation>15.391</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>raising venture capital</dc:subject>
+		<dc:subject>seed stage investment</dc:subject>
+		<dc:subject>angel investors</dc:subject>
+		<dc:subject>structuring deals</dc:subject>
+		<dc:subject>valuating companies</dc:subject>
+		<dc:subject>entrepreneurship</dc:subject>
+		<dc:subject>venture capitalist</dc:subject>
+		<dc:subject>negotiate investments</dc:subject>
+		<dc:subject>start-up ventures</dc:subject>
+		<dc:subject>term sheet</dc:subject>
+		<dc:subject>VC</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-769-operations-strategy-fall-2010">
+		<title>15.769 Operations Strategy (MIT)</title>
+		<description>15.769 Operations Strategy provides a unifying framework for analyzing strategic issues in manufacturing and service operations. Students analyze the relationships between manufacturing and service companies and their suppliers, customers, and competitors. The course covers strategic decisions in technology, facilities, vertical integration, human resources, and other areas, and also explores means of competition such as cost, quality, and innovativeness.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=7cf4ebb76d2ad6f6ca48448a6a0d4263&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=7cf4ebb76d2ad6f6ca48448a6a0d4263&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=7cf4ebb76d2ad6f6ca48448a6a0d4263</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-769-operations-strategy-fall-2010</pheedo:origLink>
+		<dc:creator>Fine, Charles H.</dc:creator>
+		<dc:creator>Rosenfield, Donald</dc:creator>
+		<dc:date>2011-06-23T13:30:18+05:00</dc:date>
+		<dc:relation>15.769</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>Operations strategy</dc:subject>
+		<dc:subject>value chain dynamics</dc:subject>
+		<dc:subject>process technology decisions</dc:subject>
+		<dc:subject>competition</dc:subject>
+		<dc:subject>supplier management</dc:subject>
+		<dc:subject>manufacturing</dc:subject>
+		<dc:subject>service operations</dc:subject>
+		<dc:subject>competition</dc:subject>
+		<dc:subject>outsourcing</dc:subject>
+		<dc:subject>globalization</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+	<item rdf:about="http://ocw.mit.edu/courses/sloan-school-of-management/15-012-applied-macro-and-international-economics-spring-2011">
+		<title>15.012 Applied Macro- and International Economics (MIT)</title>
+		<description>15.012 Applied Macro- and International Economics uses case studies to investigate the macroeconomic environment in which firms operate. The first half of the course develops the basic tools of macroeconomic management: monetary, fiscal, and exchange rate policy. The class discusses recent emerging market and financial crises by examining their causes and considering how best to address them and prevent them from recurring in the future. The second half evaluates different strategies of economic development. Topics covered in the second half of this course include growth, the role of debt and foreign aid, and the reliance on natural resources.&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=2b41d40ce1d6f28dab780e629ed2db1a&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=2b41d40ce1d6f28dab780e629ed2db1a&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;</description>
+		<link>http://www.pheedcontent.com/click.phdo?i=2b41d40ce1d6f28dab780e629ed2db1a</link>
+		<pheedo:origLink>http://ocw.mit.edu/courses/sloan-school-of-management/15-012-applied-macro-and-international-economics-spring-2011</pheedo:origLink>
+		<dc:creator>Rigobon, Roberto</dc:creator>
+		<dc:creator>Cavallo, Alberto</dc:creator>
+		<dc:date>2011-06-23T12:46:15+05:00</dc:date>
+		<dc:relation>15.012</dc:relation>
+		<dc:language>en-US</dc:language>
+		<dc:subject>international economics</dc:subject>
+		<dc:subject>macroeconomics</dc:subject>
+		<dc:subject>monetary policy</dc:subject>
+		<dc:subject>fiscal policy</dc:subject>
+		<dc:subject>exchange rate policy</dc:subject>
+		<dc:subject>financial crisis</dc:subject>
+		<dc:subject>emerging market crisis</dc:subject>
+		<dc:subject>economic development</dc:subject>
+		<dc:subject>foreign aid</dc:subject>
+		<dc:subject>natural resources</dc:subject>
+		<dc:publisher>MIT OpenCourseWare http://ocw.mit.edu</dc:publisher>
+		<dc:rights>Content within individual OCW courses is (c) by the individual authors unless otherwise noted. MIT OpenCourseWare materials are licensed by the Massachusetts Institute of Technology under a Creative Commons License (Attribution-NonCommercial-ShareAlike). For further information see http://ocw.mit.edu/terms/index.htm</dc:rights>
+	</item>
+</rdf:RDF>

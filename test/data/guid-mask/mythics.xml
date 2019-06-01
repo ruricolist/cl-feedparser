@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+    <channel>
+    
+     <title><![CDATA[Mythics Blog]]></title>
+     <link>http://www.mythics.com/blog</link>
+     <dc:language>en</dc:language>
+     <dc:rights>Copyright 2015</dc:rights>
+     <dc:date>2015-02-06T16:48:16-05:00</dc:date>
+     
+ 
+     <item>
+       <title><![CDATA[Oracle Database 11gR2 Support Has Expired! But there is a Waiver? Confused? See Our Guide Inside]]></title>
+       <link>http://www.mythics.com/about/blog/mythics-oracle-database-11gr2-de-support-guide</link>
+       <guid>http://www.mythics.com/about/blog/mythics-oracle-database-11gr2-de-support-guide</guid>
+       <description><![CDATA[<p><strong>Did you know that Premier Support for the Oracle Database 11gR2 has expired on 1/31/2015?&nbsp;&nbsp; Did you also know that Oracle has now issued a&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2015-02-03T12:50+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[Oracle Exadata X5-2:&nbsp; More Than Just A Hardware Upgrade]]></title>
+       <link>http://www.mythics.com/about/blog/oracle-exadata-x5-2-more-than-just-a-hardware-upgrade</link>
+       <guid>http://www.mythics.com/about/blog/oracle-exadata-x5-2-more-than-just-a-hardware-upgrade</guid>
+       <description><![CDATA[<p>Last week, Oracle announced the X5 upgrades for several of their Engineered Systems, all triggered by the release of the Oracle Server X5-2 and X5-2L&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2015-01-30T19:20+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[GoldenGate 12c Setup with Oracle 12c Pluggable Multi-Tenant DB and OEM GoldenGate Plugins]]></title>
+       <link>http://www.mythics.com/about/blog/goldengate-12c-setup-with-oracle-12c-pluggable-multi-tenant-db-and-oem-gold</link>
+       <guid>http://www.mythics.com/about/blog/goldengate-12c-setup-with-oracle-12c-pluggable-multi-tenant-db-and-oem-gold</guid>
+       <description><![CDATA[<p><span style="line-height: 1.6em;">I recently built out a new installation of GoldenGate using the latest versions and features, namely the Integrated Capture and Replication capabilities for&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2015-01-28T16:02+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[ODA X5-2: Just Plain More Everything!]]></title>
+       <link>http://www.mythics.com/about/blog/oda-x52-just-plain-more-everything</link>
+       <guid>http://www.mythics.com/about/blog/oda-x52-just-plain-more-everything</guid>
+       <description><![CDATA[<p><span style="line-height: 1.6em;">Every time a major manufacturer announces a new system, we hear the same common messages from marketing. &nbsp;More CPU, more RAM, faster than&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2015-01-26T13:54+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[Practical Oracle WebCenter Content UI]]></title>
+       <link>http://www.mythics.com/about/blog/practical-oracle-webcenter-content-ui</link>
+       <guid>http://www.mythics.com/about/blog/practical-oracle-webcenter-content-ui</guid>
+       <description><![CDATA[<p><span style="line-height: 1.6em;">This article focuses on practical aspects of Oracle&#39;s new WebCenter Content User Interface, frequently referred as Content UI (aka ADF UI and Web&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2015-01-16T18:33+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[Debbie&#8217;s Outreach and Volunteer Efforts (DOVE) by Team Mythics]]></title>
+       <link>http://www.mythics.com/about/blog/debbies-outreach-and-vollunteer-efforts-dove-by-team-mythics</link>
+       <guid>http://www.mythics.com/about/blog/debbies-outreach-and-vollunteer-efforts-dove-by-team-mythics</guid>
+       <description><![CDATA[<p>On behalf of the Mythics family and all of our employees we are so proud to continue the spirit of giving by our longtime employee&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2014-12-22T14:33+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[It&#8217;s Time to Upgrade to Oracle Database 12c, Here is Why, and Here is How]]></title>
+       <link>http://www.mythics.com/about/blog/its-time-to-upgrade-to-oracle-database-12c-here-is-why-and-here-is-how</link>
+       <guid>http://www.mythics.com/about/blog/its-time-to-upgrade-to-oracle-database-12c-here-is-why-and-here-is-how</guid>
+       <description><![CDATA[<p>Well, it&#39;s that time again, when the whole Oracle database community will be dealing with the questions around upgrading to&nbsp;Database 12c from 11g (and some&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2014-10-16T18:16+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[Enterprise Storage Reinvented]]></title>
+       <link>http://www.mythics.com/about/blog/enterprise-storage-reinvented</link>
+       <guid>http://www.mythics.com/about/blog/enterprise-storage-reinvented</guid>
+       <description><![CDATA[<p>At Oracle OpenWorld 2014, Oracle introduced the world to the latest member of the Axiom family, the FS1 array. This is a hybrid flash array,&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2014-10-04T14:59+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[An Introduction to Your Server’s Next CPU:&nbsp; the SPARC M7]]></title>
+       <link>http://www.mythics.com/about/blog/an-introduction-to-your-servers-next-cpu-the-sparc-m7</link>
+       <guid>http://www.mythics.com/about/blog/an-introduction-to-your-servers-next-cpu-the-sparc-m7</guid>
+       <description><![CDATA[<p>Some changes in technology are evolutionary, some are disruptive but the rarest of technologies are revolutionary in nature.</p> <p><span style="line-height: 1.6em;">Examples of evolutionary technology are&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2014-10-03T17:27+00:00</dc:date>
+     </item>
+ 
+     <item>
+       <title><![CDATA[Answers to Common Questions on Java Versions/Editions]]></title>
+       <link>http://www.mythics.com/about/blog/answers-to-common-questions-on-java-versions-editions</link>
+       <guid>http://www.mythics.com/about/blog/answers-to-common-questions-on-java-versions-editions</guid>
+       <description><![CDATA[<p>In the past several months, our team has received many inquires about <a href="https://en.wikipedia.org/wiki/Java_virtual_machine">Java Virtual Machine</a> (JVM) and <a href="https://en.wikipedia.org/wiki/Java_Development_Kit">Java Development Kit</a> (JDK) versions and&#8230;]]></description>
+       <dc:subject><![CDATA[]]></dc:subject>
+       <dc:date>2014-10-01T14:31+00:00</dc:date>
+     </item>
+ 
+    
+    </channel>
+</rss>

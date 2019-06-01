@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+    <channel>
+    
+    <title><![CDATA[A List Apart: The Full Feed]]></title>
+    <link>http://alistapart.com</link>
+    <description>Articles, columns, and blog posts for people who make web sites.</description>
+    <dc:language>en</dc:language>
+    <dc:creator>The fine folks at A List Apart</dc:creator>
+    <dc:rights>Copyright 2013</dc:rights>
+    <dc:date>2013-07-01T18:04:53+00:00</dc:date>
+    
+
+	    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/alistapart/main" /><feedburner:info uri="alistapart/main" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+      <title><![CDATA[Progressive Enhancement is Still Important]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/Ix9tsfiJG2E/</link>
+      <guid isPermaLink="false">http://jakearchibald.com/2013/progressive-enhancement-still-important/</guid>
+      <description>&lt;a href="http://jakearchibald.com/2013/progressive-enhancement-still-important/" style="font-size: 18px;"&gt;» Progressive Enhancement is Still Important&lt;/a&gt;&lt;br&gt;&lt;br&gt;"One of the best things about the web is it can rival native applications without a hefty initial download, without an install process, and do so across devices old and new. Let's keep it that way."&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/Ix9tsfiJG2E" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-07-03T14:32:37+00:00</dc:date>
+    <feedburner:origLink>http://jakearchibald.com/2013/progressive-enhancement-still-important/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[The Origin of Tweet]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/BRnFPmgeLnI/</link>
+      <guid isPermaLink="false">http://furbo.org/2013/06/28/the-origin-of-tweet/</guid>
+      <description>&lt;a href="http://furbo.org/2013/06/28/the-origin-of-tweet/" style="font-size: 18px;"&gt;» The Origin of Tweet&lt;/a&gt;&lt;br&gt;&lt;br&gt;Twitterific co-creator Craig Hockenberry tells how and when a bird became synonymous with Twitter, and reveals the secret history of “tweet” as a noun and verb for Twitter messages and the act of publishing them.&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/BRnFPmgeLnI" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-07-02T17:53:47+00:00</dc:date>
+    <feedburner:origLink>http://furbo.org/2013/06/28/the-origin-of-tweet/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Enough With the JavaScript Already!]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/IUh9r2h1etU/enough-withthejavascriptalready</link>
+      <guid isPermaLink="false">http://www.slideshare.net/nzakas/enough-withthejavascriptalready</guid>
+      <description>&lt;a href="http://www.slideshare.net/nzakas/enough-withthejavascriptalready" style="font-size: 18px;"&gt;» Enough With the JavaScript Already!&lt;/a&gt;&lt;br&gt;&lt;br&gt;A fantastic slide deck from Nicholas Zakas, asking us to ease up on the idea that JavaScript can save the world.&lt;br&gt;&lt;br&gt;℅ &lt;a class="attribution-link" href="https://twitter.com/scottjehl/status/351787464555380737"&gt;@scottjehl&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/IUh9r2h1etU" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-07-01T20:11:15+00:00</dc:date>
+    <feedburner:origLink>http://www.slideshare.net/nzakas/enough-withthejavascriptalready</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[This week's sponsor: Sponsor A List Apart]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/4tBMlK_e8IQ/sponsor</link>
+      <guid isPermaLink="false">http://alistapart.com/about/sponsor</guid>
+      <description>&lt;p&gt;Reach 300,000 clueful designers and developers. &lt;a href="http://alistapart.com/about/sponsor"&gt;Sponsor A List Apart&amp;#8217;s RSS feed&lt;/a&gt;.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/4tBMlK_e8IQ" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-07-01T18:04:53+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/about/sponsor</feedburner:origLink></item>
+    
+	    <item>
+      <title><![CDATA[Nishant Kothary on the Human Web: It Is What It Is]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/bFCn9EfFWPE/it-is-what-it-is</link>
+      <guid isPermaLink="false">http://alistapart.com/column/it-is-what-it-is</guid>
+      <description>&lt;p&gt;One of my first managers — we shall call him Bob — had a saying that used to drive me nuts. To most of my complaints about workplace dysfunctions in our manager-employee one-on-ones, Bob would respond, “It is what it is.”&lt;/p&gt;
+
+&lt;p&gt;Whenever I heard those words, my &lt;a href="https://en.wikipedia.org/wiki/Amygdala"&gt;amygdala&lt;/a&gt; — the part of the brain responsible for the “fight or flight” instinct — would take control of my mind. And the next thing I knew, I was fantasizing about myself as the  &lt;em&gt;American Psycho&lt;/em&gt;, ridding myself of demons with an axe to the soundtrack of &lt;em&gt;Hip to be Square&lt;/em&gt; by Huey Lewis.&lt;/p&gt;
+
+&lt;p&gt;To the idealist whippersnapper I was at the time, Bob’s words reeked of apathy. They implied, “Don’t bother trying to change the world.” Of course, that’s not quite what Bob meant.&lt;/p&gt;
+
+&lt;p&gt;What Bob usually meant was, “You’re driving yourself crazy (and going in circles) over how things &lt;em&gt;should be&lt;/em&gt;, but if you settle down and look at how things &lt;em&gt;really are&lt;/em&gt;, you might figure out how to change a few of them.” This was Yoda-caliber advice, but given my beliefs back then, I suspect I’d have reacted badly even if he’d uttered those exact words. I was often at an emotional standstill: I was deeply disappointed at the dysfunction, e.g. a coworker throwing me under the bus in the daily scrum, and I had a value system that wanted things to be done “the right way.” I didn’t want to accept that the world was just what it was. And if it really was, I wanted nothing to do with it.&lt;/p&gt;
+
+&lt;p&gt;This was hardly unique to me. The reality is that it’s quintessentially human to &lt;em&gt;hate&lt;/em&gt; the notion that the world &lt;em&gt;is just what it is&lt;/em&gt;: that the world is too chaotic for us to control. That’s because the core function of the brain is to create a sense of control for its human. What most of us don’t know is that the brain achieves this mostly by lying.&lt;/p&gt;
+
+&lt;p&gt;Indeed, you don’t have to look very far into neuroscience to learn an alarming fact about the human brain. One of the primary functions of our brain is to &lt;em&gt;confabulate&lt;/em&gt;. That is, to fabricate things. To make s#!t up. The brain must continuously create theories that it can act upon, and most of these theories are born of very limited information: some sensory stimulus paired with a few innate capacities, a thing or two that we may have read or heard on the news, and when we’re lucky, a personal experience in the domain at hand. What’s more, these theories have to be &lt;em&gt;bullet proof&lt;/em&gt;, at least in the short term — otherwise the self-aware brain itself will discard them, leaving the body in a state of inaction. In the best case, the cost of inaction is negligible. In the worst, it’s fatal.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, we rarely have to worry about the worst case. The brain is fantastic at its core job of quickly creating believable theories about everything and anything. I write this with a deep sense of admiration and gratitude (at least in this moment). The brain can connect seemingly unrelated dots to create sense out of nonsense. It can deduce a potential break-in from an out-of-place sound in the backyard, or an imminent stock market crash from a pattern in a complex set of charts. And the results have sustained us as a species. As it turns out, the brain is actually &lt;em&gt;fantastic&lt;/em&gt; at exerting control over a chaotic world.&lt;/p&gt;
+
+&lt;p&gt;So why, when faced with a statement like “It is what it is,” does the brain get all apoplectic? Shouldn’t it just shrug it off? As counterintuitive as this seems, it makes perfect sense if you think about it.&lt;/p&gt;
+
+&lt;p&gt;The brain solves seemingly impossible problems &lt;em&gt;without&lt;/em&gt; knowing that these problems are impossible to solve. Sure, it has this eerie sense at times that a problem is going to be really hard to solve, and &lt;em&gt;maybe&lt;/em&gt; even impossible. But it can easily confabulate (we’re loosely speaking of &lt;em&gt;denial&lt;/em&gt; here) its way out this uncomfortable line of thinking, putting focus back on its job of creating a sense of security and control for its human.&lt;/p&gt;
+
+&lt;p&gt;But, when it is informed that the world is just what it is — that is, no matter what we do, nothing is going to let us tame the chaos — it flips out because it is suddenly stripped of its confabulatory framework. Most often when this happens, it simply throws its hands up (am I the only one that pretends that the brain has skinny gray arms with long pointy fingers?) and goes, “Alright, folks. Pass this one to the angry old guy in the back.” And before we know it, we either find ourselves running around swinging an axe or fleeing to the mountains, compliments of our paranoid amygdalae.&lt;/p&gt;
+
+&lt;p&gt;This is why you should never share with your college roommate and best friend the “undeniable fact” that the girl he’s dating is going to ruin his career aspirations. Unless you &lt;em&gt;want&lt;/em&gt; him to dig his heels in deeper, marry her, and prove you right. That’s just a hypothetical situation, of course.&lt;/p&gt;
+
+&lt;p&gt;Coming back to the point, the real problem isn’t that some words trigger a paralyzing reaction. The real problem is that &lt;em&gt;it is what it is&lt;/em&gt; is a notion that we are confronted with constantly, sometimes hundreds of times in a day, in non-verbal forms: a curt email from a peer, a questionable decision by our leadership at work, a user’s visceral reaction to one of our designs, a contrarian post about “flat design” in our RSS feed, the absence of a promotion where one was expected, the repeated inability to get the best work out of our employees. Each of these situations serves the same function as hearing “It is what it is.” They challenge our confabulatory framework.&lt;/p&gt;
+
+&lt;p&gt;In short, &lt;em&gt;it is what it is&lt;/em&gt;, in all its forms, &lt;em&gt;threatens&lt;/em&gt; the minute-by-minute security that self-deception bestows on us. And how we respond to and learn from these threats ultimately charts not only the course of our lives, but more importantly, who we ultimately become and how we feel along the way. The key, as with most things, lies in realizing that these threats are blessings in disguise. They are clues from the universe about how things really are. Recognizing these clues is the first step to formulating a solution, and this is where most of us never achieve any proficiency.&lt;/p&gt;
+
+&lt;p&gt;I’ve found that our reactions to the universe generally fall into three categories, each more desirable than the previous:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Victim — We see the clues as attacks. Consequently, we lose sight of the long-term, and focus on the short-term by either fleeing or fighting back without rhyme or reason.&lt;/li&gt;
+&lt;li&gt;Apprentice — We are fairly good at embracing the clues, and turning them into meaningful outcomes. But since we don’t have all of the necessary experience and knowledge, we don’t always succeed.&lt;/li&gt;
+&lt;li&gt;Master — We are experts at recognizing the clues. We are able to draw from a vast base of experience and knowledge in the context at hand to turn most situations to our favor. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I was prone to being a victim at the start of my career. I hid behind the comfortable cloak of my idealistic nature, and rejected the simple realities of a work environment (and more generally, life): coworkers will lie to your face, your boss won’t always protect you, promotions aren’t necessarily given to those who deserve them, everyone has a hidden agenda, leaders often care more about results than about employee morale. At my first job, the more I dug my heels in — the more I didn’t recognize the clues — the more I sabotaged myself. By the time I quit, I was overweight, tense, and bitter.&lt;/p&gt;
+
+&lt;p&gt;The universe had won. I couldn’t parse it.&lt;/p&gt;
+
+&lt;p&gt;Then one day a friend of mine recommended Dan Ariely’s &lt;a href="http://www.amazon.com/Predictably-Irrational-Revised-Expanded-Edition/dp/0061353248"&gt;&lt;cite&gt;Predictably Irrational&lt;/cite&gt;&lt;/a&gt;. I read it in a breath because it had answers. His bibliography led me to another. And another. And another. I haven’t stopped since.&lt;/p&gt;
+
+&lt;p&gt;When you’re invited to write a column, particularly one for a prestigious industry treasure like &lt;em&gt;A List Apart&lt;/em&gt;, you’re bound to lose a little sleep. Unlike an article, a column has a distinct identity complete with its own title. Its constituent pieces must function together at some level to paint a bigger picture. As I brainstormed with my wife, Pita, and editor, Rose, I created a list of fictitious titles for pieces I could see myself writing in the hopes we may find a pattern.&lt;/p&gt;
+
+&lt;p&gt;And, I think we did.&lt;/p&gt;
+
+&lt;p&gt;We found that I wanted to write about minimizing our time as &lt;em&gt;Victims&lt;/em&gt;, becoming comfortable with spending most of our time as &lt;em&gt;Apprentices&lt;/em&gt;, and relishing the few moments we’ll spend as &lt;em&gt;Masters&lt;/em&gt;. In a moment of revelation, Rose even came up with a title for the column: &lt;em&gt;The Human Web&lt;/em&gt;. It stuck like brown on rice.&lt;/p&gt;
+
+&lt;p&gt;So, that’s what you can expect from this column: discussions on taking control of our destinies at work (and play), with the occasional tangent every now and then. If that sounds like your thing, &lt;a href="http://alistapart.com/site/abridged-feed"&gt;grab a seat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For now, here’s your first lesson: it is what it is.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/bFCn9EfFWPE" height="1" width="1"/&gt;</description>
+      <dc:subject><![CDATA[<a href="/topic/process">Process</a>, <a href="/topic/creativity">Creativity</a>, <a href="/topic/project-management">Project Management</a>, <a href="/topic/business">Business</a>]]></dc:subject>
+      <dc:date>2013-06-27T12:30:46+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/column/it-is-what-it-is</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Content Choreography]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/ZWeKoYoorgU/</link>
+      <guid isPermaLink="false">http://trentwalton.com/2011/07/14/content-choreography/</guid>
+      <description>&lt;a href="http://trentwalton.com/2011/07/14/content-choreography/" style="font-size: 18px;"&gt;» Content Choreography&lt;/a&gt;&lt;br&gt;&lt;br&gt;Old Gold: The concept of permanently placing content on a web page for a single browsing width or resolution is becoming a thing of the past. Content choreography rearranges content as appropriate for different viewports and devices. Trent Walton thoughtfully explores ways and means.&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/ZWeKoYoorgU" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-26T17:44:35+00:00</dc:date>
+    <feedburner:origLink>http://trentwalton.com/2011/07/14/content-choreography/</feedburner:origLink></item>
+	
+		
+    <item>
+      <title><![CDATA[Designing for Services Beyond the&nbsp;Screen]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/Eof-nvYn4qo/designing-for-services-beyond-the-screen</link>
+      <guid isPermaLink="false">http://alistapart.com/article/designing-for-services-beyond-the-screen</guid>
+      <description>&lt;p&gt;The producer-consumer model is so ingrained in our society that we tend to treat everything like a product—a one-and-done offering that can be pushed to the market and forgotten. &lt;/p&gt;
+
+&lt;p&gt;Online experiences are rarely so simple.&lt;/p&gt;
+
+&lt;p&gt;Imagine taking a flight from London to New York: you book a ticket on the airline’s website, use an online check-in and ticketing system, interact with gate staff and other passengers, and deal with third-party airport services like ground transport and security. Suddenly, that plane ticket isn’t just a purchase online, but an ongoing service experience—and one where a hundred things could go wrong at any step along the way.&lt;/p&gt;
+
+&lt;p&gt;Let’s say a family has to check in at the airport instead of online because the web system wasn’t able to handle a seat booking for an infant. This seems like a small, one-off issue, but aggregated with other “small” problems, the stress induced when traveling long-haul with a young family becomes enormous—big enough that they may never fly that airline again.&lt;/p&gt;
+
+&lt;p&gt;You might be brought in by the marketing department to redesign the website for this airline, but who is designing the check-in machines, the CRM systems used by call center staff, the print materials, or the policies the cabin crew must adhere to?&lt;/p&gt;
+
+&lt;p&gt;Are you thinking through these broader service contexts? You should be. Because even if your “job” ends at the design for a specific channel, your users’ experiences don’t. Your website or mobile app might be wonderful on its own, but customers experience services in totality, and base their judgments on how well everything works together. This means the transitions between channels and over time become crucial.&lt;/p&gt;
+
+&lt;p&gt;When no one is designing the rest &lt;em&gt;and&lt;/em&gt; taking care of how it all connects together, then there is a danger that many parts of the service experience will “just happen.” If we care about our users as much as we say we do, this isn’t good enough.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;a href="http://d.alistapart.com/377/multichannel1.jpg"&gt;&lt;img src="http://d.alistapart.com/377/multichannel1.jpg" alt="Single-Channel Thinking"&gt;&lt;/a&gt;
+&lt;figcaption&gt;Single-Channel Thinking&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;a href="http://d.alistapart.com/377/multichannel2.jpg"&gt;&lt;img src="http://d.alistapart.com/377/multichannel2.jpg" alt="Multichannel Experience"&gt;&lt;/a&gt;
+&lt;figcaption&gt;A Multichannel Experience&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2&gt;Services aren’t assembly line products&lt;/h2&gt;
+
+&lt;p&gt;How do you know the quality of a product? You can pick up an iPhone, inspect the stitching on a suit, or test drive a Mercedes. But services are often intangible. You cannot hold your bank or cell phone accounts in your hand. These accounts grant you access to infrastructure, such as the ubiquitous “cloud” or the bank’s ATM network, much of which you only ever see a tiny amount of. This makes it hard for potential customers to evaluate quality.&lt;/p&gt;
+
+&lt;p&gt;Many critical services, such as insurance and healthcare, are long-term investments in a possible future scenario. In these cases, the customer does not even discover the quality of the service until long after they have paid for it, and often at the very worst moment—when disaster strikes.&lt;/p&gt;
+
+&lt;p&gt;Services are not totally intangible, of course. A customer might not be able to hold her bank account in her hand, but she will interact with many parts of the service. The ATM card, online banking website, smartphone app, branches, staff, marketing material, and tedious security shenanigans are all tangible touchpoints of the service.&lt;/p&gt;
+
+&lt;p&gt;Somebody has to design all of those touchpoints, and you’ve probably even designed a few of them yourself. But often they are not designed as a coherent whole. Instead, each touchpoint channel is the domain of a different silo within an organization.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="http://d.alistapart.com/377/silos.jpg" alt="Many business are arranged in silos."&gt;
+&lt;figcaption&gt;Many business are arranged in silos.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Dividing businesses into silos, with each silo reporting back to management, worked well for industrial product companies: on an assembly line, each worker works on building the same object, such as a car, that never changes its planned final form over the course of assembly. Each task is repeatable and requires little or no interaction with other people—so much so that factory workers can be replaced by robots. &lt;/p&gt;
+
+&lt;p&gt;But services aren’t made on an assembly line. They are complex and difficult to get right, because your users might interact with the service across a wide array of touchpoints. You can’t predict precisely which of them each user will need, in what order she will encounter them, and who will help her along the way. The service is experienced differently by every person, because every person is different.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="http://d.alistapart.com/377/cx_view.jpg" alt="Services are ecologies"&gt;
+&lt;figcaption&gt;Services are ecologies.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Many of these channels also involve interactions between people. Although branding folk like to speak of products having personalities, your car does not wake up with a hangover, and your iPhone does not hate its boss and act surly with its user all day.&lt;/p&gt;
+
+&lt;p&gt;In contrast, your interaction with someone in your insurance company’s call center &lt;em&gt;is&lt;/em&gt; the value of the service, and interpersonal interactions are messy and unpredictable. Relationships do not break down into manageable silos and units in the same way as products. This means designing &lt;em&gt;with&lt;/em&gt; people and not just &lt;em&gt;for&lt;/em&gt; them. The back-end systems and services that staff use are just as important as the customer-facing ones.&lt;/p&gt;
+
+&lt;p&gt;If each channel is also owned and managed by a different organizational silo, it is very difficult to deliver a coherent customer experience—because the people working on the various parts of the project make decisions without understanding their implications outside their group. Or, the decision falls between departmental domains and no one makes them. &lt;/p&gt;
+
+&lt;p&gt;Either way, a crack in the customer experience appears.&lt;/p&gt;
+
+&lt;h2&gt;Time and place affect service&lt;/h2&gt;
+
+&lt;p&gt;Service experiences are also very much affected by when and where they happen. The most amazing thing delivered at the wrong time can be more frustrating than something average delivered at exactly the right moment. &lt;/p&gt;
+
+&lt;p&gt;Think of a couple arguing in a restaurant when the violinist turns up to serenade them, or a helpful nurse arriving with a meal just after a loved one has died in a hospital room (something I once experienced). As with a great deal of design, some of the best service experiences are like the ideal waiter—there to fill your glass when needed, but somehow invisible when not.&lt;/p&gt;
+
+&lt;p&gt;The key to a seamless service experience is taking care to understand the contexts in which users interact with touchpoints and services and how they transition between them.&lt;/p&gt;
+
+&lt;p&gt;After a recent upgrade of the Deutsche Bahn train ticket machines in Germany, for example, the graphic design of the screens is more pleasant, but the overall interaction flow is much slower. The interface feels like that of a website, but in the context of rushing for a train, its time-consuming, tab-by-tab sequencing is totally frustrating.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="http://d.alistapart.com/377/bahn_ticket_machine_800.jpg" alt="Sequenced tabs make for slow going with the new Deutsche Bahn ticket machines."&gt;
+&lt;figcaption&gt;Sequenced tabs make for slow going with the new Deutsche Bahn ticket machines.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The other context is the maintenance of the machines themselves, usually carried out by third-party contractors. Even when it is clear to the designers and researchers that the ticket machines are a problem, the company supplying and maintaining those machines usually resists changes, citing IT support issues. On one project I know of, the only things the design team was allowed to change were the graphics; they were not even allowed to touch the layout of the buttons, despite research evidence showing that this was a source of confusion for customers.&lt;/p&gt;
+
+&lt;p&gt;Something as small as a change in an organization’s policy, third-party partner agreement, or even a &lt;a href="http://www.uie.com/articles/three_hund_million_button/"&gt;single UI element&lt;/a&gt; can have large ripple effects that always relate back to real people with real emotions.&lt;/p&gt;
+
+&lt;p&gt;Think of service interactions in terms &lt;a href="http://www.polaine.com/2007/02/company-relationships-are-like-a-marriage/"&gt;similar to any other relationship&lt;/a&gt;. An individual’s lack of basic personal hygiene or punctuality is not a big deal in the grand scheme of things, but it does reveal how much that person cares about the people he interacts with.&lt;/p&gt;
+
+&lt;p&gt;The same goes for services. All the small glitches—delivering letters to the wrong address, billing errors, customers having to repeat details multiple times—damage people’s trust in a company. They make people wonder whether similar chaos is going on behind the scenes. If the airline’s web systems don’t work, how well does it maintain its aircraft? Fixing the small glitches can have a big impact on the level of trust and the overall experience.&lt;/p&gt;
+
+&lt;h2&gt;Start designing beyond the screen&lt;/h2&gt;
+
+&lt;p&gt;Experiences are not bound by media channels. Designing for complex services is both an opportunity and a challenge for web and mobile designers. &lt;/p&gt;
+
+&lt;p&gt;We say we’re great at empathy for users, but designers are not so good at turning that lens onto their clients. We often see our role as protecting the end user from corporate short-sightedness. Why don’t we also ask, “So, turning around a company with 5,000 employees must be difficult. Would you tell us about it?”&lt;/p&gt;
+
+&lt;p&gt;The same methods and attention we use to advocate for users can extend into the structure of the organizations delivering those services and beyond. Think of it as UX for the entire organization. &lt;/p&gt;
+
+&lt;p&gt;Designers also excel at making the intangible tangible, and are well suited to visualizing and communicating the interdependencies of a system to others. We can do this for service ecosystems as well as we can for website architectures by creating artifacts like &lt;a href="http://www.servicedesigntools.org/tools/35"&gt;service blueprints&lt;/a&gt;, &lt;a href="http://www.servicedesigntools.org/tools/8"&gt;customer-journey maps&lt;/a&gt;, &lt;a href="http://www.servicedesigntools.org/tools/13"&gt;storyboards&lt;/a&gt;, and &lt;a href="http://www.servicedesigntools.org/tools/24"&gt;prototypes&lt;/a&gt;. These all help those delivering services understand what the experience will &lt;em&gt;feel&lt;/em&gt; like—and highlight where things might go wrong.&lt;/p&gt;
+
+&lt;p&gt;For example, Norwegian energy company Haflsund was experiencing a high volume of call-center inquiries. The company could have hired more customer service staff, but it discovered that the source problem started well before the call center: &lt;a href="http://liveworkstudio.com/client-cases/hafslund/"&gt;30 percent of calls were from customers simply confused by their bill&lt;/a&gt;. A prototype helped shape and test a solution—and implementing it cost a lot less than a staff increase.&lt;/p&gt;
+
+&lt;p&gt;Although not all clients are interested in breaking out of their own silos, don’t let that stop you. The better you understand how the channel you are designing for fits into a broader context, the better your design will be. You might not be able to influence the other channels, but you &lt;em&gt;can&lt;/em&gt; ensure you are using the same language, and create smooth “on- and off-ramps” to your channel.&lt;/p&gt;
+
+&lt;h2&gt;Designing for change&lt;/h2&gt;
+
+&lt;p&gt;Many organizations &lt;em&gt;do&lt;/em&gt; know their customer experience is lousy, however. They just don’t know how to go about fixing it.&lt;/p&gt;
+
+&lt;p&gt;Help them get out of their old industrial mindset by using the screenwriter’s maxim. &lt;em&gt;Show&lt;/em&gt; clients how other parts of their organization have an impact on what they are trying to do, don’t just &lt;em&gt;tell&lt;/em&gt; them about it. This might just be the evidence they need to persuade others in their organization to change.&lt;/p&gt;
+
+&lt;p&gt;This isn’t only a job for designers, of course. Professionals in change management are as essential to this as experienced designers are to a good website. But our visual skills are powerful. &lt;/p&gt;
+
+&lt;p&gt;Many executives are more comfortable talking about business cases in Excel than experiences, because numbers feel objective. What everybody really wants are assurances that the project is not going to fail, either from the &lt;em&gt;business&lt;/em&gt; side or the &lt;em&gt;design&lt;/em&gt; side. &lt;a href="http://liveworkstudio.com/the-customer-blah/pilot-or-perish/"&gt;Breaking away from the screen&lt;/a&gt; with visual and tangible artifacts that can be experienced and tested creates a bridge between the two.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/Eof-nvYn4qo" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-25T12:00:09+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/article/designing-for-services-beyond-the-screen</feedburner:origLink></item>
+    
+    <item>
+      <title><![CDATA[Don’t Poke the Bear: Creating Content for Sensitive Situations]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/UyTQnysh3Iw/dont-poke-the-bear-creating-content-for-sensitive-situations</link>
+      <guid isPermaLink="false">http://alistapart.com/article/dont-poke-the-bear-creating-content-for-sensitive-situations</guid>
+      <description>&lt;p&gt;We’re all imperfectly human, and our readers are no exception. They have touchy subjects and insecurities and things they’d rather not talk about—and they bring them all to the table when they interact with our content. &lt;/p&gt;
+
+&lt;p&gt;We tend to show more empathy during face-to-face conversations than in written communication. When we’re getting immediate feedback, we don’t want to offend anyone or make them feel awkward, so we naturally adapt our tone based on the situation. You might use a more casual tone during dinner with your best friend than you would in a meeting with your boss. That sort of tonal &lt;a href="http://www.npr.org/blogs/codeswitch/2013/04/08/176064688/how-code-switching-explains-the-world"&gt;code-switching&lt;/a&gt; is partly an act of empathy. Unfortunately, that doesn’t always translate in writing. We can’t see our readers or their reactions, so writing to their comfort level isn’t always instinctual.&lt;/p&gt;
+
+&lt;p&gt;We also generally write from our perspectives as experts in our industry. We deliver bad news in a way that protects our interests or shifts blame to our customers. Though we may know everything about our topic, we don’t know everything about our customers. Not even close. They have struggles and insecurities that affect the way they interpret our content and view our brand.&lt;/p&gt;
+
+&lt;p&gt;Some topics are especially likely to make them feel uncomfortable or frustrated. These touchy subjects aren’t limited to the obvious offenders like money, religion, and politics. They’re not limited to highly visible crisis-management messages crafted by professional writers, either. They’re common things like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Error messages &lt;/li&gt;
+&lt;li&gt;Warnings &lt;/li&gt;
+&lt;li&gt;System alerts&lt;/li&gt;
+&lt;li&gt;Financial and privacy-related updates&lt;/li&gt;
+&lt;li&gt;Legal agreements &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When we’re writing about sensitive situations like these, we have to get inside their skin. &lt;/p&gt;
+
+&lt;p&gt;We have to be intentional with our empathy.&lt;/p&gt;
+
+&lt;h2&gt;Collect yourself&lt;/h2&gt;
+
+&lt;p&gt;Delivering bad news is hard, but it’s part of life and business. We notify customers when we’re out of a product they want to buy, and we send warnings when people violate our companies’ terms of service. God forbid we have to send a system alert because our database was hacked, affecting every one of our users. But these things happen to the best of us, so if you find yourself the bearer of bad news, here’s what to do:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Remain calm.&lt;/li&gt;
+&lt;li&gt;Speak clearly.&lt;/li&gt;
+&lt;li&gt;Be serious.&lt;/li&gt;
+&lt;li&gt;Be nice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Imagine you’re driving down the interstate, listening to music, windows rolled down. And then you see those blue lights of shame coming up behind you. You pull over, and your heart is racing as the police officer approaches your door. What kind of information do you need in that moment? How do you want to be treated? Chances are, you want to know if you’re getting a ticket right away. Equally important, you want the officer to &lt;em&gt;be nice&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;No matter who’s at fault, customers deserve the same respect when they’re receiving bad news. If you have to inform someone you’ve closed her account due to an unpaid balance, don’t start your email with:&lt;/p&gt;
+
+&lt;figure class="quote"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dear valued customer, we have sent you three notices, and we have not received any payment from you since December 2012. We have to take certain actions when customers fail to pay their bills.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/figure&gt;
+
+&lt;p&gt;Instead, calmly and quickly get to the point:&lt;/p&gt;
+&lt;figure class="quote"&gt;
+&lt;blockquote&gt;&lt;p&gt;We had to close your account because your balance is six months past due.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/figure&gt;
+
+&lt;p&gt;After you explain the situation, try to normalize the customer’s feelings. Even if she did something wrong, you can probably understand how she feels. And at the very least, it shows that there’s a real, live human—and not just a greedy company—behind the late-payment notice.&lt;/p&gt;
+
+&lt;figure class="quote"&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We understand that you depend on our service, but we can’t let balances go past six months due.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sometimes we have to go beyond empathy—we have to be moved enough to do something about it. Knowing the next steps can relieve a huge amount of stress for the customer, and turning these situations into learning opportunities builds trust. Offer a solution and extend an olive branch, if you can.&lt;/p&gt;
+
+&lt;figure class="quote"&gt;
+&lt;blockquote&gt;
+If you’re not ready to pay the full amount but you’d like to get your balance back on track, email us to set up a payment plan. We’d love to keep working with you.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/figure&gt;
+
+&lt;p&gt;And, of course, humor doesn’t belong in these situations. Even if your company has a playful voice, you don’t need to be funny all the time. Sensitive subjects call for a more serious tone than positive communications, like success messages or welcome emails.&lt;/p&gt;
+
+&lt;h2&gt;Offer full disclosure&lt;/h2&gt;
+
+&lt;p&gt;Our customers don’t have access to the same information we do. If something goes wrong that affects them, they have the right to know exactly what happened and why. When delivering bad news, offer as much information as you can. &lt;/p&gt;
+
+&lt;p&gt;Airlines send flight delay notifications all the time, by email and inside their apps. They have a lot of information to send to a lot of people every day, so vague canned messages save time and money. Problem is, vague canned messages make people mad—and one too many angry customers leads to a loss of time, money, &lt;em&gt;and&lt;/em&gt; trust.&lt;/p&gt;
+
+&lt;p&gt;Flight delays are stressful at best, and a notification that says, “ALERT: Flight delayed by 30 minutes or more” can compound someone’s stress. For people who are trying to get to an important event, that kind of message is downright infuriating. Customers deserve to know why the flight was delayed, the rescheduled time, and if there are any other options. Even if you use templates, it’s worth taking the time to create a set of messages that vary based on the situation, or fill in important details before an email goes out. &lt;/p&gt;
+
+&lt;p&gt;Full disclosure also helps diffuse everyday problems that could turn ugly. If your website is down, a message that says, “We’re sorry. The site is down” isn’t exactly helpful. Is it down for routine maintenance? Because of a storm? Do you know how long it will take? What are you doing about it? If something goes wrong, reassure your customers before it turns into something bigger.&lt;/p&gt;
+
+&lt;p&gt;Legal agreements are common offenders. People are rightfully protective of their personal data, and many of us are on guard from the moment we sit down to read a company’s terms of service or privacy policy. Though it’s a cornerstone of legalese, resist ambiguity. Fight it with clarity! Provide as much information as you can in legal documents, without putting your business at risk. &lt;/p&gt;
+
+&lt;p&gt;Editorially’s clear &lt;a href="https://editorially.com/terms"&gt;terms of service and privacy policy&lt;/a&gt; reflect the team’s love for good writing, and they still meet the company’s legal requirements. When readers completely understand your contract, they relax, because they feel more in control of their own information. So if you use cookies, tell your customers why—it’s usually not as scary as it sounds. And if you’re afraid to fully disclose something, maybe you need to rethink the practice itself. Unclear language is often symptomatic of unclear practices, so make sure you’re solving the right problem.&lt;/p&gt;
+
+&lt;h2&gt;Prepare for the worst&lt;/h2&gt;
+
+&lt;p&gt;Sorry, optimists, but we owe it to our users to consider the most disappointing, frustrating, and embarrassing situations we could possibly put them in.&lt;/p&gt;
+
+&lt;p&gt;Copywriters are trained to write for the most common outcome. For example, online retailers send credit-card decline messages all the time. Usually, it’s because the card is expired or someone fat-fingered the number. Those customers can just retype the number or use another card. No big deal.&lt;/p&gt;
+
+&lt;p&gt;But sometimes, that kind of notification &lt;em&gt;is&lt;/em&gt; a big deal. What if someone’s trying to buy something they need or a gift for a family member, and they’re out of cash? The decline message informs them that they’re out of credit, too. Suddenly, every word carries a little more weight.&lt;/p&gt;
+
+&lt;p&gt;At MailChimp, we regularly notify people that we shut down their accounts because they sent spam or violated another one of our policies. The first few weeks on the compliance team can be difficult—delivering bad news all day, every day certainly takes some getting used to. But over time, emotional labor sets in, and you deal with enough evil spammers that sending these messages almost gives you a sense of justice. &lt;/p&gt;
+
+&lt;p&gt;But “evil spammer meets justice” is just one of many possible scenarios, and we’d be wise not to spend too much energy worrying about the bad seeds. In reality, not everyone who sends spam is trouble—innocent people violate our policies every day, because they don’t know any better. &lt;/p&gt;
+
+&lt;p&gt;Maybe a business owner collected business cards in a fishbowl, thinking it was OK to send those people a mass email; maybe a nonprofit has been too busy to send a newsletter lately, and emailing an outdated list caused too many bounces. Worst-case scenario, people could lose their jobs over an account shutdown. That changes things. Over time, our compliance messaging has evolved from harsh warnings to more educational notifications. Instead of sending a short, threatening message that says, “Warning: Terms of Use Violation,” we try to provide links to help documents for people who might not understand why they broke the rules.&lt;/p&gt;
+
+&lt;p&gt;We don’t know who’s reading our content. We can’t predict the fallout they’ll face. But we &lt;em&gt;can&lt;/em&gt; communicate in a way that maintains their dignity. Before writing a message, take a minute to think about the impact it might have on your readers.&lt;/p&gt;
+
+&lt;h2&gt;Don’t blame or shame&lt;/h2&gt;
+
+&lt;p&gt;We’d be naive to think the customer is always right, but it’s best not to assume they’re always wrong. Careless copywriting can expose our readers’ vulnerabilities and make them feel like failures. In her book &lt;cite&gt;Daring Greatly&lt;/cite&gt;, Brené Brown says, “There are no data to support that shame is a helpful compass for good behavior.” Researchers simply don’t find that shaming creates positive outcomes. We have nothing to gain from making our readers feel guilty, but we’ve got a whole lot to lose. &lt;/p&gt;
+
+&lt;p&gt;Blame almost always makes its way into sensitive conversations. Most banks email users when their account balances are low. The message is helpful, because it prevents overdraft fees. But a lot of people feel stressed and embarrassed about low account balances. Since they might already be in a vulnerable place, an insensitive message can turn that stress into shame.&lt;/p&gt;
+
+&lt;p&gt;My large bank used to send an email that said “Alert! Your account balance fell below $50.” There are a couple of problems here: first, that “Alert!” makes it seem like a Very Big Deal. It’s like when a family member calls and says, “I need to talk to you about something.” The seconds seem like hours until they finally SPIT IT OUT. Opening with an alarm puts readers on edge before they even get to the message itself. &lt;/p&gt;
+
+&lt;p&gt;The email also said the balance “fell” below a certain amount. Although it’s a subtle difference, “fell” is more dramatic than something like “dropped.” All in all, “Alert! Your balance fell&amp;#8230;” comes across as scary and stressful. Consider the ways customers could be affected by this email: some people might live paycheck to paycheck, and feel tense every time they have to so much as &lt;em&gt;think&lt;/em&gt; about money. This email could upset them. Others think $50 is plenty, thank you very much! The email might make them feel insecure, like maybe they don’t have enough money after all. (Easy for you to say, &lt;em&gt;bank&lt;/em&gt;.)&lt;/p&gt;
+
+&lt;p&gt;The bank’s intentions were good—a low-balance notification is a nice courtesy and practical business move. It’s the subtle word choices and overall tone that don’t sit right. Losing the exclamation mark and softening the language could change the way the message makes customers feel. Some banks, like &lt;a href="http://www.simple.com"&gt;Simple&lt;/a&gt;, try to reduce customer anxiety by cutting out low-balance notifications altogether. Others let customers decide for themselves whether or not they receive these messages, how often, and how much money constitutes a low balance.&lt;/p&gt;
+
+&lt;p&gt;Assuming user error is a slippery slope. When people feel they’re being blamed for something, they become defensive. Instead of trying to understand the message and solve the problem, they focus on clearing their name. And in order to clear their name, they need someone else to blame. Guess who! That vicious cycle diminishes the very trust we work so hard to build with our customers. &lt;/p&gt;
+
+&lt;h2&gt;Mean it&lt;/h2&gt;
+
+&lt;p&gt;Compassion doesn’t happen on the surface—you can’t just sprinkle in a little kindness after your content is in place. Creating &lt;a href="http://www.voiceandtone.com"&gt;voice and tone&lt;/a&gt; standards paves the way for empathetic content, so you don’t end up scrambling for the right words when times get tough. Voice and tone guidelines should be accessible for writers and non-writers, so people across departments feel empowered to communicate on behalf of the company.&amp;nbsp; &lt;/p&gt;
+
+&lt;p&gt;But compassion only works if we’re practicing what we preach. If we can’t treat each other with kindness, our customers don’t stand a chance. Brown calls this concept minding the gap. “We have to pay attention to the space between where we’re actually standing and where we want to be,” she says. “More importantly, we have to practice the values that we’re holding out as important in our culture.” Think about the touchy subjects that exist within your workplace. In &lt;cite&gt;Daring Greatly&lt;/cite&gt;, Brown recommends asking questions like this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Which behaviors are rewarded? Punished?&lt;/li&gt;
+&lt;li&gt;Do people feel safe and supported talking about how they feel and asking for what they need?&lt;/li&gt;
+&lt;li&gt;What are the sacred cows? Who is most likely to tip them? Who stands the cows back up?&lt;/li&gt;
+&lt;li&gt;What happens when someone fails, disappoints, or makes a mistake?&lt;/li&gt;
+&lt;li&gt;How prevalent are shame and blame and how are they showing up?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’d add a few questions for web teams:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Are critiques productive or stressful?&lt;/li&gt;
+&lt;li&gt;Are teams isolated, or do they communicate about organizational goals?&lt;/li&gt;
+&lt;li&gt;Do employees actually use the product they’re writing about?&lt;/li&gt;
+&lt;li&gt;Do people cheer each other on, or are they competitive?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whatever your answers, you can bet those patterns come through in your content. &lt;/p&gt;
+
+&lt;p&gt;If the behaviors your team is practicing don’t line up with the ones you want to portray, then start by looking inward. Some insensitive content just comes down to oversight, but sometimes, it’s a reflection of the way a team treats each other. Fixing an error message won’t fix your organization, but it &lt;em&gt;could&lt;/em&gt; start a larger discussion about culture problems. Walk right into those conversations with coworkers and clients, because a well-adjusted team is one of the best things that can happen to your content. &lt;/p&gt;
+
+&lt;p&gt;Approach touchy subjects directly, and if you’re a manager, give your team the freedom to talk openly about them. These conversations don’t have to be uncomfortable for people; in the right setting, they can be positive, focused, and restorative. We need to take care of our own, so they have the strength to take care of our customers. &lt;/p&gt;
+
+&lt;p&gt;We’ve all got problems. Our websites are broken, and our communication is too. But our readers don’t expect perfection; they want to know we’re &lt;em&gt;human&lt;/em&gt;. That means we have to accept that they’re human, too.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/UyTQnysh3Iw" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-25T12:00:19+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/article/dont-poke-the-bear-creating-content-for-sensitive-situations</feedburner:origLink></item>
+    
+	
+	    <item>
+      <title><![CDATA[Working Around a Lack of Element Queries]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/ayUtB1M_cjY/</link>
+      <guid isPermaLink="false">http://filamentgroup.com/lab/element_query_workarounds/</guid>
+      <description>&lt;a href="http://filamentgroup.com/lab/element_query_workarounds/" style="font-size: 18px;"&gt;» Working Around a Lack of Element Queries&lt;/a&gt;&lt;br&gt;&lt;br&gt;"We want to build responsive layouts comprised of many modular, independent HTML components that fluidly fill any layout container we drop them into, but CSS3 media queries don't currently offer a way to make content respond to its container's dimensions (as opposed to the overall viewport size)."&lt;br&gt;&lt;br&gt;℅ &lt;a class="attribution-link" href="https://twitter.com/RWD/status/348125437915967489"&gt;@rwd&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/ayUtB1M_cjY" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-21T17:11:10+00:00</dc:date>
+    <feedburner:origLink>http://filamentgroup.com/lab/element_query_workarounds/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[“The first thing she wrote was a story about a squirrel.”]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/kn8F5fKGYbA/words.html</link>
+      <guid isPermaLink="false">http://justinjackson.ca/words.html</guid>
+      <description>&lt;a href="http://justinjackson.ca/words.html" style="font-size: 18px;"&gt;» “The first thing she wrote was a story about a squirrel.”&lt;/a&gt;&lt;br&gt;&lt;br&gt;“I remember teaching my daughter to code HTML when she was 8. The first thing she wrote was a story about a squirrel. She wasn’t ‘writing HTML’; she was sharing something with the world.”&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/kn8F5fKGYbA" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-20T18:09:57+00:00</dc:date>
+    <feedburner:origLink>http://justinjackson.ca/words.html</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Rachel Andrew on the Business of Web Dev: The Local Shops of the Web]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/pMlahuxfKLg/the-local-shops-of-the-web</link>
+      <guid isPermaLink="false">http://alistapart.com/column/the-local-shops-of-the-web</guid>
+      <description>&lt;p&gt;A local shop is part of an ecosystem — here in England we call it the High Street. The owner of a local shop generally has no ambition to become a Tesco or WalMart. She’d rather experience steady growth, building relationships with customers who value what she brings to the community.&lt;/p&gt;
+
+&lt;p&gt;People often mourn the disappearance of their “local shops.” I’m sure it is the same in many parts of the world. Large chains move in, and the small local businesses, unable to compete on price, close. As the local shops disappear, customers win on price, but they are losing on personal service. &lt;/p&gt;
+
+&lt;p&gt;At local shops, they know their customers by name, remember the usual order of a familiar face, are happy to go the extra mile for a customer who will come through the door every week. It’s most often the business owner who is behind the counter filling bags and taking money.&lt;/p&gt;
+
+&lt;p&gt;This direct and personal relationship with the people that their business serves quite naturally provides the local shop with information to meet the needs of their customers. Customers come in and ask if they stock a certain product, one that they have seen advertised on TV; or that is required for a recipe on a recent episode of a cooking show. The local shop owner remembers that three people asked for that same thing this week, and adds it to their order. We’re not dealing with the careful analysis of data collected from thousands of customers here. The shop owner could name the customers that asked for that item — she will point out the new stock to them next time they come in.&lt;/p&gt;
+
+&lt;p&gt;One single store is unlikely to attract much footfall, so the business of one store relies on being part of a vibrant community. Within this community the local shops and tradespeople support each other. A customer pops into a store and mentions while paying that they are having trouble with their car; the shopkeeper recommends the garage down the road — “don’t forget to tell Jim that I sent you!”&lt;/p&gt;
+
+&lt;p&gt;As the co-owner of a bootstrapped digital product, I often feel like we are that local shop on the web. I know many of our customers by name, I know the sort of projects they use our software for. I follow many of them from my personal account on Twitter. I love the fact that they come to speak to me at conferences; that they feel they know us, Drew and Rachel from Perch. This familiarity means they tell us their ideas for the product, and share with us their frustrations in their work. We love being able to tell someone we’ve implemented their suggestions.&lt;/p&gt;
+
+&lt;p&gt;We’re also part of this ecosystem of small products. Unlike the village shops we are not bound together by location, but I think we are bound together by ethos. When selecting a tool or product to use in our business, I always prefer those by similar small businesses. I feel I can trust that the founders will know us by name, will care about our individual experience with their product. When I get in touch with a query I want to feel as if my issue is truly important to them, perhaps get a personal response from the founder rather than a cheery support representative quoting from a script.&lt;/p&gt;
+
+&lt;p&gt;This is business. We make a thing, and we sell it at a profit. The money we make enables us to continue to create something that people want, and to support our customers as they use our product. It also enables us to support other people who are running businesses in this digital high street we are part of, from the companies who provide the software we use for our help desk and our bug tracking system, right through to the freelancers who design for us. &lt;/p&gt;
+
+&lt;p&gt;I am happy with my small shopkeeper status. I talk and write about bootstrapping because I want to show other developers that there is a sane and achievable route to launching a product, a route that doesn’t involve chasing funding rounds or becoming beholden to a board of investors. I love the fact that decisions for my product can be made by the two of us, based on the discussions we have with our customers. If we had investors hoping for a return on their investment, it would be a very different product by now, and I don’t think a better one.&lt;/p&gt;
+
+&lt;p&gt;I think it is important for those of us succeeding at this to talk about it. As an industry we make a lot of noise about the startup that has just landed a huge funding round. We then bemoan the disappearance of products that we use and love, when the founder sells out to a Yahoo!, Twitter, or Google. Yet we don’t always make the connection between the two.&lt;/p&gt;
+
+&lt;p&gt;Small sustainable businesses rarely make headlines. So we, the local shopkeepers and tradespeople of the web, need to celebrate our own successes, build each other up, and support each other. I’d love there to be more ways to highlight the amazing products and services out there that are developed by individuals and tiny teams, to celebrate the local shops of the web. Let’s support those people who are crafting small, sustainable businesses—the people who know their customers and are not interested in chasing a lottery-winning dream of acquisition, but instead are happy to make a living making a good thing that other people love.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/pMlahuxfKLg" height="1" width="1"/&gt;</description>
+      <dc:subject><![CDATA[<a href="/topic/industry-business">Industry & Business</a>, <a href="/topic/business">Business</a>, <a href="/topic/interaction-design">Interaction Design</a>]]></dc:subject>
+      <dc:date>2013-06-20T12:30:56+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/column/the-local-shops-of-the-web</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Ughck. Images.]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/UHauHAHdSDY/</link>
+      <guid isPermaLink="false">http://daverupert.com/2013/06/ughck-images/</guid>
+      <description>&lt;a href="http://daverupert.com/2013/06/ughck-images/" style="font-size: 18px;"&gt;» Ughck. Images.&lt;/a&gt;&lt;br&gt;&lt;br&gt;In a follow-up to his ALA article &lt;a href="http://alistapart.com/article/mo-pixels-mo-problems"&gt;Mo’ Pixels, Mo’ Problems&lt;/a&gt;, Dave Rupert talks about all the progress we've made toward responsive image solutions — by which he means no progress has been made.&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/UHauHAHdSDY" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-17T15:00:33+00:00</dc:date>
+    <feedburner:origLink>http://daverupert.com/2013/06/ughck-images/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Google Changes Rankings of Smartphone Search Results]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/2cKmN-l1KtU/changes-in-rankings-of-smartphone_11.html</link>
+      <guid isPermaLink="false">http://googlewebmastercentral.blogspot.com/2013/06/changes-in-rankings-of-smartphone_11.html</guid>
+      <description>&lt;a href="http://googlewebmastercentral.blogspot.com/2013/06/changes-in-rankings-of-smartphone_11.html" style="font-size: 18px;"&gt;» Google Changes Rankings of Smartphone Search Results&lt;/a&gt;&lt;br&gt;&lt;br&gt;Google has started decreasing the ranking of sites with misconfigured mobile content redirects and errors. Highly recommended for any developer who cares about site rankings in Google (i.e. all of them).&lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/2cKmN-l1KtU" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-13T16:37:01+00:00</dc:date>
+    <feedburner:origLink>http://googlewebmastercentral.blogspot.com/2013/06/changes-in-rankings-of-smartphone_11.html</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Why Do We Need Responsive Images? 72% Less Image Weight.]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/gfuyt_VUnPw/</link>
+      <guid isPermaLink="false">http://timkadlec.com/2013/06/why-we-need-responsive-images/</guid>
+      <description>&lt;a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/" style="font-size: 18px;"&gt;» Why Do We Need Responsive Images? 72% Less Image Weight.&lt;/a&gt;&lt;br&gt;&lt;br&gt;We all need to step up our responsive development game and start thinking more about page weight. The most obvious place to start? Images.&lt;br&gt;&lt;br&gt;℅ &lt;a class="attribution-link" href="https://twitter.com/respimg/status/344478943715393538"&gt;@respimg&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/gfuyt_VUnPw" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-11T15:41:13+00:00</dc:date>
+    <feedburner:origLink>http://timkadlec.com/2013/06/why-we-need-responsive-images/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Karen McGrane on Content: The Alternative is Nothing]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/8N_c-7U9_M0/the-alternative-is-nothing</link>
+      <guid isPermaLink="false">http://alistapart.com/column/the-alternative-is-nothing</guid>
+      <description>&lt;p&gt;The history of technology innovation is the history of disruption. New technologies become available and disrupt the market for more-established, higher-end products.&lt;/p&gt;
+
+&lt;p&gt;We’re witnessing one of the latest waves of technological disruption, as mobile devices put access to the internet in the hands of people who previously never had that power. Always-available connectivity through PCs and broadband connections has already transformed the lives of people who have it. Mobile internet will do the same for an even larger population worldwide.&lt;/p&gt;
+
+&lt;p&gt;Despite examples from countless industries where disruption has taken place, it’s easy to pretend that it won’t happen to the web. Today’s mobile internet is janky. It’s slow. It’s hard to navigate. It offers only a paltry subset of what’s available on the desktop. It’s hard to imagine anyone truly preferring it.&lt;/p&gt;
+
+&lt;p&gt;Clayton Christensen, author of &lt;cite&gt;The Innovator’s Dilemma&lt;/cite&gt;, argues that lower quality and less-than-adequate performance is, in fact, at the heart of what makes disruptive innovation happen:&lt;/p&gt;
+
+&lt;figure class="quote"&gt;&lt;blockquote&gt;In industry after industry, Christensen discovered, the new technologies that had brought the big, established companies to their knees weren’t better or more advanced—they were actually worse. The new products were low-end, dumb, shoddy, and in almost every way inferior. But the new products were usually cheaper and easier to use, and so people or companies who were not rich or sophisticated enough for the old ones started buying the new ones, and there were so many more of the regular people than there were of the rich, sophisticated people that the companies making the new products prospered. Christensen called these low-end products “disruptive technologies,” because, rather than sustaining technological progress toward better performance, they disrupted it.&lt;/blockquote&gt;
+&lt;figcaption&gt;Larissa MacFarquahar, &lt;a href="http://www.newyorker.com/reporting/2012/05/14/120514fa_fact_macfarquhar"&gt;The &lt;cite&gt;New Yorker&lt;/cite&gt;&lt;/a&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2&gt;Disruptive technologies aren’t competitive at the start&lt;/h2&gt;
+
+&lt;p&gt;In terms of quality, disruptive technologies don’t compete. They often have a less-polished design or are crafted of lower-quality materials, equivalent functionality (like bandwidth or memory) costs more compared to earlier products, and they don’t perform as well on key metrics.&lt;/p&gt;
+
+&lt;p&gt;People often point at the failings of the mobile internet as rationale for why it won’t overtake the desktop web. “No one will ever want to do that on mobile” gets used to justify short-sighted decisions. Truth is, we can’t predict all the ways that people will want to use mobile in the future. Jason Grigsby, co-author of &lt;cite&gt;Head First Mobile Web&lt;/cite&gt; (with Lyza Danger Gardner) says “We can&amp;#8217;t predict future behavior from a current experience that sucks.”&lt;/p&gt;
+
+&lt;h2&gt;Disruption happens from the low end&lt;/h2&gt;
+
+&lt;p&gt;Disruptive technologies take off because they create a new market for a product. People who previously could not afford a particular technology get access to it, in a form that (at least at the start) is less powerful and of lower quality. These people aren’t comparing between the more established technology and the new one. They have no other alternative.&lt;/p&gt;
+
+&lt;p&gt;McKinsey estimates that the mobile internet could bring billions of people online:&lt;/p&gt;
+
+&lt;figure class="quote"&gt;&lt;blockquote&gt;However, the full potential of the mobile Internet is yet to be realized; over the coming decade, this technology could fuel significant transformation and disruption, not least from the possibility that the mobile Internet could bring two billion to three billion more people into the connected world and the global economy.&lt;/blockquote&gt;
+&lt;figcaption&gt;&lt;a href="http://www.mckinsey.com/insights/business_technology/disruptive_technologies"&gt;Disruptive technologies: Advances that will transform life, business, and the global economy&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2&gt;Disruptive technologies eventually improve&lt;/h2&gt;
+
+&lt;p&gt;Over time, the quality of low-end technology improves. As more and more people buy into a cheaper, less-capable technology, more attention and focus goes toward refining it. Eventually, it overtakes its larger, more capable predecessor.&lt;/p&gt;
+
+&lt;p&gt;This is the challenge we face in mobile right now. Mobile won’t always be a secondary device or a limited, on-the-go use case. Mobile will be the internet. Comparing its shortcomings to what the desktop web does well is missing the point. Mobile will be &lt;em&gt;better&lt;/em&gt; than the desktop—but it will succeed on what it does uniquely well. &lt;/p&gt;
+
+&lt;p&gt;McKinsey estimates the astonishing potential economic upside of the mobile internet:&lt;/p&gt;
+
+&lt;figure class="quote"&gt;&lt;blockquote&gt;We estimate that for the applications we have sized, the mobile Internet could generate annual economic impact of $3.7 trillion to $10.8 trillion globally by 2025. This value would come from three main sources: improved delivery of services, productivity increases in select work categories, and the value from Internet use for the new Internet users who are likely to be added in 2025, assuming that they will use wireless access either all or part of the time.&lt;/blockquote&gt;
+&lt;figcaption&gt;&lt;a href="http://www.mckinsey.com/insights/business_technology/disruptive_technologies"&gt;Disruptive technologies: Advances that will transform life, business, and the global economy&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Today, the mobile internet provides a lousy experience. For billions of people coming online across the world, it will be their first (and only) way to access the web. The history of disruptive innovation shows that it’s okay if the mobile internet provides a less-than-adequate experience today. Most mobile internet users won’t be comparing between the desktop web and the mobile web. For these people, the alternative is &lt;em&gt;nothing&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;Tomorrow, the mobile internet will provide a better experience. It’s up to us to make it happen.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/8N_c-7U9_M0" height="1" width="1"/&gt;</description>
+      <dc:subject><![CDATA[<a href="/topic/content">Content</a>, <a href="/topic/user-experience">User Experience</a>, <a href="/topic/industry">Industry</a>, <a href="/topic/mobile-multidevice">Mobile/Multidevice</a>]]></dc:subject>
+      <dc:date>2013-06-06T11:30:15+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/column/the-alternative-is-nothing</feedburner:origLink></item>
+	
+		
+    <item>
+      <title><![CDATA[Designing for Breakpoints]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/zFkOLCNW-WE/designing-for-breakpoints</link>
+      <guid isPermaLink="false">http://alistapart.com/article/designing-for-breakpoints</guid>
+      <description>&lt;p&gt;Jeremy Keith notes that what happens between the breakpoints is just as important as the breakpoints themselves—perhaps even more so. While I agree with this, we do have to start somewhere. In a way, this part of the process reminds me of storyboarding, or creating animation keyframes, with the in-between frames being developed later. We’re going to do that here.&lt;/p&gt;
+
+&lt;aside class="supplement"&gt;&lt;strong&gt;Major breakpoints&lt;/strong&gt; are conditions that, when met, trigger major changes in your design. A major breakpoint might be, for example, where your entire layout must change from two columns to four.&lt;/aside&gt;
+
+&lt;p&gt;Let’s say you’ve chosen three basic design directions from your thumbnails. Think about what your &lt;strong&gt;major breakpoints&lt;/strong&gt; will look like (Figure 7.6). And here’s the key: &lt;em&gt;try to come up with as few major breakpoints as possible&lt;/em&gt;. That might sound crazy, since we’re talking about responsive design. After all, we have media queries, so let’s use about 12 of them, right? No! If a linear layout works for every screen and is &lt;em&gt;appropriate&lt;/em&gt; for your particular concept, then there’s no need for different layouts. In that case, simply describe what will happen when the screen gets larger. Will everything generally stay the same, with changes only to font size, line height and margins? If so, sketch those. For these variations, make thumbnails first, explore some options, and then move on to larger, more detailed sketches. Use your breakpoint graph as a guide at first and make sketches according to the breakpoints you’ve estimated on your graph.&lt;/p&gt;
+
+&lt;p&gt;When thinking about major breakpoints, remember to think about &lt;em&gt;device classes&lt;/em&gt;. If you’re thinking about smartphones, tablets, laptops/desktops, TVs, and game consoles, for example, you’re heading in the right direction. If you’re thinking in terms of brand names and specific operating systems, you’re on the wrong track. The idea is to think in terms of general device classifications and, sometimes, device capabilities. Capabilities are more important when designing web applications, since you should be thinking about what screens will look like both with and &lt;em&gt;without&lt;/em&gt; any particular capability.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rough sketches&lt;/strong&gt; of major breakpoints can help you determine:&lt;/p&gt;
+
+&lt;aside class="supplement"&gt;&lt;strong&gt;Rough sketches&lt;/strong&gt; are more detailed than thumbnails, but they shouldn’t take a long time to create. In a short period, you should have a sketch of each major breakpoint for each of your chosen designs. This should be enough to decide on one of the designs.&lt;/aside&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Whether or not more major breakpoints are needed&lt;/li&gt;
+&lt;li&gt;Which design choice will be the most labor intensive; you might opt for a design that will better fit within time and budget constraints&lt;/li&gt;
+&lt;li&gt;Whether or not a particular device class has been neglected or needs further consideration&lt;/li&gt;
+&lt;li&gt;What technologies you’ll need to develop the design responsively&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure data-picture data-alt="Figure 7.6"&gt;
+&lt;div data-src="/d/376/ch07-06_small.png" data-media="(max-width: 700px)"&gt;&lt;/div&gt;
+&lt;div data-src="/d/376/ch07-06_small_retina.png" data-media="(max-width: 700px) and (min-device-pixel-ratio: 2.0)"&gt;&lt;/div&gt;
+&lt;div data-src="/d/376/ch07-06_full.png" data-media="(min-width: 701px)"&gt;&lt;/div&gt;
+&lt;div data-src="/d/376/ch07-06_full_retina.png" data-media="(min-width: 701px) and (min-device-pixel-ratio: 2.0)"&gt;&lt;/div&gt;
+&lt;!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. --&gt;
+&lt;noscript&gt;&lt;img src="/d/376/ch07-06_full.png" alt=""&gt;&lt;/noscript&gt;
+&lt;figcaption&gt;Figure 7.6: Most websites need very few major breakpoints.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;aside class="supplement"&gt;&lt;strong&gt;Minor breakpoints&lt;/strong&gt; are conditions that, when met, trigger small changes in your design. An example would be moving form labels from above text fields to the left of those fields, while the rest of the design remains the same.&lt;/aside&gt;
+
+&lt;p&gt;So where and when will you sketch &lt;strong&gt;minor breakpoints&lt;/strong&gt;? &lt;em&gt;In the browser&lt;/em&gt;, when you do your web-based mockup. You’ll find out why and how in the next chapter. In the meantime, simply focus on making sketches of the state of your web pages or app screens at the major breakpoints of each design.&lt;/p&gt;
+
+&lt;p&gt;At this point, don’t worry too much if you notice that the initial breakpoints on your breakpoint graph simply won’t do. Those were just a starting point, and you’re free to revise your estimate based on your sketches. You might even decide that you need an extra breakpoint for a given design and record that in sketch form; you can add that breakpoint to your graph. This is a cycle of discovery, learning, and revision.&lt;/p&gt;
+
+&lt;h2&gt;Think about your content while sketching&lt;/h2&gt;
+
+&lt;p&gt;While sketching, you’ll certainly be thinking about the way things should look. My experience is that much UI sketching of this type revolves around the layout of elements on the screen. I’ve found it useful to keep thinking about the content while sketching, and to consider what will happen to the content in various situations. When designing responsively, it can be useful to consider how you’ll handle the following content in particular:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;li&gt;Navigation&lt;/li&gt; 
+&lt;li&gt;Tables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Oh, sure, there are many more things to consider, and you’ll end up creating your own list of “things to do some extra thinking about” as the project progresses. For now, let’s take a look at the items listed above.&lt;/p&gt;
+
+&lt;h3&gt;Text&lt;/h3&gt;
+
+&lt;p&gt;Before you say, “Hey, wait a minute, didn’t you just tell me that I didn’t have to draw text while sketching?” hear me out. While sketching, there are a couple of text-related issues you’ll need to tackle: column width and text size, both of which are relevant &lt;em&gt;in proportion to the screen and the other elements on the page&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Column width is fairly obvious, but it can be difficult to estimate how wide a column will be with &lt;em&gt;actual&lt;/em&gt; text. In this case, sketching on a device might give you a better idea of the actual space you have to work with. Another method I’ve used is just to make a simple HTML page that contains only text, and load that into a device’s browser (or even an emulator, which while not optimal still gives a more realistic impression than lines on paper). When the text seems too large or too small, you can adjust the font size accordingly. Once it seems right, you’ll be able to make your sketches a bit more realistic.&lt;/p&gt;
+
+&lt;aside class="supplement"&gt;&lt;b&gt;Note:&lt;/b&gt; Distinguish between &lt;strong&gt;touchability&lt;/strong&gt; and &lt;strong&gt;clickability&lt;/strong&gt;. Many designers, myself included, have made the mistake of refining links for people who click on them using a mouse, or even via the keyboard, without considering how touchable these links are for people on touch devices.&lt;/aside&gt;
+
+&lt;p&gt;Think about the size of links—not only the text size, but also the amount of space around them. Both of these factors play a role in the &lt;strong&gt;touchability&lt;/strong&gt; or &lt;strong&gt;clickability&lt;/strong&gt; of links (and buttons): large links and buttons are easier targets, but slightly smaller links with plenty of space around them can work just as well. That said, there’s a decent chance that no matter what you choose to sketch, you’ll end up making changes again when you create your mockups.&lt;/p&gt;
+
+&lt;p&gt;This is the great thing about sketching that I can’t repeat often enough: you’re going to refine your design in the browser anyway, so the speed with which you can try things out when sketching means you won’t have to do detail work more than once (unless your client has changes, but we all know that never happens).&lt;/p&gt;
+
+&lt;h3&gt;Navigation&lt;/h3&gt;
+
+&lt;p&gt;Navigation is another poster child for sketching on actual devices. The size issues are the same as with links, but there’s a lot more thinking to do in terms of the design of navigation for various devices, which means navigation might change significantly at each major breakpoint.&lt;/p&gt;
+
+&lt;p&gt;Think back to Bryan Rieger’s practice of designing in text first, and ponder what you would do &lt;em&gt;before&lt;/em&gt; the very first breakpoint if you had only plain HTML and CSS at your disposal—in other words, if you had no JavaScript. That means no, you can’t have your menu collapsed at the top of the screen and have it drop down when someone touches it. If you have your menu at the top, it’s in its expanded form and takes up all the vertical space it normally would.&lt;/p&gt;
+
+&lt;p&gt;This is a controversial enough subject, with even accessibility gurus in disagreement: JavaScript, after all, is currently considered an “accessibility supported” technology. But this isn’t necessarily about accessibility. It’s about &lt;em&gt;thinking&lt;/em&gt; about what happens when a browser lacks JavaScript support, or if the JavaScript available on the device is different than what you’d expect. Your content will be presented in a certain way before JavaScript does its thing with it, no matter what the browser. So why not think about what that initial state will be?&lt;/p&gt;
+
+&lt;p&gt;In the chapter on wireframes, I talked about my preferred pattern for navigation on the smallest screens: keep it near the bottom of the screen and place a link to that navigation near the top of the screen. JavaScript, when available and working as expected, can move that navigation up to the top and create the drop-down menu on the fly.&lt;/p&gt;
+
+&lt;p&gt;But a pattern is not design law, so how you choose to handle the smallest screens will depend on your project. If I had only a few links in my navigation, I might very well put the menu at the top from the very start, and there it would stay at every breakpoint.&lt;/p&gt;
+
+&lt;p&gt;Remember that JavaScript and CSS let you do a lot of rearranging of stuff on the screen. That knowledge should empower you to safely design a great page with plain HTML and use JavaScript and CSS to spice it up any way you like. This is the essence of progressive enhancement.&lt;/p&gt;
+
+&lt;h3&gt;Tables&lt;/h3&gt;
+
+&lt;p&gt;Tables! Oh, the bane of the responsive designer (or wait, is that images? Or video? Or layout? Ahem). Tables are tough to deal with on small screens. I’d love to tell you I have all the answers, but instead I have more questions. Hopefully, these will lead you to a solution. It’s good to think about these while you’re sketching.&lt;/p&gt;
+
+&lt;p&gt;First of all, what types of tables will you be dealing with? Narrow? Wide? Numerical? Textual? Your content inventory should give you enough information to answer these simple questions. Once you’ve considered those, try to categorize the types of tables you have into something like the following classes (Figure 7.7):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Small-screen-friendly tables&lt;/b&gt;, which you’ll probably leave as they are, because they’re small enough and will work fine on most small screens.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Blockable tables&lt;/b&gt;, which you can alter with CSS so that each row in the table functions visually as a block item in a list (Figure 7.8).&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Chartable tables&lt;/b&gt;, which contain numerical data that can be transformed into a chart, graph, or other visualization that will take up less space on a small screen.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Difficult tables&lt;/b&gt;, which are hard enough to deal with that you’ll need to come up with a different plan for them, sometimes even on a case-by-case basis. These are our enemies, but unfortunately, are the friends of our clients, who all love Microsoft Excel. Oh well.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure data-picture data-alt="Figure 7.7"&gt;
+&lt;div data-src="/d/376/ch07-07_small.png" data-media="(max-width: 700px)"&gt;&lt;/div&gt;
+&lt;div data-src="/d/376/ch07-07_full.png" data-media="(min-width: 701px)"&gt;&lt;/div&gt;
+&lt;!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. --&gt;
+&lt;noscript&gt;&lt;img src="/d/376/ch07-07_full.png" alt=""&gt;&lt;/noscript&gt;
+&lt;figcaption&gt;Figure 7.7: There are several different types of tables, and different ways of dealing with them on small screens. (Sources: &lt;a href="http://mobilism.nl"&gt;mobilism.nl&lt;/a&gt; and &lt;a href="http://eu-verantwoording.nl/"&gt;eu-verantwoording.nl&lt;/a&gt;)&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;figure data-picture data-alt="Figure 7.8"&gt;
+&lt;div data-src="/d/376/ch07-08_small.png" data-media="(max-width: 700px)"&gt;&lt;/div&gt;
+&lt;div data-src="/d/376/ch07-08_full.png" data-media="(min-width: 701px)"&gt;&lt;/div&gt;
+&lt;!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. --&gt;
+&lt;noscript&gt;&lt;img src="/d/376/ch07-08_full.png" alt=""&gt;&lt;/noscript&gt;
+&lt;figcaption&gt;Figure 7.8: One way of dealing with small screen tables is to treat each row as a block.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thinking again in terms of progressive enhancement, the base design should probably just include the whole table, which means that the user will have to scroll horizontally to see the whole thing in many cases. On top of this, we can employ CSS and JavaScript, when they’re available, to do some magic for us. Blockable and chartable tables can be &lt;em&gt;blocked&lt;/em&gt; with CSS and &lt;em&gt;charted&lt;/em&gt; with JavaScript. Plenty of designers and developers have experimented with many different options for tables, from simply making the table itself scrollable to exchanging columns and rows.&lt;/p&gt;
+
+&lt;p&gt;The fun part is that what you do on small screens isn’t necessarily what you’ll do on larger screens. That’s why now—when all you have to do is sketch and it won’t take much time—is the time to think about the changes you’ll be making at each breakpoint.&lt;/p&gt;
+
+&lt;h2&gt;What to do if you get stuck&lt;/h2&gt;
+
+&lt;p&gt;Every designer gets stuck at some point. It’s no big deal unless you treat it like one. There are countless ways to deal with it, from asking yourself &lt;em&gt;what if&lt;/em&gt; questions (“What if it weren’t a table, but a list?” is what I asked myself before “blockifying” the attendees table for the Mobilism site) to the cliché &lt;em&gt;taking a shower&lt;/em&gt;, which you hopefully do on a regular basis anyway. The reason this chapter focuses so much on sketching is because the act of drawing itself can actually stimulate your brain to come up with more ideas, provided you push it hard enough by sketching past your comfort zone of first-come ideas.&lt;/p&gt;
+
+&lt;p&gt;If your problem is that you’re stuck creatively, there are many inspiring books and resources to get your creative engine started during the bitter cold of designer’s block. Although there are plenty of resources on design and creativity itself (try such classics as Edward de Bono’s &lt;i&gt;Lateral Thinking&lt;/i&gt;), the greatest inspiration can come from sources outside the realm of design.&lt;sup data-footnote&gt;1&lt;/sup&gt; Trying to combine things that normally aren’t combined can lead to surprising results. It’s a simple little trick, but I’ve often used Brian Eno and Peter Schmidt’s &lt;i&gt;Oblique Strategies&lt;/i&gt; to force me to take a different approach.&lt;sup data-footnote&gt;2&lt;/sup&gt; Worst case, it’s a lot of fun. Best case, you’ve got a great idea!&lt;/p&gt;
+
+&lt;p&gt;If your problem is that you’re not sure how to handle something in the context of responsive design, there’s no harm in researching how others have solved problems like yours. Just be sure to use your creativity and tailor any ideas you might find to your own situation; after all, you’re a designer. At the time of this writing I find Brad Frost’s &lt;i&gt;This Is Responsive&lt;/i&gt; to be one of the most exhaustive collections of responsive design patterns and resources available.&lt;sup data-footnote&gt;3&lt;/sup&gt; You can spend hours going through there and you’ll certainly come across something that will get you unstuck.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Excerpted from &lt;i&gt;Responsive Design Workflow&lt;/i&gt; by Stephen Hay. Copyright © 2013.&lt;br /&gt;
+Used with permission of Pearson Education, Inc. and New Riders.&lt;/small&gt;&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/zFkOLCNW-WE" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-06-04T12:00:27+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/article/designing-for-breakpoints</feedburner:origLink></item>
+    
+	
+	    <item>
+      <title><![CDATA[Maps Should Be Crafted, Not “Plugged In”]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/MYIFRr9DzKI/maps-should-be-crafted-not-plugged-in</link>
+      <guid isPermaLink="false">http://cognition.happycog.com/article/maps-should-be-crafted-not-plugged-in</guid>
+      <description>&lt;a href="http://cognition.happycog.com/article/maps-should-be-crafted-not-plugged-in" style="font-size: 18px;"&gt;» Maps Should Be Crafted, Not “Plugged In”&lt;/a&gt;&lt;br&gt;&lt;br&gt;Web designers: erase the line between “the map” and “the content“ by harnessing the power of open-source Leaflet and your own fresh creative thinking. In the tradition of ALA’s recent “Hack Your Maps,” Happy Cog’s Brandon Rosage shares how to make location a central aspect of the content experience—not just a visual aid. &lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/MYIFRr9DzKI" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-05-30T17:10:40+00:00</dc:date>
+    <feedburner:origLink>http://cognition.happycog.com/article/maps-should-be-crafted-not-plugged-in</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Amazon Web Services Introduces a New API]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/MXux5aUPqRA/aws-iam-now-supports-amazon-facebook-and-google-identity-federation.html</link>
+      <guid isPermaLink="false">http://aws.typepad.com/aws/2013/05/aws-iam-now-supports-amazon-facebook-and-google-identity-federation.html</guid>
+      <description>&lt;a href="http://aws.typepad.com/aws/2013/05/aws-iam-now-supports-amazon-facebook-and-google-identity-federation.html" style="font-size: 18px;"&gt;» Amazon Web Services Introduces a New API&lt;/a&gt;&lt;br&gt;&lt;br&gt;Amazon Web Services Identity and Access Management (IAM) is expanding to support web identity federation. Developers can integrate Amazon.com, Facebook, or Google identity into their app by using the new AWS Security Token Service (STS) API, &lt;code&gt;AssumeRoleWithWebIdentity&lt;/code&gt;, to request temporary security credentials.
+ &lt;br&gt;&lt;br&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/MXux5aUPqRA" height="1" width="1"/&gt;</description>
+      <dc:subject><![CDATA[<a href="/topic/application-development">Application Development</a>]]></dc:subject>
+      <dc:date>2013-05-30T01:00:20+00:00</dc:date>
+    <feedburner:origLink>http://aws.typepad.com/aws/2013/05/aws-iam-now-supports-amazon-facebook-and-google-identity-federation.html</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Responsive Web Design Easter Egg]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/fnj2UIH-fVc/responsive-web-design-easter-egg</link>
+      <guid isPermaLink="false">http://alistapart.com/blog/post/responsive-web-design-easter-egg</guid>
+      <description>&lt;p&gt;Three years ago in these pages, ALA technical editor &lt;a href="http://alistapart.com/author/emarcotte"&gt;Ethan Marcotte&lt;/a&gt; fired the shot heard &amp;#8217;round the web. ALA designer &lt;a href="http://alistapart.com/author/mikepick"&gt;Mike Pick&lt;/a&gt; thought it might be fun to celebrate the third anniversary of &amp;#8220;&lt;a href="http://alistapart.com/article/responsive-web-design"&gt;Responsive Web Design&lt;/a&gt;&amp;#8221; (&lt;cite&gt;A List Apart&lt;/cite&gt; Issue No. 306, May 25, 2010) by secreting an Easter Egg in the original article; our illustrator, &lt;a href="http://alistapart.com/author/kcornell"&gt;Kevin Cornell&lt;/a&gt;, rose to the challenge. &lt;/p&gt;
+
+&lt;p&gt;To see it in action, visit &lt;a href="http://alistapart.com/article/responsive-web-design"&gt;alistapart.com/article/responsive-web-design&lt;/a&gt;, grab the edge of the browser window (device permitting), and perform the responsive resize mambo. (ALA&amp;#8217;s &lt;a href="http://alistapart.com/author/murtaugh"&gt;Tim Murtaugh&lt;/a&gt;, who coded the Easter Egg, has provided a &lt;a href="http://d.alistapart.com/misc-images/responsive-illos-b.mp4"&gt;handy video demo&lt;/a&gt; of what you&amp;#8217;ll see.)&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/fnj2UIH-fVc" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-05-29T17:48:50+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/blog/post/responsive-web-design-easter-egg</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Do Users Care About Your Latest News? (Spoiler: No.)]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/NYo3YYDB34Y/</link>
+      <guid isPermaLink="false">http://boagworld.com/content-strategy/website-news/</guid>
+      <description>&lt;a href="http://boagworld.com/content-strategy/website-news/" style="font-size: 18px;"&gt;» Do Users Care About Your Latest News? (Spoiler: No.)&lt;/a&gt;&lt;br&gt;&lt;br&gt;Paul Boag takes a look at some analytics to see what it can tell us about the effectiveness of putting your "latest news" on your home page.&lt;br&gt;&lt;br&gt;℅ &lt;a class="attribution-link" href="https://twitter.com/DiaryCS/status/339469261082882048"&gt;@DiaryCS&lt;/a&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/NYo3YYDB34Y" height="1" width="1"/&gt;</description>
+      <dc:subject />
+      <dc:date>2013-05-28T20:02:14+00:00</dc:date>
+    <feedburner:origLink>http://boagworld.com/content-strategy/website-news/</feedburner:origLink></item>
+	
+	    <item>
+      <title><![CDATA[Cennydd Bowles on UX & Design: On Changing the World]]></title>
+      <link>http://feedproxy.google.com/~r/alistapart/main/~3/PfzRNQJZag4/on-changing-the-world</link>
+      <guid isPermaLink="false">http://alistapart.com/column/on-changing-the-world</guid>
+      <description>&lt;p&gt;We hear it mostly from proud CEOs and recruiters, as a sweet nothing designed to tempt candidates to drop their counter-offers, or a statement in a desperate pitch deck. We’re changing the world! All it takes is a few hundred fearsome intellects and laptops. Are you in or out?&lt;/p&gt;
+
+&lt;p&gt;It’s a bold claim, and when it crops up in more laughable contexts it’s easy to discount as hubris. But consider the claim more closely and it’s harder to deny. Technology loves to demolish the status quo, and it’s doing it with aplomb.&lt;/p&gt;
+
+&lt;p&gt;The world is struggling to come to terms with the implications of such rapid change. So far, specific industries&amp;#8201;—&amp;#8201;music, news, film&amp;#8201;—&amp;#8201;have had to pick up most of the debris, but now technology is destabilizing some of society’s central pillars: law, finance, education, defense, and politics. We’ve recently seen the rise of a rogue currency outside the global financial system. Crowdsourced vigilantism. The further erosion of the concept of ownership. State-sponsored hacking. Technologists are already making buildings busier than any hospital, and cities ten times the size of Tokyo. We’re hacking around the limitations of space and time. It’s sci-fi stuff, unevenly distributed straight into our inboxes. Today we label these feats “digital,” but before long that qualifier will no longer make much sense. &lt;/p&gt;
+
+&lt;p&gt;It’s hardly surprising that work on this scale challenges existing systems and behaviors. &lt;/p&gt;
+
+&lt;figure class="quote"&gt;
+&lt;blockquote&gt;Once you have something that grows faster than education grows, you’re always going to get a pop culture.&lt;/blockquote&gt;
+&lt;figcaption&gt;&lt;a href="http://queue.acm.org/detail.cfm?id=1039523"&gt;Alan Kay&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;From the inside, it’s exciting to see technology race ahead of the social frameworks that surround it. Our industry is in thrall to disruption, just so long as it happens to someone else. And although we can feign disinterest&amp;#8201;—“It’s not our fault you can’t keep up…”—&amp;#8201;power is a fresh, intoxicating phenomenon for geeks like us.&lt;/p&gt;
+
+&lt;p&gt;Outside our bubble, the change is more worrying. Technology is becoming the lingua franca of the modern elite, but it’s a language the world doesn’t yet fully understand. Today, a tiny clique has disproportionate influence on global culture. This group is largely young, male, white, and concentrated around wealthy urban regions, particularly the San Francisco Bay Area.&lt;/p&gt;
+
+&lt;p&gt;Doubtless many readers identify with this group, as do I. But we must admit it’s not a group that’s terribly well versed in the ways of the world. Therefore, those of us in the privileged position of affecting the course of technology have a duty to inform others of our intentions and listen to their feedback.&lt;/p&gt;
+
+&lt;p&gt;Grass-roots schemes like the UK’s &lt;a href="http://www.codeclub.org.uk"&gt;Code Club&lt;/a&gt; encourage digital literacy by introducing the public to the fundamentals of programming. These are important and welcome initiatives. But as well as raw technical knowledge, we need to stir up public debate on the societal implications of technology. Who controls our data? How does &lt;abbr title="Digital Rights Management"&gt;DRM&lt;/abbr&gt; affect commerce and the public’s possessions? What will privacy mean in a Glass-wearing era?&lt;/p&gt;
+
+&lt;p&gt;The tech industry is well placed to begin these conversations—not because we understand the likely cultural impact (frankly, we’re pretty clueless there) but because we have advanced warning of emerging technologies.&lt;/p&gt;
+
+&lt;p&gt;As &lt;a href="http://www.billbuxton.com/"&gt;Bill Buxton&lt;/a&gt; has argued, new technologies take roughly 20 years to reach the mainstream. The mouse, the touchscreen, the mobile phone, wearable computers: none was an overnight success. All existed as prototypes in &lt;abbr title="research and development"&gt;R&amp;amp;D&lt;/abbr&gt; labs and thought experiments in academic papers long before they were commercialized.&lt;/p&gt;
+
+&lt;p&gt;Industry insiders can all take a strong guess at what will be the next generation’s disruptive digital technologies. It’s time to talk about the potential impact of 3D printing, voice inputs, pervasive networks, and embedded computing today, not when the products hit the shelves.&lt;/p&gt;
+
+&lt;p&gt;We already have the tools required to begin these discussions: blogs, tweets, conference talks, conversations with friends outside the industry. We can also reach further by taking up the issues with government representatives or the media, writing books, and starting public campaigns. But soapboxes and councils aren’t the only way to raise these issues: our products can also speak for us.&lt;/p&gt;
+
+&lt;p&gt;One way we can clarify the function and implications of new technology is to design self-disclosure into it. Innovative products should help users form accurate mental models of how they work, and discuss consequences the user may not have considered. For example, a voice-operated technology could explain how to prevent others from triggering it, or remind the user to be conscious of her environment before issuing sensitive commands. A networked car telemetry system could notify the user exactly who has access to this data, and why sharing it with the insurance company could lead to lower premiums.&lt;/p&gt;
+
+&lt;p&gt;This notion of self-disclosure doesn’t sit too well with the modern preference for seamlessness. I’ve previously questioned whether the &lt;a href="http://alistapart.com/column/looking-beyond-user-centered-design"&gt;“invisible interface” deprecates style&lt;/a&gt; and risks homogenizing design. But there are broader questions too.&lt;/p&gt;
+
+&lt;p&gt;The black box model&amp;#8201;—&amp;#8201;a device or product that hides its mechanics and complexity&amp;#8201;—&amp;#8201;can be useful for designing appealing, marketable products. However, it can also act against users’ interests.&lt;/p&gt;
+
+&lt;p&gt;First, black boxes are harder to diagnose and debug. Without an entry point (serviceable hardware, an API, or even just some flashing LEDs) and knowledge of how the thing works, a black box can be stubborn and uncommunicative when something goes wrong. Imagine a house full of co-operating devices that all fail because an OS somewhere in that network has crashed. The designer of this system must provide some visibility into the workings of the network, allowing the user to resolve the problem.&lt;/p&gt;
+
+&lt;p&gt;Second, black box devices have the potential to reduce the user’s agency. It’s hard to understand a device that seems to act of its own accord. A seamless device demands trust, but offers no way for the user to decide if that trust is warranted. There’s a risk that invisible interfaces could therefore become breeding grounds for unethical design. Since the user has little insight into the workings of the system, it becomes easier to slip personal data to an unknown IP, connect to a premium-rate phone line, or perform some other hostile act.&lt;/p&gt;
+
+&lt;p&gt;So seamlessness may not be the right model for new genres of technology. Perhaps it’s better for the first wave of innovative devices to be explicit about their workings and implications, helping the public to understand and react appropriately. Once people become more familiar with the technology, designers can carefully taper this self-disclosure off.&lt;/p&gt;
+
+&lt;p&gt;It may be harder to design a slick user experience if we expose the workings of a device, but advocating transparency is about designing a good experience for humankind, not just a single user. It demonstrates an ethical, holistic mindset that’s becoming ever more important as technology becomes central to people’s lives.&lt;/p&gt;
+
+&lt;p&gt;For ethical values to thrive in our field, we can’t let the pace of change seduce us into thinking we&amp;#8217;ve no time for them. Designers and engineers alike need to think deeply about the implications of the things we make, and appreciate the value of doing so. We also need role models. I long for our industry to stop fetishizing entrepreneurs and billion-dollar buyouts, and instead to praise technologists who inform the public about new technology, or companies that make tough decisions for the greater good.&lt;/p&gt;
+
+&lt;p&gt;Individuals within the tech industry also need the courage to do the right thing. The job market is so strong that the only response to unethical pressure from employers should be a hearty middle-fingered farewell. And where &lt;a href="http://alistapart.com/article/dark-patterns-deception-vs.-honesty-in-ui-design"&gt;dark patterns&lt;/a&gt; do emerge, the industry must highlight these dirty tricks, and explain to the public how they can avoid being taken for a ride.&lt;/p&gt;
+
+&lt;p&gt;Finally, the tech community should educate itself about global issues. Our tiny elite needs to understand the world in order to affect it positively. Efforts to travel, to learn about other cultures and contexts, and to consider use cases beyond those of our nearest neighbors will help reduce the risk of technological imperialism. It would be a mistake to assume that a solution that works for a Western techie will work for a North African trader.&lt;/p&gt;
+
+&lt;p&gt;These are complex times for the tech industry, and the consequences of taking a wrong step could be severe. Let’s dedicate thoughtful time to ensure the effect we’re having on the world is positive. The results will also be good for our own industry: an informed public means a greater trust of and appetite for our work.&lt;/p&gt;&lt;img src="http://feeds.feedburner.com/~r/alistapart/main/~4/PfzRNQJZag4" height="1" width="1"/&gt;</description>
+      <dc:subject><![CDATA[<a href="/topic/user-experience">User Experience</a>, <a href="/topic/interaction-design">Interaction Design</a>]]></dc:subject>
+      <dc:date>2013-05-28T12:30:00+00:00</dc:date>
+    <feedburner:origLink>http://alistapart.com/column/on-changing-the-world</feedburner:origLink></item>
+	
+    
+    </channel>
+</rss>

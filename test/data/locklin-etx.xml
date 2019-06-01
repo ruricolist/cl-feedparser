@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+        xmlns:content="http://purl.org/rss/1.0/modules/content/"
+        xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+        xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+        xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+        >
+
+<channel>
+        <title>Locklin on science</title>
+        <atom:link href="http://scottlocklin.wordpress.com/feed/" rel="self" type="application/rss+xml" />
+        <link>http://scottlocklin.wordpress.com</link>
+        <description>In which I explain things interesting, remarkable or silly.</description>
+        <lastBuildDate>Thu, 21 Aug 2014 23:49:23 +0000</lastBuildDate>
+        <language>en</language>
+                <sy:updatePeriod>hourly</sy:updatePeriod>
+                <sy:updateFrequency>1</sy:updateFrequency>
+        <generator>http://wordpress.com/</generator>
+<cloud domain='scottlocklin.wordpress.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+<image>
+                <url>http://0.gravatar.com/blavatar/c1335a278acbc5affdbeffd3acdaa1b8?s=96&#038;d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png</url>
+                <title>Locklin on science</title>
+                <link>http://scottlocklin.wordpress.com</link>
+        </image>
+        <atom:link rel="search" type="application/opensearchdescription+xml" href="http://scottlocklin.wordpress.com/osd.xml" title="Locklin on science" />
+        <atom:link rel='hub' href='http://scottlocklin.wordpress.com/?pushpress=hub'/>
+        <item>
+                <title>Optalysys and Optical computing</title>
+                <link>http://scottlocklin.wordpress.com/2014/08/11/optalysys-and-optical-computing/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/08/11/optalysys-and-optical-computing/#comments</comments>
+                <pubDate>Mon, 11 Aug 2014 21:44:56 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[non-standard computer architectures]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1888</guid>
+                <description><![CDATA[Years and years ago, when I was writing up my dissertation and thinking about what I was going to do with my life, I gave some thought to non von-Neumann computing architectures. This was more or less the dawn of the quantum computing/quantum information era as a field, when it turned from an obscure idea [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1888&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/08/11/optalysys-and-optical-computing/feed/</wfw:commentRss>
+                <slash:comments>9</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/08/comp1.jpg?w=300" medium="image">
+                        <media:title type="html">comp1</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/08/comp.jpg?w=300" medium="image">
+                        <media:title type="html">comp</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/08/optalysys-optical-computing-multiple-lasers-640x353.jpg?w=300" medium="image">
+                        <media:title type="html">optalysys-optical-computing-multiple-lasers-640x353</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/08/mmult.jpg?w=300" medium="image">
+                        <media:title type="html">mmult</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Neglected machine learning ideas</title>
+                <link>http://scottlocklin.wordpress.com/2014/07/22/neglected-machine-learning-ideas/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/07/22/neglected-machine-learning-ideas/#comments</comments>
+                <pubDate>Tue, 22 Jul 2014 18:48:29 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[machine learning]]></category>
+                <category><![CDATA[statistical tools]]></category>
+                <category><![CDATA[tools]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1898</guid>
+                <description><![CDATA[This post is inspired by the &#8220;metacademy&#8221; suggestions for &#8220;leveling up your machine learning.&#8221; They make some halfway decent suggestions for beginners.  The problem is, these suggestions won&#8217;t give you a view of machine learning as a field; they&#8217;ll only teach you about the subjects of interest to authors of machine learning books, which is [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1898&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/07/22/neglected-machine-learning-ideas/feed/</wfw:commentRss>
+                <slash:comments>39</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/1510.jpg?w=300" medium="image">
+                        <media:title type="html">1510</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/boris-artzybasheff-machinalia1.jpg?w=300" medium="image">
+                        <media:title type="html">boris-artzybasheff-machinalia1</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/4140093417_c8b498a205_b.jpg?w=300" medium="image">
+                        <media:title type="html">4140093417_c8b498a205_b</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/4140853224_78a8faed00_b.jpg?w=300" medium="image">
+                        <media:title type="html">4140853224_78a8faed00_b</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/98.jpg?w=300" medium="image">
+                        <media:title type="html">98</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/4140852076_c0b2bc6ee6_b.jpg?w=300" medium="image">
+                        <media:title type="html">4140852076_c0b2bc6ee6_b</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/4140092567_80f07dbc23_b.jpg?w=300" medium="image">
+                        <media:title type="html">4140092567_80f07dbc23_b</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Can the Su-25 intercept and shoot down a 777?</title>
+                <link>http://scottlocklin.wordpress.com/2014/07/21/can-the-su-25-intercept-and-shoot-down-a-777/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/07/21/can-the-su-25-intercept-and-shoot-down-a-777/#comments</comments>
+                <pubDate>Mon, 21 Jul 2014 23:12:04 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[big machines]]></category>
+                <category><![CDATA[War nerding]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1884</guid>
+                <description><![CDATA[Personal background: I&#8217;ve flown Malaysian Airlines and declare it better and more civilized than any US airline. I&#8217;ve been to Ukraine on a business-vacation. I&#8217;m sympathetic to the aspirations of the long suffering Ukrainian people. I&#8217;m also sympathetic to the position of the Russian government with respect to Ukraine, which is, after all, sort of [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1884&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/07/21/can-the-su-25-intercept-and-shoot-down-a-777/feed/</wfw:commentRss>
+                <slash:comments>245</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/hacking-boeing-777-showcase_image-8-p-1638.jpg?w=300" medium="image">
+                        <media:title type="html">hacking-boeing-777-showcase_image-8-p-1638</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/su25_maxbryansky.jpg?w=300" medium="image">
+                        <media:title type="html">su25_maxbryansky</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/aa-2-atoll.jpg?w=300" medium="image">
+                        <media:title type="html">The K-13 AA missile</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/r-60_2_128.jpg?w=300" medium="image">
+                        <media:title type="html">The R-60 aphid</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/07/ww1.jpg?w=300" medium="image">
+                        <media:title type="html">War is bad, m&#039;kay?</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Quantifiably unsane: Vessyl</title>
+                <link>http://scottlocklin.wordpress.com/2014/06/24/quantifiably-unsane-vessyl/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/06/24/quantifiably-unsane-vessyl/#comments</comments>
+                <pubDate>Tue, 24 Jun 2014 19:21:05 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[Design]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1844</guid>
+                <description><![CDATA[According to the nation&#8217;s editorial pages, the modern era is characterized by international trade, the spread of &#8220;democracy&#8221; and high technology. Historians from the future will characterize the present as a squalid LED-lit beeping dark age where common sense went to die. Today&#8217;s exhibit, brought to you thanks to their PR department: Vessyl. A $200 [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1844&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/06/24/quantifiably-unsane-vessyl/feed/</wfw:commentRss>
+                <slash:comments>15</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/06/vessyl-pametna-casa.jpg?w=300" medium="image">
+                        <media:title type="html">vessyl-pametna-casa</media:title>
+                </media:content>
+
+                <media:content url="https://scottlocklin.files.wordpress.com/2014/06/billstarr.jpg" medium="image">
+                        <media:title type="html">billstarr</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Michael Lewis: shilling for the buyside</title>
+                <link>http://scottlocklin.wordpress.com/2014/04/04/michael-lewis-shilling-for-the-buyside/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/04/04/michael-lewis-shilling-for-the-buyside/#comments</comments>
+                <pubDate>Fri, 04 Apr 2014 08:15:06 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[finance journalism]]></category>
+                <category><![CDATA[microstructure]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1789</guid>
+                <description><![CDATA[Journalism, in the ideal world, is supposed to inform the citizenry of facts important to their well being. Modern journalism seems to involve issuing press releases from the oligarchical reptiles who are destroying Western Civilization. Maybe I am a naive fool, and it was always thus. Either way, Michael Lewis&#8217;s latest book lends credence to [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1789&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/04/04/michael-lewis-shilling-for-the-buyside/feed/</wfw:commentRss>
+                <slash:comments>71</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/lewis_a.jpg?w=224" medium="image">
+                        <media:title type="html">lewis_a</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/fbi.jpeg?w=300" medium="image">
+                        <media:title type="html">fbi</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/cbotpit1900-gb.jpg" medium="image">
+                        <media:title type="html">CBOTpit1900-GB</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/cbot1929.jpg?w=300" medium="image">
+                        <media:title type="html">cbot1929</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/they-live-16.jpg" medium="image">
+                        <media:title type="html">they-live-16</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/theylive1.jpg?w=300" medium="image">
+                        <media:title type="html">TheyLive1</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/04/sergey-aleynikov-1-png.jpeg?w=300" medium="image">
+                        <media:title type="html">sergey-aleynikov-1.png</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Bad models and the end of the world</title>
+                <link>http://scottlocklin.wordpress.com/2014/03/23/bad-models-and-the-end-of-you/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/03/23/bad-models-and-the-end-of-you/#comments</comments>
+                <pubDate>Sun, 23 Mar 2014 04:14:29 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[econo-blasphemy]]></category>
+                <category><![CDATA[stats jackass of the month]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1757</guid>
+                <description><![CDATA[I loathe journalism as a profession: a claque of careerist whores, half-educated back-slappers and propagandists for the oligarchical lizard people who are ruining civilization. I loathe &#8220;science journalism&#8221; particularly, as they&#8217;re generally talking about something I know about, and so their numerous impostures are more obvious. Today&#8217;s exhibit, the &#8220;NASA study predicting the end of [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1757&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/03/23/bad-models-and-the-end-of-you/feed/</wfw:commentRss>
+                <slash:comments>18</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/they-live-3.jpg?w=720" medium="image">
+                        <media:title type="html">Journalists: they&#039;re mostly like this</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/repent-the-end-is-nigh-ye-must-be-cleansed.png" medium="image">
+                        <media:title type="html">The three authors of this study</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/sandwich-board-man-warns-us-of-impending-doom.jpg" medium="image">
+                        <media:title type="html">sandwich-board-man-warns-us-of-impending-doom</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/frank-chu-20091128040249.jpg" medium="image">
+                        <media:title type="html">A more reliable narrator than the Ahmed bozo who broke this story</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Anatomy of a Fusion press release</title>
+                <link>http://scottlocklin.wordpress.com/2014/03/05/anatomy-of-a-fusion-press-release/</link>
+                <comments>http://scottlocklin.wordpress.com/2014/03/05/anatomy-of-a-fusion-press-release/#comments</comments>
+                <pubDate>Wed, 05 Mar 2014 02:25:30 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[big machines]]></category>
+                <category><![CDATA[Design]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1721</guid>
+                <description><![CDATA[Listening to the nonsense mindlessly parroted  by media outlets, you&#8217;d think we were a few months away from limitless fusion power. I&#8217;d like to believe that. I&#8217;d like to believe my country was still capable of making important technical breakthroughs. Just as I&#8217;d like to believe my country&#8217;s foreign policy isn&#8217;t run by simpering baboons [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1721&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2014/03/05/anatomy-of-a-fusion-press-release/feed/</wfw:commentRss>
+                <slash:comments>30</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/nif1.jpg?w=547" medium="image">
+                        <media:title type="html">NIF1</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/nif2.jpg" medium="image">
+                        <media:title type="html">NIF2</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2014/03/nif_1a.jpg" medium="image">
+                        <media:title type="html">nif_1a</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>The most beautiful rocket</title>
+                <link>http://scottlocklin.wordpress.com/2013/11/14/the-most-beautiful-rocket/</link>
+                <comments>http://scottlocklin.wordpress.com/2013/11/14/the-most-beautiful-rocket/#comments</comments>
+                <pubDate>Thu, 14 Nov 2013 07:48:22 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[big machines]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=709</guid>
+                <description><![CDATA[Rocketry is a field which peaked in the 1960s, probably never to improve appreciably. The space shuttle? A flying brick. The attempted replacement for the space shuttle, the Ares is a piece of junk. They originally tried to base it on shuttle technology &#8220;to save money&#8221; -a lovely demonstration of the sunk cost fallacy, but [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=709&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2013/11/14/the-most-beautiful-rocket/feed/</wfw:commentRss>
+                <slash:comments>11</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/11/ares-i-rocket-667aac29c209b493.jpg?w=720" medium="image">
+                        <media:title type="html">ares-i-rocket-667aac29c209b493</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/11/14015-004-5c866bdf.jpg" medium="image">
+                        <media:title type="html">14015-004-5C866BDF</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/11/titan2_color_silo.jpg" medium="image">
+                        <media:title type="html">Titan2_color_silo</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/11/geminititan.jpg" medium="image">
+                        <media:title type="html"></media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/11/gemini-titan_11_launch_-_gpn-2000-001020-e1384411765338.jpg?w=720" medium="image">
+                        <media:title type="html"></media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Shannon information, compression and psychic powers</title>
+                <link>http://scottlocklin.wordpress.com/2013/10/31/shannon-information-compression-psychic/</link>
+                <comments>http://scottlocklin.wordpress.com/2013/10/31/shannon-information-compression-psychic/#comments</comments>
+                <pubDate>Thu, 31 Oct 2013 00:32:49 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[information theory]]></category>
+                <category><![CDATA[J]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1608</guid>
+                <description><![CDATA[Fun thing I found in the J-list, a game of code golf. Generate the following pattern with the least number of bytes of code: _____*_____ _____*_____ ____*_*____ ___*___*___ __*_____*__ **_______** __*_____*__ ___*___*___ ____*_*____ _____*_____ _____*_____ The  J solution by Marshall Lochbaum is the best one I&#8217;ve seen, taking only 18 bytes of code. I&#8217;ll break [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1608&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2013/10/31/shannon-information-compression-psychic/feed/</wfw:commentRss>
+                <slash:comments>12</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+        </item>
+                <item>
+                <title>Soviet interceptors: the power and the glory</title>
+                <link>http://scottlocklin.wordpress.com/2013/07/30/soviet-interceptors-the-power-and-the-glory/</link>
+                <comments>http://scottlocklin.wordpress.com/2013/07/30/soviet-interceptors-the-power-and-the-glory/#comments</comments>
+                <pubDate>Tue, 30 Jul 2013 00:07:30 +0000</pubDate>
+                <dc:creator><![CDATA[Scott Locklin]]></dc:creator>
+                                <category><![CDATA[big machines]]></category>
+
+                <guid isPermaLink="false">http://scottlocklin.wordpress.com/?p=1605</guid>
+                <description><![CDATA[The Soviets solved problems differently from the West. This wasn&#8217;t just because they had different problems to solve, though there is that. Part of the reason their artifacts are so weird to Western eyes is their engineering and scientific disciplines evolved under different pressures. Consider the Soviet long range interceptors. Westerners mostly didn&#8217;t consider the [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=scottlocklin.wordpress.com&#038;blog=6936594&#038;post=1605&#038;subd=scottlocklin&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+                <wfw:commentRss>http://scottlocklin.wordpress.com/2013/07/30/soviet-interceptors-the-power-and-the-glory/feed/</wfw:commentRss>
+                <slash:comments>31</slash:comments>
+
+                <media:content url="http://1.gravatar.com/avatar/4dccc57eb523d720fcee09388033e30c?s=96&#38;d=identicon&#38;r=G" medium="image">
+                        <media:title type="html">scottlocklin</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/tu-128ut.jpg" medium="image">
+                        <media:title type="html">tu-128ut</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/su-15.jpg" medium="image">
+                        <media:title type="html">su-15</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/su-15m.jpg?w=720" medium="image">
+                        <media:title type="html">su-15m</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/tu-128-2.jpg" medium="image">
+                        <media:title type="html">tu-128-2</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/i152a3.jpg" medium="image">
+                        <media:title type="html">i152a3</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/i152-1.jpg" medium="image">
+                        <media:title type="html">i152-1</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/ye-152m.jpg?w=720" medium="image">
+                        <media:title type="html">Ye-152m</media:title>
+                </media:content>
+
+                <media:content url="http://scottlocklin.files.wordpress.com/2013/07/i150.jpg" medium="image">
+                        <media:title type="html">i150</media:title>
+                </media:content>
+        </item>
+        </channel>
+</rss>

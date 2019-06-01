@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+	xml:lang="en">
+	<channel rdf:about="http://kmuto.jp/b.cgi/index.rss">
+		<title>No Cook, No Life</title>
+		<link>http://kmuto.jp/b.cgi</link>
+		<description>- Kenshi's memorandum</description>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<admin:generatorAgent rdf:resource="http://www.blosxom.com/?v=2.0"/>
+		<admin:errorReportsTo rdf:resource="mailto:kmuto_b@kmuto.jp"/>
+		<items>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/apt-command.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/bug-668001.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-324-squeeze.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2639-squeeze.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-bpomirrors.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze2.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2632-lenny.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/backed-from-debconf9.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/my-mistake-plan-debconf9.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/ext4-working.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2630-lenny.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/travel-plan-debconf9.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/gree-meeting.htm"/>
+				<rdf:li rdf:resource="http://kmuto.jp/b.cgi/debian/hclv2.htm"/>
+			</rdf:Seq>
+		</items>
+	</channel>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/apt-command.htm">
+		<title>smart "apt" command</title>
+		<link>http://kmuto.jp/b.cgi/debian/apt-command.htm</link>
+		<description>During evaluating Jessie, I found 'apt' command and noticed it was pretty good for novice-usual users.Usage: apt [options] commandCLI for apt.Basic commands:  list - list packages based on package names search - search in package descriptions show - show package details update - update list of available packages install - install packages remove  - remove packages upgrade - upgrade the system by installing/upgrading packages full-upgrade - upgrade the system by removing/installing/upgrading packages edit-sources - edit the source information file'apt list' is like a combination of 'dpkg -l' + 'apt-cache pkgnames'. 'apt search' is a bit slower than 'apt-cache search' but provides with useful information. 'apt show' formats bytesizes and hides some (for experts) fields. install/remove/upgrade/full-upgrade are mostly same as apt-get. 'apt edit-sources' opens a editor and checks the integrity.So, I'd like to recommend 'apt' command to Debian users.Well, why did I write this entry...? ;) I found a mistranslation I had made in ja.po of apt. Because it is critical mistranslation (Japanese users will confuse by it), I want to fix it strongly.Dear apt deity maintainers, could you consider to update apt for Jessie? (#772678. FYI there are other translation updates also: #772913, #771982, and #771967)</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2014-12-19T19:12+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>During evaluating Jessie, I found 'apt' command and noticed it was pretty good for novice-usual users.</p>
+<pre>
+Usage: apt [options] command
+
+CLI for apt.
+Basic commands: 
+ list - list packages based on package names
+ search - search in package descriptions
+ show - show package details
+
+ update - update list of available packages
+
+ install - install packages
+ remove  - remove packages
+
+ upgrade - upgrade the system by installing/upgrading packages
+ full-upgrade - upgrade the system by removing/installing/upgrading packages
+
+ edit-sources - edit the source information file
+</pre>
+<p>'apt list' is like a combination of 'dpkg -l' + 'apt-cache pkgnames'. 'apt search' is a bit slower than 'apt-cache search' but provides with useful information. 'apt show' formats bytesizes and hides some (for experts) fields. install/remove/upgrade/full-upgrade are mostly same as apt-get. 'apt edit-sources' opens a editor and checks the integrity.</p>
+<p>So, I'd like to recommend 'apt' command to Debian users.</p>
+<p>Well, why did I write this entry...? ;) I found a mistranslation I had made in ja.po of apt. Because it is critical mistranslation (Japanese users will confuse by it), I want to fix it strongly.</p>
+<p>Dear apt deity maintainers, could you consider to update apt for Jessie? (#772678. FYI there are other translation updates also: #772913, #771982, and #771967)</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/apt-command.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/bug-668001.htm">
+		<title>Bug #668001</title>
+		<link>http://kmuto.jp/b.cgi/debian/bug-668001.htm</link>
+		<description>If the bug title of #668001 was not"debootstrap: cant install systemd instead of sysvinit",but was like"debootstrap ignores everything from the first pipe character tothe end of Depends/Pre-Depends line.",it would be treated more carefully ;)My patch posting #20 aims to fix it.Well, I wish this bug will be solved on jessie+1 or backports.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2014-11-25T12:00+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+If the bug title of <a href="http://bugs.debian.org/668001">#668001</a> was not
+"debootstrap: cant install systemd instead of sysvinit",
+but was like
+"debootstrap ignores everything from the first pipe character to
+the end of Depends/Pre-Depends line.",
+it would be treated more carefully ;)</p>
+
+<p>
+My patch posting <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=668001#20">#20</a> aims to fix it.</p>
+
+<p>Well, I wish this bug will be solved on jessie+1 or backports.</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/bug-668001.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-324-squeeze.htm">
+		<title>Squeeze amd64/i386 d-i images with Linux kernel 3.2.4 bpo, and WPA support</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-324-squeeze.htm</link>
+		<description>After a long silence, I updated the bpo Debian-installer for Debian GNU/Linux 6.0.4, Squeeze. You know, you can take it from http://kmuto.jp/debian/d-i/.bases on Debian 6.0.4 Squeeze with firmwaresuses Linux kernel 3.2.4 (linux-image-3.2.0-0.bpo.1 3.2.4-1~bpo60+1)includes fixed DHCP client for buggy MacOS X DHCP serversupports WiFi WPAincludes backported finish-install to fix wrong /etc/inittab on some environments.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2012-03-15T23:26+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+After a long silence, I updated the bpo Debian-installer for Debian GNU/Linux 6.0.4, Squeeze. You know, you can take it from <a href="http://kmuto.jp/debian/d-i/">http://kmuto.jp/debian/d-i/</a>.
+</p>
+<ul>
+<li>bases on Debian 6.0.4 Squeeze with firmwares</li>
+<li>uses Linux kernel 3.2.4 (linux-image-3.2.0-0.bpo.1 3.2.4-1~bpo60+1)</li>
+<li>includes fixed DHCP client for buggy MacOS X DHCP server</li>
+<li>supports WiFi WPA</li>
+<li>includes backported finish-install to fix wrong /etc/inittab on some environments.</li>
+</ul>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-324-squeeze.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-2639-squeeze.htm">
+		<title>Squeeze amd64/i386 d-i images with Linux kernel 2.6.39.bpo</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-2639-squeeze.htm</link>
+		<description>Today I released bpo Debian-Installer with using Linux kernel 2.6.39. You know, you can download it.uses Linux kernel 2.6.39 (bpo.2)updates disk controller drivers such as hpsa. (by updating kernel-wedge)updates firmware packages (such as bnx2x)Enjoy!</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2011-08-09T13:31+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+Today I released bpo Debian-Installer with using Linux kernel 2.6.39. You know, you can <a href="http://kmuto.jp/debian/d-i/">download it</a>.
+</p>
+<ul>
+<li>uses Linux kernel 2.6.39 (bpo.2)</li>
+<li>updates disk controller drivers such as hpsa. (by updating kernel-wedge)</li>
+<li>updates firmware packages (such as bnx2x)</li>
+</ul>
+<p>Enjoy!</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2639-squeeze.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-bpomirrors.htm">
+		<title>backport debian-installer gets a power of cdimage.debian.org</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-bpomirrors.htm</link>
+		<description>With Steve's kind help, I got a place to put my backport debian-installer images at Debian official CD host cdimage.debian.org.Although http://kmuto.jp/debian/d-i/ remains as the site of primary information, you can download or rsync every files from http://cdimage.debian.org/cdimage/unofficial/backports/ directly also.Please DO NOT fill any bugs about these images to Debian BTS. They are unofficial, even are provided by Debian official host ;-P</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2011-07-25T23:33+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+With <a href="http://blog.einval.com/2011/07/25#kmuto_cd">Steve's kind help</a>, I got a place to put my backport debian-installer images at Debian official CD host cdimage.debian.org.
+</p><p>
+Although <a href="http://kmuto.jp/debian/d-i/">http://kmuto.jp/debian/d-i/</a> remains as the site of primary information, you can download or rsync every files from <a href="http://cdimage.debian.org/cdimage/unofficial/backports/">http://cdimage.debian.org/cdimage/unofficial/backports/</a> directly also.
+</p><p>
+Please DO NOT fill any bugs about these images to Debian BTS. They are <strong>unofficial</strong>, even are provided by Debian official host ;-P
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-bpomirrors.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze2.htm">
+		<title>Squeeze amd64/i386 d-i images with Linux kernel 2.6.38.bpo (update#2)</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze2.htm</link>
+		<description>I updated the bpo Debian-installer for Debian GNU/Linux 6.0, Squeeze. You can download it from the place.is based on Debian 6.0.2.1 with firmwaresuses Linux kernel 2.6.38 (bpo.2)includes modified DHCP client for buggy MacOS X DHCP serversupports i386 architectureEnjoy!</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2011-07-10T22:42+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+I updated the bpo Debian-installer for Debian GNU/Linux 6.0, Squeeze. You can download it from <a href="http://kmuto.jp/debian/d-i/">the place</a>.
+</p>
+<ul>
+<li>is based on Debian 6.0.2.1 with firmwares</li>
+<li>uses Linux kernel 2.6.38 (bpo.2)</li>
+<li>includes modified DHCP client for buggy MacOS X DHCP server</li>
+<li>supports i386 architecture</li>
+</ul>
+<p>Enjoy!</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze2.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze.htm">
+		<title>Squeeze amd64 d-i images with Linux kernel 2.6.38.bpo</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze.htm</link>
+		<description>This is first release of backported Debian-installer for Debian GNU/Linux 6.0, Squeeze. You can download it from the place.Debian 6.0.1 basedKernel 2.6.38 (bpo.2)Update #1: I updated images, as revision 0614. It is based on Debian 6.0.1 + firmware netinst. So, you don't need to make a memory stick to insert additional firmwares. Plus, this image includes new DHCP client which is fixed an interacting problem with some DHCP servers.Notice: This ISO image doesn't include non-free firmware. You can take it from Debian official page (please see Debian squeeze installation information and look Section 2.2, Installation Guide). WPA support isn't implemented yet.Enjoy!</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2011-06-15T20:29+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+This is first release of backported Debian-installer for Debian GNU/Linux 6.0, Squeeze. You can download it from <a href="http://kmuto.jp/debian/d-i/">the place</a>.
+</p>
+<ul>
+<li>Debian 6.0.1 based</li>
+<li>Kernel 2.6.38 (bpo.2)</li>
+</ul>
+<p>
+Update #1: I updated images, as revision 0614. It is based on Debian 6.0.1 + firmware netinst. So, you don't need to make a memory stick to insert additional firmwares. Plus, this image includes new DHCP client which is fixed an interacting problem with some DHCP servers.
+</p>
+<p>Notice: <s>This ISO image doesn't include non-free firmware. You can take it from Debian official page (please see <a href="http://www.debian.org/releases/squeeze/debian-installer/">Debian squeeze installation information</a> and look <a href="http://www.debian.org/releases/squeeze/amd64/ch02s02.html">Section 2.2, Installation Guide</a>).</s> WPA support isn't implemented yet.</p>
+<p>Enjoy!</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2638-squeeze.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-2632-lenny.htm">
+		<title>i386/amd64 d-i images for Lenny, Linux kernel version 2.6.32</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-2632-lenny.htm</link>
+		<description>I happily release lenny-custom-1230.Have a nice new year day.Debian 5.0.3Linux kernel 2.6.32ext4 supportfirmware support[Update 16th January] Update ISO file (0116) with firmware filesfirmware-nonfree 0.22 based.I hope some devices such as bnx2, bnx2x, and tg3 work again now.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2010-01-16T16:39+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+I happily release <a href="http://kmuto.jp/debian/d-i/">lenny-custom-1230</a>.
+Have a nice new year day.
+</p>
+<ul>
+<li>Debian 5.0.3</li>
+<li>Linux kernel 2.6.32</li>
+<li>ext4 support</li>
+<li>firmware support</li>
+</ul>
+<p>
+[Update 16th January] Update ISO file (0116) with firmware files
+firmware-nonfree 0.22 based.
+I hope some devices such as bnx2, bnx2x, and tg3 work again now.
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2632-lenny.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/backed-from-debconf9.htm">
+		<title>Adios Debconf9</title>
+		<link>http://kmuto.jp/b.cgi/debian/backed-from-debconf9.htm</link>
+		<description>I backed home from Madrid yesterday. I had a precious time in this trip.La Coruna, where was the place I visited first, had a beautiful beach. I was relaxed a long time there and adopt myself to Spain, though sunburn was a bit painful. (hey, I'm molting!) Galician octopus was the best I ate ever. Thanks my friend Kazuhisa.I stayed at Madrid before/after Debconf. Because it was the second time I visited there, I could behave like a tour conductor for my friends :-P Plada museum, Sophia museum, and Toredo were nice to see. Foods were really nice also.Debconf9, you know, was the best. I met and talked with many people; old friends, new friends, local people, and so on. Every sessions were fun. i18n meeting was hot. Day-trip provided me hiking, swimming, drinking, and talking. It would be hard challenge to prepare and coordinate for organization team and local staff, but you succeeded perfectly! I'd like to say thank orga, staff, and all attendees. See you!</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-08-01T12:21+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+I backed home from Madrid yesterday. I had a precious time in this trip.
+</p><p>
+La Coruna, where was the place I visited first, had a beautiful beach. I was relaxed a long time there and adopt myself to Spain, though sunburn was a bit painful. (hey, I'm molting!) Galician octopus was the best I ate ever. Thanks my friend Kazuhisa.
+</p><p>
+I stayed at Madrid before/after Debconf. Because it was the second time I visited there, I could behave like a tour conductor for my friends :-P Plada museum, Sophia museum, and Toredo were nice to see. Foods were really nice also.
+</p><p>
+Debconf9, you know, was the best. I met and talked with many people; old friends, new friends, local people, and so on. Every sessions were fun. i18n meeting was hot. Day-trip provided me hiking, swimming, drinking, and talking. It would be hard challenge to prepare and coordinate for organization team and local staff, but you succeeded perfectly! I'd like to say thank orga, staff, and all attendees. See you!
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/backed-from-debconf9.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/my-mistake-plan-debconf9.htm">
+		<title>Oh my...</title>
+		<link>http://kmuto.jp/b.cgi/debian/my-mistake-plan-debconf9.htm</link>
+		<description>Yesterday Debconf provisional schedule was announced. Thanks Debconf team for your hard work!But I understood I couldn't attend some interesting sessions and keysign party due to my schedule... I have to leave Caceres on 29 July afternoon. I made a big mistake about my travel plan.OK, so I'll try to exchange keysign personally during the conference and watch the talks later when Debconf video team create them.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-06-30T10:34+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+Yesterday <a href="https://penta.debconf.org/dc9_schedule/index.en.html">Debconf provisional schedule</a> was announced. Thanks Debconf team for your hard work!
+</p><p>
+But I understood I couldn't attend some interesting sessions and keysign party due to my schedule... I have to leave Caceres on 29 July afternoon. I made a big mistake about my travel plan.
+</p><p>
+OK, so I'll try to exchange keysign personally during the conference and watch the talks later when Debconf video team create them.
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/my-mistake-plan-debconf9.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/ext4-working.htm">
+		<title>Working for ext4 support</title>
+		<link>http://kmuto.jp/b.cgi/debian/ext4-working.htm</link>
+		<description>I had gotten some requests to support brand-new ext4 filesystem from my backport d-i users. Yesterday I implemented it. Download via previous article.The work was harder than I assumed...The implementation on d-i side was mostly done already on d-i trunk by cjwatson and otavio. I appreciate their good job! I merged it to partman-base and partman-ext3.Because GNU parted in Lenny didn't support ext4, I had to backport from unstable. Plus, I had to build again some packages to follow ABI change.e2fsprogs-udeb in Lenny didn't contain mkfs.ext4, though deb contained it. I backported from unstable for stability.grub won't work with ext4. You have to use grub-pc instead of it, if you'd like to use ext4 for root (boot) partition. I left this issue alone and just wrote down FAQ.Even you choose grub-pc, it won't boot because initramfs misrecognizes ext4 partition as ext3. You have to append "rootfstype=ext4" option to kernel parameter. I wrote it on FAQ.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-06-28T11:41+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+I had gotten some requests to support brand-new ext4 filesystem from my backport d-i users. Yesterday I implemented it. Download via <a href="http://kmuto.jp/b.cgi/debian/d-i-2630-lenny.htm">previous article</a>.
+</p><p>
+The work was harder than I assumed...
+</p>
+<ul>
+<li>The implementation on d-i side was mostly done already on d-i trunk by cjwatson and otavio. I appreciate their good job! I merged it to partman-base and partman-ext3.</li>
+<li>Because GNU parted in Lenny didn't support ext4, I had to backport from unstable. Plus, I had to build again some packages to follow ABI change.</li>
+<li>e2fsprogs-udeb in Lenny didn't contain mkfs.ext4, though deb contained it. I backported from unstable for stability.</li>
+<li>grub won't work with ext4. You have to use grub-pc instead of it, if you'd like to use ext4 for root (boot) partition. I left this issue alone and just wrote down FAQ.</li>
+<li>Even you choose grub-pc, it won't boot because initramfs misrecognizes ext4 partition as ext3. You have to append "rootfstype=ext4" option to kernel parameter. I wrote it on FAQ.</li>
+</ul>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/ext4-working.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/d-i-2630-lenny.htm">
+		<title>i386/amd64 d-i images for Lenny, kernel version 2.6.30 + firmware + ext4 support</title>
+		<link>http://kmuto.jp/b.cgi/debian/d-i-2630-lenny.htm</link>
+		<description>For those who would like to use Linux kernel 2.6.30 for installing Debian Lenny,here it is. Enjoy.Debian 5.0.1 Lenny based.Linux Kernel 2.6.30 (as same as Debian unstable)Support IDE disk again. (yes, I hadn't noticed ide-disk renamed to ide-gd_mod)pre-located firmware (linux-firmware package will be installed if d-i detects your machine needs it. This image supports bnx2 and bnx2x also)experimental WPA support (not tested)[update on 28 Jun] Added ext4 support. You can choose ext4 filesystem at partition manager screen. Don't try to use ext4 for your root partition (or see FAQ).By the way,</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-06-28T10:47+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+For those who would like to use Linux kernel 2.6.30 for installing Debian Lenny,
+<a href="/debian/d-i/">here it is</a>. Enjoy.
+</p>
+<ul>
+<li>Debian 5.0.1 Lenny based.</li>
+<li>Linux Kernel 2.6.30 (as same as Debian unstable)</li>
+<li>Support IDE disk again. (yes, I hadn't noticed ide-disk renamed to ide-gd_mod)</li>
+<li>pre-located firmware (linux-firmware package will be installed if d-i detects your machine needs it. This image supports bnx2 and bnx2x also)</li>
+<li>experimental WPA support (not tested)</li>
+<li>[update on 28 Jun] Added ext4 support. You can choose ext4 filesystem at partition manager screen. Don't try to use ext4 for your root partition (or see <a href="/debian/d-i/#faq">FAQ</a>).</li>
+</ul>
+<p>By the way,</p>
+<img src="/d/photo/debconf9-going-to.png" alt="I'm going to Debconf9.">]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/d-i-2630-lenny.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/travel-plan-debconf9.htm">
+		<title>My schedule for Debconf9 and vacation</title>
+		<link>http://kmuto.jp/b.cgi/debian/travel-plan-debconf9.htm</link>
+		<description>Debconf9 is coming. I'll be there and will have a short trip to Coruna to visit my friend and to Madrid to visit some museums, before Debconf.Tokyo-Madrid round-trip ticket (Thai airline): ReservedDebconf attendance fee: PaidMadrid-Coruna round-trip ticket (Iberia air): ReservedHotel at Coruna: ReservedHostel at Madrid: ReservedMadrid Atocha-&gt;Caceres train Talgo (23 July): ReservedCaceres-&gt;Madrid (29 July evening): Not yet.Hotel at Madrid for 29 July: ReservedAnyway, see you at Debconf9! :)</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-06-11T08:57+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>Debconf9 is coming. I'll be there and will have a short trip to Coruna to visit my friend and to Madrid to visit some museums, before Debconf.</p>
+<ul>
+<li>Tokyo-Madrid round-trip ticket (Thai airline): Reserved</li>
+<li>Debconf attendance fee: Paid</li>
+<li>Madrid-Coruna round-trip ticket (Iberia air): Reserved</li>
+<li>Hotel at Coruna: Reserved</li>
+<li>Hostel at Madrid: Reserved</li>
+<li>Madrid Atocha-&gt;Caceres train Talgo (23 July): Reserved</li>
+<li>Caceres-&gt;Madrid (29 July evening): Not yet.</li>
+<li>Hotel at Madrid for 29 July: Reserved</li>
+</ul>
+<p>Anyway, see you at Debconf9! :)</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/travel-plan-debconf9.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/gree-meeting.htm">
+		<title>Opensource technology study meeting at GREE</title>
+		<link>http://kmuto.jp/b.cgi/debian/gree-meeting.htm</link>
+		<description>Hideki Yamane and Nobuhiro Iwamatsu talked about Debian Project last Friday at GREE was one of famous SNS providers in Japan. GREE uses Debian GNU/Linux on large scale for its services.Hideki, is active Debian Maintainer, talked that using Debian was pretty easy and welcomed every contributors. He also described how Debian Project was managing release, QA, and buildd for a large audience.Nobuhiro, just passed NM tests and is awaiting final DAM's check, spoke about NM process with his personal experience. He is one of Linux kernel upstream developers and has good knowledges about embedded system programmings and device drivers. I hope he passes DAM's check early to improve Debian more.I met and talked with some people who were interesting in Debian after the meeting. Yes, I enjoyed that time.</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-04-12T22:24+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+<a href="http://wiki.debian.org/HidekiYamane">Hideki Yamane</a> and Nobuhiro Iwamatsu talked about Debian Project last Friday at <a href="http://gree.jp/">GREE</a> was one of famous SNS providers in Japan. GREE uses Debian GNU/Linux on large scale for its services.
+</p><p>
+Hideki, is active Debian Maintainer, talked that using Debian was pretty easy and welcomed every contributors. He also described how Debian Project was managing release, QA, and buildd for a large audience.
+</p><p>
+Nobuhiro, just passed NM tests and is awaiting final DAM's check, spoke about NM process with his personal experience. He is one of Linux kernel upstream developers and has good knowledges about embedded system programmings and device drivers. I hope he passes DAM's check early to improve Debian more.
+</p><p>
+I met and talked with some people who were interesting in Debian after the meeting. Yes, I enjoyed that time.
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/gree-meeting.trackback"/>
+	</item>
+	<item rdf:about="http://kmuto.jp/b.cgi/debian/hclv2.htm">
+		<title>Debian GNU/Linux device driver check &amp; report version 2.0</title>
+		<link>http://kmuto.jp/b.cgi/debian/hclv2.htm</link>
+		<description>I updated Web service 'Debian HCL - Debian GNU/Linux device driver check &amp; report page' is an easy tool to check and see the support status of your hardware on GNU/Linux, with many improved features.Integrating the check page and submitted reports is convenience.The vendor tree view will make easier to find models what you'd like to see.Although Searching isn't implemented yet, I think new URL structure is friendly to search engine crawlers. I'll put Google search form on the page after Google crawls.Handling your submission is semi-automatic periodically. So please don't submit again and again even it won't be shown soon. :)This service is localized in English, Japanese, French, Spanish, Spanish-Argentina, Italian, Polish, German, Portguese, and Chinese (simplified) at this time, by using your Web browser language information. Because I introduced the GNU gettext system for internationalizing, it's easy to translate and update the translations. You can take template.pot file and translate in your language. If you'd like to translate in your language, please tell me. Have a fun!</description>
+		<dc:subject>Debian</dc:subject>
+		<dc:creator>Kenshi Muto</dc:creator>
+		<dc:date>2009-04-08T14:42+09:00</dc:date>
+		<content:encoded><![CDATA[
+<p>
+<a href="/debian/hcl/"><img src="/d/photo/hclv2.png" alt="" border="0"></a>
+I updated Web service '<a href="/debian/hcl/">Debian HCL - Debian GNU/Linux device driver check &amp; report page</a>' is an easy tool to check and see the support status of your hardware on GNU/Linux, with many improved features.
+</p><p>
+Integrating the check page and submitted reports is convenience.
+The vendor tree view will make easier to find models what you'd like to see.
+Although Searching isn't implemented yet, I think new URL structure is friendly to search engine crawlers. I'll put Google search form on the page after Google crawls.
+</p><p>
+Handling your submission is semi-automatic periodically. So please don't submit again and again even it won't be shown soon. :)
+</p><p>
+This service is localized in English, Japanese, French, Spanish, Spanish-Argentina, Italian, Polish, German, Portguese, and Chinese (simplified) at this time, by using your Web browser language information. Because I introduced the GNU gettext system for internationalizing, it's easy to translate and update the translations. You can take <a href="http://kmuto.jp/svn/hcl/trunk/prog/locale/template.pot">template.pot</a> file and translate in your language. If you'd like to translate in your language, please tell me. Have a fun!
+</p>]]></content:encoded>
+		<trackback:ping rdf:resource="http://kmuto.jp/b.cgi/debian/hclv2.trackback"/>
+	</item>
+</rdf:RDF>

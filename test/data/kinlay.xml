@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>QUANTITATIVE RESEARCH AND TRADING</title>
+	<atom:link href="http://jonathankinlay.com/index.php/feed/" rel="self" type="application/rss+xml" />
+	<link>http://jonathankinlay.com</link>
+	<description>The latest theories, models and investment strategies in quantitative research and trading</description>
+	<lastBuildDate>Tue, 22 Apr 2014 08:13:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.6</generator>
+		<item>
+		<title>How to Spot a Fake</title>
+		<link>http://jonathankinlay.com/index.php/2014/04/how-to-spot-a-fake/</link>
+		<comments>http://jonathankinlay.com/index.php/2014/04/how-to-spot-a-fake/#comments</comments>
+		<pubDate>Sun, 20 Apr 2014 10:03:54 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Trading]]></category>
+		<category><![CDATA[Equity Curve]]></category>
+		<category><![CDATA[Fake]]></category>
+		<category><![CDATA[Natural Gas]]></category>
+		<category><![CDATA[Performance Report]]></category>
+		<category><![CDATA[Strategy]]></category>
+		<category><![CDATA[Tradestation]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=565</guid>
+		<description><![CDATA[One of the issues that comes up regularly is how, as an investor or other interested party, one can protect oneself from unscrupulous scam artists posing as professional traders or money managers. This is a particular problem on web sites &#8230; <a href="http://jonathankinlay.com/index.php/2014/04/how-to-spot-a-fake/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>One of the issues that comes up regularly is how, as an investor or other interested party, one can protect oneself from unscrupulous scam artists posing as professional traders or money managers. This is a particular problem on web sites featuring trader forums, where individuals with unverified track records claiming stellar trading histories use their purported trading “prowess” to try to impress and intimidate other participants, usually impressionable newbies. The purpose of this post is to provide some guidance to help investors, traders and other fellow travelers sort the wheat from the chaff. We’ll be doing some forensic analysis on the track record for a strategy in NG futures that one such character recently posted in one of these forums, as a classic example of the kind of fakery I am describing.</p>
+<p>One thing you should understand about scam artists operating on forums, is that they don’t work alone: usually they have a bunch of groupies who will shill for them at every opportunity and who will try to shout down any investigative questioning. Don’t be deterred. These know-it-alls are usually just ignorant dupes, who understand no more about trading than the scam artist. They may just as easily be fellow-scam artists themselves.</p>
+<p><strong>THE FIRST BIG RED FLAG: UNWILLINGNESS TO PRODUCE A TRACK RECORD</strong><br />
+Anyone claiming to be a CTA or professional money manager (or whose shills claim he is one) has to have a track record that is freely available in the public domain. So how does a scam artist overcome a challenge to produce it? He will claim that he “can’t advertise”, or make some other, similar excuse. Don’t accept that at face value. Ask him to PM it to you. If he won’t, there’s already a high probability he’s a con artist.</p>
+<p><strong>THE SECOND BIG RED FLAG: CURVE FITTING</strong><br />
+Let’s say our suspect meets the challenge and produces a track record. Ideally this will be an audited P&amp;L statement, but let’s assume for the purposes of this discussion that he produces something along the lines of the Performance Reports produced by a product like Tradestation or MultiCharts, i.e. we are dealing with a simulated back-test.</p>
+<p>If your suspect produces a back-test, you can be pretty sure it’s going to look good – otherwise he wouldn’t produce it. The task now is to dig into those reports to spot the red flags that give clues as to whether it might be fake.<br />
+Now of course any trading system is going to make assumptions – about fill rates, slippage, commissions, capacity etc. All that is fine, as long as the assumptions are clearly stated. You might want to challenge any or all of the assumptions, and the trader may disagree with you about some or all of them. That’s perfectly ok – it’s an honest, open discussion about a set of investment assumptions that have been revealed at the outset.</p>
+<p>But here is what is <strong>NOT</strong> ok: any opacity about which data was used to build the trading model and which data was used to test it. The former, the in-sample (IS) data set, used to construct the model, must be entirely separate and distinct from the out-of-sample (OOS) data set. It is trivially easy using a tool like Tradestation to produce a trading system that shows stellar results in-sample, but which will immediately crash and burn when it is used in live trading. This is known as curve-fitting. And it’s by far the most common method by which scam artists try to dupe investors.</p>
+<p>In order to demonstrate the robustness of the system prior to risking real money, a genuine trader will test his system OOS and show you the results. What you are looking for ideally is congruity between the IS and OOS results. Now by congruity, I don’t mean that they should be identical. Far from it – markets evolve and strategy performance will vary over time. But what you are hoping is that the key performance metrics in the OOS and IS periods, such as annual returns, Sharpe ration, PNL per contract, profit ratio and win rate, will be comparable. At the very least, you would like to be able to identify some portion of the IS data set for which the strategy performance characteristics are similar to those in the OOS period.</p>
+<p>Any – I mean ANY – ambiguity or lack of clarity about which data was used to build the model and which was used for OOS testing is a HUGE red flag. Chances are, your scam artist is already trying to fudge the issue that he curve-fitted the system.<br />
+This was the case in the recent forum post we are using as a test case. The trader made no attempt whatsoever to clarify which data was used for model development and which for testing. Immediately, I was suspicious and began looking for other evidence of curve fitting. It didn’t take me long to find it.</p>
+<p><strong>THE THIRD BIG RED FLAG: THE EQUITY CURVE</strong><br />
+The first item I turned to in the performance reports was the equity curve and I immediately spotted two rather large clues that I was dealing with a fake.</p>
+<p>The first clue was the large sign on the chart labelled “live start date”. What does this mean? This is a back-test, so all of the results are theoretical, including those after the supposed “live start date” sometime in 2013. What the faker is trying to do is imply the part of the equity curve shown after that date indicate actual performance results. He doesn’t actually claim this, so he has plausible deniability if you call him on it (“I said it was just a back test”). But he hopes that you won’t, and that, by default, you’ll accept these results are real. But they aren’t.</p>
+<p>The second clue of fakery is much more important: the equity curve itself. When someone shows you and equity curve like the one reported by this trader, rising in a straight line from the lower left to upper right quadrants, you can be 99% confident that you are dealing with a fake.<br />
+You see, in finance there are almost never any straight lines. They are as rare as unicorns. Especially when it comes to strategy performance. They only time you will EVER see an equity curve like this is when you are looking at the equity curve of (i) a high frequency market making trading system or (ii) a fake, produced by curve fitting a strategy to the ENTIRE data set.<br />
+And this strategy was not high frequency – as we shall see, it operated on 15 minute bars, holding positions overnight.</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/EC-Chart.png"><img class="aligncenter size-medium wp-image-568" alt="EC Chart" src="http://jonathankinlay.com/wp-content/uploads/EC-Chart-300x267.png" width="600" height="525" /></a></p>
+<p><strong>THE FOURTH BIG RED FLAG: GOD’s EQUITY CURVE</strong><br />
+I said that straight line equity curve were extremely rare. In fact, even God’s equity curve isn’t often a straight line. What does that mean?</p>
+<p>Suppose you had a strategy that could predict with 100% accuracy whether the market would go up or down over the next bar (whether you are using daily bars, or 15 minute bars, as in our example). The system would buy (or hold) when the market was forecast to rise, and sell when the market was predicted to fall. What would the performance of such a perfect system look like? Pretty stellar, obviously. And most people would guess that the system’s equity curve would be a straight line, or maybe even exponential in shape. In fact that’s typically not the case. God’s equity curve will be sloped and kinked, just like any other equity curve. And if your suspect’s equity curve is real, it should show some commonality with God’s equity curve, by which I mean it should show changes in slope and level that reflect those seen in the perfect equity curve.</p>
+<p>What does God’s Equity Curve look like in NG futures?</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/Gods-EC.png"><img class="aligncenter size-medium wp-image-569" alt="Gods EC" src="http://jonathankinlay.com/wp-content/uploads/Gods-EC-300x277.png" width="600" height="550" /></a></p>
+<p>As you can see it’s not straight. In fact it’s concave. So a REAL equity curve should have similar characteristics, like this one, for example:</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/NG-EC.png"><img class="aligncenter size-medium wp-image-570" alt="NG EC" src="http://jonathankinlay.com/wp-content/uploads/NG-EC-242x300.png" width="600" height="600" /></a></p>
+<p>As you can see, the equity curve of the real trading system track’s God’s Equity Curve, albeit at a much lower level. It’s concave, with an upswing during the final few months of trading, just like God’s. That’s a good sign that the strategy back-test is very likely genuine (which it is – I produced it).</p>
+<p>Why is Gods’ Equity Curve the shape it is? The answer will vary from market to market. In the case of NG, the suggestion is that the market is becoming more efficient: simple trading strategies based on technical indicators work less well than they did five years ago. We have seen something very similar in F/X markets. During the 1970’s and 1980’s when Soros was active in the field, simple strategies like moving average crossovers made great returns, but these entirely dissipated in the 1990’s, with the advent of widely available computing power.</p>
+<p><strong>THE FIFTH BIG RED FLAG: THE SHILL SHOUTDOWN</strong><br />
+When I posted my analysis, which clearly indicated fakery by this well known forum participant, I was immediately flamed by one of his supporters who shouted something to the effect that (i) everyone knows that the downward slope of God’s Equity Curve was caused by volatility and (ii) the star trader, unlike God, or me, knows about position sizing.</p>
+<p>This attempt at misdirection in the face of awkward facts is a classic sign of fakery. What distinguishes the shill post is:</p>
+<p>(i) Immediacy – clearly no attempt has been made to evaluate the argument or analysis. The shill simply attempts to drown out the critic with a lot of noise, as quickly as possible.</p>
+<p>(ii) Plausibility – shills will throw around terms that lend plausibility to their objection, but which after a moment’s reflection are entirely irrelevant or, as in this case, detrimental to their own cause.</p>
+<p>(iii) Invective – the more intemperate the post, the more likely the shill is simply trying to provide cover for the faker.</p>
+<p>So let’s take a moment to dispose of the plausible sounding objections posted by the shill in this example.<br />
+I am going to take it as read that everyone understands that trading profitability is positively correlated with volatility. There is a huge amount of empirical research supporting that finding, but to keep it simple we can appeal to one of the cornerstones of modern finance: risk and return. The higher the volatility, i.e. the greater the risk, the greater the return traders and investors in the markets will require on their capital. This is a principle of modern financial theory that even a graduate of the Scranton college of fine art should be expected to appreciate.</p>
+<p>So what’s the story with NG volatility? You can see the time series of NG volatility in the chart below. One feature stands out above all others: the upward slope of the curve. NG volatility has RISEN over the sample period from 2008 to 2014. Consequently, returns from trading NG futures should also have RISEN rather than fallen. One thing we can say for sure, whatever caused the concave shape in God’s Equity Curve in NG futures, it was NOT volatility!</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/NG-Volatility.png"><img class="aligncenter size-medium wp-image-571" alt="NG Volatility" src="http://jonathankinlay.com/wp-content/uploads/NG-Volatility-300x187.png" width="600" height="370" /></a></p>
+<p>Turning to the shill’s next, plausible sounding, but dubious “explanation”, position sizing: this really is completely irrelevant. Because, as we shall see from an examination of the performance report, the track record was created by trading a constant one-lot! So this was just an attempt to sound “sophisticated” by someone trying to misdirect the reader away from the increasingly obvious evidence of fakery.</p>
+<p><strong>THE SIXTH BIG RED FLAG: LOW DRAWDOWNS AND OVERNIGHT GAP RISK</strong><br />
+One of the highly unusual features of our faker’s equity curve is it’s exceptional smoothness. Low volatility in the equity curve is, in and of itself, an indicator the track record results from curve fitting. But we can get even more insight by digging into the performance report, shown below.</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/Perf-1.png"><img class="aligncenter size-medium wp-image-572" alt="Perf 1" src="http://jonathankinlay.com/wp-content/uploads/Perf-1-240x300.png" width="600" height="600" /></a><br />
+<a href="http://jonathankinlay.com/wp-content/uploads/Perf-2.png"><img class="aligncenter size-medium wp-image-573" alt="Perf 2" src="http://jonathankinlay.com/wp-content/uploads/Perf-2-300x278.png" width="600" height="550" /></a></p>
+<p>As you can see from the second page of the report, the strategy holds positions for an average of 57 15-minute bars, equivalent to slightly over 14 hours. So this is a low frequency strategy that takes overnight risk. Now, as any trader will know, overnight gap risk in a product like NG can be very significant and likely to be produce much larger drawdowns over a 5 year period than the $8,470 reported here.</p>
+<p>The only other possible explanation is that the strategy is traded continuously through both day and night sessions. But this is not only itself improbable, it gives rise to another implausibility: liquidity in the overnight session is so poor that the strategy is unlikely to be able to trade more than 1-2 contracts, at most. This would be of little value to a CTA, or its customers, whatever the star trader’s protestations that his “clients are happy”.</p>
+<p>There is no plausible way to resolve the disconnection between the low drawdown, overnight gap risk and market illiquidity. The most plausible explanation: the back-test is a curve fitting exercise.</p>
+<p><strong>THE SEVENTH AN FINAL BIG RED FLAG: INCONSISTENCY BETWEEN PERFORMANCE METRICS</strong><br />
+As any experienced strategy developer knows, you can get some of the things you want, but you can never achieve all of them. Amongst the desirable features to be maximized are<br />
+• Profit factor<br />
+• Average PNL per contract<br />
+• Percentage win rate</p>
+<p>There is a trade-off between the features. A high PNL per contract typically means you are trading less frequently, with longer hold periods, and consequently the percentage win rate tends to be lower. Alternatively, you can increase the win rate, at the cost of lowering the average PNL per contract and/or the profit factor. And so on.</p>
+<p>This strategy purports to have it all: a high average PNL per contract resulting from low frequency trading, coupled with good percentage win rate of over 50% and profit factor. A win rate of much over 40% is highly unusual for a momentum strategy entering and exiting with market or stop orders – and its almost inconceivable for a strategy with a PNL per contract and profit factor as large as suggested here.</p>
+<p><strong>CONCLUSION</strong><br />
+This back-test fails the sniff test on so many levels, I would rate the chance of it being real as less than 1 in 1000.<br />
+The final, conclusive proof of fakery is that the “star trader” responsible for producing the report was unable and/or unwilling to attempt to answer even a single one of the criticisms.</p>
+<p>So, be warned. If you see forum members banding about track records like this one, you can be sure that they and their strategies are likely to be fake, and not to be trusted.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2014/04/how-to-spot-a-fake/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A Study in Gold</title>
+		<link>http://jonathankinlay.com/index.php/2014/04/a-study-in-gold/</link>
+		<comments>http://jonathankinlay.com/index.php/2014/04/a-study-in-gold/#comments</comments>
+		<pubDate>Sun, 20 Apr 2014 07:07:46 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Algorithmic Trading]]></category>
+		<category><![CDATA[Metals]]></category>
+		<category><![CDATA[Algorithm]]></category>
+		<category><![CDATA[Gold]]></category>
+		<category><![CDATA[Strategy]]></category>
+		<category><![CDATA[Trading]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=542</guid>
+		<description><![CDATA[I want to take a look at a trading strategy in the GDX Gold ETF that has attracted quite a lot of attention, stemming from Jay Kaeppel&#8217;s article: The Greatest Gold Stock System You&#8217;ll Probably Never Use (http://www.optionetics.com/market/articles/2012/11/28/kaeppels-corner-the-greatest-gold-stock-system-youll-probably-never-use). The essence &#8230; <a href="http://jonathankinlay.com/index.php/2014/04/a-study-in-gold/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I want to take a look at a trading strategy in the GDX Gold ETF that has attracted quite a lot of attention, stemming from Jay Kaeppel&#8217;s article: The Greatest Gold Stock System You&#8217;ll Probably Never Use (http://www.optionetics.com/market/articles/2012/11/28/kaeppels-corner-the-greatest-gold-stock-system-youll-probably-never-use).</p>
+<p>The essence of the approach is that GDX has reliably tended to trade off during the day session, after making gains in the overnight session.  One possible explanation for the phenomenon is offer by Adrian Douglas in his article Gold Market is not “Fixed”, it’s Rigged (see https://marketforceanalysis.com/articles/latest_article_081310.html) in which he takes issue with the London Fixing mechanism used to set the daily price of gold</p>
+<p>In any event there has been a long-term opportunity to exploit what appears to be a market inefficiency using an extremely simple trading rule, as described by Oddmund Grotte (see http://www.quantifiedstrategies.com/the-greatest-gold-stock-system-you-should-trade/):</p>
+<p>1) If GDX rises from the open to the close more than 0.1%, buy on the close and exit on the opening next day.<br />
+2) If GDX rises from the open to the close more than 0.1% the day before, sell short on the opening and exit on the close (you have to both sell your position from number 1 but also short some more).</p>
+<p>Unfortunately this simple strategy has recently begun to fail, producing (substantial) negative returns since June 2013.  So I have been experimenting with a number of closely-related strategies and have created a simple <a href="ftp://anyuser:1!user@ftp.jonathankinlay.com/Articles/Study%20in%20Gold/Gold_Study.xlsx">Excel workbook</a> to evaluate them.  First, a little notation:<br />
+RCO = Return from prior close to market open<br />
+ROC = return from open to close<br />
+RCC = Return from close to close</p>
+<p>I also use the suffix &#8220;m1&#8243; to denote the prior period&#8217;s return.  So, for example, ROCm1 is yesterday&#8217;s return, measured from open to close.  And I use the slash symbol &#8220;/&#8221; to denote dependency.  So, for instance, RCO/ROCm1 means the return from today&#8217;s open to close, given the return from open to close yesterday.</p>
+<p>In the accompanying workbook I look at several possible, closely related trading rules, and evaluate their performance over time.  The basic daily data spans the period from May 2006 to July 2013 and in shown in columns A-H of the workbook.  Columns I-K show the daily RCO, ROC and RCC returns.  The returns for three different strategies are shown in columns L, N and P, and the cumulative returns for each are shown in columns M, N and Q, respectively.</p>
+<p>The trading rules for each of the strategies are as follows:</p>
+<p>COL L:  RCO/ROCm1>0.5%. Which means: buy GDX at the close if the intra-day return from open to close exceeds 0.5%, and hold overnight until the following morning.</p>
+<p>COL N: ROC/ROCm1>1%.  Which means:  sell GDX at today&#8217;s open if the intra-day return from open to close on the preceding day exceeds 1% and buy at today&#8217;s close.</p>
+<p>COL P: ROC/RCCm1>1%.  Which means: sell GDX at today&#8217;s open if the return from close to close on the preceding day exceeds 1% and buy at today&#8217;s close.</p>
+<p>COL R shows returns from a blended strategy which combines the returns from the strategies in columns N and P on Mondays, Tuesdays and Thursdays only (i.e. assuming no trading on Wednesdays or Fridays).  The cumulative returns from this hybrid strategy are shown in column S.</p>
+<p>We can now present the results from the four strategies, over the 7 year period from May 2006 to July 2013, as shown in the chart and table below.  On their face, the results are impressive: all four strategies have Sharpe ratios in excess of 3, with the blended strategy having a Sharpe of 4.57, while the daily win rates average around 60%.</p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/Cumulative-Returns.png"><img src="http://jonathankinlay.com/wp-content/uploads/Cumulative-Returns-300x253.png" alt="Cumulative Returns" width="600" height="500" class="aligncenter size-medium wp-image-550" /></a></p>
+<p><a href="http://jonathankinlay.com/wp-content/uploads/Performance-Stats.png"><img src="http://jonathankinlay.com/wp-content/uploads/Performance-Stats-300x102.png" alt="Performance Stats" width="600" height="200" class="aligncenter size-medium wp-image-551" /></a></p>
+<p>How well do these strategies hold up over time?  You can monitor their performance as you move through time by clicking on the scrollbar control in COL U of the workbook.  As you do so, the start date of the strategies is rolled forward, and the table of performance results is updated to include results from the new start date, ignoring any prior data.</p>
+<p>As you can see, all of the strategies continue to perform well into the latter part of 2010.  At that point, the performance of the first strategy begins to decline precipitously, although the remaining three strategies continue to do well. By mid-2012, the first strategy is showing negative performance, while the Sharpe ratios of the remaining strategies begin to decline.  As we reach the end of Q1, 2013,  only the Sharpe ratio of the ROC/RCCm1 strategy remains above 2 for the period Apr 2013 to July 2013.</p>
+<p>The conclusion appears to be that there is evidence for the possibility of generating abnormal returns in GDX lasting well into the current decade.  However these have declined considerably in recent years, to a point where the effects are likely no longer important.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2014/04/a-study-in-gold/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Implied Volatility in Merton&#8217;s Jump Diffusion Model</title>
+		<link>http://jonathankinlay.com/index.php/2012/12/implied-volatility-in-mertons-jump-diffusion-model/</link>
+		<comments>http://jonathankinlay.com/index.php/2012/12/implied-volatility-in-mertons-jump-diffusion-model/#comments</comments>
+		<pubDate>Sun, 02 Dec 2012 18:35:44 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Options]]></category>
+		<category><![CDATA[Stochastic Differential Equations]]></category>
+		<category><![CDATA[Volatility Modeling]]></category>
+		<category><![CDATA[Jump Diffusion]]></category>
+		<category><![CDATA[Smile]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=503</guid>
+		<description><![CDATA[The &#8220;implied volatility&#8221; corresponding to an option price is the value of the volatility parameter for which the Black-Scholes model gives the same price. A well-known phenomenon in market option prices is the &#8220;volatility smile&#8221;, in which the implied volatility &#8230; <a href="http://jonathankinlay.com/index.php/2012/12/implied-volatility-in-mertons-jump-diffusion-model/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>The &#8220;implied volatility&#8221; corresponding to an option price is the value of the volatility parameter for which the Black-Scholes model gives the same price. A well-known phenomenon in market option prices is the &#8220;volatility smile&#8221;, in which the implied volatility increases for strike values away from the spot price. The jump diffusion model is a generalization of Black\[Dash]Scholes in which the stock price has randomly occurring jumps in addition to the random walk behavior. One of the interesting properties of this model is that it displays the volatility smile effect. In this Demonstration, we explore the Black-Scholes implied volatility of option prices (equal for both put and call options) in the jump diffusion model. The implied volatility is modeled as a function of the ratio of option strike price to spot price.</p>
+<p><script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script><br />
+<script type="text/javascript">
+var cdf = new cdfplugin();
+cdf.embed('http://jonathankinlay.com/wp-content/uploads/ImpliedVolatilityInMertonsJumpDiffusionModel.cdf', 634, 1063);
+</script></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2012/12/implied-volatility-in-mertons-jump-diffusion-model/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Option Prices in the Variance Gamma Model</title>
+		<link>http://jonathankinlay.com/index.php/2012/11/option-prices-in-the-variance-gamma-model-2/</link>
+		<comments>http://jonathankinlay.com/index.php/2012/11/option-prices-in-the-variance-gamma-model-2/#comments</comments>
+		<pubDate>Fri, 23 Nov 2012 09:30:26 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Mathematica]]></category>
+		<category><![CDATA[Options]]></category>
+		<category><![CDATA[Volatility Modeling]]></category>
+		<category><![CDATA[Smile]]></category>
+		<category><![CDATA[Volatility]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=490</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[<p><script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script><br />
+<script type="text/javascript">
+var cdf = new cdfplugin();
+cdf.embed('http://jonathankinlay.com/wp-content/uploads/Option-Prices-in-the-Variance-Gamma-Model.cdf', 634, 1063);
+</script></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2012/11/option-prices-in-the-variance-gamma-model-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Measuring Toxic Flow for Trading &amp; Risk Management</title>
+		<link>http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/#comments</comments>
+		<pubDate>Mon, 19 Sep 2011 00:23:06 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Algorithmic Trading]]></category>
+		<category><![CDATA[ARMA]]></category>
+		<category><![CDATA[Direction Prediction]]></category>
+		<category><![CDATA[Econometrics]]></category>
+		<category><![CDATA[Econophysics]]></category>
+		<category><![CDATA[Forecasting]]></category>
+		<category><![CDATA[High Frequency Finance]]></category>
+		<category><![CDATA[Market Microstructure]]></category>
+		<category><![CDATA[Order Flow]]></category>
+		<category><![CDATA[Risk Management]]></category>
+		<category><![CDATA[Time Series Modeling]]></category>
+		<category><![CDATA[Toxic Flow]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=459</guid>
+		<description><![CDATA[A common theme of microstructure modeling is that trade flow is often predictive of market direction.  One concept in particular that has gained traction is flow toxicity, i.e. flow where resting orders tend to be filled more quickly than expected, while &#8230; <a href="http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>A common theme of microstructure modeling is that trade flow is often predictive of market direction.  One concept in particular that has gained traction is flow toxicity, i.e. flow where resting orders tend to be filled more quickly than expected, while aggressive orders rarely get filled at all, due to the participation of informed traders trading against uninformed traders.  The fundamental insight from microstructure research is that the order arrival process is informative of subsequent price moves in general and toxic flow in particular.  This is turn has led researchers to try to measure the probability of informed trading  (PIN).  One recent attempt to model flow toxicity, the Volume-Synchronized Probability of Informed Trading (VPIN)metric, seeks to estimate PIN based on volume imbalance and trade intensity.  A major advantage of this approach is that it does not require the estimation of unobservable parameters and, additionally, updating VPIN in trade time rather than clock time improves its predictive power.  VPIN has potential applications both in high frequency trading strategies, but also in risk management, since highly toxic flow is likely to lead to the withdrawal of liquidity providers, setting up the conditions for a flash-crash” type of market breakdown.</p>
+<p>The procedure for estimating VPIN is as follows.  We begin by grouping sequential trades into equal volume buckets of size V.  If the last trade needed to complete a bucket was for a size greater than needed, the excess size is given to the next bucket.  Then we classify trades within each bucket into two volume groups:  Buys (V(t)<sub>B</sub>) and Sells (V(t)<sub>S</sub>), with V = V(t)<sub>B </sub>+ V(t)<sub>S</sub><br />
+The Volume-Synchronized Probability of Informed Trading is then derived as:</p>
+<p><a href="http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/vpin-2/" rel="attachment wp-att-465"><img class="aligncenter size-full wp-image-465" title="VPIN" src="http://jonathankinlay.com/wp-content/uploads/VPIN.png" alt="" width="750" height="66" /></a></p>
+<p>Typically one might choose to estimate VPIN using a moving average over n buckets, with n being in the range of 50 to 100.</p>
+<p>Another related statistic of interest is the single-period signed VPIN. This will take a value of between -1 and =1, depending on the proportion of buying to selling during a single period t.</p>
+<p><a href="http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/single-period-vpin/" rel="attachment wp-att-466"><img class="aligncenter size-medium wp-image-466" title="Single Period VPIN" src="http://jonathankinlay.com/wp-content/uploads/Single-Period-VPIN-300x225.png" alt="" width="300" height="225" /></a></p>
+<p style="text-align: center;">Fig 1. Single-Period Signed VPIN for the ES Futures Contract</p>
+<p style="text-align: left;">It turns out that quote revisions condition strongly on the signed VPIN. For example, in tests of the ES futures contract, we found that the change in the midprice from one volume bucket the next  was highly correlated to the prior bucket’s signed VPIN, with a coefficient of 0.5.  In other words, market participants offering liquidity will adjust their quotes in a way that directly reflects the direction and intensity of toxic flow, which is perhaps hardly surprising.</p>
+<p>Of greater interest is the finding that there is a small but statistically significant dependency of price changes, as measured by first buy (sell) trade price to last sell (buy) trade price, on the prior period’s signed VPIN.  The correlation is positive, meaning that strongly toxic flow in one direction has a tendency  to push prices in the same direction during the subsequent period. Moreover, the single period signed VPIN turns out to be somewhat predictable, since its autocorrelations are statistically significant at two or more lags.  A simple linear auto-regression ARMMA(2,1) model produces an R-square of around 7%, which is small, but statistically significant.</p>
+<p>A more useful model, however , can be constructed by introducing the idea of Markov states and allowing the regression model to assume different parameter values (and error variances) in each state.  In the Markov-state framework, the system transitions from one state to another with conditional probabilities that are estimated in the model.</p>
+<p>An example of such a model  for the signed VPIN in ES is shown below. Note that the model R-square is over 27%, around 4x larger than for a standard linear ARMA model.</p>
+<p>We can describe the regime-switching model in the following terms.  In the regime 1 state  the model has two significant autoregressive terms and one significant moving average term (ARMA(2,1)).  The AR1 term is large and positive, suggesting that trends in VPIN tend to be reinforced from one period to the next. In other words, this is a momentum state. In the regime 2 state the AR2 term is not significant and the AR1 term is large and negative, suggesting that changes in VPIN in one period tend to be reversed in the following period, i.e. this is a mean-reversion state.</p>
+<p>The state transition probabilities indicate that the system is in mean-reversion mode for the majority of the time, approximately around 2 periods out of 3.  During these periods, excessive flow in one direction during one period tends to be corrected in the<br />
+ensuring period.  But in the less frequently occurring state 1, excess flow in one direction tends to produce even more flow in the same direction in the following period.  This first state, then, may be regarded as the regime characterized by toxic flow.</p>
+<p><strong><span style="text-decoration: underline;">Markov State Regime-Switching Model</span></strong></p>
+<p>Markov Transition Probabilities</p>
+<p>P(.|1)       P(.|2)</p>
+<p>P(1|.)        0.54916      0.27782</p>
+<p>P(2|.)       0.45084      0.7221</p>
+<p>Regime 1:</p>
+<p>AR1           1.35502    0.02657   50.998        0</p>
+<p>AR2         -0.33687    0.02354   -14.311        0</p>
+<p>MA1          0.83662    0.01679   49.828        0</p>
+<p>Error Variance^(1/2)           0.36294     0.0058</p>
+<p>Regime 2:</p>
+<p>AR1      -0.68268    0.08479    -8.051        0</p>
+<p>AR2       0.00548    0.01854    0.296    0.767</p>
+<p>MA1     -0.70513    0.08436    -8.359        0</p>
+<p>Error Variance^(1/2)           0.42281     0.0016</p>
+<p>Log Likelihood = -33390.6</p>
+<p>Schwarz Criterion = -33445.7</p>
+<p>Hannan-Quinn Criterion = -33414.6</p>
+<p>Akaike Criterion = -33400.6</p>
+<p>Sum of Squares = 8955.38</p>
+<p>R-Squared =  0.2753</p>
+<p>R-Bar-Squared =  0.2752</p>
+<p>Residual SD =  0.3847</p>
+<p>Residual Skewness = -0.0194</p>
+<p>Residual Kurtosis =  2.5332</p>
+<p>Jarque-Bera Test = 553.472     {0}</p>
+<p>Box-Pierce (residuals):         Q(9) = 13.9395 {0.124}</p>
+<p>Box-Pierce (squared residuals): Q(12) = 743.161     {0}</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">A Simple Trading Strategy</span></strong></p>
+<p>One way to try to monetize the predictability of the VPIN model is to use the forecasts to take directional positions in the ES<br />
+contract.  In this simple simulation we assume that we enter a long (short) position at the first buy (sell) price if the forecast VPIN exceeds some threshold value 0.1  (-0.1).  The simulation assumes that we exit the position at the end of the current volume bucket, at the last sell (buy) trade price in the bucket.</p>
+<p>This simple strategy made 1024 trades over a 5-day period from 8/8 to 8/14, 90% of which were profitable, for a total of $7,675 – i.e. around ½ tick per trade.</p>
+<p>The simulation is, of course, unrealistically simplistic, but it does give an indication of the prospects for  more realistic version of the strategy in which, for example, we might rest an order on one side of the book, depending on our VPIN forecast.</p>
+<p><a href="http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/pl/" rel="attachment wp-att-467"><img class="aligncenter size-medium wp-image-467" title="Trade PL" src="http://jonathankinlay.com/wp-content/uploads/PL-300x225.png" alt="" width="300" height="225" /></a></p>
+<p style="text-align: center;">Figure 2 – Cumulative Trade PL</p>
+<p><strong><span style="text-decoration: underline;">References</span></strong></p>
+<p>Easley, D., Lopez de Prado, M., O’Hara, M., Flow Toxicity and Volatility in a High frequency World, Johnson School Research paper Series # 09-2011, 2011</p>
+<p>Easley, D. and M. O‟Hara (1987), &#8220;Price, Trade Size, and Information in Securities Markets&#8221;, Journal of Financial Economics, 19.</p>
+<p>Easley, D. and M. O‟Hara (1992a), <em>&#8220;Adverse Selection and Large Trade Volume: The Implications for Market Efficiency&#8221;</em>,<br />
+Journal of Financial and Quantitative Analysis, 27(2), June, 185-208.</p>
+<p>Easley, D. and M. O‟Hara (1992b), <em>“Time and the process of security price adjustment”</em>, Journal of Finance, 47, 576-605.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/09/measuring-toxic-flow-for-trading-risk-management/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Generalized Regression</title>
+		<link>http://jonathankinlay.com/index.php/2011/06/generalized-regression/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/06/generalized-regression/#comments</comments>
+		<pubDate>Sun, 05 Jun 2011 17:34:10 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Financial Engineering]]></category>
+		<category><![CDATA[Regression]]></category>
+		<category><![CDATA[Financial engineering]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=446</guid>
+		<description><![CDATA[Linear regression is one of the most useful applications in the financial engineer&#8217;s tool-kit, but it suffers from a rather restrictive set of assumptions that limit its applicability in areas of research that are characterized by their focus on highly &#8230; <a href="http://jonathankinlay.com/index.php/2011/06/generalized-regression/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Linear_regression" target="_blank">Linear regression</a> is one of the most useful applications in the financial engineer&#8217;s tool-kit, but it suffers from a rather restrictive set of assumptions that limit its applicability in areas of research that are characterized by their focus on highly non-linear or correlated variables.  The latter problem, referred to as colinearity (or <a href="http://en.wikipedia.org/wiki/Multicollinearity" target="_blank">multicolinearity</a>) arises very frequently in financial research, because asset processes are often somewhat (or even highly) correlated.  In a colinear system, one can test for the overall significant of the regression relationship, but one is unable to distinguish which of the explanatory variables is individually significant.  Furthermore, the estimates of the model paramaters, the weights applied to each explanatory variable, tend to be biased.</p>
+<p>Over time, many attempts have been made to address this issue, one well-known example being ridge regression.  More recent attempts include lasso, elastic net and what I term generalized regression, which appear to offer significant advantages vs traditional regression techniques in situations where the variables are correlated.</p>
+<p>In this note, I examine a variety of these technqiues and attempt to illustrate and compare their effectiveness.</p>
+<p><a rel="attachment wp-att-451" href="http://jonathankinlay.com/index.php/2011/06/generalized-regression/generalized-regression-graphic-3/"><img class="aligncenter size-medium wp-image-451" title="Generalized Regression Graphic" src="http://jonathankinlay.com/wp-content/uploads/Generalized-Regression-Graphic2-300x191.jpg" alt="" width="300" height="191" /></a></p>
+<p>You can downlaod a <a title="Generalized Regression pdf" href="http://www.jonathankinlay.com/Articles/Generalized%20Regression/Generalized%20Regression.pdf" target="_blank">pdf </a>here.</p>
+<p>A <em>Mathematica </em>notebook is also available <a href="http://www.jonathankinlay.com/Articles/Generalized%20Regression/Generalized%20Regression.nb">here</a>.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/06/generalized-regression/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Hiring High Frequency Quant/Traders</title>
+		<link>http://jonathankinlay.com/index.php/2011/05/hiring-quanttraders/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/05/hiring-quanttraders/#comments</comments>
+		<pubDate>Thu, 26 May 2011 18:29:52 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[High Frequency Finance]]></category>
+		<category><![CDATA[High Frequency Trading]]></category>
+		<category><![CDATA[Jobs]]></category>
+		<category><![CDATA[Quant/Traders]]></category>
+		<category><![CDATA[Recruitment]]></category>
+		<category><![CDATA[Chicago]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=437</guid>
+		<description><![CDATA[I am hiring in Chicago for exceptional HF Quant/Traders in Equities, F/X, Futures &#38; Fixed Income.  Remuneration for these roles, which will be dependent on qualifications and experience, will be in line with the highest market levels. Role Working closely with team &#8230; <a href="http://jonathankinlay.com/index.php/2011/05/hiring-quanttraders/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I am hiring in Chicago for exceptional HF Quant/Traders in Equities, F/X, Futures &amp; Fixed Income.  Remuneration for these roles, which will be dependent on qualifications and experience, will be in line with the highest market levels.</p>
+<p><strong>Role<br />
+</strong>Working closely with team members including developers, traders and quantitative researchers, the central focus of the role will be to research and develop high frequency trading strategies in equities, fixed income, foreign exchange and related commodities markets.</p>
+<p><strong>Responsibilities</strong><br />
+The analyst will have responsibility of taking an idea from initial conception through research, testing and implementation.  The work will entail:</p>
+<ul>
+<li>Formulation of mathematical and econometric models for market microstructure</li>
+<li>Data collation, normalization and analysis</li>
+<li>Model prototyping and programming</li>
+<li>Strategy development, simulation, back-testing and implementation</li>
+<li>Execution strategy &amp; algorithms</li>
+</ul>
+<p><strong>Qualifications &amp; Experience</strong></p>
+<ul>
+<li>Minimum 5 years in quantitative research with a leading proprietary trading firm, hedge fund, or investment bank</li>
+<li>In-depth knowledge of Equities, F/X and/or futures markets, products and operational infrastructure</li>
+<li>High frequency data management &amp; data mining techniques</li>
+<li>Microstructure modeling</li>
+<li>High frequency econometrics (cointegration, VAR,error correction models, GARCH, panel data models, etc.)</li>
+<li>Machine learning, signal processing, state space modeling and pattern recognition</li>
+<li>Trade execution and algorithmic trading</li>
+<li>PhD in Physics/Math/Engineering, Finance/Economics/Statistics</li>
+<li>Expert programming skills in Java, Matlab/Mathematica essential</li>
+<li><strong>Must be US Citizen or Permanent Resident</strong></li>
+</ul>
+<p>Send your resume to: jkinlay at systematic-strategies.com.</p>
+<p>No recruiters please.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/05/hiring-quanttraders/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Alpha Spectral Analysis</title>
+		<link>http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/#comments</comments>
+		<pubDate>Sun, 22 May 2011 23:56:14 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Forecasting]]></category>
+		<category><![CDATA[Fourier Transforms]]></category>
+		<category><![CDATA[High Frequency Finance]]></category>
+		<category><![CDATA[Pairs Trading]]></category>
+		<category><![CDATA[Principal Components Analysis]]></category>
+		<category><![CDATA[Signal Processing]]></category>
+		<category><![CDATA[Statistical Arbitrage]]></category>
+		<category><![CDATA[High Frequency Trading]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=412</guid>
+		<description><![CDATA[One of the questions of interest is the optimal sampling frequency to use for extracting the alpha signal from an alpha generation function.  We can use Fourier transforms to help identify the cyclical behavior of the strategy alpha and hence &#8230; <a href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>One of the questions of interest is the optimal sampling frequency to use for extracting the alpha signal from an alpha generation function.  We can use Fourier transforms to help identify the cyclical behavior of the strategy alpha and hence determine the best time-frames for sampling and trading.  Typically, these spectral analysis techniques will highlight several different cycle lengths where the alpha signal is strongest.</p>
+<p>The spectral density of the combined alpha signals across twelve pairs of stocks is shown in Fig. 1 below.  It is clear that the strongest signals occur in the shorter frequencies with cycles of up to several hundred seconds. Focusing on the density within<br />
+this time frame, we can identify in Fig. 2 several frequency cycles where the alpha signal appears strongest. These are around 50, 80, 160, 190, and 230 seconds.  The cycle with the strongest signal appears to be around 228 secs, as illustrated in Fig. 3.  The signals at cycles of 54 &amp; 80 (Fig. 4), and 158 &amp; 185/195 (Fig. 5) secs appear to be of approximately equal strength.<br />
+There is some variation in the individual pattern for of the  power spectra for each pair, but the findings are broadly comparable, and  indicate that strategies should be designed for sampling frequencies at around  these time intervals.</p>
+<dl id="attachment_414">
+<dt><a rel="attachment wp-att-414" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-1/"></a></dt>
+<dd></dd>
+<dd><a rel="attachment wp-att-414" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-1/"><img class="aligncenter" title="Fig 1" src="http://jonathankinlay.com/wp-content/uploads/Fig-1-300x225.jpg" alt="" width="300" height="225" /></a></dd>
+</dl>
+<p style="text-align: center;">Fig. 1 Alpha Power Spectrum</p>
+<p>&nbsp;</p>
+<p><a rel="attachment wp-att-415" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-2/"><img class="aligncenter size-medium wp-image-415" title="Fig 2" src="http://jonathankinlay.com/wp-content/uploads/Fig-2-300x225.jpg" alt="" width="300" height="225" /></a></p>
+<p style="text-align: center;">Fig.2</p>
+<p style="text-align: center;"><a rel="attachment wp-att-416" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-3/"><img class="aligncenter size-medium wp-image-416" title="Fig 3" src="http://jonathankinlay.com/wp-content/uploads/Fig-3-300x225.jpg" alt="" width="300" height="225" /></a>Fig. 3</p>
+<p style="text-align: center;"><a rel="attachment wp-att-417" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-4/"><img class="aligncenter size-medium wp-image-417" title="Fig 4" src="http://jonathankinlay.com/wp-content/uploads/Fig-4-300x225.jpg" alt="" width="300" height="225" /></a>Fig. 4</p>
+<p style="text-align: center;"><a rel="attachment wp-att-418" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-5/"><img class="aligncenter size-medium wp-image-418" title="Fig 5" src="http://jonathankinlay.com/wp-content/uploads/Fig-5-300x225.jpg" alt="" width="300" height="225" /></a>Fig. 5</p>
+<p><strong>PRINCIPAL COMPONENTS ANALYSIS OF ALPHA POWER SPECTRUM</strong><br />
+If we look at the correlation surface of the power spectra of the twelve pairs some clear patterns emerge (see Fig 6):</p>
+<p style="text-align: center;"><a rel="attachment wp-att-421" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-6/"><img class="aligncenter size-full wp-image-421" title="Fig 6" src="http://jonathankinlay.com/wp-content/uploads/Fig-6.jpg" alt="" width="605" height="380" /></a>Fig. 6</p>
+<p>Focusing on the off-diagonal elements, it is clear that the power spectrum of each pair is perfectly correlated with the power spectrum of its conjugate.   So, for instance the power spectrum of the Stock1-Stock3 pair is exactly correlated with the spectrum for its converse, Stock3-Stock1.</p>
+<p>But it is also clear that there are many other significant correlations between non-conjugate pairs.  For example, the correlation between the power spectra for Stock1-Stock2 vs Stock2-Stock3 is 0.72, while the correlation of the power spectra of Stock1-Stock2 and Stock2-Stock4 is 0.69.</p>
+<p>We can further analyze the alpha power spectrum using PCA to expose the underlying factor structure.  As shown in Fig. 7, the first two principal components account for around 87% of the variance in the alpha power spectrum, and the first four components account for over 98% of the total variation.</p>
+<div id="attachment_422" class="wp-caption aligncenter" style="width: 310px"><a rel="attachment wp-att-422" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-7/"><img class="size-medium wp-image-422" title="Fig 7" src="http://jonathankinlay.com/wp-content/uploads/Fig-7-300x225.jpg" alt="" width="300" height="225" /></a><p class="wp-caption-text">PCA Analysis of Power Spectra</p></div>
+<p style="text-align: center;">Fig. 7</p>
+<p>Stock3 dominates PC-1 with loadings of 0.52 for Stock3-Stock4, 0.64 for Stock3-Stock2, 0.29 for Stock1-Stock3 and 0.26 for Stock4-Stock3.  Stock3 is also highly influential in PC-2 with loadings of -0.64 for Stock3-Stock4 and 0.67 for Stock3-Stock2 and again in PC-3 with a loading of -0.60 for Stock3-Stock1.  Stock4 plays a major role in the makeup of PC-3, with the highest loading of 0.74 for Stock4-Stock2.</p>
+<p><a rel="attachment wp-att-423" href="http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/fig-8/"><img class="aligncenter size-full wp-image-423" title="Fig 8" src="http://jonathankinlay.com/wp-content/uploads/Fig-8.jpg" alt="" width="725" height="533" /></a></p>
+<p style="text-align: center;">Fig. 8  PCA Analysis of Power Spectra</p>
+<p style="text-align: center;">&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/05/alpha-spectral-analysis/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Market Microstructure Models for High Frequency Trading Strategies</title>
+		<link>http://jonathankinlay.com/index.php/2011/05/market-microstructure-models-for-high-frequency-trading-strategies/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/05/market-microstructure-models-for-high-frequency-trading-strategies/#comments</comments>
+		<pubDate>Sun, 08 May 2011 16:12:01 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[Econophysics]]></category>
+		<category><![CDATA[Forecasting]]></category>
+		<category><![CDATA[High Frequency Finance]]></category>
+		<category><![CDATA[High Frequency Trading]]></category>
+		<category><![CDATA[Market Microstructure]]></category>
+		<category><![CDATA[High Frequency Finanance]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=408</guid>
+		<description><![CDATA[This note summarizes some of the key research in the field of market microstructure and considers some of the models proposed by the researchers. Many of the ideas presented here have become widely adopted by high frequency trading firms and &#8230; <a href="http://jonathankinlay.com/index.php/2011/05/market-microstructure-models-for-high-frequency-trading-strategies/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p><span style="color: #000080; font-family: Times New Roman;"><span style="color: #000080; font-family: Times New Roman;"><a title="Market Microstructure Models" href="http://www.Jonathankinlay.com/Articles/Market%20Microstructure%20Models/Market%20MicroStructure%20Models.pdf" target="_blank">This note </a>summarizes some of the key research in the field of market microstructure and considers some of the models proposed by the researchers. Many of the ideas presented here have become widely adopted by high frequency trading firms and incorporated into their trading systems.</span></span></p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/05/market-microstructure-models-for-high-frequency-trading-strategies/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Forecasting Financial Markets &#8211; Part 1:  Time Series Analysis</title>
+		<link>http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/</link>
+		<comments>http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/#comments</comments>
+		<pubDate>Sat, 30 Apr 2011 10:45:47 +0000</pubDate>
+		<dc:creator>Jonathan</dc:creator>
+				<category><![CDATA[ARMA]]></category>
+		<category><![CDATA[Econometrics]]></category>
+		<category><![CDATA[Forecasting]]></category>
+		<category><![CDATA[Purchasing Power Parity]]></category>
+		<category><![CDATA[Time Series Modeling]]></category>
+		<category><![CDATA[Unit Roots]]></category>
+		<category><![CDATA[White Noise]]></category>
+		<category><![CDATA[ARMA Models]]></category>
+		<category><![CDATA[Box Jenkins]]></category>
+		<category><![CDATA[Direction Prediction]]></category>
+		<category><![CDATA[Time Series Analysis]]></category>
+
+		<guid isPermaLink="false">http://jonathankinlay.com/?p=392</guid>
+		<description><![CDATA[The presentation in this post covers a number of important topics in forecasting, including: Stationary processes and random walks Unit roots and autocorrelation ARMA models Seasonality Model testing Forecasting Dickey-Fuller and Phillips-Perron tests for unit roots Also included are a number &#8230; <a href="http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+				<content:encoded><![CDATA[<p>The <a title="Forecasting Financial Markets - Time Series Analysis" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Forecasting%202011%20-%20Time%20Series.pdf" target="_blank">presentation </a> in this post covers a number of important topics in forecasting, including:</p>
+<ul>
+<li>Stationary processes and random walks</li>
+<li>Unit roots and autocorrelation</li>
+<li>ARMA models</li>
+<li>Seasonality</li>
+<li>Model testing</li>
+<li>Forecasting</li>
+<li>Dickey-Fuller and Phillips-Perron tests for unit roots</li>
+</ul>
+<p>Also included are a number of detailed worked examples, including:</p>
+<ol>
+<li><a title="ARMA Modeling" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Arma11.pdf" target="_blank">ARMA Modeling</a></li>
+<li><a title="Box Jenkins" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Box-Jenkins%20Analysis.PDF" target="_blank">Box Jenkins methodology</a></li>
+<li><a title="Wholesale Price Index" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Wpi.pdf" target="_blank">Modeling the US Wholesale Price Index</a></li>
+<li><a title="Pesaran Timmermann Study" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Recursive%20Regression%20Prediction%20of%20Equity%20Returns.PDF" target="_blank">Pesaran &amp; Timmermann study of excess equity returns</a></li>
+<li><a title="Purchasing Power Parity" href="http://www.jonathankinlay.com/Articles/Part%201%20-%20Time%20Series%20Analysis/Purchasing%20Power%20Parity.PDF" target="_blank">Purchasing Power Parity</a></li>
+</ol>
+<ul></ul>
+<p><a rel="attachment wp-att-402" href="http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/rolling-regression/"><img class="aligncenter size-full wp-image-402" title="Rolling Regression" src="http://jonathankinlay.com/wp-content/uploads/Rolling-Regression.jpg" alt="" width="750" height="479" /></a><a rel="attachment wp-att-402" href="http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/rolling-regression/"></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://jonathankinlay.com/index.php/2011/04/forecasting-financial-markets-part-1-time-series-analysis/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

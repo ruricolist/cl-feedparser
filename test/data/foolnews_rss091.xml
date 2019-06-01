@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE rss SYSTEM "http://www.fool.com/xml/rss-0.91.dtd">
+
+<rss version="0.91">
+	<channel>
+		<title>The Motley Fool</title>
+		<link>http://www.fool.com</link>
+		<description>To Educate, Amuse, and Enrich</description>
+		<language>en-us</language>
+		<image>
+			<title>The Motley Fool</title>
+			<url>http://www.fool.com/art/partners/bbac/88x31F.gif</url>
+			<link>http://www.fool.com</link>
+			<width>88</width>
+			<height>31</height>
+			<description>To Educate, Amuse, and Enrich</description>
+		</image>    
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+		<item>
+			<title></title>
+			<link></link>
+			<description></description>
+		</item>
+	</channel>
+</rss>

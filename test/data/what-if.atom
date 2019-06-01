@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>What If?</title>
+    <link href="http://what-if.xkcd.com/feed.atom" rel="self" />
+    <link href="http://what-if.xkcd.com" />
+    <id>http://what-if.xkcd.com/feed.atom</id>
+    <author>
+        <name>xkcd</name>
+        <email>whatif@xkcd.com</email>
+    </author>
+    <updated>2013-06-25T00:00:00Z</updated>
+    <entry>
+    <title>Free Fall</title>
+    <link href="http://what-if.xkcd.com/51/" />
+    <id>http://what-if.xkcd.com/51/</id>
+    <published>2013-06-25T00:00:00Z</published>
+    <updated>2013-06-25T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article class="entry">
+  <a href="//what-if.xkcd.com/51/"><h1>Free Fall</h1></a>
+  <p id="question">What place on Earth would allow you to freefall the longest by jumping off it? What about using a squirrel suit?</p>
+<p id="attribute">—Dhash Shrivathsa</p>
+<p>The largest purely vertical drop on Earth is the face of Canada's <a href="http://en.wikipedia.org/wiki/Mount_Thor">Mount Thor</a>, which is shaped like this:</p>
+<img class="illustration" title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" src="//what-if.xkcd.com/imgs/a/51/freefall_thor.png" />
+<p>To make things a little less gruesome, let's put a pit at the bottom of the cliff filled with something fluffy, like cotton candy, to safely break your fall. (Would this work? Hmm ...)</p>
+<img class="illustration" title="Would this work? Stay tuned for a future article ..." src="//what-if.xkcd.com/imgs/a/51/freefall_candy.png" />
+<p>A human falling with arms and legs outstretched has a terminal velocity in the neighborhood of 55 meters per second. It takes a few hundred meters to get up to speed, so it would take you a little over 26 seconds to fall the full distance.</p>
+<p>How long is that?</p>
+<p>It's long enough to finish the first level of the original Super Mario.<a href="http://www.youtube.com/watch?v=DGQGvAwqpbE"><sup>[1]</sup></a></p>
+<p>Sprint's ring cycle—the time the phone rings before going to voicemail—is 23 seconds.<a href="http://www1.sprintpcs.com/support/HelpCenter.jsp?FOLDER%3C%3Efolder_id=1531979#4"><sup>[2]</sup></a> (For those keeping score, Wagner's is 2,350 times longer.)</p>
+<p>This means that if someone called your phone, and it started ringing the moment you jumped, it would go to voicemail three seconds before you reached the bottom.</p>
+<img class="illustration" title="Surprisingly good service for a desolate cliff face in Nunavut." src="//what-if.xkcd.com/imgs/a/51/freefall_voicemail.png" />
+<p>On the other hand, if you jumped off Ireland's 210-meter <a href="http://www.cliffsofmoher.ie/">Cliffs of Moher</a>, you would only be able to fall for about eight seconds—nine, if you jumped upward.</p>
+<p>That's not very long, but according to River Tam, it would be enough time to drain all the blood from your body given adequate vacuuming systems. (So much for making things less gruesome.)</p>
+<p>But you don't have to drop vertically.</p>
+<p>Even without any special equipment, a skilled skydiver—once they get up to full speed—can glide at almost a 45-degree angle.<a href="http://www.airspacemag.com/flight-today/Jump-Fly-Land.html"><sup>[3]</sup></a> By gliding away from the base of the cliff, you could conceivably extend your fall substantially.</p>
+<img class="illustration" title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ::gasp:: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" src="//what-if.xkcd.com/imgs/a/51/freefall_extended.png" />
+<p>It's hard to say exactly <em>how</em> far; it all depends on your clothes. As a comment on a <a href="http://www.blincmagazine.com/forum/wiki/Records">BASE jumping records wiki</a> puts it,</p>
+<blockquote>
+<p>The record for longest [fall time] without a wingsuit is hard to find since the line between jeans and wingsuits has blurred since the introduction of more advanced tracking apparel.</p>
+</blockquote>
+<p>Which brings us to wingsuits.</p>
+<p>Wingsuits are what you get when you take the average of parachute pants and parachutes.</p>
+<p>One wingsuit operator posted tracking data from a series of jumps.<a href="http://www.dropzone.com/cgi-bin/forum/gforum.cgi?post=577711#577711"><sup>[4]</sup></a> It shows that in a glide, a wingsuit can lose altitude as slowly as 18 meters per second.</p>
+<p>Even ignoring horizontal travel, that would stretch out our fall to over a minute. That's <a href="http://www.youtube.com/watch?v=Bzrap8Vtyq8">long enough for a chess game</a>. It's also long enough to sing the first verse of—appropriately enough—REM's <em>It's the End of the World as We Know It</em> followed by—less appropriately—the rap breakdown from the end of the Spice Girls' <em>Wannabe</em>.</p>
+<img class="illustration" title="So here's the story / from A to Z / You wanna get with me / You gotta tumble helplessly" src="//what-if.xkcd.com/imgs/a/51/freefall_wannabe.png" />
+<p>When we include horizontal glides, the times get even longer.</p>
+<p>There are a lot of mountains that could probably support very long wingsuit flights. For example, Nanga Parbat, a mountain in Pakistan, has a drop of more than three kilometers at a fairly steep angle.<a href="http://www.alpinejournal.org.uk/Contents/Contents_1984_files/AJ%201984%2021-29%20Herrligkoffer%20NParbat.pdf"><sup>[5]</sup></a> (Surprisingly, a wingsuit still works fine at those altitudes,<a href="http://www.worldrecordacademy.com/sports/highest_BASE_jump_Valery_Rozov_breaks_Guinness_world_record_213415.html"><sup>[6]</sup></a> though the jumper needs oxygen and glides a little faster than normal.)</p>
+<p>So far, the record for longest wingsuit BASE jump is held by Dean Potter, who jumped from the Eiger—a mountain in Switzerland—and flew for three minutes and twenty seconds.<a href="http://www.tonywingsuits.com/deanpotter.html"><sup>[7]</sup></a></p>
+<p>Joey Chestnut and Takeru Kobayashi are the world's top competitive eaters.</p>
+<p>If we can find a way for them to operate wingsuits while eating at full speed, and they jumped from the Eiger, they could—in theory—finish as many as 45 hot dogs between them before reaching the ground ...</p>
+<img class="illustration" title="Given the ongoing Kobayashi/Chestnut rivalry, the potential for sabotage could, somehow, make this situation even more dangerous." src="//what-if.xkcd.com/imgs/a/51/freefall_hotdogs.png" />
+<p>... making them the joint holders of what just might be the strangest world record of all time.</p>
+
+</article>
+]]></summary>
+</entry>
+<entry>
+    <title>Extreme Boating</title>
+    <link href="http://what-if.xkcd.com/50/" />
+    <id>http://what-if.xkcd.com/50/</id>
+    <published>2013-06-18T00:00:00Z</published>
+    <updated>2013-06-18T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article class="entry">
+  <a href="//what-if.xkcd.com/50/"><h1>Extreme Boating</h1></a>
+  Question:What would it be like to navigate a rowboat through a lake of mercury?
+What about bromine? Liquid gallium? Liquid tungsten? Liquid nitrogen?
+Liquid helium?
+By:–Nicholas Aron
+
+Let's take these one at a time.
+
+Bromine and mercury are the only known pure elements that are liquid at
+room temperature.
+
+Rowing a boat on a sea of mercury just might be possible.
+
+**Mercury** is so dense that [steel ball bearings float on the
+surface](http://www.youtube.com/watch?v=EGv_YVQHu7U). Your boat would be
+so buoyant that you'd barely make a dent in the mercury, and you'd have
+to lean your weight into the paddle to get the end of it below the
+surface.
+
+Image:boat_mercury.png:'Michael, row the boat ashore.' 'I'm TRYING!'
+
+In the end, it certainly wouldn't be easy, and you wouldn't be able to
+move *fast*. But you could probably row a little bit.
+
+You should probably avoid splash fights.
+
+**Bromine** is about as dense as water, so a standard rowboat could in
+theory float on it.
+
+However, Bromine is awful. For one thing, it smells terrible; the name
+&quot;bromine&quot; comes from the ancient Greek &quot;brōmos&quot;, meaning &quot;stench&quot;. If
+that weren't enough, it [violently
+reacts](http://www.youtube.com/watch?v=uCwHzTsx5yY) with a lot of
+materials. Hopefully, you're not in an aluminium rowboat.
+
+Imageboat_bromine_aluminium.png:The mercury one was going to be the least deadly, wasn't it.
+
+If that's not incentive enough to avoid it, the [Materials Safety Data
+Sheet on bromine](http://avogadro.chem.iastate.edu/MSDS/Br2.htm)
+includes the following phrases:
+
+-   &quot;severe burns and ulceration&quot;
+-   &quot;perforation of the digestive tract&quot;
+-   &quot;permanent corneal opacification&quot;
+-   &quot;vertigo, anxiety, depression, muscle incoordination, and emotional
+    instability&quot;
+-   &quot;diarrhea, possibly with blood&quot;
+
+You should not get in a splash fight on a bromine lake.
+
+**Liquid gallium** is weird stuff. Gallium melts just above room
+temperature, like butter, so you can't hold it in your hand for too
+long.
+
+It's fairly dense, though not anywhere near as dense as mercury, and
+would be easier to row a boat on.
+
+However, once again, you'd better hope the boat isn't made of aluminium,
+because aluminium (like many metals) absorbs gallium like a sponge
+absorbs water. The gallium spreads throughout the aluminium,
+dramatically changing its chemical properties. The modified aluminium is
+so weak it can be [pulled apart like wet
+paper](http://www.youtube.com/watch?v=FaMWxLCGY0U). This is something
+gallium has in common with mercury—both will [destroy
+aluminium](http://www.youtube.com/watch?v=Z7Ilxsu-JlY).
+
+Like my grandma used to say, don't sail an aluminium boat on a gallium
+lake. (My grandma was a little strange.)
+
+**Liquid tungsten** is really hard to work with.
+
+Tungsten has the highest melting point of any element. This means
+there's a lot we don't know about its properties. The reason for
+this—and this may sound a little stupid—is that it's hard to study,
+because we can't find a container to hold it in. For almost any
+container, the material in the container will melt before the tungsten
+does. There are a few compounds, like tantalum hafnium carbide, with
+slightly higher melting points, but no one has been able to make a
+liquid tungsten container with them.
+
+To give you an idea of how hot liquid tungsten is, I could tell you the
+exact temperature that it melts at (3422°C). But a better point might be
+this:
+
+*Liquid tungsten is so hot, if you dropped it into a lava flow, the lava
+would freeze the tungsten.*
+
+Needless to say, if you set a boat on a sea of liquid tungsten, both you
+and the boat would rapidly combust and be incinerated.
+
+**Liquid nitrogen** is very cold.
+
+Liquid helium is colder, but they're both closer to absolute zero than
+to the coldest temperatures in Antarctica, so to someone floating on
+them in a boat, the temperature difference is not that significant.
+
+A [Dartmouth engineering page on liquid nitrogen
+safety](http://engineering.dartmouth.edu/microeng/ln2.html) includes the
+following phrases:
+
+-   &quot;violent reactions with organic materials&quot;
+-   &quot;it will explode&quot;
+-   &quot;displace oxygen in the room&quot;
+-   &quot;severe clothing fire&quot;
+-   &quot;suffocation without warning&quot;
+
+Liquid nitrogen has a density similar to that of water, so a rowboat
+would float on it, but if you were in it, you wouldn't survive for long.
+
+If the air above the nitrogen was room temperature when you started, it
+would cool rapidly, and you and the boat would be smothered in a thick
+fog as the water condensed out of the air. (This is the same effect that
+causes steam when you pour out liquid nitrogen.) The condensation would
+freeze, quickly covering your boat in a layer of frost.
+
+The warm air would cause the nitrogen on the surface to evaporate. This
+would displace the oxygen over the lake, causing you to asphyxiate.
+
+If the air (or the nitrogen) were both cold enough to avoid evaporation,
+you would instead develop hypothermia and die of exposure.
+
+**Liquid helium** would be worse.
+
+For one thing, it's only about one-eighth as dense as water, so your
+boat would have to be eight times larger to support a given weight.
+
+Imageboat_large.png:Frankly, what they needed was a smaller shark.
+
+But helium has a trick. When cooled below about two degrees kelvin, it
+becomes a superfluid, which has the odd property that it crawls up and
+over the walls of containers by capillary forces.
+
+It crawls along at about 20 centimeters per second, so it would take the
+liquid helium less than 30 seconds to start collecting in the bottom of
+your boat.
+
+This would, as in the liquid nitrogen scenario, cause rapid death from
+hypothermia.
+
+If it's any consolation, as you lay dying, you would be able to observe
+an odd phenomenon.
+
+Superfluid helium films, like the one rapidly covering you, carry the
+same types of ordinary sound waves that most materials do. But they also
+exhibit an additional type of wave, a slow-moving ripple that propogates
+along thin films of helium. It's only observed in superfluids, and has
+the mysterious and poetic name &quot;[third
+sound](http://www.physics.berkeley.edu/research/packard/current_research/schechter's%20web/page2.html).&quot;
+
+Your eardrums may no longer function, and wouldn't be able to detect
+this type of vibration anyway, but as you froze to death in the floor of
+a giant boat, your ears would be filled—literally—with a sound no human
+can ever hear: The third sound.
+
+And that, at least, is pretty cool.
+
+Imageboat_cool.png:Worth it.
+
+</article>
+]]></summary>
+</entry>
+<entry>
+    <title>Extreme Boating</title>
+    <link href="http://what-if.xkcd.com/50/" />
+    <id>http://what-if.xkcd.com/50/</id>
+    <published>2013-06-18T00:00:00Z</published>
+    <updated>2013-06-18T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<article class="entry">
+  <a href="//what-if.xkcd.com/50/"><h1>Extreme Boating</h1></a>
+  <p id="question">What would it be like to navigate a rowboat through a lake of mercury? What about bromine? Liquid gallium? Liquid tungsten? Liquid nitrogen? Liquid helium?</p>
+<p id="attribute">-Nicholas Aron</p>
+<p>Let's take these one at a time.</p>
+<p>Bromine and mercury are the only known pure elements that are liquid at room temperature.</p>
+<p>Rowing a boat on a sea of mercury just might be possible.</p>
+<p><strong>Mercury</strong> is so dense that <a href="http://www.youtube.com/watch?v=EGv_YVQHu7U">steel ball bearings float on the surface</a>. Your boat would be so buoyant that you'd barely make a dent in the mercury, and you'd have to lean your weight into the paddle to get the end of it below the surface.</p>
+<img class="illustration" title="'Michael, row the boat ashore.' 'I'm TRYING!'" src="//what-if.xkcd.com/imgs/a/50/boat_mercury.png" />
+<p>In the end, it certainly wouldn't be easy, and you wouldn't be able to move <em>fast</em>. But you could probably row a little bit.</p>
+<p>You should probably avoid splash fights.</p>
+<p><strong>Bromine</strong> is about as dense as water, so a standard rowboat could in theory float on it.</p>
+<p>However, Bromine is awful. For one thing, it smells terrible; the name &quot;bromine&quot; comes from the ancient Greek &quot;brōmos&quot;, meaning &quot;stench&quot;. If that weren't enough, it <a href="http://www.youtube.com/watch?v=uCwHzTsx5yY">violently reacts</a> with a lot of materials. Hopefully, you're not in an aluminium rowboat.</p>
+<img class="illustration" title="The mercury one was going to be the least deadly, wasn't it." src="//what-if.xkcd.com/imgs/a/50/boat_bromine_aluminium.png" />
+<p>If that's not incentive enough to avoid it, the <a href="http://avogadro.chem.iastate.edu/MSDS/Br2.htm">Materials Safety Data Sheet on bromine</a> includes the following phrases:</p>
+<ul>
+<li>&quot;severe burns and ulceration&quot;</li>
+<li>&quot;perforation of the digestive tract&quot;</li>
+<li>&quot;permanent corneal opacification&quot;</li>
+<li>&quot;vertigo, anxiety, depression, muscle incoordination, and emotional instability&quot;</li>
+<li>&quot;diarrhea, possibly with blood&quot;</li>
+</ul>
+<p>You should not get in a splash fight on a bromine lake.</p>
+<p><strong>Liquid gallium</strong> is weird stuff. Gallium melts just above room temperature, like butter, so you can't hold it in your hand for too long.</p>
+<p>It's fairly dense, though not anywhere near as dense as mercury, and would be easier to row a boat on.</p>
+<p>However, once again, you'd better hope the boat isn't made of aluminium, because aluminium (like many metals) absorbs gallium like a sponge absorbs water. The gallium spreads throughout the
+aluminium, dramatically changing its chemical properties. The modified aluminium is so weak it can be <a href="http://www.youtube.com/watch?v=FaMWxLCGY0U">pulled apart like wet paper</a>. This is something gallium has in common with mercury—both will <a href="http://www.youtube.com/watch?v=Z7Ilxsu-JlY">destroy aluminium</a>.</p>
+<p>Like my grandma used to say, don't sail an aluminium boat on a gallium lake. (My grandma was a little strange.)</p>
+<p><strong>Liquid tungsten</strong> is really hard to work with.</p>
+<p>Tungsten has the highest melting point of any element. This means there's a lot we don't know about its properties. The reason for this—and this may sound a little stupid—is that it's hard to study, because we can't find a container to hold it in. For almost any container, the material in the container will melt before the tungsten does. There are a few compounds, like tantalum hafnium carbide, with slightly higher melting points, but no one has been able to make a liquid tungsten container with them.</p>
+<p>To give you an idea of how hot liquid tungsten is, I could tell you the exact temperature that it melts at (3422°C). But a better point might be this:</p>
+<p><em>Liquid tungsten is so hot, if you dropped it into a lava flow, the lava would freeze the tungsten.</em></p>
+<p>Needless to say, if you set a boat on a sea of liquid tungsten, both you and the boat would rapidly combust and be incinerated.</p>
+<p><strong>Liquid nitrogen</strong> is very cold.</p>
+<p>Liquid helium is colder, but they're both closer to absolute zero than to the coldest temperatures in Antarctica, so to someone floating on them in a boat, the temperature difference is not that significant.</p>
+<p>A <a href="http://engineering.dartmouth.edu/microeng/ln2.html">Dartmouth engineering page on liquid nitrogen safety</a> includes the following phrases:</p>
+<ul>
+<li>&quot;violent reactions with organic materials&quot;</li>
+<li>&quot;it will explode&quot;</li>
+<li>&quot;displace oxygen in the room&quot;</li>
+<li>&quot;severe clothing fire&quot;</li>
+<li>&quot;suffocation without warning&quot;</li>
+</ul>
+<p>Liquid nitrogen has a density similar to that of water, so a rowboat would float on it, but if you were in it, you wouldn't survive for long.</p>
+<p>If the air above the nitrogen was room temperature when you started, it would cool rapidly, and you and the boat would be smothered in a thick fog as the water condensed out of the air. (This is the same effect that causes steam when you pour out liquid nitrogen.) The condensation would freeze, quickly covering your boat in a layer of frost.</p>
+<p>The warm air would cause the nitrogen on the surface to evaporate. This would displace the oxygen over the lake, causing you to asphyxiate.</p>
+<p>If the air (or the nitrogen) were cold enough to avoid immediate evaporation, you would instead develop hypothermia and die of exposure.</p>
+<p><strong>Liquid helium</strong> would be worse.</p>
+<p>For one thing, it's only about one-eighth as dense as water, so your boat would have to be eight times larger to support a given weight.</p>
+<img class="illustration" title="Frankly, what they needed was a smaller shark." src="//what-if.xkcd.com/imgs/a/50/boat_large.png" />
+<p>But helium has a trick. When cooled to within two degrees of absolute zero, it becomes a superfluid, which has the odd property that it crawls up and over the walls of containers by capillary forces.</p>
+<p>It advances up the walls at about 20 centimeters per second, so it would take the liquid helium less than 30 seconds to start collecting in the bottom of your boat.</p>
+<p>This would, as in the liquid nitrogen scenario, cause rapid death from hypothermia.</p>
+<p>If it's any consolation, as you lay dying, you would be able to observe an odd phenomenon.</p>
+<p>Superfluid helium films, like the one rapidly covering you, carry the same types of ordinary sound waves that most materials do. But they also exhibit an additional type of wave, a slow-moving ripple that propagates gates along thin films of helium. It's only observed in superfluids, and has the mysterious and poetic name &quot;<a href="http://www.physics.berkeley.edu/research/packard/current_research/schechter's%20web/page2.html">third sound</a>.&quot;</p>
+<p>Your eardrums may no longer function, and wouldn't be able to detect this type of vibration anyway, but as you froze to death in the floor of a giant boat, your ears would be filled—literally—with a sound no human can ever hear: The third sound.</p>
+<p>And that, at least, is pretty cool.</p>
+<img class="illustration" title="Worth it." src="//what-if.xkcd.com/imgs/a/50/boat_cool.png" />
+
+</article>
+]]></summary>
+</entry>
+
+</feed>

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Statwing Blog</title>
+	<atom:link href="http://blog.statwing.com/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blog.statwing.com</link>
+	<description></description>
+	<lastBuildDate>Wed, 11 Dec 2013 21:52:43 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.7.1</generator>
+	<item>
+		<title>The Easiest Data Analysis Mistake to Make</title>
+		<link>http://blog.statwing.com/easiest-data-analysis-mistake-to-make/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=easiest-data-analysis-mistake-to-make</link>
+		<comments>http://blog.statwing.com/easiest-data-analysis-mistake-to-make/#comments</comments>
+		<pubDate>Wed, 11 Dec 2013 19:23:52 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Statistics]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=215</guid>
+		<description><![CDATA[<p>Consider 4 datasets, each with an x and a y variable: Dataset Mean of x Variance of x Mean of y Variance of y Correlation (Pearson&#8217;s r) 1 9.00 11.00 7.50 4.12 0.816 2 9.00 11.00 7.50 4.12 0.816 3 9.00 11.00 7.50 4.12 0.816 4 9.00 11.00 7.50 4.12 0.816 Can you say with [&#8230;]</p><p>The post <a href="http://blog.statwing.com/easiest-data-analysis-mistake-to-make/">The Easiest Data Analysis Mistake to Make</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p>Consider 4 datasets, each with an <em>x</em> and a <em>y</em> variable:</p>
+<table border="1">
+<tbody>
+<tr>
+<td>Dataset</td>
+<td>Mean of x</td>
+<td>Variance of x</td>
+<td>Mean of y</td>
+<td>Variance of y</td>
+<td>Correlation <br />(Pearson&#8217;s r)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9.00</td>
+<td>11.00</td>
+<td>7.50</td>
+<td>4.12</td>
+<td>0.816</td>
+</tr>
+<tr>
+<td>2</td>
+<td>9.00</td>
+<td>11.00</td>
+<td>7.50</td>
+<td>4.12</td>
+<td>0.816</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9.00</td>
+<td>11.00</td>
+<td>7.50</td>
+<td>4.12</td>
+<td>0.816</td>
+</tr>
+<tr>
+<td>4</td>
+<td>9.00</td>
+<td>11.00</td>
+<td>7.50</td>
+<td>4.12</td>
+<td>0.816</td>
+</tr>
+</tbody>
+</table>
+<p>Can you say with confidence that these datasets are essentially the same? Do you feel like you have a good sense of them?</p>
+<p>You shouldn&#8217;t. Here&#8217;s those same 4 datasets (known as Anscombe&#8217;s Quartet) presented visually:</p>
+<p style="text-align: center;"><a href="https://www.statwing.com/open/datasets/63d94dab716b6f065587a4512c0bcfc0eb62eb70#workspaces/9895" target="_blank"><img class="aligncenter" alt="Anscombe's Quartet 1" src="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-1.png" width="599" height="378" /></a></p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><a href="https://www.statwing.com/open/datasets/63d94dab716b6f065587a4512c0bcfc0eb62eb70#workspaces/9895" target="_blank"><img class="aligncenter" alt="Anscombe's Quartet 2" src="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-2.png" width="606" height="378" /></a></p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><a href="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-4.png"><br /></a> <a href="https://www.statwing.com/open/datasets/63d94dab716b6f065587a4512c0bcfc0eb62eb70#workspaces/9895" target="_blank"><img class="aligncenter size-full wp-image-241" alt="Anscombe's Quartet 3" src="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-3.png" width="598" height="378" /></a></p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><a href="https://www.statwing.com/open/datasets/63d94dab716b6f065587a4512c0bcfc0eb62eb70#workspaces/9895" target="_blank"><img class="aligncenter" alt="Anscombe's Quartet 4" src="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-4.png" width="598" height="378" /></a><a href="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet-1.png"><br /></a></p>
+<p style="text-align: left;">These are four very different datasets with very similar summary statistics. And if you made the very common mistake of analyzing without visualizing, you&#8217;d dramatically misunderstand them.</p>
+<p>&nbsp;</p>
+<p>Here&#8217;s that <a href="http://blog.statwing.com/wp-content/uploads/2013/12/Anscombes-Quartet.csv">data for download</a> and <a href="https://www.statwing.com/open/datasets/63d94dab716b6f065587a4512c0bcfc0eb62eb70#workspaces/9895" target="_blank">here&#8217;s the data in Statwing</a>, our easy-to-use data analysis tool. </p>
+<p><a href="https://news.ycombinator.com/item?id=6890752">Discussion on Hacker News</a></p>
+<p>Plug: Statwing automatically visualizes your data any time you run an analysis, so you can&#8217;t make errors by skipping the visualization step. And if you have an app that produces or collects data for your users, you can use <a href="https://www.statwing.com/overview/integrations" target="_blank">our API</a> to build an Export to Statwing link so your users can get more value out of their data. </p>
+<p>&nbsp;</p><p>The post <a href="http://blog.statwing.com/easiest-data-analysis-mistake-to-make/">The Easiest Data Analysis Mistake to Make</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/easiest-data-analysis-mistake-to-make/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Statwing&#8217;s New Pricing</title>
+		<link>http://blog.statwing.com/statwings-new-pricing/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=statwings-new-pricing</link>
+		<comments>http://blog.statwing.com/statwings-new-pricing/#comments</comments>
+		<pubDate>Thu, 17 Oct 2013 02:25:13 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Statwing News]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=232</guid>
+		<description><![CDATA[<p>Statwing is moving to a new pricing plan. If you were previously on the freemium plan, you&#8217;ll begin a one-month trial of Statwing&#8217;s paid plan (now called Statwing Silver). You can analyze datasets for as long as you want, with dataset sizes capped at 1 million cells (e.g., 100,000 rows by 10 columns; typically 5-10MB). [&#8230;]</p><p>The post <a href="http://blog.statwing.com/statwings-new-pricing/">Statwing&#8217;s New Pricing</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p>Statwing is moving to a new pricing plan. If you were previously on the freemium plan, you&#8217;ll begin a one-month trial of Statwing&#8217;s paid plan (now called Statwing Silver). You can analyze datasets for as long as you want, with dataset sizes capped at 1 million cells (e.g., 100,000 rows by 10 columns; typically 5-10MB). Previously you were limited to files smaller than 1MB, and you could only analyze a dataset for 24 hours.</p>
+<p>Once that one-month trial is over, you&#8217;ll be asked to pay $25 / month for Statwing Silver, or be automatically downgraded to the Statwing Public plan. Any datasets uploaded on the Statwing Public plan will be publicly viewable—this plan is not intended for confidential or business data. All datasets uploaded before switching to Statwing Public will remain confidential forever; once your trial is over, we&#8217;ll warn you very clearly before any upload of data that would be publicly viewable.</p>
+<p>Users who are already paying Statwing subscribers will have essentially the same capabilities as before, except they&#8217;ll be able to upload slightly larger datasets. The previous dataset cap was 5MB, and the new one is 1 million cells, which typically works out to 5-10MB.</p>
+<p>Please let us know if you have any feedback about the plan via the &#8220;Contact Us&#8221; box in the lower right of all non-blog Statwing pages. And thank you for using Statwing.</p><p>The post <a href="http://blog.statwing.com/statwings-new-pricing/">Statwing&#8217;s New Pricing</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/statwings-new-pricing/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Starting a Company Can Turn You into a Psychopath</title>
+		<link>http://blog.statwing.com/starting-a-company-can-turn-you-into-a-psychopath/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=starting-a-company-can-turn-you-into-a-psychopath</link>
+		<comments>http://blog.statwing.com/starting-a-company-can-turn-you-into-a-psychopath/#comments</comments>
+		<pubDate>Thu, 12 Sep 2013 00:55:27 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Experiments]]></category>
+		<category><![CDATA[Psychology]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=217</guid>
+		<description><![CDATA[<p>[The title of this post is tongue-in-cheek, of course] A few months ago we tested 5,000+ folks for psychopathy via Hacker News by asking them to agree/disagree with statements like &#8220;Success is based on survival of the fittest; I&#8217;m not concerned about the losers&#8221;. While it was based on a scientifically validated survey instrument,[1] this [&#8230;]</p><p>The post <a href="http://blog.statwing.com/starting-a-company-can-turn-you-into-a-psychopath/">Starting a Company Can Turn You into a Psychopath</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><span style="font-size: small;">[The title of this post is tongue-in-cheek, of course] </span></p>
+<p>A few months ago <a href="http://blog.statwing.com/are-you-a-psychopath/">we tested 5,000+ folks for psychopathy</a> via Hacker News by asking them to agree/disagree with statements like &#8220;Success is based on survival of the fittest; I&#8217;m not concerned about the losers&#8221;. While it was based on a scientifically validated survey instrument,<sup><a id="note1-top" href="#note1-bottom">[1]</a></sup> this was not a controlled, scientific study. Our motive is to showcase and promote interesting uses of Statwing in order to take over the world, of course.</p>
+<p>Our survey generated a cool dataset that <a href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859">you&#8217;re welcome to explore</a>. We played with it a little bit, and found some interesting correlations. What do they mean? You be the judge.</p>
+<h2>Fun factoid #1: startup founders tend to be more psychopathic than people in other positions.</h2>
+<p>Our psychopathy scores range from 0 to 46. The average for founders in our survey (n = 407) was 18.59. The average for non-founders (n = 4195) was 16.41. Take a look at the distributions:</p>
+<div id="attachment_218" style="width: 639px" class="wp-caption aligncenter"><a title="Founders vs non-founders - psycopathy scores" href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859" target="_blank"><img class="size-full wp-image-218" alt="founders-vs-nonfounders" src="http://blog.statwing.com/wp-content/uploads/2013/08/founders-vs-nonfounders.png" width="629" height="353" /></a><p class="wp-caption-text">Click to see the dataset in Statwing, including statistical output for all comparisons made in this post.</p></div>
+<p>&nbsp;</p>
+<p>
+<h2>Fun factoid #2: Windows users tend to be more psychopathic than Mac users. Linux users are less psychopathic than the previous two groups. </h2>
+<p>The scores for the groups are:</p>
+<ul>
+<li>Windows: 17.5 (n = 1,945)</li>
+<li>Mac: 16.8 (n = 1,832)</li>
+<li>Linux: 16.0 (n = 789)</li>
+</ul>
+<p>This poses some interesting questions. How has the population of Windows users evolved over the past 25 years? How does socioeconomic status affect these results? How is the choice to use open-source software related to someone&#8217;s personality?  It&#8217;d be awesome to run a controlled study with large numbers of users to find differences in personality traits.</p>
+<p>Here&#8217;s an exercise for the reader: can you guess how programming language usage correlates with psychopathy? <a href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859">Go to our dataset and find out!</a> </p>
+<p><h2>Fun factoid #3: Chrome users have a higher psychopathy score than Firefox users</h2>
+<p>.</p>
+<p>17.3 and 16.1, respectively. Of course these differences are relatively small, but enough to be statistically significant. Can you offer any theories? You can check some hypotheses by controlling for other variables; for example, founders are more likely to use Chrome than non-founders, but if you filter out non-founders, the effect still remains.</p>
+<p>Hacker News readers, thank you for your participation in the survey. Perhaps we should run the same survey against the general population (or maybe not, do we really want to know?). If you&#8217;re interested in running this survey (or a similar one), please get in touch. Also, please go ahead and see what other interesting factoids you can glean from <a href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859">our psychopathy dataset</a>. We love data, and we hope you enjoy playing with it as much as we did!</p>
+<p style="font-size: 22px;"><em><a href="https://news.ycombinator.com/item?id=5651573">Discussion on Hacker News</a></em></p>
+<p>Edit: Just to be clear, all the statements above are backed up by statistical analysis, all of which you can reach by <a href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859">playing with the dataset in Statwing</a>. Here&#8217;s an example:</p>
+<div class="notes">
+<div id="attachment_226" style="width: 575px" class="wp-caption alignnone"><a href="https://www.statwing.com/open/datasets/88ed02bd6dda2f813ba98d5e01a6f239d7a5359c#workspaces/3859"><img class="size-full wp-image-226  " alt="Statistical output from Statwing showing the difference between founders and non-founders." src="http://blog.statwing.com/wp-content/uploads/2013/09/Screen-Shot-2013-09-18-at-1.47.19-PM.png" width="565" height="613" /></a><p class="wp-caption-text">Statistical output from Statwing showing the difference between founders and non-founders.</p></div></p>
+<h2>Notes</h2>
+<p><a id="note1-bottom" href="#note1-top">[1]</a> The <a href="http://www.nrc-iol.org/cores/ccnlab/publications/levenson_etal.pdf" target="_blank">Levenson Self-Report Psychopathy Scale</a> has been <a href="http://www.ncbi.nlm.nih.gov/pubmed/10497804" target="_blank">validated</a> as having reasonably similar results to the much more prevalent, professionally-administered <a href="http://en.wikipedia.org/wiki/Hare_Psychopathy_Checklist" target="_blank">Psychopathy Checklist</a>.</p>
+</div>
+<p>The post <a href="http://blog.statwing.com/starting-a-company-can-turn-you-into-a-psychopath/">Starting a Company Can Turn You into a Psychopath</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/starting-a-company-can-turn-you-into-a-psychopath/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Are you a psychopath?</title>
+		<link>http://blog.statwing.com/are-you-a-psychopath/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=are-you-a-psychopath</link>
+		<comments>http://blog.statwing.com/are-you-a-psychopath/#comments</comments>
+		<pubDate>Fri, 03 May 2013 17:53:27 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Experiments]]></category>
+		<category><![CDATA[Psychology]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=202</guid>
+		<description><![CDATA[<p>Complete the scientifically validated test below to see how psychopathic you are relative to others who have taken the test.[1] It will take two minutes, and you&#8217;ll be contributing to some fun data that we&#8217;ll share back to the community. Psychopathy is on a spectrum: some people are less empathetic and prosocial than others, regardless [&#8230;]</p><p>The post <a href="http://blog.statwing.com/are-you-a-psychopath/">Are you a psychopath?</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p>Complete the scientifically validated test below to see how psychopathic you are relative to others who have taken the test.<sup><a id="note1-top" href="#note1-bottom">[1]</a></sup> It will take two minutes, and you&#8217;ll be contributing to some fun data that we&#8217;ll share back to the community.</p>
+<p><a href="http://en.wikipedia.org/wiki/Psychopathy" target="_blank">Psychopathy</a> is on a spectrum: some people are less empathetic and prosocial than others, regardless of whether they&#8217;re diagnosably psychopaths.<sup><a id="note2-top" href="#note2-bottom">[2]</a></sup> So the question isn&#8217;t actually <em>Are you a psychopath?</em>, it&#8217;s <em>Just how psychopathic are you?</em></p>
+<p><script type="text/javascript" >document.write('<script src="http' + ( ("https:" == document.location.protocol) ? "s" : "") + '://www.surveygizmo.com/s3/blog/1241479/87c2bf13364a?__ref=' + escape(document.location) + '" type="text/javascript" ></scr'  + 'ipt>');</script></p>
+<div>
+<span id="twitter-button-data"></span><span id="tweet-cta" style="font-size: 22px; line-height: 33px; display: none">&nbsp;&nbsp;&nbsp;Tweet your results!</span>
+</div>
+<div id="link-to-results" style="display: none;">
+<br/></p>
+<p style="font-size:22px;"><em><a href="https://news.ycombinator.com/item?id=6407076">Discussion on Hacker News</a></em></p>
+<p><br/></p>
+<p>
+  Or, <a href="https://www.statwing.com/open/datasets/6beda395392cc4b0115e04ced2f458cd0f361dff#workspaces/3712" target="_blank">take a look at the results from our initial sample</a>, like the below finding that men tended to score higher than women on the psychopathy scale.
+</p>
+<div id="attachment_212" style="width: 596px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/6beda395392cc4b0115e04ced2f458cd0f361dff#workspaces/3712" target="_blank"><img class="size-full wp-image-212 " title="Gender vs Psychopathy" alt="Gender vs Psychopathy" src="http://blog.statwing.com/wp-content/uploads/2013/05/Gender-vs-Psychopathy.png" width="586" height="328" /></a><p class="wp-caption-text">As is typical for psychopathy tests, men tended to have higher psychopathy scores than women in our initial survey sample.</p></div>
+<p>
+  Soon we'll have the full, final results from this survey (including: who's more psychopathic, iPhone owners or Android owners?). Watch for a post on Hacker News next week&mdash;and write down your score above to compare yourself to people demographically similar to you.
+</p>
+</div>
+<h2>Caveats, Warnings, Disclaimers</h2>
+<p>Results from the above test should not be viewed as a serious diagnostic. But hopefully it gives you a sense of the kinds of questions explored in the <a href="http://en.wikipedia.org/wiki/Hare_Psychopathy_Checklist" target="_blank">Psychopathy Checklist</a>, which is controversially used for <a href="http://www.npr.org/2011/05/26/136619689/can-a-test-really-tell-whos-a-psychopath" target="_blank">parole hearings in some prison systems</a>.</p>
+<p>The Levenson Self-Report Psychopathy Scale and the Psychopathy Checklist typically look for two relatively independent concepts. "Primary" pyschopathy concerns manipulativeness and a lack of empathy, while "Secondary" psychopathy concerns impulsiveness and and lack of behavioral control. In the interest of time, we only tested for the former. A fuller test is available <a href="http://personality-testing.info/tests/LSRP.php" target="_blank">here</a>.</p>
+<p>If you're curious about society's treatment of psychopathy, check out <a href="http://www.npr.org/2013/03/22/171271561/are-we-all-a-little-psychopathic" target="_blank">Jon Ronson's exploration of psychopathy</a>. You may also want to read <a href="http://www.psychopathysociety.org/images/hare%20commentary%20on%20ronson%20april%2017%202012.pdf" target="_blank">a criticism of Ronson's work</a> written by the creator of the Psychopathy Checklist, Robert Hare.</p>
+<div class="notes">
+<h2>Notes</h2>
+<p><a id="note1-bottom" href="#note1-top">[1]</a> <a href="http://en.wikipedia.org/wiki/Psychopathy#Distinct_condition_or_not" target="_blank">Quick support for this statement</a>. <a href="http://psi.sagepub.com/content/12/3/93.1.full?ijkey=WDUhPiP7pHM3Q&#038;keytype=ref&#038;siteid=sppsi" target="_blank">Less quick support for this statement</a>.</p>
+<p><a id="note2-bottom" href="#note2-top">[2]</a> The <a href="http://www.nrc-iol.org/cores/ccnlab/publications/levenson_etal.pdf" target="_blank">Levenson Self-Report Psychopathy Scale</a> has been <a href="http://www.ncbi.nlm.nih.gov/pubmed/10497804" target="_blank">validated</a> as having reasonably similar results to the much more prevalent, professionally-administered <a href="http://en.wikipedia.org/wiki/Hare_Psychopathy_Checklist" target="_blank">Psychopathy Checklist</a>.</p>
+</div>
+<script type='text/javascript'> 
+function loaded(){ 
+  var $=jQuery; 
+   function placeTwitterButton(string) { 
+    $("#twitter-button-data").html("<a id='twitter-quiz' href='https://twitter.com/share' class='twitter-share-button' data-text='" + string + "' data-via='statwing' data-size='large' data-count='none' data-dnt='true'>Tweet</a>"); 
+    twttr.widgets.load(); 
+  } 
+   function grabScore() { 
+    if ($("#tweet-text").length > 0) { 
+      placeTwitterButton($("#tweet-text").html()); 
+      $(".sg-footer").hide(); 
+      $(".sg-body").css("margin-bottom","-60px"); 
+      $(".sg-powered-by").html(" "); 
+      $(".sg-powered-by").css("margin-top","0px;") 
+      $(".sg-powered-by").css("margin-bottom","0px;") 
+      $("#tweet-cta").show(); 
+      $("#link-to-results").show(); 
+    } 
+    else { 
+      setTimeout(function(){grabScore()},3000); 
+    } 
+  } 
+   setTimeout(function(){grabScore()},3000); 
+ } 
+window.document.body.onload = loaded; 
+</script><p>The post <a href="http://blog.statwing.com/are-you-a-psychopath/">Are you a psychopath?</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/are-you-a-psychopath/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Results of Survey of 10,000 Developers</title>
+		<link>http://blog.statwing.com/results-of-survey-of-10000-developers/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=results-of-survey-of-10000-developers</link>
+		<comments>http://blog.statwing.com/results-of-survey-of-10000-developers/#comments</comments>
+		<pubDate>Mon, 08 Apr 2013 21:51:34 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Open Data]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=189</guid>
+		<description><![CDATA[<p>Stack Overflow surveyed almost 10,000 developers about the technologies they use, what&#8217;s important to them in a job, and much more. We loaded the results into Statwing so anyone can easily explore the data. There&#8217;s some interesting relationships there, like the relationship between job satisfaction and the size of the company the developer works at. Check out the [&#8230;]</p><p>The post <a href="http://blog.statwing.com/results-of-survey-of-10000-developers/">Results of Survey of 10,000 Developers</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p>Stack Overflow <a href="http://blog.stackoverflow.com/2013/01/2012-stack-overflow-user-survey-results/">surveyed almost 10,000 developers</a> about the technologies they use, what&#8217;s important to them in a job, and <em>much</em> more.</p>
+<p>We <a href="https://www.statwing.com/demos/dev-survey#workspaces/2496">loaded the results into Statwing</a> so anyone can easily explore the data. There&#8217;s some interesting relationships there, like the relationship between job satisfaction and the size of the company the developer works at.</p>
+<div id="attachment_191" style="width: 665px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2013/04/Job-Satisfaction-vs-Size-of-Company.png"><img class="size-full wp-image-191" alt="Job Satisfaction vs. Size of Company" src="http://blog.statwing.com/wp-content/uploads/2013/04/Job-Satisfaction-vs-Size-of-Company.png" width="655" height="192" /></a><p class="wp-caption-text">Developers at very small companies are more likely to report loving their job.</p></div>
+<p><a href="https://www.statwing.com/demos/dev-survey#workspaces/2496">Check out the rest of the data in Statwing</a>.</p>
+<p>&nbsp;</p><p>The post <a href="http://blog.statwing.com/results-of-survey-of-10000-developers/">Results of Survey of 10,000 Developers</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/results-of-survey-of-10000-developers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>NFL Play-by-Play Data—Analyzed, Visualized, and Quizzified</title>
+		<link>http://blog.statwing.com/nfl-play-by-play-data-analyzed-visualized-and-quizzified/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=nfl-play-by-play-data-analyzed-visualized-and-quizzified</link>
+		<comments>http://blog.statwing.com/nfl-play-by-play-data-analyzed-visualized-and-quizzified/#comments</comments>
+		<pubDate>Mon, 11 Mar 2013 19:22:18 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Open Data]]></category>
+		<category><![CDATA[Sports]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=131</guid>
+		<description><![CDATA[<p>Statwing is an easy-to-use data analysis tool. Click through the visualizations below to see analyses in Statwing (and to play around with the rest of the dataset). It’s third-and-2 and you desperately need a first down. What do you do, run or pass? A few months ago, Advanced NFL Stats released an incredible dataset containing [&#8230;]</p><p>The post <a href="http://blog.statwing.com/nfl-play-by-play-data-analyzed-visualized-and-quizzified/">NFL Play-by-Play Data—Analyzed, Visualized, and Quizzified</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><span class="small-text"><em>
+  Statwing is an easy-to-use data analysis tool. Click through the visualizations below to see analyses in Statwing (and to play around with the rest of the dataset).
+</em></span></p>
+<p>
+  It’s third-and-2 and you desperately need a first down. What do you do, run or pass?
+</p>
+<p>
+  A few months ago, <a href="http://www.advancednflstats.com/" target="_blank">Advanced NFL Stats</a> released <a href="http://www.advancednflstats.com/2010/04/play-by-play-data.html" target="_blank">an 
+  incredible dataset</a> containing information on every play of the 2012 NFL regular season. We structured that dataset and 
+  <a href="https://www.statwing.com/open/datasets/a5f1490426a4715847054a3e72f09dde28edaf21#workspaces/1697" target="_blank">
+  uploaded it into Statwing for analysis.</a><sup><a class="endnote-top"></a></sup>
+  Now you can test your coaching instincts against the data.
+</p>
+
+<div id="quiz">
+
+  <div class="question">
+    <h2>Early in the game, the score is tied. You have fourth-and-goal at the 2-yard line. What should you do?<sup><a class="endnote-top"></a></sup></h2>
+    <div class="choices">
+      <button class="choice btn btn-primary big correct" data-choice="a">Go for it</button>
+      <button class="choice btn btn-primary big" data-choice="b">Kick a field goal</button>
+      <button class="choice btn btn-primary big" data-choice="c">If you do the math, it works out similarly either way</button>
+    </div>
+    <div class="answer answer-a"><p><span class="correct">Correct</span></p></div>
+    <div class="answer answer-b"><p><span class="incorrect">Wrong</span>. You should go for it.</p></div>
+    <div class="answer answer-c"><p><span class="incorrect">Wrong</span>. You should go for it.</p></div>
+    <div class="answer answer-default">
+      <p>
+        About 1.5% of field goal attempts are unsuccessful at that range, so you’re virtually assured three points if you kick.<sup><a class="endnote-top"></a></sup>
+        When teams go for it on fourth-and-goal from the 2, they get a touchdown 44% of the time.<sup><a class="endnote-top"></a></sup>
+        So on average teams get 3.1 points when they go for it&mdash;roughly the same amount they&#8217;d expect if they kicked a field goal.
+      </p>
+      <div id="attachment_168" style="width: 652px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/25b0fae170a34729d4743fd4e4b7b0e0fd8050c1#workspaces/1692" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Touchdowns-on-4th-and-Goal1.png" alt="Touchdowns on 4th and Goal" width="642" height="144" class="size-full wp-image-168" />
+        </a><p class="wp-caption-text">Click the image to explore this analysis and play with a dataset consisting of the last ten years of plays from third-and-goal and fourth-and-goal from within the 10-yard line.</p></div>
+      <p>
+        But that&#8217;s not all. If you&#8217;re stopped on fourth-and-goal, the opponent starts with terrible field position. You&#8217;ll even get a safety about 5% of the time. 
+        By comparison, you can expect the opponent to start from the 23-yard line after a kickoff following a made field goal, 
+        and they will even have a 0.5% chance of returning the kickoff for a touchdown
+      </p>
+      <div id="attachment_157" style="width: 633px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/a5f1490426a4715847054a3e72f09dde28edaf21#workspaces/1691" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Yards-to-Endzone-Immediately-After-Kickoff.png" alt="Yards to Endzone Immediately After Kickoff" width="623" height="439" class="size-full wp-image-157" />
+        </a><p class="wp-caption-text">Click the image to see the full NFL 2012 regular season dataset in Statwing. It contains all the analyses cited above.</p></div>
+      <p>
+        Going for it and kicking a field goal both yield about 3 points on average, and the field position is much better if you go for it. 
+        Despite this, coaches usually kick a field goal on fourth-and-goal. 
+        In fact, during the last ten seasons coaches only went for the touchdown <em>twice</em> in this situation.
+      </p>
+      <p>
+        You&#8217;ve gotten <span class="keepScoreCorrect"></span> out of <span class="keepScoreOutOf"></span> answers correct so far.
+      </p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>It&#8217;s third-and-1. Which type of run is most likely to result in a first down?</h2>
+    <div class="choices">
+      <button class="choice btn btn-primary big correct" data-choice="a">Run it up the gut<br/>(between the linemen)</button>
+      <button class="choice btn btn-primary big" data-choice="b">Run off tackle<br/>(outside the linemen)</button>
+    </div>
+    <div class="answer answer-a"><p><span class="correct">Correct</span></p></div>
+    <div class="answer answer-b"><p><span class="incorrect">Wrong</span>. Side story: your author&#8217;s mom always yelled at the Chiefs not to go up the middle on third-and-short. 
+      It saddens your author to find out that she was mostly likely leading the Chiefs astray.</p></div>
+    <div class="answer answer-default">
+      <p>
+        Going up the gut just barely beats running around the end.<sup><a class="endnote-top"></a></sup>
+      </p>
+      <div id="attachment_159" style="width: 440px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/a5f1490426a4715847054a3e72f09dde28edaf21#workspaces/1694" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Run-Direction-vs.-First-Down2.png" alt="Run Direction vs. First Down" width="430" height="141" class="size-full wp-image-159" />
+        </a><p class="wp-caption-text">Click the image to see an even more detailed breakdown of running plays (e.g., off-center versus off-guard).</p></div>
+      <p>
+        You&#8217;ve gotten <span class="keepScoreCorrect"></span> out of <span class="keepScoreOutOf"></span> answers correct so far.
+      </p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h2>On third-and-2, are you more likely to pick up a first down by running the ball or passing it?</h2>
+    <div class="choices">
+      <button class="choice btn btn-primary big" data-choice="a">Running</button>
+      <button class="choice btn btn-primary big" data-choice="b">Passing</button>
+      <button class="choice btn btn-primary big correct" data-choice="c">Running and passing are equally likely to work</button>
+    </div>
+    <div class="answer answer-a"><p><span class="incorrect">Wrong</span></p></div>
+    <div class="answer answer-b"><p><span class="incorrect">Wrong</span></p></div>
+    <div class="answer answer-c"><p><span class="correct">Correct</span></p></div>
+    <div class="answer answer-default">
+      <p>
+        We used Statwing to look at every third-and-2 in the 2012 NFL regular season dataset. 
+        Teams picked up first downs a bit more than half of the time, regardless of whether they ran or passed.<sup><a class="endnote-top"></a></sup>
+      </p>
+        <div id="attachment_158" style="width: 429px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/a5f1490426a4715847054a3e72f09dde28edaf21#workspaces/1693" target="_blank">
+            <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Run-vs.-Pass-for-First1.png" alt="Run vs. Pass for First" width="419" height="130" class="size-full wp-image-158" />
+          </a><p class="wp-caption-text">This difference is not statistically significant.
+          <br/>
+          Click the image to explore this analysis and the rest of the dataset in Statwing.</p></div>
+      <p>
+      </p>
+        In case you&#8217;re curious, here are the odds of picking up a first down on third-and-<em>x</em>, split by running versus passing:<sup><a class="endnote-top"></a></sup>
+      <div id="attachment_169" style="width: 582px" class="wp-caption aligncenter"><img src="http://blog.statwing.com/wp-content/uploads/2013/03/Likelihood-of-Getting-1st-Down-by-Play-Type2.png" alt="Likelihood of Getting 1st Down, by Play Type" width="572" height="355" class="size-full wp-image-169" /><p class="wp-caption-text">Runs are statistically significantly more effective than passes on third-and-1 and similarly effective on third-and-2, third-and-3, and third-and-4. 
+          In 2012 passes were not statistically significantly more successful for third-and-5 through third-and-10.</p></div>
+        As an aside, coaches tend to pass on third with more than a yard to go.
+      <div id="attachment_170" style="width: 584px" class="wp-caption aligncenter"><img src="http://blog.statwing.com/wp-content/uploads/2013/03/Proportion-of-3rd-Down-Plays-That-Are-Runs2.png" alt="Proportion of 3rd Down Plays That Are Runs" width="574" height="355" class="size-full wp-image-170" /><p class="wp-caption-text">Coaches very rarely run on third down with three or more yards to go.</p></div>
+      <p>
+        You&#8217;ve gotten <span class="keepScoreCorrect"></span> out of <span class="keepScoreOutOf"></span> questions correct so far.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="question">
+    <h2>You need a two-point conversion. What kind of play should you call?</h2>
+    <div class="choices">
+      <button class="choice btn btn-primary big correct" data-choice="a">Running</button>
+      <button class="choice btn btn-primary big" data-choice="b">Passing</button>
+      <button class="choice btn btn-primary big" data-choice="c">Running and passing are equally likely to work.</button>
+    </div>
+    <div class="answer answer-a"><p><span class="correct">Correct</span></p></div>
+    <div class="answer answer-b"><p><span class="incorrect">Wrong</span></p></div>
+    <div class="answer answer-c"><p><span class="incorrect">Wrong</span></p></div>
+    <div class="answer answer-default">
+      <p>
+        During the last ten years running has succeeded 61% of the time, versus 45% for passing.
+      </p>
+      <p>
+        This seems odd because we just found out that running wasn&#8217;t better than passing on third-and-2.
+        But the two-point conversion situation is different from a typical third-and-2. 
+        For example, the defense isn’t spread out, so it’s hard for receivers to find gaps in the coverage.
+      </p>
+      <div id="attachment_153" style="width: 431px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/ae72c7048c4f9f0fe50f735c695123148a032a1d#workspaces/1687" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Two-point-Conversions-Running-vs-Passing.png" alt="Two-point Conversions - Running vs Passing" width="421" height="131" class="size-full wp-image-153" />
+        </a><p class="wp-caption-text">Click the image to see statistical data, explore this analysis, and play with the rest of the 2003&ndash;2012 two-point conversion dataset in Statwing.</p></div>
+      <p>
+        This suggests that coaches should run more often than they currently do.
+      </p>
+      <div id="attachment_155" style="width: 653px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/ae72c7048c4f9f0fe50f735c695123148a032a1d#workspaces/1687" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Coaches-Tend-to-Pass-for-Two-point-Conversions1.png" alt="Coaches Tend to Pass for Two-point Conversions" width="643" height="144" class="size-full wp-image-155" />
+        </a><p class="wp-caption-text">Click the image to see the confidence intervals and play with the rest of the 2003&ndash;2012 two-point conversion dataset in Statwing.</p></div>
+      <p>
+        You&#8217;ve gotten <span class="keepScoreCorrect"></span> out of <span class="keepScoreOutOf"></span> answers correct so far.
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="question">
+    <h2>How depressing was it to be a Chiefs fan last year?</h2>
+    <div class="choices">
+      <button class="choice btn btn-primary big correct" data-choice="a">Really depressing</button>
+      <button class="choice btn btn-primary big" data-choice="b">Fine, you sort of get used to it</button>
+      <button class="choice btn btn-primary big" data-choice="c">Actually in some ways last season gave cause for hope</button>
+    </div>
+    <div class="answer answer-a"><p><span class="correct">Indeed</span></p></div>
+    <div class="answer answer-b"><p><span class="incorrect">Wrong-ish</span>. This is a judgment call, but the author claims the expertise of having 
+      specialized in this field for some time, and thus feels confident to assert that one does not get used to it. 
+      Though please feel free to credit yourself as correct if you are a Chiefs fan or root for another team that
+      <a href="http://en.wikipedia.org/wiki/List_of_NFL_franchise_post-season_droughts#Longest_active_playoff_game_victory_drought" target="_blank">
+        hasn’t won a playoff game since George Bush was President (the other George Bush)</a>.</p></div>
+    <div class="answer answer-c"><p><span class="incorrect">No, not really</span>. Last year&#8217;s Chiefs made the Royals look competitive.</p></div>
+    <div class="answer answer-default">
+      <p>
+        Here&#8217;s how depressing it was. On an average defensive play in 2012, the Chiefs were losing by a touchdown. And that calculation includes the first quarter.
+      </p>
+      <div id="attachment_161" style="width: 590px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/a5f1490426a4715847054a3e72f09dde28edaf21#workspaces/1696" target="_blank">
+          <img src="http://blog.statwing.com/wp-content/uploads/2013/03/Chiefs-Score-Diff-Before-Def-Play1.png" alt="Chiefs Score Differential Before Defensive Play" width="580" height="403" class="size-full wp-image-161" />
+        </a><p class="wp-caption-text">This data allows you to precisely measure how seldom a Chiefs fan thinks, &#8220;Wow, I can&#8217;t believe we&#8217;re winning this game!&#8221;
+        <br/>
+        Click the image to see more and explore the 2012 regular season dataset in Statwing.</p></div>      
+    </div>
+  </div>
+</div>
+
+<div class="wrapup">
+  <br/>
+  <h2>Thanks for playing</h2>
+  <p>
+    You got <span class="keepScoreCorrect"></span> out of <span class="keepScoreOutOf"></span> answers correct. 
+    <span class="score-assessment 0-correct">Not ideal. But, hey, such is life.</span>
+    <span class="score-assessment 1-correct">Not ideal. But, hey, such is life.</span>
+    <span class="score-assessment 2-correct">Not ideal. But, hey, such is life.</span>
+    <span class="score-assessment 3-correct">That&#8217;ll do just fine.</span>
+    <span class="score-assessment 4-correct">That&#8217;ll do just fine.</span>
+    <span class="score-assessment 5-correct">Change your name to Harbaugh.</span>
+  </p>
+  <span id="twitter-button-data"></span> <em>Tweet your quiz results</em>
+  <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+</div>
+
+<br/>
+<br/>
+<p><a href="https://news.ycombinator.com/item?id=5363903">Discussion on Hacker News</a></p> 
+<p>A special thanks to David Laughlin, who wrote most of the copy for this post. David is available for freelance work at 
+<a href="mailto:davidclaughlin@gmail.com?Subject=Freelance%20writing%20gig">davidclaughlin@gmail.com</a>.</p>
+
+
+
+<div class="notes">
+  <h2>Notes</h2>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    The <a href="https://docs.google.com/a/statwing.com/file/d/0BxEXxf9odCnMOGdHRUVvOV9GVVk/edit" target="_blank">original data</a> from 
+    <a href="http://www.advancednflstats.com/" target="_blank">Advanced NFL Stats</a> is mostly free-text play descriptions,
+    which we interpreted into structured data using Excel.
+    The original data does have a few errors here and there, not all of which could be cleaned up. 
+    Some plays are missing, and a very small number of plays have some inaccurate data.
+    But overall the dataset is comprehensive and accurate.
+    For example, the dataset only omits four of the roughly 1,000 field goals attempted in 2012.
+  </p>
+  <p>
+    You can download the structured data in Excel to see the specifics of how we calculated various fields from the original data:
+    <ul>
+      <li><a href="http://blog.statwing.com/wp-content/uploads/2013/03/2012-NFL-Season-Final.xlsx">2012 regular season data</a> (39MB). 
+        This data is excellent, though not perfect.</li>
+      <li><a href="https://www.dropbox.com/s/286jayvtj4mginx/2003-2012%20NFL%20Seasons%20-%20All%20Data.xlsx">All data from 2003&ndash;2012</a> except the 2012 playoffs (101MB). 
+        Our formulas are only tailored to the 2012 season, so there are a few difficulties when applying our formulas to the multi-year dataset. 
+        For example, the older dataset doesn&#8217;t always distinguish quarterback scrambles from run plays. 
+        Still, the data for the other seasons seems similar in most respects.</li>
+      <li><a href="http://blog.statwing.com/wp-content/uploads/2013/03/2003-2012-NFL-Seasons-2-point-attempts.xlsx">Two-point conversions</a> (200kB). 
+        A subset of the 2003&ndash;2012 dataset. It contains every two-point conversion during that time frame.</li>
+      <li><a href="http://blog.statwing.com/wp-content/uploads/2013/03/2003-2012-NFL-Seasons-3-4-and-goal.xlsx">Third- or fourth-and-goal</a> (4MB). 
+        A subset of the 2003&ndash;2012 dataset. It contains every third- or fourth-and-goal from inside the 10-yard line during that time frame.</li>
+    </ul>
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    We make the following assumptions throughout:
+    <ul>
+      <li>You are coaching the “average” team. Individual teams would vary, but the data we use is the average of all teams’ behaviors in whatever situation we are analyzing. </li>
+      <li>There are more than five minutes left in the half or game. Last minute plays have slightly different outcomes, so we exclude them.</li>
+      <li>Yardage from penalties committed during a play is included in the outcome.</li>
+      <li>The hypothetical coach does not always call the same type of play in the same situation. 
+        That is, the coach randomizes play calling enough to be unpredictable while still favoring the more advantageous plays.
+        The very awesome Brian at Advanced NFL Stats does a great job of
+        <a href="http://www.advancednflstats.com/2008/06/game-theory-and-runpass-balance.html" target="_blank">describing randomization and game theory</a>.
+    </ul>
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    Click through the image (<a href="https://www.statwing.com/open/datasets/25b0fae170a34729d4743fd4e4b7b0e0fd8050c1#workspaces/1692" target="_blank">or this link</a>)
+    to see the analysis that yielded the 1.5% number.
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    In the last ten years, there have only been twenty-five instances where teams went for it on fourth-and-goal at the 2-yard line. It turns out, though, that going for the end
+    zone on third-and-short is pretty similarly successful to going for it on fourth-and-short, so we used both types of plays in this analysis. For example, the 44% figure
+    was calculated using both third- and fourth-and-2. Here, as with the rest of this fourth-and-2 analysis, we were inspired by a 
+    <a href="http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf" target="_blank">2002 paper by David Romer</a>. Romer is a notable Berkeley economist, and
+    his wife chaired the White House Council of Economic Advisors in 2009 and 2010.
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    This was barely statistically significant in the 2012 dataset, 
+    so we ran the same analysis in the 2003&ndash;2012 dataset. There we found a very clearly statistically significant relationship.
+    The magnitude of the difference between the two running directions was only 6.5% in the ten-year dataset, 
+    as opposed to 11% (with wide confidence intervals) in the 2012 dataset.
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    If objectives other than just picking up a first down are considered, there is actually some evidence that running is better. Brian at Advanced NFL Stats
+    does a <a href="http://www.advancednflstats.com/2009/12/run-pass-imbalance-on-2nd-and-3rd-downs.html" target="_blank">great job of diving into that question</a>,
+    though you might want to learn about the concept of 
+    <a href="http://www.advancednflstats.com/2010/01/expected-points-ep-and-expected-points.html" target="blank">expected points</a> before reading Brian&#8217;s analysis.
+  </p>
+
+  <p>
+    <a class="endnote-bottom"></a>
+    Brian at Advanced NFL Stats <a href="http://www.advancednflstats.com/2008/08/play-calling-on-3rd-and-short-part-1.html" target="_blank">looked at this same question</a>
+    with data from 2000 to 2007. He found that running was more likely to have resulted in a first down on third-and-2. 
+    He brought more data to bear, but our confidence intervals were pretty narrow. This suggests that in 2012 running and passing were
+    more similar in their success on third-and-2 than during the years Brian looked at.
+  </p>
+
+</div>
+
+
+
+
+
+<script type='text/javascript'>
+function loaded(){
+var $=jQuery;
+
+correct = 0;
+outOf = 0;
+
+function showAnswers(choice) {
+  var specificAnswer = ".answer-" + $(choice).attr("data-choice");
+  var generalAnswer = ".answer-" + "default";
+  $(choice).parent().parent().children(specificAnswer).show("slow"); 
+  $(choice).parent().parent().children(generalAnswer).show("slow");
+}
+
+
+function assessScore () {
+  var finalScoreClass = "." + correct + "-correct";
+  $(finalScoreClass).show();
+}
+
+
+function placeTwitterButton() {
+  $("#twitter-button-data").html("<a id='twitter-quiz' href='https://twitter.com/share' class='twitter-share-button' data-text='I just got a " + correct + " out of " + outOf + " on an absurd football analytics quiz:' data-via='statwing' data-size='large' data-count='none' data-dnt='true'>Tweet</a>");
+  twttr.widgets.load();
+}
+
+function tellScore () {
+  $(".keepScoreCorrect").html(correct);
+  $(".keepScoreOutOf").html(outOf);
+  placeTwitterButton();
+  if (outOf == numberOfQuestions) {
+    $(".wrapup").show();
+    assessScore();
+  }
+
+}
+
+function keepScore(choice) {
+  if ($(choice).hasClass("correct")) {
+    correct++;
+  }
+  outOf++;
+  tellScore();
+}
+
+function prepEachChoice(choices) {
+  for (var i=0;i<choices.length;i++)
+  { 
+    $(choices[i]).click(function() {
+      showAnswers(this);
+      keepScore(this);      
+      $(this).parent().children(".choice").unbind().addClass("disabled");
+      $(this).addClass("btn-sunk").addClass("disabled");
+    });
+  }
+}
+
+var $questions = $("#quiz .question");
+var numberOfQuestions = $questions.length;
+for (var i=0;i<$questions.length;i++)
+{ 
+  var choices = $($questions[i]).find(".choice");;
+  prepEachChoice(choices);
+}
+
+
+
+function addEndnotes() {
+  var $endnoteTops = $(".endnote-top");
+  var $endnoteBottoms = $(".endnote-bottom");
+  for (var i=0;i<$endnoteTops.length;i++)
+  { 
+    var count = i + 1;
+    var countDisplay = "[" + count + "]";
+    $($endnoteTops[i]).html(countDisplay);
+    $($endnoteTops[i]).attr("id","note" + count + "-top");
+    $($endnoteTops[i]).attr("href","#note" + count + "-bottom");
+
+    $($endnoteBottoms[i]).html(countDisplay);
+    $($endnoteBottoms[i]).attr("id","note" + count + "-bottom");
+    $($endnoteBottoms[i]).attr("href","#note" + count + "-top");
+  }
+
+}
+addEndnotes();
+
+}
+window.document.body.onload = loaded;
+</script><p>The post <a href="http://blog.statwing.com/nfl-play-by-play-data-analyzed-visualized-and-quizzified/">NFL Play-by-Play Data—Analyzed, Visualized, and Quizzified</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/nfl-play-by-play-data-analyzed-visualized-and-quizzified/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Political Polling is Broken (And How Mushiness Can Fix It)</title>
+		<link>http://blog.statwing.com/political-polling-is-broken-and-how-mushiness-can-fix-it/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=political-polling-is-broken-and-how-mushiness-can-fix-it</link>
+		<comments>http://blog.statwing.com/political-polling-is-broken-and-how-mushiness-can-fix-it/#comments</comments>
+		<pubDate>Thu, 21 Feb 2013 19:30:40 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Experiments]]></category>
+		<category><![CDATA[Politics]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=117</guid>
+		<description><![CDATA[<p>Advertisement: Statwing is an easy-to-use tool for analyzing survey results and other business data. Click through the visualization below to see the analysis in Statwing (and play around with the rest of the dataset). Daniel Yankelovich, the &#8220;founding father of public opinion research&#8221;, was bothered that political polling did not take into account the conviction with [&#8230;]</p><p>The post <a href="http://blog.statwing.com/political-polling-is-broken-and-how-mushiness-can-fix-it/">Political Polling is Broken (And How Mushiness Can Fix It)</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><span class="small-text">Advertisement: Statwing is an easy-to-use tool for analyzing survey results and other business data. Click through the visualization below to see the analysis in Statwing (and play around with the rest of the dataset).</span></p>
+<div id="attachment_121" style="width: 210px" class="wp-caption alignright"><a href="http://blog.statwing.com/wp-content/uploads/2013/02/Daniel-Yankelovich.jpg"><img class="size-full wp-image-121 " alt="Daniel Yankelovich" src="http://blog.statwing.com/wp-content/uploads/2013/02/Daniel-Yankelovich.jpg" width="200" height="249" /></a><p class="wp-caption-text">Daniel Yankelovich, the &#8220;founding father of public opinion research.&#8221; <br />Photo by Matthew Septimus, courtesy of <a href="http://www.strategy-business.com/article/05309?gko=a6cb5" target="_blank">strategy+business</a>.</p></div>
+<p><span style="line-height: 28px;">Daniel Yankelovich, the &#8220;founding father of public opinion research&#8221;, was bothered that political polling did not take into account the conviction with which respondents held a position.<sup><a id="note1-top" href="#note1-bottom">[1]</a></sup> Take the question &#8220;Should the U.S. ban assault weapons, Yes or No?&#8221; Someone who felt very strongly about the issue was given the same weight by a pollster as someone who barely cared. </span></p>
+<p><span style="line-height: 28px;">So in the 1970&#8242;s Yankelovich developed a set of questions that assessed how strong someone&#8217;s conviction was on an issue. He presented it to one of his clients, </span><em style="line-height: 28px;">Time Magazine</em><span style="line-height: 28px;">, who dubbed it the &#8220;</span>Mushiness Index&#8221;<span style="line-height: 28px;">. Says Yankelovich, &#8220;They were quite enthusiastic. And then they found, when the reporters and writers sat down to write the stories, they found &#8230; it slowed up the storytelling and, as a result, they just didn&#8217;t use it.&#8221;<sup><a id="note2-top" href="#note2-bottom">[2]</a></sup> </span><span style="line-height: 28px;">Little has changed since.</span></p>
+<p>We decided to run an experiment to see if the Mushiness Index could add anything to our understanding of contemporary political attitudes. We reached out to a couple hundred Americans via <a href="https://crowdflower.com/" target="_blank">CrowdFlower</a>, and asked them to take a survey we created on <a href="http://kwiksurveys.com/" target="_blank">Kwiksurvey</a>.<sup><a id="note3-top" href="#note3-bottom">[3]</a></sup> They were asked about their attitudes on increasing funding for border control, U.S. Postal Service Saturday delivery elimination, fracking, marijuana legalization, and Internet neutrality. For each of those questions we asked both their position and how important that issue was to them, on a 1 to 7 scale.<sup><a id="note4-top" href="#note4-bottom">[4]</a>,<a id="note5-top" href="#note5-bottom">[5]</a></sup></p>
+<p>For three of those questions, respondents on one side of the issue tended to feel more strongly than respondents on the other side of the issue. For example, only 32% of our (unrepresentative) sample thought the United States should spend more on border security. But those who did feel the U.S. should spend more tended to feel much more strongly about it than those who did not.<sup><a id="note6-top" href="#note6-bottom">[6]</a></sup></p>
+<p><span class="small-text">Click the image below to see the statistical test results, and to explore the rest of the dataset.</span></p>
+<div id="attachment_124" style="width: 608px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/622b7db1cbd9b256928763be2f9ee3902263de34#workspaces/1371" target="_blank"><img class="size-full wp-image-124  " alt="Raising Border Spending, Mushiness-weighting" src="http://blog.statwing.com/wp-content/uploads/2013/02/opinions-on-border-protection-spending1.png" width="598" height="394" /></a><p class="wp-caption-text">The 57 respondents who answered &#8220;Yes&#8221; to whether or not border spending should be increased felt more strongly about the issue than the 118 respondents who answered &#8220;No&#8221;</p></div>
+<p><span style="line-height: 28px;">We weighted responses by the respondents&#8217; degree of conviction, counting a respondent more heavily if they said the issue was extremely important to them. When we did, we found 41% support instead of 32% support for higher border spending (see endnote for exact methodology).<sup><a id="note7-top" href="#note7-bottom">[7]</a></sup> Using mushiness-weighting, you might say that America is collectively 41% in favor of spending more on border security, even if only 32% of individual Americans</span><span style="line-height: 28px;"> are in favor of such. Applying the same method to the other questions we asked yields the following:</span></p>
+<div id="attachment_120" style="width: 579px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-20-at-3.19.26-PM.png"><img class="size-full wp-image-120" alt="Mushiness-weighted support for political issues" src="http://blog.statwing.com/wp-content/uploads/2013/02/Screen-Shot-2013-02-20-at-3.19.26-PM.png" width="569" height="188" /></a><p class="wp-caption-text">Some issues have a larger disparity between supporter and opponent mushiness than others</p></div>
+<p><span style="line-height: 28px;">In the polling world, a 9-point difference is important, and can be the difference between a headline reading &#8220;The majority of Americans agree that&#8230;&#8221; and a headline reading the opposite</span><span style="line-height: 28px;">. And the disparity between the unweighted and mushiness-weighted result is itself an interesting datapoint, an indicator of the relative conviction of people on either side of the issue. When we ignore the conviction individuals have in their views, we miss a lot of the story.</span></p>
+<p>What other lessons should we take from this? First, pollsters include questions regarding the strength of the conviction of those they&#8217;re polling. Second, we should take poll findings that don&#8217;t account for strength of conviction with a grain of salt. Lastly, everyday non-political surveys should also account for conviction—which can be as simple as allowing respondents to answer on a <a href="http://survey.cvent.com/blog/customer-insights-2/is-life-really-as-simple-as-yes-or-no">one to seven scale instead of with a binary Yes/No</a>. Mushiness is an important part of how the world thinks and feels, so it&#8217;s time we start accounting for it.</p>
+<p>&nbsp;</p>
+<p><a href="http://news.ycombinator.com/item?id=5259615">Discussion on Hacker News</a><br /> <a href="https://www.statwing.com">Statwing Front Page</a></p>
+<div class="notes">
+<h2>Notes</h2>
+<p><a id="note1-bottom" href="#note1-top">[1]</a> The &#8220;founding father of public opinion research&#8221; description comes from Bill Moyers. Courtesy of <a href="http://www.strategy-business.com/article/05309?gko=a6cb5" target="_blank">strategy+business</a>.</p>
+<p><a id="note2-bottom" href="#note2-top">[2]</a> Hat tip to the excellent <em>This American Life</em> story &#8220;<a href="http://www.thisamericanlife.org/radio-archives/episode/260/transcript" target="_blank">The Facts Don&#8217;t Matter</a>&#8220;.</p>
+<p><a id="note3-bottom" href="#note3-top">[3]</a> The sample was admittedly unrepresentative (e.g., it leaned young and Democratic, among other things). Our goal here was only to demonstrate whether people on different sides of important issues have meaningfully different degrees of conviction about it, not to actually come up with unassailable polling data.</p>
+<p><a id="note4-bottom" href="#note4-top">[4]</a> Our survey questions:</p>
+<ul>
+<li>&#8220;Should the United States increase government spending on security measures and enforcement at U.S. borders?&#8221; <a href="http://www.gallup.com/poll/160307/americans-widely-support-immigration-reform-proposals.aspx" target="_blank">adapted from Gallup</a> (68% support)</li>
+<li><span style="line-height: 28px;">&#8220;As you may know, the U.S. Postal Service is anticipating billions of dollars in losses this year. Should the post office eliminate residential mail delivery on Saturdays to save money?&#8221; <a href="http://www.gallup.com/poll/160421/six-americans-favor-ending-saturday-mail-delivery.aspx" target="_blank">adapted from Gallup</a> (63% support).<br /> </span></li>
+<li>&#8220;A process known as hydraulic fracturing, sometimes called fracking, is used to drill for oil and natural gas in shale oil reserves. Do you favor or oppose the use of fracking to produce more oil and natural gas in this country?&#8221; <a href="http://www.rasmussenreports.com/public_content/business/econ_survey_questions/march_2012/questions_fracking_march_22_23_2012" target="_blank">adapted from Rasmussen</a> (57% support).</li>
+<li>&#8220;Do you think the use of marijuana should be made legal?&#8221; <a href="http://www.gallup.com/poll/150149/Record-High-Americans-Favor-Legalizing-Marijuana.aspx" target="_blank">adapted from Gallup</a> (50% support)</li>
+<li>&#8220;Should internet service providers (like Comcast) be allowed to give different priority to different types of Internet traffic (for example, giving normal Internet traffic a higher priority than peer-to-peer filesharing traffic)?&#8221;</li>
+<li>For each of the above we individually asked &#8220;How important to you personally is this issue?&#8221;</li>
+</ul>
+<p><a id="note5-bottom" href="#note5-top">[5]</a> We used one question to measure conviction, where the original Mushiness Index used four. It&#8217;s worth noting that asking someone how strongly they feel is problematic; it&#8217;d be better to examine revealed preference indicators like whether someone has written their representative about the issue or tried to convince a friend of their view.</p>
+<p><a id="note6-bottom" href="#note6-top">[6]</a> Again, 32% isn&#8217;t the actual number. Gallup&#8217;s more reliably sampled poll says that number is 68%.</p>
+<p><a id="note7-bottom" href="#note7-top">[7]</a> We normalized responses to &#8220;How important to you personally is this issue&#8221; by subtracting 1 and then dividing by 6 to get a 0 to 1 scale of how strongly the respondent felt (the math works out the same if you don&#8217;t divide, but that felt cleanest). The weights of the 57 &#8220;Yes&#8221; respondents summed to 28.1; those of the 121 &#8220;No&#8221; respondents summed to 39.7. Where 57/(57+121) yields 32% of the unweighted sample supporting higher spending, 28.1/(28.1+39.7) yields 41% of the mushiness-weighted sample supports higher spending.</p>
+</div><p>The post <a href="http://blog.statwing.com/political-polling-is-broken-and-how-mushiness-can-fix-it/">Political Polling is Broken (And How Mushiness Can Fix It)</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/political-polling-is-broken-and-how-mushiness-can-fix-it/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>America Goes to the Doctor</title>
+		<link>http://blog.statwing.com/america-goes-to-the-doctor/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=america-goes-to-the-doctor</link>
+		<comments>http://blog.statwing.com/america-goes-to-the-doctor/#comments</comments>
+		<pubDate>Wed, 16 Jan 2013 18:46:04 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Open Data]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=108</guid>
+		<description><![CDATA[<p>Advertisement: Statwing makes an easy-to-use data analysis tool. Click through any of the images below to see that analysis in Statwing (and play around with the dataset). You know how when you go to the doctor you get your height, weight, blood pressure, etc. measured? We popped thousands of those readings into Statwing (from Kaggle&#8217;s  Practice Fusion [&#8230;]</p><p>The post <a href="http://blog.statwing.com/america-goes-to-the-doctor/">America Goes to the Doctor</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><em>Advertisement: <a href="https://www.statwing.com">Statwing</a> makes an easy-to-use data analysis tool. Click through any of the images below to see that analysis in Statwing (and play around with the dataset).</em></p>
+<p>You know how when you go to the doctor you get your height, weight, blood pressure, etc. measured? We popped thousands of those readings into Statwing (from <a href="http://www.kaggle.com/" target="_blank">Kaggle&#8217;s</a>  <a href="http://blog.kaggle.com/2012/06/06/analyze-this-practice-fusion-on-kaggle-prospect/" target="_blank">Practice Fusion Analyze This 2012 Prediction Challenge</a>), and the data is pretty fun to play with.<a id="note1-top" href="#note1-bottom">[1]</a> This dataset isn&#8217;t perfectly representative, but it gives a decent feel for how vital signs, heights, and weights are distributed in the population.<a id="note2-top" href="#note2-bottom">[2]</a> Note that the data is U.S. only.<a id="note3-top" href="#note3-bottom">[3]</a></p>
+<p>For example, here&#8217;s the distribution of weights of Americans:</p>
+<div id="attachment_109" style="width: 608px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/2576c90b3a0e2b4cae8653f5045c871732ed7562#workspaces/537" target="_blank"><img class="size-full wp-image-109 " title="Weight by Gender" alt="Weight by Gender" src="http://blog.statwing.com/wp-content/uploads/2013/01/Weight-by-Gender.png" width="598" height="348" /></a><p class="wp-caption-text">Click the image to see the analysis in Statwing. It&#8217;s much more interactive, has averages and medians and the like, and you can run additional analyses of other variables.</p></div>
+<p>&nbsp;</p>
+<p>We all know that height and weight are correlated, but how much? (Click through for statistical test results.)</p>
+<div id="attachment_110" style="width: 630px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/2576c90b3a0e2b4cae8653f5045c871732ed7562#workspaces/538" target="_blank"><img class="size-full wp-image-110 " title="Weight vs. Height" alt="Weight vs. Height" src="http://blog.statwing.com/wp-content/uploads/2013/01/Weight-by-Height.png" width="620" height="401" /></a><p class="wp-caption-text">Click the image to see it in Statwing (with statistical test results), and to run analyses on other vital signs.</p></div>
+<p>&nbsp;</p>
+<p>When your blood pressure is taken, two numbers are recorded (you&#8217;ll hear &#8220;### over ###&#8221;). Turns out the first number (systolic) is your blood pressure when the heart&#8217;s ventricles are contracted, having just pumped blood, and your blood pressure is at its highest point in the heartbeat cycle. The second number (diastolic) is your blood pressure when the heart&#8217;s ventricles are full of blood, about to pump, and your blood pressure is at its lowest. They&#8217;re correlated to roughly the same degree as height and weight are.</p>
+<div id="attachment_111" style="width: 628px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/2576c90b3a0e2b4cae8653f5045c871732ed7562#workspaces/539" target="_blank"><img class="size-full wp-image-111 " alt="Systolic by Diastolic" src="http://blog.statwing.com/wp-content/uploads/2013/01/Systolic-by-Diastolic.png" width="618" height="396" /></a><p class="wp-caption-text">Click the image to see it in Statwing (with statistical test results), and to run analyses on other vital signs.</p></div>
+<p>They don&#8217;t just vary from each other, they&#8217;re also used to assess different health issues. For example, high <em>systolic</em> blood pressure <a href="http://www.medscape.com/viewarticle/448003" target="_blank">is a better indicator</a> of potential cardiac issues than high <em>diastolic</em> blood pressure.</p>
+<p>&nbsp;</p>
+<p>There&#8217;s a lot more fun stuff in this dataset. You can pivot by region, age, body temperature, and more. <a href="https://www.statwing.com/open/datasets/2576c90b3a0e2b4cae8653f5045c871732ed7562#workspaces/537" target="_blank">Take a look</a>.</p>
+<p><a href="http://news.ycombinator.com/item?id=5068385">Discussion on Hacker News</a><br /> <a href="https://www.statwing.com">Statwing Front Page</a></p>
+<div class="notes">
+<h2> </h2>
+<h2>Notes</h2>
+<p><a id="note1-bottom" href="#note1-top">[1]</a> Data prep: Data was downloaded from <a href="https://www.kaggle.com/c/pf2012/data">here</a>. We started with visits to family practitioners, general practitioners, and doctors of internal medicine from the training_SyncTranscript file. We removed records with no height or weight, outliers that appeared to be measurement errors (for example, weight numbers that were probably kilograms instead of pounds), folks experiencing moderate hypothermia (temperature readings 90<b>°</b> Fahrenheit and lower), and one individual who ruined all our charts by weighing 1150 pounds. We then randomly selected data so there was no more than one visit per patient, then brought in data from training_SyncPatient to get age, gender, and location. We didn&#8217;t have exact birthdays so ages are estimated from birth year.</p>
+<p><a id="note2-bottom" href="#note1-top">[2]</a> The dataset isn&#8217;t necessarily representative of the American public generally. Younger people are significantly underrepresented. People often go to the doctor when they&#8217;re sick, so you might expect (for example) a higher than typical number of feverish temperatures. Et cetera. As a sanity check we compared dataset averages with known averages for <a href="http://en.wikipedia.org/wiki/Human_height#Average_height_around_the_world">height</a> and <a href="http://en.wikipedia.org/wiki/Body_weight#By_country">weight</a> (per gender) and found them to be within an inch and within a few pounds.</p>
+<p><a id="note3-bottom" href="#note3-top">[3]</a> The data would look quite different if it were not U.S.-only. For example, <a href="http://en.wikipedia.org/wiki/Body_weight#By_country" target="_blank">Americans weigh about 15 pounds more than Germans on average</a>.</p>
+</div><p>The post <a href="http://blog.statwing.com/america-goes-to-the-doctor/">America Goes to the Doctor</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/america-goes-to-the-doctor/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The Ecological Fallacy</title>
+		<link>http://blog.statwing.com/the-ecological-fallacy/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=the-ecological-fallacy</link>
+		<comments>http://blog.statwing.com/the-ecological-fallacy/#comments</comments>
+		<pubDate>Thu, 20 Dec 2012 18:36:48 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Open Data]]></category>
+		<category><![CDATA[Politics]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=98</guid>
+		<description><![CDATA[<p>Advertisement: Statwing makes an easy-to-use data analysis tool. Click through any of the images below to see that analysis in Statwing (and play around with related data). U.S. states with proportionally more immigrants have proportionally more households with income above $100k.[1] Ergo, immigrants are more likely than non-immigrants to have household incomes above $100k. Hopefully [&#8230;]</p><p>The post <a href="http://blog.statwing.com/the-ecological-fallacy/">The Ecological Fallacy</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p><em>Advertisement: Statwing makes an easy-to-use data analysis tool. Click through any of the images below to see that analysis in Statwing (and play around with related data).</em></p>
+<p>U.S. states with proportionally more immigrants have proportionally more households with income above $100k.<a id="note1-top" href="#note1-bottom">[1]</a> Ergo, immigrants are more likely than non-immigrants to have household incomes above $100k.</p>
+<div id="attachment_99" style="width: 603px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/f037ef56de6857508e72e09ad0025cf917bf01dd#workspaces/266" target="_blank"><img class="size-full wp-image-99       " alt="Foreign Born vs Income" src="http://blog.statwing.com/wp-content/uploads/2012/12/Foreign-Born-vs-Income.png" width="593" height="378" /></a><p class="wp-caption-text">There&#8217;s a strong positive correlation between the proportion of a state&#8217;s residents that are foreign born and the proportion of it&#8217;s households with income over $100k.<br />Click the image to see statistical output (and to explore similar looking data on median household income and per capita income).</p></div>
+<p>Hopefully something feels off about that logic. Because it&#8217;s wrong. Actually the relationship between income and being an immigrant at the individual level is the opposite.</p>
+<div id="attachment_100" style="width: 359px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/9b5b82b74367da0dfe07110e6e242c4fac718f8d#workspaces/262" target="_blank"><img class="size-full wp-image-100    " alt="Relative to residents born in America, a relatively low proportion of immigrants have incomes above $100k." src="http://blog.statwing.com/wp-content/uploads/2012/12/Foreign-Born-vs-Income-Indiv..png" width="349" height="401" /></a><p class="wp-caption-text">Each column above sums to 100%; for example, 77.9% of immigrants in America have a household income below $100k.<a id="note2-top" href="#note2-bottom">[2]<br /></a>Click the image to see detailed statistical output.</p></div>
+<p>Deducing from the first chart that immigrants are more likely to be well-off is committing the <em>ecological fallacy</em>—attributing qualities at the individual level because of a relationship at a group level.<a id="note3-top" href="#note3-bottom">[3]</a></p>
+<p>That example was pretty easy to catch, not least because it feels intuitive that immigrants would tend to have lower income than non-immigrants. But not all ecological fallacies are so easy to spot.</p>
+<p>For example, there&#8217;s a negative correlation between per capita income in a state and the percent of the 2012 presidential election vote that went to Romney.</p>
+<div id="attachment_103" style="width: 608px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/f037ef56de6857508e72e09ad0025cf917bf01dd#workspaces/265" target="_blank"><img class="size-full wp-image-103  " alt="State median income is negatively correlated with proportion of the state's vote in the 2012 election that went to Romney.Click the image to see detailed statistical output." src="http://blog.statwing.com/wp-content/uploads/2012/12/Income-vs-Republican.png" width="598" height="375" /></a><p class="wp-caption-text">State median income is negatively correlated with proportion of the state&#8217;s vote in the 2012 election that went to Romney.<a id="note4-top" href="#note4-bottom">[4]</a><br />Click the image to see detailed statistical output.</p></div>
+<p>It&#8217;s easy to picture rich and liberal cities like San Francisco and New York, hear the phrase &#8220;latte liberal&#8221; a couple times, and believe that higher income is in fact correlated with voting Democratic.</p>
+<p>At an individual level, though, higher income is associated with voting Republican.</p>
+<div id="attachment_101" style="width: 490px" class="wp-caption aligncenter"><img class="size-full wp-image-101" alt="Higher income is associated with voting for Republicans.This image from a great New York Times blog post by Andrew Gelman &quot;Red vs. Blue in a New Light.&quot; Gelman popularized the recognition that the traditional red-blue electoral college map often leads to conclusions that suffer from the ecological fallacy." src="http://blog.statwing.com/wp-content/uploads/2012/12/Republican-Vote-Share.jpg" width="480" height="357" /><p class="wp-caption-text">Higher income is associated with voting for Republicans.<br />This image from a great New York Times blog post by Andrew Gelman and Avi Feller <a href="http://campaignstops.blogs.nytimes.com/2012/11/12/red-versus-blue-in-a-new-light/" target="_blank">&#8220;Red vs. Blue in a New Light.&#8221;</a></p></div>
+<p>The (simplified) explanation for this apparent paradox? Across the country, lower income folk tend to vote Democrat; within blue states, upper income folk also vote Democrat, but in red states they vote Republican. For more on this, read Andrew Gelman&#8217;s very awesome book <a href="http://www.amazon.com/Red-State-Blue-Rich-Poor/dp/0691143935" target="_blank">Red State, Blue State, Rich State, Poor State</a>, or at least read <a href="http://www.stat.columbia.edu/~gelman/research/published/red_state_blue_state_revised.pdf" target="_blank">this paper of his [pdf]</a> about it.</p>
+<p>Making judgments based on group-level data isn&#8217;t always bad; <a href="http://www.scientificintegrityinstitute.org/aje050188.pdf" target="_blank">sometimes group level data is more accurate [pdf]</a>, and at the very least it&#8217;s easier to gather. Quite often, conclusions one might make from group-level data are correct, as with a famous 1968 dataset correlating smoking with various cancers (click the image to see cigarettes vs. other cancers, too).</p>
+<div id="attachment_102" style="width: 615px" class="wp-caption aligncenter"><a href="https://www.statwing.com/open/datasets/f037ef56de6857508e72e09ad0025cf917bf01dd#workspaces/267" target="_blank"><img class="size-full wp-image-102   " alt="At the state level, consumption of cigarettes is positively correlated with deaths from lung cancer.Click through to see statistical output." src="http://blog.statwing.com/wp-content/uploads/2012/12/Cigarettes-vs-Lung-Cancer.png" width="605" height="394" /></a><p class="wp-caption-text">At the state level, consumption of cigarettes is positively correlated with deaths from lung cancer.<a id="note5-top" href="#note5-bottom">[5]</a><br />Click through to see statistical output.</p></div>
+<p>&nbsp;</p>
+<p>So. Be cautious anytime someone points to group-level data to say something about members of that group. Sometimes the fallacious thinking will be obvious, but often it will not.</p>
+<p> <br /> <a href="http://news.ycombinator.com/item?id=4949183">Discussion on Hacker News</a><br /> <a href="https://www.statwing.com">Statwing Front Page</a></p>
+<div class="notes">
+<h2>Notes</h2>
+<p><a id="note1-bottom" href="#note1-top">[1]</a> Unless otherwise noted, all data is collected from the <a href="http://www.census.gov/cps/data/cpstablecreator.html" target="_blank">Current Population Survey</a>; this data was calculated from 2008-2012 data. Click the picture to see detailed statistical output.</p>
+<p><a id="note2-bottom" href="#note2-top">[2]</a>. Income is presented in bands in the Current Population Survey (e.g., $45,000-$47,499). Running a ranked (nonparametric) t-test across the whole range of incomes also indicates that immigrants tend to have lower incomes.</p>
+<p><a id="note3-bottom" href="#note3-top">[3]</a>. Thanks to David Freeman at UC Berkeley for this example <a href="http://michaeljohnsonphilosophy.com/wp-content/uploads/2012/10/ecological-fallacy.pdf" target="_blank">from his technical report on the ecological fallacy</a>., which was itself inspired by the original paper discussing the ecological fallacy at length (<a href="http://cooley.libarts.wsu.edu/schwartj/pdf/Robinson.pdf" target="_blank">Robinson, 1950</a>).</p>
+<p><a id="note4-bottom" href="#note4-top">[4]</a>. Voting data pulled from <a href="http://en.wikipedia.org/wiki/United_States_presidential_election,_2012#Votes_by_state" target="_blank">Wikipedia</a>.</p>
+<p><a id="note5-bottom" href="#note5-top">[5]</a>. This dataset, made famous by Fraumeni (1968) <a href="http://lib.stat.cmu.edu/DASL/Datafiles/cigcancerdat.html" target="_blank">pulled from CMU&#8217;s Statlib</a>.</p>
+</div><p>The post <a href="http://blog.statwing.com/the-ecological-fallacy/">The Ecological Fallacy</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/the-ecological-fallacy/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Those Who Care Not For Trees</title>
+		<link>http://blog.statwing.com/those-who-care-not-for-trees/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=those-who-care-not-for-trees</link>
+		<comments>http://blog.statwing.com/those-who-care-not-for-trees/#comments</comments>
+		<pubDate>Fri, 16 Nov 2012 17:39:03 +0000</pubDate>
+		<dc:creator><![CDATA[Statwing]]></dc:creator>
+				<category><![CDATA[Open Data]]></category>
+
+		<guid isPermaLink="false">http://blog.statwing.com/?p=70</guid>
+		<description><![CDATA[<p>How do you feel about the current number of trees in your city? Too many? About right? Not enough? You probably didn&#8217;t answer &#8220;Too many.&#8221; In a survey of San Franciscans (courtesy of San Francisco&#8217;s Open Data initiative), 3.1% of of respondents said San Francisco has too many trees. So. Who thinks there&#8217;s too many trees? Who are [&#8230;]</p><p>The post <a href="http://blog.statwing.com/those-who-care-not-for-trees/">Those Who Care Not For Trees</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></description>
+				<content:encoded><![CDATA[<p>How do you feel about the current number of trees in your city? Too many? About right? Not enough? You probably didn&#8217;t answer &#8220;Too many.&#8221;</p>
+<p>In a survey of San Franciscans (courtesy of <a href="https://data.sfgov.org/Statistics/1996-2011-City-Survey-Database/583k-63vu">San Francisco&#8217;s Open Data initiative</a>), 3.1% of of respondents said San Francisco has too many trees.</p>
+<p>So. <em>Who thinks there&#8217;s too many trees?</em> <em>Who are those 3.1%?</em></p>
+<div id="attachment_84" style="width: 652px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-15-at-8.35.25-PM.png"><img class="size-full wp-image-84  " title="Statwing screen shot: Lumberjackiness" alt="Statwing screen shot: Lumberjackiness" src="http://blog.statwing.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-15-at-8.35.25-PM.png" width="642" height="226" /></a><p class="wp-caption-text">Sample size of 9,219.</p></div>
+<p>We looked around the dataset to try to paint a portrait of this segment of the population, who we&#8217;ll call Lumberjacks.<a href="#note1">[1]</a></p>
+<h1><strong>Are they from a certain neighborhood?</strong></h1>
+<p>For the most part this is a city-wide phenomenon. Lumberjacks do tend to be concentrated in Districts 9, 10, and 11 (which were grouped together in the survey we&#8217;re analyzing).</p>
+<div id="attachment_71" style="width: 329px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/SF-District-Map.gif"><img class="size-full wp-image-71   " title="SF District Map" alt="San Francisco District Map" src="http://blog.statwing.com/wp-content/uploads/2012/11/SF-District-Map.gif" width="319" height="320" /></a><p class="wp-caption-text">Districts 9, 10, and 11 together form a wildly heterogenous area. This image courtesy of <a href="http://www.sfresidence.com/aboutsf.htm">SFResidence.com</a></p></div>
+<p>But it&#8217;s not really a very large effect: 4.9% of Southeasterners are not fans of trees. That&#8217;s statistically significantly but not <em>too</em> meaningfully different from the 3.3% average across the city.<a href="#note2">[2]</a></p>
+<h1><strong>What else is demographically interesting about lumberjacks?</strong></h1>
+<p>A couple things stand out. Older folks are less likely to care for trees than younger folks (though it&#8217;s unclear if this is best interpreted as being about age, the era in which one grew up, or something else).<a href="#note3">[3]</a></p>
+<div id="attachment_87" style="width: 562px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Age-copy.png"><img class="size-full wp-image-87" title="Statwing screen shot: Lumberjacks by age" alt="Statwing screen shot: Lumberjacks by age" src="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Age-copy.png" width="552" height="349" /></a><p class="wp-caption-text">Each column sums to 100%. For example, of survey respondents over 74, 9.6% are lumberjacks.</p></div>
+<p>The other notable demographic difference is by income. Lower income respondents are more likely than higher income respondents to be lumberjacks. Here&#8217;s the proportion of each income bracket that dislikes trees:</p>
+<div id="attachment_88" style="width: 650px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Income.png"><img class="size-full wp-image-88" title="Statwing screen shot: Lumberjacks by incomes" alt="Statwing screen shot: Lumberjacks by incomes" src="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Income.png" width="640" height="415" /></a><p class="wp-caption-text">Each column sums to 100%. For example, only 1.1% of respondents with household incomes above $100k are lumberjacks.</p></div>
+<p>To be very clear: income is not the end of the story. Every other effect discussed in this blog post holds firm even while controlling for income level. In fact, every effect discussed in this post is still relevant even while controlling for every other effect in this post (though most of them do tend to be correlated).</p>
+<p><strong>Are they just cranky people generally?</strong></p>
+<p>Yes, sort of. Even controlling for income and age, lumberjacks are very consistently less satisfied than typical with just about everything.</p>
+<p>The survey asked respondents to grade San Francisco&#8217;s city services on an A-B-C-D-F scale (i.e., the grading scale in U.S. schools). Across every one of 24 grades they gave the city, lumberjacks graded statistically significantly more harshly than non-lumberjacks did, typically by a third of a letter grade. For example, on average they grade the condition of the city&#8217;s pavement as a D+, while others graded it a C-.</p>
+<div id="attachment_89" style="width: 471px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Condition-of-Pavement-v2.png"><img class="size-full wp-image-89" title="Statwing screen shot: Pavement condition by lumberjack" alt="Statwing screen shot: Pavement condition by lumberjack" src="http://blog.statwing.com/wp-content/uploads/2012/11/Hatingness-by-Condition-of-Pavement-v2.png" width="461" height="340" /></a><p class="wp-caption-text">Chart shows the proportion of respondents in each group that gave a certain grade. For example, about 30% of lumberjacks gave the city a D on this measure.</p></div>
+<p>To give you some idea of the breadth of city services lumberjacks are less happy about than non-lumberjacks, here&#8217;s a representative selection:</p>
+<div id="attachment_90" style="width: 579px" class="wp-caption aligncenter"><a href="http://blog.statwing.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-16-at-12.12.11-AM.png"><img class="size-full wp-image-90" title="SF Grades by lumberjack" alt="SF Grades by lumberjack" src="http://blog.statwing.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-16-at-12.12.11-AM.png" width="569" height="273" /></a><p class="wp-caption-text">Apologies to folks who aren&#8217;t familiar with the U.S. grading system.</p></div>
+<p>Labeling lumberjacks &#8220;cranky people generally &#8221; is perhaps overly harsh. Perhaps they were just in a bad mood when they took the survey. Perhaps they&#8217;re just more demanding citizens. But &#8220;cranky&#8221; seems as reasonable an interpretation as any.</p>
+<h1><strong>Conclusion</strong></h1>
+<p>Lumberjacks tend to be older, lower income, more southeasterly, and crankier. But those are only tendencies. There were plenty of lumberjacks who didn&#8217;t fit those patterns.</p>
+<p>So. Look to your left. Look to your right. If you&#8217;re in a room in San Francisco with hundreds of people, at least one of those people probably wishes San Francisco had fewer trees.</p>
+<p>Thanks for coming on this journey with us. This survey dataset is a goldmine of fun analyses. Consider this Part 1 in a series.</p>
+<div>
+<p><em>&#8220;If trees could scream, would we be so cavalier about cutting them down? We might, if they screamed all the time for no good reason.&#8221;</em></p>
+<p>-Jack Handy</p>
+<p>Late edit #1: As one <a href="http://news.ycombinator.com/item?id=4795262">Hacker News commenter points out</a>, some folks oppose trees because of the association between trees and gentrification. He links to a <a href="http://www.post-gazette.com/stories/sectionfront/life/san-franciscos-red-light-denizens-fight-to-stay-seedy-456135/">really interesting article</a> about the phenomenon.</p>
+<p>Late edit #2: We should have called them Treeshuggers (or maybe Treetotalers), not Lumberjacks. Props again to Hacker News commenters for the concern about &#8220;Lumberjack&#8221; and the suggestions. Late edit #3: As a gesture of respect to the lumberjack community, we&#8217;ve donated ~$25 to the Kickstarter campaign for the lumberjack-starring game <a href="http://www.kickstarter.com/projects/551886203/fist-of-awesome">Fist of Awesome</a>.</p>
+<p><a href="http://news.ycombinator.com/item?id=4794861">Discussion on Hacker News</a></p>
+<p>&nbsp;</p>
+</div>
+<div class="notes">
+<h2>Notes</h2>
+<p><span id="note1">1. Some</span> folks may want fewer trees because they know it costs the city to maintain them, but lumberjacks really do tend to dislike greenery. For example, only 40% reported visiting a city park at least once a month in the past year, as opposed to 64% of non-lumberjacks people. They also tend to rate the quality of the city&#8217;s parks particularly poorly. Late edit: Some folks quite reasonably expressed concern that these 3.1% of respondents were actually just folks who miskeyed or mis-circled a survey response. In fact about a quarter of the survey responses were answered by phone, and those responses showed the same patterns of lumberjackiness as other results.</p>
+<p><span id="note2">2. Note that the survey specifically asked about the number of trees in the respondent&#8217;s <em>neighborhood</em>, then the number of trees <em>citywide. </em>And respondents did tend to answer those questions differently. So we wouldn&#8217;t naively expect different neighborhoods to have different perceptions about the appropriate number of trees <em>citywide, </em>which is the question we&#8217;re examining.</span></p>
+<p><span id="note3">3. Late edit:</span> Though we rarely mention it, every finding here is backed by statistical significance testing, and the findings are quite robust. For example, the p-values associated with this table were below 0.00001 for every year of the survey.</p>
+</div><p>The post <a href="http://blog.statwing.com/those-who-care-not-for-trees/">Those Who Care Not For Trees</a> appeared first on <a href="http://blog.statwing.com">Statwing Blog</a>.</p>]]></content:encoded>
+			<wfw:commentRss>http://blog.statwing.com/those-who-care-not-for-trees/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
