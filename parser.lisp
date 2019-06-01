@@ -449,8 +449,14 @@ feed, use the :link property of the feed as the base."
     (let ((feed *feed*)
           (xml-base (fxml.klacks:current-xml-base *source*)))
       (if (not (emptyp xml-base)) xml-base
-          (when (equal (gethash* :proxy feed) "feedburner")
-            (gethash* :link feed))))))
+          (if (equal (gethash* :proxy feed) "feedburner")
+              (gethash* :link feed)
+              (if-let (link (find "self"
+                                  (gethash* :links feed)
+                                  :test #'equal
+                                  :key (op (href _ :rel))))
+                (href link :href)
+                xml-base))))))
 
 (defun current-xml-base ()
   (or *base* (current-xml-base-aux) ""))
