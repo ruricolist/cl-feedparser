@@ -274,3 +274,9 @@ error."
     (is (notany #'emptyp
                 (mapcar (op (href _ :summary))
                         (href feed :entries))))))
+
+(test guid-overrides-link
+  "Test that the guid doesn't override the link."
+  (let* ((feed (parse-feed (load-test-file "hpr_ogg_rss.php"))))
+    (dolist (entry (href feed :entries))
+      (is (string*= "eps.php?id=" (href entry :link))))))

@@ -392,11 +392,12 @@
       (when id
         (check-guid-mask entry)
         (setf (href entry :id) id)
-        (when (or permalinkp
-                  ;; Use GUID as a fallback link.
-                  (and (urlish? id)
-                       (null (gethash* :href entry))))
-          (setf (gethash* :link entry) (resolve-uri id)))))))
+        (symbol-macrolet ((link (gethash* :link entry)))
+          (when (or permalinkp
+                    ;; Use GUID as a fallback link.
+                    (and (urlish? id)
+                         (null link)))
+            (setf link (resolve-uri id))))))))
 
 (defhandler nil :item
   (handle-tag :atom :entry))
