@@ -420,3 +420,11 @@
 
 (defhandler nil :fullitem
   (handle-tag :atom :content))
+
+(defhandler nil :enclosure
+  (let ((source *source*))
+    (push (dict :rel "enclosure"
+                :type (get-attribute source "type")
+                :length (get-attribute source "length")
+                :href (get-attribute source "url"))
+          (gethash* :enclosures (or *entry* *feed*)))))

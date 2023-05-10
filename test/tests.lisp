@@ -280,3 +280,7 @@ error."
   (let* ((feed (parse-feed (load-test-file "hpr_ogg_rss.php"))))
     (dolist (entry (href feed :entries))
       (is (string*= "eps.php?id=" (href entry :link))))))
+
+(test rss-enclosure
+  (let ((feed (parse-feed (load-test-file "substack.rss"))))
+    (is (= 4 (hash-table-size (href feed :links))))))
